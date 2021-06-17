@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace WebApplication2
 {
-    public partial class Bai5 : System.Web.UI.Page
+    public partial class WebForm2 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -16,7 +16,9 @@ namespace WebApplication2
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-
+            String usename = usenameTxt.Text;
+            String password = passwordTxt.Text;
+            Response.Redirect("WebForm3.aspx?Name=" + usename + "&Pass=" + password);
         }
     }
 }
