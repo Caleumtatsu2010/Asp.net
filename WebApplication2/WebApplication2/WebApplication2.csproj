@@ -68,6 +68,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Bai5.aspx" />
+    <Content Include="CalAreal.aspx" />
+    <Content Include="Control.aspx" />
+    <Content Include="Error.html" />
     <Content Include="Home.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="TienDien.aspx" />
@@ -85,6 +88,20 @@
     </Compile>
     <Compile Include="Bai5.aspx.designer.cs">
       <DependentUpon>Bai5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CalAreal.aspx.cs">
+      <DependentUpon>CalAreal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CalAreal.aspx.designer.cs">
+      <DependentUpon>CalAreal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Control.aspx.cs">
+      <DependentUpon>Control.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Control.aspx.designer.cs">
+      <DependentUpon>Control.aspx</DependentUpon>
     </Compile>
     <Compile Include="Home.aspx.cs">
       <DependentUpon>Home.aspx</DependentUpon>

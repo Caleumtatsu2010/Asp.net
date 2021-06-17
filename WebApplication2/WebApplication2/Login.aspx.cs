@@ -16,16 +16,9 @@ namespace WebApplication2
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            if(TextBoxUsename.Text=="abc" & TextBoxPassword.Text=="123")
-            {
-                Session["Status"] = "yes";
-                Response.Redirect("Home.aspx");
-            }
-            else
-            {
-                Session["Status"] = "no";
-                Response.Write("Ban dang nhap sai");
-            }
+
+            Response.Redirect("Control.aspx?User="+TextBoxUsename.Text+ "&Pass="+TextBoxPassword.Text);
+
         }
     }
 }

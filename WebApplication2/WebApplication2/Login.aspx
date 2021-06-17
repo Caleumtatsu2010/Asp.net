@@ -36,17 +36,12 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2">
-                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Login" />
+                <td colspan="2" style="padding-left:100px">
+                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Login" Width="77px" />
                 </td>
             </tr>
         </table>
 
-        <script>
-            function myFunction() {
-              alert("I am an alert box!");
-            }
-        </script>
     </form>
 </body>
 </html>
