@@ -1,0 +1,84 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="FrontEnd.master.cs" Inherits="WebShop.Page.FrontEnd" %>
+
+<%@ Register src="Login.ascx" tagname="Login" tagprefix="uc1" %>
+
+<%@ Register src="Search.ascx" tagname="Search" tagprefix="uc2" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="../CSS/Style.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="page">
+            <div id="header">
+                <div id="logo">
+                    <img src="../images/big_img.jpg" alt="" border="0"/>
+                    <a href="">
+                        <img src="../images/logo.jpg" alt="Nhà sách Minh Sơn" border="0"/>
+                    </a>
+                </div>
+                <div id="menung">
+                    <ul>
+                        <li><a href="#"><span>Trang chủ</span></a></li>
+                        <li><a href="#"><span>Giới thiệu</span></a></li>
+                        <li><a href="#"><span>Tin tức</span></a></li>
+                        <li><a href="#"><span>Sản phẩm</span></a></li>
+                        <li><a href="#"><span>Liên hệ</span></a></li>
+                        <li><a href="#"><span>Giỏ hàng</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="main">
+                <div id="left">
+                    <div id="menud">
+                        <p>Danh mục sách</p>
+                        <ul>
+                            <li><a href="#"><span>Văn phòng</span></a></li>
+                            <li><a href="#"><span>Ứng dụng</span></a></li>
+                            <li><a href="#"><span>Lập trình</span></a></li>
+                            <li><a href="#"><span>Ngoại ngữ</span></a></li>
+                            <li><a href="#"><span>Giáo dục mần non</span></a></li>
+                            <li><a href="#"><span>Tiểu học</span></a></li>
+                            <li><a href="#"><span>Trung học cơ sở</span></a></li>
+                            <li><a href="#"><span>Trung học phổ thông</span></a></li>
+                        </ul>
+                    </div>
+                    <div id="login">
+                        <uc1:Login ID="Login1" runat="server" />
+                    </div>
+                </div>
+                <div id="content">
+                    <asp:ContentPlaceHolder ID="main_body" runat="server">
+                            Nội dung tin ở đây
+                    </asp:ContentPlaceHolder>
+                 </div>
+                <div id="right">
+                    <div id="tim">
+                        <uc2:Search ID="Search1" runat="server" />
+                    </div>
+                    <div id="quangcao">
+                        <asp:HyperLink ID="hypAdvs" ImageUrl="~/images/ads/imageAds1.jpg"
+                            NavigateUrl="http://ocb.com.vn" runat="server" Width="100%" />
+                    </div>
+                </div>
+            </div>
+            <div id="footer">
+                <p>
+                    &copy; Copyright: 10/2018<br />
+                    ASP.NET project
+                </p>
+                <p>
+                    Giảng viên: Đỗ Ngọc Sơn<br />
+                    Khoa CNTT- ĐHCN Hà Nội <br />
+                    Minh Khai, Từ Liêm, Hà Nội
+                </p>
+            </div>
+        </div>
+        
+    </form>
+</body>
+</html>
