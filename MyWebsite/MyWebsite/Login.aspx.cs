@@ -24,7 +24,7 @@ namespace MyWebsite
                 DataTable dt = bll.Login(TextBoxUsername.Text, TextBoxPassword.Text);
                 if (dt != null & dt.Rows.Count > 0)
                 {
-                    Response.Redirect("Home.aspx?Username=" + TextBoxUsername.Text);
+                    Response.Redirect("HomeMaster.aspx?Username=" + TextBoxUsername.Text);
                 }
                 else
                 {
