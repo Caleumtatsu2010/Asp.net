@@ -1,0 +1,127 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="FrontEnd.master.cs" Inherits="WebShop.Pages.FrontEnd" %>
+
+<%@ Register Src="~/Pages/Login.ascx" TagName="Login" TagPrefix="uc1" %>
+<%@ Register Src="~/Pages/Search.ascx" TagName="Search" TagPrefix="uc2" %>
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="../CSS/style.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+            margin-bottom: 0px;
+        }
+
+        .auto-style3 {
+            width: 170px;
+            height: 357px;
+            padding-top:0px;
+        }
+
+        ul li {
+            list-style-type: none;
+            border-bottom: 1px solid white;
+            background-color: gray;
+            padding: 10px;
+        }
+
+        ul {
+            padding-left: 0px;
+            text-align: center;
+            margin-left: 0px;
+            margin-top: 0px;
+        }
+
+        .main {
+        }
+
+        #ContentPlaceHolder1 {
+            
+        }
+
+        .auto-style4 {
+            width: 437px;
+            height: 532px;
+        }
+
+        .auto-style5 {
+            width: 100%;
+            height: 281px;
+        }
+
+        .auto-style6 {
+            width: 177px;
+        }
+
+        .auto-style7 {
+            width: 442px;
+        }
+    </style>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:Image ID="Image1" runat="server" Height="169px" ImageUrl="~/images/logo.jpg" Width="213px" />
+        <asp:Image ID="Image2" runat="server" Height="168px" ImageUrl="~/images/big_img.jpg" Width="616px" />
+        <table cellpadding="0" cellspacing="0" class="auto-style1">
+            <tr>
+                <td>
+                    <asp:Button ID="Button1" runat="server" BackColor="Black" BorderColor="White" Text="Trang Chủ" Width="117px" ForeColor="White" />
+                    <asp:Button ID="Button2" runat="server" Text="Button" Width="118px" BackColor="Black" BorderColor="White" ForeColor="White" />
+                    <asp:Button ID="Button3" runat="server" Text="Button" Width="110px" BackColor="Black" BorderColor="White" ForeColor="White" />
+                    <asp:Button ID="Button4" runat="server" Text="Button" Width="109px" BackColor="Black" ForeColor="White" />
+                    <asp:Button ID="Button5" runat="server" Text="Button" Width="105px" BackColor="Black" BorderColor="White" ForeColor="White" />
+                    <asp:Button ID="Button6" runat="server" Text="Button" Width="106px" BackColor="Black" ForeColor="White" />
+                </td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+        <div class="main">
+            <div>
+            </div>
+        </div>
+        <table cellpadding="0" cellspacing="0" class="auto-style5">
+            <tr>
+                <td class="auto-style6">
+                    <div class="auto-style3">
+
+                            <asp:ImageButton ID="ImageButton1" runat="server" Height="36px" Width="170px" ImageUrl="~/images/title.jpg" />
+                            <ul>
+                                <li><a style="background-color: #C0C0C0">Văn phòng</a></li>
+                                <li><a>Ứng Dụng</a></li>
+                                <li><a>Lập Trình</a></li>
+                                <li><a>Giáo dục mầm non</a></li>
+                                <li><a>Ngoại Ngữ</a></li>
+                                <li><a>Tiểu Học</a></li>
+                                <li><a>Trung Học Cơ Sở</a></li>
+                                <li><a>Trung Học phổ thông</a></li>
+                            </ul>
+
+
+
+
+                    </div>
+                </td>
+                <td class="auto-style7">
+                    <div class="auto-style4">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server" >
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
