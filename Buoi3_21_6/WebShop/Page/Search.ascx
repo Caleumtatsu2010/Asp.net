@@ -16,7 +16,7 @@
     <tr>
         <td class="auto-style2" align="center">
 
-            <asp:Button ID="cmdLogin" runat="server" Text="Tìm kiếm" />
+            <asp:Button ID="cmdLogin" runat="server" Text="Tìm kiếm" OnClick="cmdLogin_Click" />
 
         </td>
     </tr>

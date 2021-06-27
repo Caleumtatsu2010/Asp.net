@@ -7,16 +7,16 @@ using System.Web.UI.WebControls;
 
 namespace WebShop.Page
 {
-    public partial class Search : System.Web.UI.UserControl
+    public partial class InsertProduct : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
 
-        protected void cmdLogin_Click(object sender, EventArgs e)
+        protected void Button2_Click(object sender, EventArgs e)
         {
-            Response.Redirect("SearchProduct.aspx?search=" + txtTen.Text);
+
         }
     }
 }

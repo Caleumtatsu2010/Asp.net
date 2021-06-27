@@ -10,7 +10,7 @@
 namespace WebShop.Page {
     
     
-    public partial class SanPham {
+    public partial class SearchProduct {
         
         /// <summary>
         /// DataList1 control.

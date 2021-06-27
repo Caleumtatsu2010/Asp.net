@@ -9,7 +9,7 @@
         .auto-style1 {
             height: 300px;
         }
-        </style>
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -36,24 +36,16 @@
             <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="TenLop" DataValueField="MaLop" Height="24px" Width="173px">
             </asp:DropDownList>
             <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
-            <asp:DataList ID="DataList2" runat="server" RepeatColumns="4" DataKeyField="MaLop" DataSourceID="SqlDataSource1" Width="487px">
+            <asp:DataList ID="DataList2" runat="server" RepeatColumns="4" Width="487px">
                 <ItemTemplate>
-                    MaLop:
-                    <asp:Label ID="MaLopLabel" runat="server" Text='<%# Eval("MaLop") %>' />
-                    <br />
-                    TenLop:
-                    <asp:Label ID="TenLopLabel" runat="server" Text='<%# Eval("TenLop") %>' />
-                    <br />
-                    DienGiai:
-                    <asp:Label ID="DienGiaiLabel" runat="server" Text='<%# Eval("DienGiai") %>' />
-                    <br />
-                    LopChuyen:
-                    <asp:Label ID="LopChuyenLabel" runat="server" Text='<%# Eval("LopChuyen") %>' />
-                    <br />
-                    HoTenGVCN:
-                    <asp:Label ID="HoTenGVCNLabel" runat="server" Text='<%# Eval("HoTenGVCN") %>' />
-                    <br />
-                    <br />
+                   <asp:Label ID="Label1" runat="server" Text='<%# Eval("MaHocSinh")%>'
+Width="220px"></asp:Label> <br />
+ <asp:Label ID="Label2" runat="server" Text='<%# Eval("TenHocSinh")%>'
+Width="220px"></asp:Label> <br />
+ <asp:Label ID="Label3" runat="server" Text='<%# Eval ("NgaySinh")%>'
+Width="220px"></asp:Label> <br />
+ <asp:Label ID="Label4" runat="server" Text='<%# Eval ("MaLop")%>'
+Width="220px"></asp:Label>
                 </ItemTemplate>
             </asp:DataList>
         </div>

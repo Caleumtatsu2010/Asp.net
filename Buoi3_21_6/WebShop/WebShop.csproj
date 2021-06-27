@@ -163,15 +163,18 @@
     <Content Include="images\top-bg.jpg" />
     <Content Include="images\tu-van.gif" />
     <Content Include="Page\DataList1.aspx" />
+    <Content Include="Page\DetailsProducts.aspx" />
     <Content Include="Page\GioHang.aspx" />
     <Content Include="Page\GioiThieu.aspx" />
     <Content Include="Page\Home.aspx" />
     <Content Include="Page\LienHe.aspx" />
     <Content Include="Page\Login.ascx" />
+    <Content Include="Page\New.aspx" />
+    <Content Include="Page\Products.aspx" />
     <Content Include="Page\QLHS.aspx" />
     <Content Include="Page\QLHS2.aspx" />
-    <Content Include="Page\SanPham.aspx" />
     <Content Include="Page\Search.ascx" />
+    <Content Include="Page\SearchProduct.aspx" />
     <Content Include="Page\TinTuc.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -182,6 +185,13 @@
     </Compile>
     <Compile Include="Page\DataList1.aspx.designer.cs">
       <DependentUpon>DataList1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\DetailsProducts.aspx.cs">
+      <DependentUpon>DetailsProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\DetailsProducts.aspx.designer.cs">
+      <DependentUpon>DetailsProducts.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page\FrontEnd.Master.cs">
       <DependentUpon>FrontEnd.Master</DependentUpon>
@@ -225,6 +235,20 @@
     <Compile Include="Page\Login.ascx.designer.cs">
       <DependentUpon>Login.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Page\New.aspx.cs">
+      <DependentUpon>New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\New.aspx.designer.cs">
+      <DependentUpon>New.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\Products.aspx.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Products.aspx.designer.cs">
+      <DependentUpon>Products.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Page\QLHS.aspx.cs">
       <DependentUpon>QLHS.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -239,19 +263,19 @@
     <Compile Include="Page\QLHS2.aspx.designer.cs">
       <DependentUpon>QLHS2.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Page\SanPham.aspx.cs">
-      <DependentUpon>SanPham.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Page\SanPham.aspx.designer.cs">
-      <DependentUpon>SanPham.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Page\Search.ascx.cs">
       <DependentUpon>Search.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Page\Search.ascx.designer.cs">
       <DependentUpon>Search.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\SearchProduct.aspx.cs">
+      <DependentUpon>SearchProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\SearchProduct.aspx.designer.cs">
+      <DependentUpon>SearchProduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page\TinTuc.aspx.cs">
       <DependentUpon>TinTuc.aspx</DependentUpon>
