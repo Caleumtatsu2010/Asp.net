@@ -167,6 +167,7 @@
     <Content Include="Page\GioHang.aspx" />
     <Content Include="Page\GioiThieu.aspx" />
     <Content Include="Page\Home.aspx" />
+    <Content Include="Page\InsertProduct.aspx" />
     <Content Include="Page\LienHe.aspx" />
     <Content Include="Page\Login.ascx" />
     <Content Include="Page\New.aspx" />
@@ -220,6 +221,13 @@
     </Compile>
     <Compile Include="Page\Home.aspx.designer.cs">
       <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Page\InsertProduct.aspx.cs">
+      <DependentUpon>InsertProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\InsertProduct.aspx.designer.cs">
+      <DependentUpon>InsertProduct.aspx</DependentUpon>
     </Compile>
     <Compile Include="Page\LienHe.aspx.cs">
       <DependentUpon>LienHe.aspx</DependentUpon>
