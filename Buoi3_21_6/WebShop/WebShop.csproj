@@ -286,6 +286,13 @@
     <Compile Include="Page\SearchProduct.aspx.designer.cs">
       <DependentUpon>SearchProduct.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Page\Site1.Master.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Page\Site1.Master.designer.cs">
+      <DependentUpon>Site1.Master</DependentUpon>
+    </Compile>
     <Compile Include="Page\TinTuc.aspx.cs">
       <DependentUpon>TinTuc.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -305,6 +312,7 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Page\FrontEnd.Master" />
+    <Content Include="Page\Site1.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

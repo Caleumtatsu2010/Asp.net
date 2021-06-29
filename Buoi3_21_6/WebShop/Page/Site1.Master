@@ -1,0 +1,204 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebShop.Page.Site1" %>
+
+
+<%@ Register Src="Login.ascx" TagName="Login" TagPrefix="uc1" %>
+<%@ Register Src="~/Page/Search.ascx" TagPrefix="uc1" TagName="Search" %>
+
+
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            height: 617px;
+            display: flex;
+        }
+
+        .auto-style2 {
+            height: 538px;
+            width: 165px;
+        }
+
+        .auto-style3 {
+            width: 100%;
+        }
+
+        .auto-style4 {
+            height: 19px;
+        }
+
+        .main {
+            background-color: lightpink;
+            margin-left: 50px;
+            min-width: 820px;
+            padding:10px;
+
+        }
+
+        .right {
+            background-color: palegreen;
+            margin-left: 20px;
+            min-width: 200px;
+            padding:10px;
+        }
+
+        .auto-style5 {
+            height: 617px;
+            display: flex;
+            width: 213px;
+        }
+        .footer
+        {
+            display:flex;
+            background-color:gray;
+            color:snow;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <asp:Image ID="Image1" runat="server" Height="123px" ImageUrl="~/images/new-highlights.gif" Width="27%" />
+        <asp:Image ID="Image2" runat="server" Height="123px" ImageUrl="~/images/tu-van.gif" Width="72%" />
+        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal" Width="100%" BackColor="Blue" Font-Bold="True" Font-Size="Larger" ForeColor="Red" >
+            <DynamicHoverStyle BackColor="#66FFCC" ForeColor="White" BorderStyle="Solid" />
+            <DynamicItemTemplate>
+                <%# Eval("Text") %>
+            </DynamicItemTemplate>
+            <Items>
+                <asp:MenuItem Text="New Item" Value="New Item" NavigateUrl="https://chat.zalo.me/"></asp:MenuItem>
+                <asp:MenuItem Text="New Item" Value="New Item" NavigateUrl="https://hentaivn.tv/">
+                    <asp:MenuItem Text="New Item" Value="New Item" NavigateUrl="https://forums.asp.net/t/1723673.aspx?Menu+Item+width"></asp:MenuItem>
+                    <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                    <asp:MenuItem Text="New Item" Value="New Item" NavigateUrl="https://forums.asp.net/t/1723673.aspx?Menu+Item+width"></asp:MenuItem>
+                    <asp:MenuItem Text="New Item" Value="New Item">
+                        <asp:MenuItem Text="New Item" Value="New Item" NavigateUrl="https://forums.asp.net/t/1723673.aspx?Menu+Item+width"></asp:MenuItem>
+                        <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                    </asp:MenuItem>
+                </asp:MenuItem>
+                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                <asp:MenuItem Text="New Item" Value="New Item"></asp:MenuItem>
+                <asp:MenuItem Text="New Item" Value="New Item" NavigateUrl="https://hentaivn.tv/"></asp:MenuItem>
+            </Items>
+        </asp:Menu>
+        <div class="auto-style5">
+
+
+            <div class="auto-style2">
+                <table cellpadding="0" cellspacing="0" class="auto-style3">
+                    <tr>
+                        <td>
+                            <asp:Button ID="Button1" runat="server" Text="Button" Width="200px" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:Button ID="Button15" runat="server" Text="Button" Width="200px" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:Button ID="Button16" runat="server" Text="Button" Width="200px" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:Button ID="Button17" runat="server" Text="Button" Width="200px" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style4">
+                            <asp:Button ID="Button18" runat="server" Text="Button" Width="200px" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:Button ID="Button19" runat="server" Text="Button" Width="200px" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:Button ID="Button20" runat="server" Text="Button" Width="200px" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:Button ID="Button21" runat="server" Text="Button" Width="200px" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style4">
+                            <asp:Button ID="Button22" runat="server" Text="Button" Width="200px" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:Button ID="Button23" runat="server" Text="Button" Width="200px" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:Button ID="Button24" runat="server" Text="Button" Width="200px" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:Button ID="Button25" runat="server" Text="Button" Width="200px" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:Button ID="Button26" runat="server" Text="Button" Width="200px" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:Button ID="Button27" runat="server" Text="Button" Width="200px" />
+                        </td>
+                    </tr>
+                </table>
+                <uc1:Login ID="Login1" runat="server" />
+            </div>
+            <div class="main">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+                </asp:ContentPlaceHolder>
+            </div>
+            <div class="right">
+                <asp:HyperLink ID="HyperLink1" runat="server" ImageUrl="~/images/big_img.jpg" ImageWidth="200px" ImageHeight="300px">HyperLink</asp:HyperLink>
+                <uc1:Search runat="server" ID="Search" />
+            </div>
+        </div>
+        <div class="footer">
+            <div class="info1">
+                <p>COPYRIGHT </p>
+                <br />
+                <p>ASP.net project</p>
+            </div>
+            <div class="info2">
+                <p>Giảng viên: Nguyễn Hoàng Long </p>
+                <br />
+                <p>Đại học Bách Khoa Hà Nội</p>
+            </div>
+
+
+
+        </div>
+
+
+    </form>
+</body>
+</html>
