@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -31,7 +32,7 @@ namespace WebShop.Page
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            string image = "~/images/products/" + FileUpload1.FileName();
+            string image = "~/images/products/" + FileUpload1.FileName;
             string title = TextBoxTitle.Text;
             int price = Int32.Parse(TextBoxPrice.Text);
 

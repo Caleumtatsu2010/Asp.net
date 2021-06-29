@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="WebApplication4.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="WebApplication4.WebForm1" ValidateRequest="false"%>
 
 <!DOCTYPE html>
 
@@ -23,8 +23,8 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <table cellpadding="0" cellspacing="0" class="auto-style1">
+        <div runat="server">
+            <table cellpadding="0" cellspacing="0" class="auto-style1" runat="server">
                 <tr>
                     <td class="auto-style2">
                         <asp:Label ID="Label1" runat="server" Text="Mã Sản Phẩm"></asp:Label>
@@ -73,14 +73,14 @@
                 </tr>
                 <tr>
                     <td colspan="3">
-                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="210px" Width="727px" OnRowCommand="GridView1_RowCommand">
+                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="210px" Width="524px" OnRowCommand="GridView1_RowCommand">
                               <AlternatingRowStyle BackColor="White" />
                             <Columns>
                                 <asp:BoundField DataField="MaSP" HeaderText="MaSP" ReadOnly="True" SortExpression="MaSP" />
                                 <asp:BoundField DataField="TenSP" HeaderText="TenSP" SortExpression="TenSP" />
                                 <asp:BoundField DataField="MaLoai" HeaderText="MaLoai" SortExpression="MaLoai" />
                                 <asp:BoundField DataField="DonGia" HeaderText="DonGia" SortExpression="DonGia" />
-                                <asp:CommandField SelectText="Select" ShowSelectButton="True" />
+                                <asp:CommandField SelectText="Select" ShowSelectButton="True" ButtonType="Button" />
                             </Columns>
                             <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
                             <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />

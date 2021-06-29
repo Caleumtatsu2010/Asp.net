@@ -119,10 +119,13 @@ namespace WebApplication4
             {
                 int index = Convert.ToInt32(e.CommandArgument);
                 GridViewRow clickedRow = GridView1.Rows[index];
-
-                TextBox myTextBox = (TextBox)clickedRow.Cells[0].FindControl("TextBox1");
                 
-                TextBox1.Text = myTextBox.Text;
+
+                TextBox1.Text = clickedRow.Cells[0].Text;
+                TextBox2.Text = clickedRow.Cells[1].Text;
+                DropDownList1.Text = clickedRow.Cells[2].Text;
+                TextBox4.Text = clickedRow.Cells[3].Text;
+
             }
         }
     }
