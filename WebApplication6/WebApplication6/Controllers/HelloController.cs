@@ -19,6 +19,12 @@ namespace WebApplication6.Controllers
             return HttpUtility.HtmlEncode("Xin chao "+ten+" So lan la"+solan);
 
         }
+        public ActionResult Hello(string name, int numtime)
+        {
+            ViewBag.Message ="Hello"+ name;
+            ViewBag.NumTimes = numtime;
+            return View();
+        }
 
     }
 }
