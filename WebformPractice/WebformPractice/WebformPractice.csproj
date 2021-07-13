@@ -1,0 +1,234 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AAC7A507-3995-4D96-BBE2-8937601C4E07}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebformPractice</RootNamespace>
+    <AssemblyName>WebformPractice</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\add_to_cart.jpg" />
+    <Content Include="images\ads_bg.jpg" />
+    <Content Include="images\big_img.jpg" />
+    <Content Include="images\cart.jpg" />
+    <Content Include="images\chitiet.jpg" />
+    <Content Include="images\chovaogio.jpg" />
+    <Content Include="images\dangnhap.jpg" />
+    <Content Include="images\icon-yahoo.gif" />
+    <Content Include="images\icon-yahoo.png" />
+    <Content Include="images\list-style.gif" />
+    <Content Include="images\list-style2.gif" />
+    <Content Include="images\login.jpg" />
+    <Content Include="images\logo.jpg" />
+    <Content Include="images\mypath.jpg" />
+    <Content Include="images\nav-bg.gif" />
+    <Content Include="images\new-highlights.gif" />
+    <Content Include="images\products\04e4d31b-6400-4b65-a362-34438bea26dd.jpg" />
+    <Content Include="images\products\0a887af9-ad73-4de9-98da-4c4e34cbaeea.jpg" />
+    <Content Include="images\products\0ab9c51b-c61e-45c1-86f5-ac173b9f8cbf.jpg" />
+    <Content Include="images\products\106e4094-018c-4a16-b217-5134bd15858e.jpg" />
+    <Content Include="images\products\10b77ecc-42c8-44a0-8b5f-567f85c59d43.jpg" />
+    <Content Include="images\products\13c1984b-0ae4-400d-b171-8939c37c24fb.jpg" />
+    <Content Include="images\products\17f2da2a-febe-4044-80f9-2d9e46f92484.jpg" />
+    <Content Include="images\products\27bc51e9-b208-4932-9507-d5215576e080.jpg" />
+    <Content Include="images\products\287c488d-c59d-410a-b7f4-00979420d250.jpg" />
+    <Content Include="images\products\28aedb90-22c8-443c-8422-fb5c45866444.jpg" />
+    <Content Include="images\products\28cb95fe-751f-4858-89b7-79ce154b736a.jpg" />
+    <Content Include="images\products\2f3cada7-32e9-4813-8462-336076f2026e.jpg" />
+    <Content Include="images\products\30b5c6b5-ad5b-4a97-ae0c-bd161c7347c6.png" />
+    <Content Include="images\products\33b5be24-1e9e-4e97-964f-5c733b0f7096.jpg" />
+    <Content Include="images\products\3508d029-79ef-4f9a-8383-ac3460a33392.jpg" />
+    <Content Include="images\products\3eea45f2-954f-4da2-9ab5-1de14c709f3a.jpg" />
+    <Content Include="images\products\422cedf2-7a67-4de1-88fb-cb78be66c0d3.jpg" />
+    <Content Include="images\products\4d7b8165-61f6-4487-b70b-bfeba924987b.jpg" />
+    <Content Include="images\products\4fe0a0ca-a96a-480d-85a1-8c90d8d83427.jpg" />
+    <Content Include="images\products\56e50f4a-957f-4e3c-8d6d-2e757d3bb428.jpg" />
+    <Content Include="images\products\5debe77b-32c5-4907-bb46-e551204d98cf.jpg" />
+    <Content Include="images\products\65d07faf-8ca1-413b-aec4-7952cfb94f83.jpg" />
+    <Content Include="images\products\66e4c261-495c-4d54-b2c6-1f659a646882.jpg" />
+    <Content Include="images\products\67009ebc-8b96-4b36-879e-747e52f14a9a.jpg" />
+    <Content Include="images\products\6706776d-49df-4ed9-b116-ec4805da839f.png" />
+    <Content Include="images\products\6aa77e0e-4ded-433f-bc45-b8fd9d7f5862.jpg" />
+    <Content Include="images\products\6b57a5f1-19ad-4de4-a5be-8ddb14461ca2.jpg" />
+    <Content Include="images\products\6cbafde4-3abc-4c75-8ed4-4d7d2bccb2b6.jpg" />
+    <Content Include="images\products\701e9f53-5d95-4214-943c-f8aa9167e565.png" />
+    <Content Include="images\products\7649e011-c122-42a9-ad8e-4df29d73681d.jpg" />
+    <Content Include="images\products\77d610f5-250a-4d67-89ed-0ced67cba05e.jpg" />
+    <Content Include="images\products\78f73f01-9a09-4a1e-a1a0-e50879ecc52e.jpg" />
+    <Content Include="images\products\859320d6-ae03-424f-88cc-633896428355.jpg" />
+    <Content Include="images\products\85ab69ca-fdfc-4472-ba2e-e2aa5e8250dc.jpg" />
+    <Content Include="images\products\876887ee-5cf8-46e4-8576-2677e1bafc82.jpg" />
+    <Content Include="images\products\8d1f9bf6-c760-42fe-88f4-cd7a651c0ba2.jpg" />
+    <Content Include="images\products\8e024457-2956-4321-a26e-c6aa11fd3719.jpg" />
+    <Content Include="images\products\9156d751-895c-47c9-b1be-d4f8fb10717e.jpg" />
+    <Content Include="images\products\9662514a-4af1-4f2d-b005-75a547ea937f.jpg" />
+    <Content Include="images\products\9729b4d6-7090-4520-ba44-90ea12ae23fa.jpg" />
+    <Content Include="images\products\977e3aaa-f7c1-4415-8955-d2071856d6e1.jpg" />
+    <Content Include="images\products\9f896f3b-2082-4151-bec0-7b9a02a36fa0.jpg" />
+    <Content Include="images\products\a13a82c3-787f-4fef-8682-f99a637936ef.jpg" />
+    <Content Include="images\products\a3275dd8-5de4-4ab6-97a0-b135dcdd0155.jpg" />
+    <Content Include="images\products\a79ffb0e-62fb-4f14-9b19-cdbd1b7f0748.jpg" />
+    <Content Include="images\products\a7be6a4c-009a-476e-8c76-f202a34dc2bb.jpg" />
+    <Content Include="images\products\a8f3ac23-b60c-4b97-90d5-0bf3c1e3adff.jpg" />
+    <Content Include="images\products\aae4373c-8c65-481e-b63b-93dc0fb6db17.jpg" />
+    <Content Include="images\products\aed4ee31-6d3f-49cd-a852-ce1d7d4aa1ac.jpg" />
+    <Content Include="images\products\afecccca-32db-4676-b2e0-c0d55952f027.jpg" />
+    <Content Include="images\products\b1c5dca5-9fe4-4b8e-9ef8-45fb32c1bc1a.jpg" />
+    <Content Include="images\products\ba3119b3-40bc-4d1b-a592-88ef18f5860c.jpg" />
+    <Content Include="images\products\c3c51194-1fab-4f79-a56f-c0903767b25d.jpg" />
+    <Content Include="images\products\c590a5a5-2c94-4111-8b01-2b0a8362604d.jpg" />
+    <Content Include="images\products\c8d0fa40-fd90-4282-a622-f2dfe7f53b5c.jpg" />
+    <Content Include="images\products\d84f86aa-4f96-4b25-8e56-a33f1019eb8b.jpg" />
+    <Content Include="images\products\d855a409-6b79-401a-9783-b7b2779e9cab.jpg" />
+    <Content Include="images\products\da32519a-f835-452f-931d-0d8795629fe2.jpg" />
+    <Content Include="images\products\dcff07db-88ae-4585-a1fd-c918b13681db.jpg" />
+    <Content Include="images\products\dead4905-167f-4e4f-8c50-00017834dec4.jpg" />
+    <Content Include="images\products\e69a4fc0-097b-4dd9-94fe-9d40c718b67d.jpg" />
+    <Content Include="images\products\e6e31787-1948-4e7b-9fff-7caa6e72b18f.jpg" />
+    <Content Include="images\products\e7f11b9a-ad15-4ea3-ad47-76b6ea8eedba.jpg" />
+    <Content Include="images\products\ee6c2114-e45a-4c04-bbb7-0fa86f3dfda9.jpg" />
+    <Content Include="images\products\f15039b7-7b4e-43bf-bbcd-73e5f4fd3347.jpg" />
+    <Content Include="images\products\fc3eeba8-5d49-4d0e-b90a-ee7aff6dcbcf.jpg" />
+    <Content Include="images\sidebar-title-button.gif" />
+    <Content Include="images\title.jpg" />
+    <Content Include="images\top-bg.jpg" />
+    <Content Include="images\tu-van.gif" />
+    <Content Include="practice1\addProductADO\product.aspx" />
+    <Content Include="practice1\addStudentWebform\addStudent.aspx" />
+    <Content Include="practice1\addStudentWebform\displayStudents.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="practice1\addProductADO\product.aspx.cs">
+      <DependentUpon>product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="practice1\addProductADO\product.aspx.designer.cs">
+      <DependentUpon>product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="practice1\addStudentWebform\addStudent.aspx.cs">
+      <DependentUpon>addStudent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="practice1\addStudentWebform\addStudent.aspx.designer.cs">
+      <DependentUpon>addStudent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="practice1\addStudentWebform\displayStudents.aspx.cs">
+      <DependentUpon>displayStudents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="practice1\addStudentWebform\displayStudents.aspx.designer.cs">
+      <DependentUpon>displayStudents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="practice1\addStudentWebform\Student.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52716</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:52716/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

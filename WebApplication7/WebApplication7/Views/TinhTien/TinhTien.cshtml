@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "TinhTien";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>TÍNH TIỀN</h2>
+
+<form action="/TinhTien/Index">
+    <table border="1">
+        <tr>
+            <td><label for="manv">Mã NV:</label><br></td>
+            <td>
+                @ViewBag.manv;
+
+            </td>
+        </tr>
+        <tr>
+            <td><label for="ngaycong">Ngày Công:</label><br></td>
+            <td>
+
+                @ViewBag.ngaycong;
+
+            </td>
+        </tr>
+        <tr>
+            <td><label for="tienlinh">Tiền Lĩnh:</label><br></td>
+            <td>
+                @ViewBag.tienlinh;
+            </td>
+        </tr>
+        <tr>
+            <td>    <input type="submit" value="Trở Về"></td>
+            <td>    </td>
+        </tr>
+    </table>
+
+
+
+</form>

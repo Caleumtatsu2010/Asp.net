@@ -23,5 +23,15 @@ namespace WebApplication6.Controllers
             ViewBag.Mark = mark;
             return View();
         }
+        public ActionResult XuLy2(SinhVien sv)
+        {
+            string id = sv.ID;
+            string name = sv.Name;
+            double mark = sv.Mark;
+            ViewBag.ID = id;
+            ViewBag.Name = name;
+            ViewBag.Mark = mark;
+            return View();
+        }
     }
 }

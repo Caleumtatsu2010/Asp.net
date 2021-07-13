@@ -1,0 +1,76 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>TÍNH TIỀN</h2>
+
+<form action="/TinhTien/TinhTien">
+    <table border="1">
+        <tr>
+            <td><label for="manv">Mã NV:</label><br></td>
+            <td><input type="text" id="manv" name="manv" value="NV04"><br></td>
+        </tr>
+        <tr>
+            <td><label for="bacluong">Bậc Lương:</label><br></td>
+            <td><input type="text" id="bacluong" name="bacluong" value="4"></td>
+        </tr>
+        <tr>
+            <td><label for="ngaycong">Ngày Công:</label><br></td>
+            <td><input type="text" id="ngaycong" name="ngaycong" value="27"><br></td>
+        </tr>
+        <tr>
+            <td>
+                <label for="chucvu">Chức Vụ</label>
+            </td>
+            <td>
+                <select name="chucvu" id="chucvu">
+                    <option value="Trưởng Phòng">Trưởng Phòng</option>
+                    <option value="Phó Phòng">Phó Phòng</option>
+                    <option value="Giám Đốc">Giám Đốc</option>
+                </select>
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <label for="gioitinh">Giới Tính</label>
+            </td>
+            <td>
+
+                <input type="radio" id="nam" name="nam" value="Nam">
+                <label for="nam">Nam</label>
+                <input type="radio" id="nu" name="nu" value="Nữ">
+                <label for="nu">Nữ</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Ngoại Ngữ</label>
+            </td>
+            <td>
+                <input type="checkbox" id="anh" name="anh" value="ANH">
+                <label for="anh">Anh</label>
+                <input type="checkbox" id="phap" name="phap" value="PHÁP">
+                <label for="phap">Pháp</label>
+                <input type="checkbox" id="nga" name="nga" value="NGA">
+                <label for="nga">Nga</label>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="tienlinh">Tiền Lĩnh:</label><br></td>
+            <td><input type="text" id="tienlinh" value=""></td>
+        </tr>
+        <tr>
+            <td>    <input type="submit" value="Tính"></td>
+            <td>    <input type="button" value="Xóa"></td>
+
+        </tr>
+    </table>
+
+
+
+</form>
+
+
