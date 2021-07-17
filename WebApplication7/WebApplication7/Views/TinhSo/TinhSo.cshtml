@@ -1,0 +1,66 @@
+﻿
+<html>
+<body>
+    <h2>TinhSo</h2>
+
+    @{
+        var total = 0;
+        if (IsPost & Request["button"] == "Cộng")
+        {
+            var num1 = Request["so1"];
+            var num2 = Request["so2"];
+            total = num1.AsInt() + num2.AsInt();
+
+        }
+        if (IsPost & Request["button"] == "Trừ")
+        {
+            var num1 = Request["so1"];
+            var num2 = Request["so2"];
+            total = num1.AsInt() - num2.AsInt();
+        }
+        if (IsPost & Request["button"] == "Nhân")
+        {
+            var num1 = Request["so1"];
+            var num2 = Request["so2"];
+            total = num1.AsInt() * num2.AsInt();
+        }
+        if (IsPost & Request["button"] == "Chia")
+        {
+            var num1 = Request["so1"];
+            var num2 = Request["so2"];
+            total = num1.AsInt()/num2.AsInt();
+        }
+    }
+
+    <form action="" method="post">
+
+
+        <label for="so1">Nhập số thứ 1:</label><br>
+        <input type="text" id="so1" name="so1" value=""><br>
+
+        <label for="so2">Nhập số thứ 2:</label><br>
+        <input type="text" id="so2" name="so2" value=""><br>
+
+        <label for="kq">Kết quả: </label><br>
+        <input type="text" id="kq" name="kq" value="@total"><br>
+
+        <input type="submit" value="Cộng" name="button">
+        <input type="submit" value="Trừ" name="button">
+        <input type="submit" value="Nhân" name="button">
+        <input type="submit" value="Chia" name="button">
+
+
+
+
+
+
+    </form>
+
+
+
+
+
+
+    </body>
+</html>
+

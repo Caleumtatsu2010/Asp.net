@@ -120,7 +120,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\fitController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TinhSoController.cs" />
     <Compile Include="Controllers\TinhTienController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -165,6 +167,12 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\TinhTien\TinhTien.cshtml" />
     <Content Include="Views\TinhTien\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout1.cshtml" />
+    <Content Include="Views\fit\KyThuat.cshtml" />
+    <Content Include="Views\fit\HeThong.cshtml" />
+    <Content Include="Views\TinhSo\TinhSo.cshtml" />
+    <Content Include="Views\TinhSo\Register.cshtml" />
+    <Content Include="Views\TinhSo\HienThi.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
