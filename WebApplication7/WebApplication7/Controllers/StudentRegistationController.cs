@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebApplication7.Models;
 
 namespace WebApplication7.Controllers
 {
@@ -13,9 +14,9 @@ namespace WebApplication7.Controllers
         {
             return View();
         }
-        public ActionResult Regis()
+        public ActionResult Regis(Student s)
         {
-            return View();
+            return View(s);
         }
     }
 }
