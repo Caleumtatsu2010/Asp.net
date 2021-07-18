@@ -122,6 +122,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\fitController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StudentRegistationController.cs" />
     <Compile Include="Controllers\TinhSoController.cs" />
     <Compile Include="Controllers\TinhTienController.cs" />
     <Compile Include="Global.asax.cs">
@@ -171,8 +172,7 @@
     <Content Include="Views\fit\KyThuat.cshtml" />
     <Content Include="Views\fit\HeThong.cshtml" />
     <Content Include="Views\TinhSo\TinhSo.cshtml" />
-    <Content Include="Views\TinhSo\Register.cshtml" />
-    <Content Include="Views\TinhSo\HienThi.cshtml" />
+    <Content Include="Views\StudentRegistation\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

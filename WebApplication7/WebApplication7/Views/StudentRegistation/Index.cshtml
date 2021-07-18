@@ -1,0 +1,67 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        @using (Html.BeginForm("Regis", "StudentRegistation"))
+        {
+        <table>
+            <tr>
+                <td>@Html.Label("Student Name")</td>
+                <td>@Html.TextBox("name")</td>
+            </tr>
+            <tr>
+                <td>@Html.Label("Gender")</td>
+                <td>@Html.RadioButton("gender", "Nam")Nam</td>
+                <td>@Html.RadioButton("gender", "Nu")Nữ</td>
+
+            </tr>
+            <tr>
+                <td>@Html.Label("Email")</td>
+                <td>@Html.TextBox("email")</td>
+            </tr>
+            <tr>
+                <td>@Html.Label("Address")</td>
+                <td>
+                    @{
+                        IEnumerable<String> listStr = new List<String> { "Hà Nội", "Đà Nẵng", "Tp HCM" };
+                    }
+                    @Html.DropDownList("adrr", new SelectList(listStr, listStr.FirstOrDefault()), "--select--");
+                </td>
+            </tr>
+            <tr>
+                <td>@Html.Label("Subjects")</td>
+                <td>@Html.CheckBox("Java core")Java core</td>
+                <td>@Html.CheckBox("Sql server")SQL server</td>
+                <td>@Html.CheckBox("PHP")PHP</td>
+
+            </tr>
+            <tr>
+                <td>@Html.Label("Username")</td>
+                <td>@Html.TextBox("username")</td>
+            </tr>
+            <tr>
+                <td>@Html.Label("Password")</td>
+                <td>@Html.TextBox("password")</td>
+            </tr>
+            <tr>
+                <td>@Html.Label("Comment")</td>
+                <td>@Html.TextArea("comment", "")</td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Regis" /></td>
+            </tr>
+        </table>
+        }
+    </div>
+</body>
+</html>

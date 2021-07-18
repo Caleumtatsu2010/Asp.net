@@ -16,7 +16,7 @@ namespace WebApplication7
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "TinhSo", action = "Register", id = UrlParameter.Optional }
+                defaults: new { controller = "StudentRegistation", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
