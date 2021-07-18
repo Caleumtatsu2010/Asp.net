@@ -1,0 +1,50 @@
+﻿@model WebApplication7.Models.Books
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index2</title>
+</head>
+<body>
+    <div>
+        <h4>Books</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.author)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.author)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.year)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.year)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

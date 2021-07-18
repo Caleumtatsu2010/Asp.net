@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLHSModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="HOCSINH">
+    <Key>
+      <PropertyRef Name="MaHocSinh" />
+    </Key>
+    <Property Name="MaHocSinh" Type="Int32" Nullable="false" />
+    <Property Name="TenHocSInh" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="NgaySinh" Type="DateTime" Precision="0" />
+    <Property Name="MaLop" Type="Int32" />
+    <NavigationProperty Name="LOPHOC" Relationship="Self.FK_MaLop" FromRole="HOCSINH" ToRole="LOPHOC" />
+  </EntityType>
+  <EntityType Name="LOPHOC">
+    <Key>
+      <PropertyRef Name="MaLop" />
+    </Key>
+    <Property Name="MaLop" Type="Int32" Nullable="false" />
+    <Property Name="TenLop" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="DienGiai" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="LopChuyen" Type="Boolean" />
+    <Property Name="HoTenGVCN" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HOCSINHs" Relationship="Self.FK_MaLop" FromRole="LOPHOC" ToRole="HOCSINH" />
+  </EntityType>
+  <EntityType Name="product">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Photo" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Price" Type="Int32" />
+    <Property Name="Category" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="Text" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_MaLop">
+    <End Role="LOPHOC" Type="Self.LOPHOC" Multiplicity="0..1" />
+    <End Role="HOCSINH" Type="Self.HOCSINH" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LOPHOC">
+        <PropertyRef Name="MaLop" />
+      </Principal>
+      <Dependent Role="HOCSINH">
+        <PropertyRef Name="MaLop" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QLHSEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="HOCSINHs" EntityType="Self.HOCSINH" />
+    <EntitySet Name="LOPHOCs" EntityType="Self.LOPHOC" />
+    <EntitySet Name="products" EntityType="Self.product" />
+    <AssociationSet Name="FK_MaLop" Association="Self.FK_MaLop">
+      <End Role="LOPHOC" EntitySet="LOPHOCs" />
+      <End Role="HOCSINH" EntitySet="HOCSINHs" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
