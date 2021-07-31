@@ -46,13 +46,12 @@
     @Html.ActionLink("Back to List", "Index")
 </div>
 
-@if (ViewBag.Error != null)
-{
-    <br />
-    <div class="alert alert-danger" role="alert">@ViewBag.Error</div>
+@{
+    if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger" role="alert">@ViewBag.Error</div>
+    }
 }
-
-
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }

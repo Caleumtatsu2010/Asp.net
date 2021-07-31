@@ -50,8 +50,6 @@ namespace WebApplication8.Controllers
         {
             try
             {
-
-
                 if (ModelState.IsValid)
                 {
                     db.Catalogies.Add(catalogy);
@@ -61,8 +59,8 @@ namespace WebApplication8.Controllers
             }
             catch (Exception ex)
             {
-                ViewBag.Error = "Loi nhap du lieu " + ex.Message;
-               
+                ViewBag.Error = "Lỗi Nhập Dữ Liệu " + ex.Message;
+
             }
             return View(catalogy);
 
@@ -104,6 +102,7 @@ namespace WebApplication8.Controllers
                 ViewBag.Error = "Lỗi sửa dữ liệu " + ex.Message;
             }
             return View(catalogy);
+            return View(catalogy);
         }
 
         // GET: Catalogies/Delete/5
@@ -126,21 +125,19 @@ namespace WebApplication8.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
+
             Catalogy catalogy = db.Catalogies.Find(id);
             try
             {
-                
                 db.Catalogies.Remove(catalogy);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 ViewBag.Error = "Không xóa được bản ghi này " + ex.Message;
                 return View("Delete", catalogy);
             }
-           
-
         }
 
         protected override void Dispose(bool disposing)

@@ -36,15 +36,13 @@
 
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            @Html.ActionLink("Quay Lại", "Index")
         </div>
     }
-
-
-
-    @if (ViewBag.Error != null)
-    {
-        <br />
-        <div class="alert alert-danger" role="alert">@ViewBag.Error</div>
+    @{
+        if (ViewBag.Error != null)
+        {
+            <div class="alert alert-danger" role="alert">@ViewBag.Error</div>
+        }
     }
 </div>

@@ -1,0 +1,77 @@
+﻿@model IEnumerable<WebApplication9.Models.Hang>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nha_CC.TenNCC)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TenHang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LuongCo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MoTa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ChietKhau)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HinhAnh)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nha_CC.TenNCC)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenHang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LuongCo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MoTa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ChietKhau)
+        </td>
+        
+        
+        <td>
+            @{
+                string ImagePath="~/wwwroot/" + item.HinhAnh;
+            }
+            <img src="@Url.Content(ImagePath)" width="100" class="img-thumbnail" /><br />
+            @Html.DisplayFor(modelItem => item.HinhAnh)
+
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaHang }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaHang }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaHang })
+        </td>
+    </tr>
+}
+
+</table>

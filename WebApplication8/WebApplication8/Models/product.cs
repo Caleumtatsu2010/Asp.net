@@ -11,44 +11,52 @@
     public partial class Product
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [DisplayName("Mã rượu")]
+        [DisplayName("Mã Rượu")]
+        
         public int ProductID { get; set; }
 
-        [Required(ErrorMessage ="Tên rượu không được để trống")]
+
         [StringLength(50)]
-        [DisplayName("Tên rượu")]
+        [DisplayName("Tên Rượu")]
+        [Required(ErrorMessage = "Tên Rượu không được để trống")]
+
         public string ProductName { get; set; }
 
         [Column(TypeName = "text")]
-        [DisplayName("Mô tả")]
+        [DisplayName("Mô Tả")]
         public string Description { get; set; }
 
         [Column(TypeName = "numeric")]
-        [DisplayName("Giá nhập")]
+        [DisplayName("Giá Nhập")]
+
         public decimal PurchasePrice { get; set; }
 
         [Column(TypeName = "numeric")]
         [DisplayName("Giá Bán")]
-        public decimal Price { get; set; }
 
-        [DisplayName("Số lượng")]
+        public decimal Price { get; set; }
+        [DisplayName("Số Lượng")]
+
         public int Quantity { get; set; }
 
         [StringLength(20)]
-        [DisplayName("Năm sản xuất")]
+        [DisplayName("Năm Sản XUất")]
+
         public string Vintage { get; set; }
 
-        [Required]
+
         [StringLength(10)]
+        [Required(ErrorMessage = "Mã danh mục không được để trống")]
         public string CatalogyID { get; set; }
 
         [Column(TypeName = "text")]
-        [DisplayName("Hình ảnh")]
         public string Image { get; set; }
 
-        [Required]
+
         [StringLength(100)]
         [DisplayName("Vùng")]
+        [Required(ErrorMessage = "Vùng không được để trống")]
+
         public string Region { get; set; }
 
         public virtual Catalogy Catalogy { get; set; }
