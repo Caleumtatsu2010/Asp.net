@@ -1,8 +1,18 @@
-﻿@model IEnumerable<WebApplication10.Models.Catalogy>
+﻿
 
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@{
+
+    var ListCatalogy = ViewBag.ListCatalogy as IEnumerable<WebApplication10.Models.Catalogy>;
+    var ListProduct = ViewBag.ListProduct as IEnumerable<WebApplication10.Models.Product>;
+
 }
 
 <h2>Index</h2>
@@ -10,31 +20,60 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.CatalogyName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.CatalogyName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CatalogyID.Trim() }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CatalogyID.Trim() }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CatalogyID.Trim() })
-        </td>
-    </tr>
+@using (Html.BeginForm())
+{
+    <p>
+        Tìm mặt hàng: @Html.TextBox("searchString", ViewBag.currentFilter as string)
+        <input type="submit" value="Tìm" />
+    </p>
 }
+    <table class="table">
+        <tr>
+            @*<th>
+                @Html.DisplayNameFor(model => model.CatalogyName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th></th>*@
+        </tr>
 
-</table>
+        @foreach (var item in ListCatalogy)
+        {
+            <tr>
+                <td>
+                    @*@Html.DisplayFor(modelItem => item.CatalogyName)*@
+                    @item.CatalogyName
+                </td>
+                <td>
+                    @*@Html.DisplayFor(modelItem => item.Description)*@
+                    @item.Description
+                </td>
+                <td>
+                    @*@Html.ActionLink("Edit", "Edit", new { id = item.CatalogyID.Trim() }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.CatalogyID.Trim() }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.CatalogyID.Trim() })*@
+                </td>
+            </tr>
+        }
+        @foreach (var item in ListProduct)
+        {
+            <tr>
+                <td>
+                    @*@Html.DisplayFor(modelItem => item.CatalogyName)*@
+                    @item.ProductName
+                </td>
+                <td>
+                    @*@Html.DisplayFor(modelItem => item.Description)*@
+                    @item.Price
+                </td>
+                <td>
+                    @*@Html.ActionLink("Edit", "Edit", new { id = item.CatalogyID.Trim() }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.CatalogyID.Trim() }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.CatalogyID.Trim() })*@
+                </td>
+            </tr>
+        }
+
+    </table>

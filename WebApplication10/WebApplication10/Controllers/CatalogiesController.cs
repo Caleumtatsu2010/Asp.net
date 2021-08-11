@@ -18,14 +18,21 @@ namespace WebApplication10.Controllers
         // GET: Catalogies
         public ActionResult Index()
         {
-            return View(db.Catalogies.ToList());
+
+            var catalogies = db.Catalogies.ToList();
+            ViewBag.ListCatalogy = catalogies;
+            var products = db.Products.ToList();
+            ViewBag.ListProduct = products;
+            return View();
         }
+        //phan trang don gian
         public ActionResult Display(int? page)
         {
             var danhmuc = db.Catalogies.Select(s => s);
+            //sap xep truoc khi phan trang
             danhmuc = danhmuc.OrderBy(s => s.CatalogyID);
-            int pageSize = 3;
-            int pageNumber = (page ?? 1);
+            int pageSize = 3;//kich thuoc trang
+            int pageNumber = (page ?? 1);//neu page = null thi tra bang 1
             return View(danhmuc.ToPagedList(pageNumber, pageSize));
         }
 

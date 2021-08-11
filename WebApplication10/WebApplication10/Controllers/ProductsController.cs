@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using WebApplication10.Models;
+using PagedList;
 
 namespace WebApplication10.Controllers
 {
@@ -21,12 +22,18 @@ namespace WebApplication10.Controllers
         //    return View(products.ToList());
         //}
 
-        //public ActionResult Index(String sortOrder)
+
+        //sap xep va tim kiem
+        //public ActionResult Index(String sortOrder, string searchString)
         //{
         //    ViewBag.SapTheoTen = String.IsNullOrEmpty(sortOrder) ? "ten_desc" : "";
         //    ViewBag.SapTheoGia = sortOrder == "gia" ? "gia_desc" : "gia";
         //    var products = db.Products.Select(p => p);
-        //    switch(sortOrder)
+        //    if(!String.IsNullOrEmpty(searchString))
+        //    {
+        //        products = products.Where(p => p.ProductName.Contains(searchString));
+        //    }
+        //    switch (sortOrder)
         //    {
         //        case "ten_desc":
         //            products = products.OrderByDescending(s => s.ProductName);
@@ -37,18 +44,33 @@ namespace WebApplication10.Controllers
         //        case "gia_desc":
         //            products = products.OrderByDescending(s => s.Price);
         //            break;
-        //        default :
+        //        default:
         //            products = products.OrderBy(s => s.ProductName);
         //            break;
         //    }
         //    return View(products.ToList());
         //}
-        public ActionResult Index(String sortOrder, string searchString)
+
+            //phan trang co sap xep tim kiem
+        public ActionResult Index(String sortOrder, string searchString, string currentFilter, int? page)
         {
+            ViewBag.CurrentSort = sortOrder;
+
             ViewBag.SapTheoTen = String.IsNullOrEmpty(sortOrder) ? "ten_desc" : "";
             ViewBag.SapTheoGia = sortOrder == "gia" ? "gia_desc" : "gia";
+
+            if(searchString !=null)
+            {
+                page = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+            ViewBag.CurrentFilter = searchString;
+
             var products = db.Products.Select(p => p);
-            if(!String.IsNullOrEmpty(searchString))
+            if (!String.IsNullOrEmpty(searchString))
             {
                 products = products.Where(p => p.ProductName.Contains(searchString));
             }
@@ -67,7 +89,10 @@ namespace WebApplication10.Controllers
                     products = products.OrderBy(s => s.ProductName);
                     break;
             }
-            return View(products.ToList());
+            int pageSize = 2;//kich thuoc trang
+            int pageNumber = (page ?? 1);//neu page = null thi tra bang 1
+            return View(products.ToPagedList(pageNumber, pageSize));
+
         }
 
         // GET: Products/Details/5
@@ -103,6 +128,7 @@ namespace WebApplication10.Controllers
             {
                 if (ModelState.IsValid)
                 {
+                    
                     product.Image = "";
                     var f = Request.Files["ImageFile"];
                     if(f != null & f.ContentLength>0)

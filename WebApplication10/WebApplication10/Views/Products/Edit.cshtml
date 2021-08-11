@@ -6,9 +6,12 @@
 }
 
 <h2>Edit</h2>
+@{ 
+    ViewBag.Title = "Edit";
+    var ImagePath = "~/wwwroot/" + Model.Image;
+}
 
-
-@using (Html.BeginForm())
+@using (Html.BeginForm("Edit", "Products", FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
 
@@ -77,9 +80,15 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Image, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
+
+                @*-----------------------------------------------------------*@
+
                 <img id="output" class="img-rounded" width="180" height="200" src="@Url.Content(@ImagePath)" />
                 <p><label for="u" style="cursor:pointer;">Chọn file ảnh</label></p>
                 <input name="ImageFile" id="u" type="file" style="display:none;" onchange="loadFile(event)" />
+
+
+                @*-----------------------------------------------------------*@
             </div>
         </div>
 

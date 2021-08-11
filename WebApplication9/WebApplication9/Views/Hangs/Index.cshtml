@@ -1,5 +1,7 @@
 ﻿@model IEnumerable<WebApplication9.Models.Hang>
 
+
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -36,42 +38,43 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Nha_CC.TenNCC)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TenHang)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Gia)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LuongCo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.MoTa)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ChietKhau)
-        </td>
-        
-        
-        <td>
-            @{
-                string ImagePath="~/wwwroot/" + item.HinhAnh;
-            }
-            <img src="@Url.Content(ImagePath)" width="100" class="img-thumbnail" /><br />
-            @Html.DisplayFor(modelItem => item.HinhAnh)
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nha_CC.TenNCC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenHang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LuongCo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MoTa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ChietKhau)
+            </td>
 
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MaHang }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MaHang }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MaHang })
-        </td>
-    </tr>
-}
+
+            <td>
+                @{
+                    string ImagePath = "~/wwwroot/" + item.HinhAnh;
+                }
+                <img src="@Url.Content(ImagePath)" width="100" class="img-thumbnail" /><br />
+                @Html.DisplayFor(modelItem => item.HinhAnh)
+
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MaHang }) |
+                @Html.ActionLink("Details", "Details", new { id = item.MaHang }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.MaHang })
+            </td>
+        </tr>
+    }
 
 </table>
