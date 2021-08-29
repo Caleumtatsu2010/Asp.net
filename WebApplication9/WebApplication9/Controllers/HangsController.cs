@@ -100,10 +100,9 @@ namespace WebApplication9.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "MaHang,MaNCC,TenHang,Gia,LuongCo,MoTa,ChietKhau,HinhAnh")] Hang hang)
-        {try
+        {
+            try
             {
-
-
                 if (ModelState.IsValid)
                 {
                     hang.HinhAnh = "";
