@@ -16,42 +16,50 @@ namespace WebApplication10.Controllers
         private WineStoreModel1 db = new WineStoreModel1();
 
         // GET: Products
-        //public ActionResult Index()
-        //{
-        //    var products = db.Products.Include(p => p.Catalogy);
-        //    return View(products.ToList());
-        //}
+        public ActionResult Index()
+        {
+            var products = db.Products.Include(p => p.Catalogy);
+            return View(products.ToList());
+        }
 
 
         //sap xep va tim kiem
-        //public ActionResult Index(String sortOrder, string searchString)
-        //{
-        //    ViewBag.SapTheoTen = String.IsNullOrEmpty(sortOrder) ? "ten_desc" : "";
-        //    ViewBag.SapTheoGia = sortOrder == "gia" ? "gia_desc" : "gia";
-        //    var products = db.Products.Select(p => p);
-        //    if(!String.IsNullOrEmpty(searchString))
-        //    {
-        //        products = products.Where(p => p.ProductName.Contains(searchString));
-        //    }
-        //    switch (sortOrder)
-        //    {
-        //        case "ten_desc":
-        //            products = products.OrderByDescending(s => s.ProductName);
-        //            break;
-        //        case "gia":
-        //            products = products.OrderBy(s => s.Price);
-        //            break;
-        //        case "gia_desc":
-        //            products = products.OrderByDescending(s => s.Price);
-        //            break;
-        //        default:
-        //            products = products.OrderBy(s => s.ProductName);
-        //            break;
-        //    }
-        //    return View(products.ToList());
-        //}
+        public ActionResult Index( int  min, int max)
+        {
+            var employ;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                employ = employ.where(c.MinPrice >= employ.MinPrice && c.MaxPrice <= product.MaxPrice)
+            }
+            where(c.MinPrice >= product.MinPrice && c.MaxPrice <= product.MaxPrice)
 
-            //phan trang co sap xep tim kiem
+            return View(products.ToList());
+        }
+
+
+            //ViewBag.SapTheoTen = String.IsNullOrEmpty(sortOrder) ? "ten_desc" : "";
+            //ViewBag.SapTheoGia = sortOrder == "gia" ? "gia_desc" : "gia";
+            //var products = db.Products.Select(p => p);
+
+            //switch (sortOrder)
+            //{
+            //    case "ten_desc":
+            //        products = products.OrderByDescending(s => s.ProductName);
+            //        break;
+            //    case "gia":
+            //        products = products.OrderBy(s => s.Price);
+            //        break;
+            //    case "gia_desc":
+            //        products = products.OrderByDescending(s => s.Price);
+            //        break;
+            //    default:
+            //        products = products.OrderBy(s => s.ProductName);
+            //        break;
+            //}
+
+        }
+
+        //phan trang co sap xep tim kiem
         public ActionResult Index(String sortOrder, string searchString, string currentFilter, int? page)
         {
             ViewBag.CurrentSort = sortOrder;
