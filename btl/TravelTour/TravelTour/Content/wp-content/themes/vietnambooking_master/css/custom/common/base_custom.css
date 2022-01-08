@@ -1,0 +1,920 @@
+﻿.no-padding-right {
+    padding-right: 0px;
+}
+
+#popup.fancybox-content {
+    padding: 0px;
+}
+/* form date default */
+#ui-datepicker-div.form-date-default {
+    background: #fff;
+    min-width: 360px;
+    padding: 10px 10px;
+    box-shadow: 0px 3px 6px #9E9E9E;
+}
+
+    #ui-datepicker-div.form-date-default .ui-datepicker-calendar tr th {
+        font-size: 16px;
+        font-family: 'r_conde_bold';
+        color: #161616;
+    }
+
+        #ui-datepicker-div.form-date-default .ui-datepicker-calendar tr th.ui-datepicker-week-end {
+            color: #10bef3;
+        }
+
+            #ui-datepicker-div.form-date-default .ui-datepicker-calendar tr th.ui-datepicker-week-end:last-child {
+                color: #ff0000;
+            }
+
+    #ui-datepicker-div.form-date-default .ui-datepicker-header {
+        border: 0px;
+        background: #fff;
+        color: #2f2f2f;
+        font-size: 16px;
+        font-family: 'r_conde_bold';
+        font-weight: normal;
+    }
+
+        #ui-datepicker-div.form-date-default .ui-datepicker-header .ui-datepicker-title {
+            font-size: 16px;
+        }
+
+    #ui-datepicker-div.form-date-default .ui-datepicker-today .ui-state-highlight {
+        background: #efefef;
+        border: 1px solid #efefef;
+    }
+
+    #ui-datepicker-div.form-date-default .ui-datepicker-current-day .ui-state-active {
+        background: #0096ff;
+        color: #fff;
+    }
+
+        #ui-datepicker-div.form-date-default .ui-datepicker-current-day .ui-state-active .ui-datepicker-day {
+            color: #fff;
+        }
+
+        #ui-datepicker-div.form-date-default .ui-datepicker-current-day .ui-state-active .ui-datepicker-lunar {
+            color: #fff;
+        }
+
+    #ui-datepicker-div.form-date-default .ui-datepicker-day {
+        font-size: 16px;
+        color: #161616;
+        font-family: 'r_conde_bold';
+        padding-left: 5px;
+    }
+
+    #ui-datepicker-div.form-date-default .ui-datepicker-lunar {
+        font-size: 12px;
+        font-family: 'r_conde_regular';
+        color: #c4c4c4;
+        padding-right: 5px;
+    }
+
+    #ui-datepicker-div.form-date-default .ui-datepicker-calendar tbody tr td {
+        padding: 3px;
+    }
+
+        #ui-datepicker-div.form-date-default .ui-datepicker-calendar tbody tr td a {
+            border: 1px solid transparent;
+            border-radius: 7px;
+            outline: 0px;
+        }
+
+    #ui-datepicker-div.form-date-default .ui-widget-header .ui-datepicker-prev {
+        top: 0px;
+        left: 0px;
+        cursor: pointer;
+    }
+
+        #ui-datepicker-div.form-date-default .ui-widget-header .ui-datepicker-prev .ui-icon {
+            background: url(../../../images/index/icon_arrow_left.png) top center no-repeat;
+            padding: 9px;
+        }
+
+    #ui-datepicker-div.form-date-default .ui-widget-header .ui-datepicker-next {
+        top: 0px;
+        right: 0px;
+        cursor: pointer;
+    }
+
+        #ui-datepicker-div.form-date-default .ui-widget-header .ui-datepicker-next .ui-icon {
+            background: url(../../../images/index/icon_arrow_right.png) top center no-repeat;
+            padding: 9px;
+        }
+
+    #ui-datepicker-div.form-date-default .ui-widget-header .ui-state-hover {
+        border: 1px solid transparent;
+        background: transparent;
+    }
+/* end form date default */
+
+/* rating comment */
+.box-item-star {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+}
+
+    .box-item-star .item-star {
+        position: relative;
+        width: 17px;
+        height: 17px;
+        display: inline-block;
+        font-size: 17px;
+        margin: 0px 3px;
+    }
+
+        .box-item-star .item-star i {
+            position: absolute;
+            left: 0px;
+            overflow: hidden;
+        }
+
+            .box-item-star .item-star i.far.fa-star {
+                opacity: 0.5;
+            }
+/* end rating comment */
+
+/* radio nice */
+.checkbox-material {
+    display: inline-block;
+    margin-left: 16px
+}
+
+    .checkbox-material .toggle {
+        position: relative;
+        display: block;
+        width: 40px;
+        height: 20px;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        transform: translate3d(0, 0, 0)
+    }
+
+        .checkbox-material .toggle span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            display: block;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(154,153,153,0.5);
+            transition: all .2s ease
+        }
+
+            .checkbox-material .toggle span:before {
+                content: "";
+                position: absolute;
+                display: block;
+                margin: -18px;
+                width: 56px;
+                height: 56px;
+                background: rgba(79,46,220,0.5);
+                border-radius: 50%;
+                transform: scale(0);
+                opacity: 1;
+                pointer-events: none
+            }
+
+        .checkbox-material .toggle:before {
+            content: "";
+            position: relative;
+            top: 3px;
+            left: 3px;
+            width: 34px;
+            height: 14px;
+            display: block;
+            background: #9A9999;
+            border-radius: 8px;
+            transition: background .2s ease
+        }
+
+    .checkbox-material #cbx:checked + .toggle:before {
+        background: #004f8b
+    }
+
+    .checkbox-material #cbx:checked + .toggle span {
+        background: #ffffff;
+        transform: translateX(20px);
+        transition: all 0.2s cubic-bezier(0.8, 0.4, 0.3, 1.25),background 0.15s ease;
+        box-shadow: 0 3px 8px rgba(79,46,220,0.2)
+    }
+
+        .checkbox-material #cbx:checked + .toggle span:before {
+            transform: scale(1);
+            opacity: 0;
+            transition: all 0.4s ease
+        }
+
+.btn-blue {
+    background: transparent;
+    position: relative;
+    border: none;
+    padding: 0px;
+    width: 100%
+}
+/* end radio nice */
+
+span.twitter-typeahead {
+    width: 100%;
+}
+
+ul.list-tour-top {
+    padding: 0px;
+    margin: 0px;
+    padding: 5px;
+    display: inline-block;
+    width: 25%;
+}
+
+    ul.list-tour-top li {
+        list-style: none;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+        ul.list-tour-top li img {
+            width: 50px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        ul.list-tour-top li .box-info {
+            display: inline-block;
+            padding-left: 5px;
+        }
+
+h5.item-title-autocomplete {
+    font-size: 16px;
+    text-align: center;
+    color: #1397e2;
+    text-transform: none;
+}
+
+
+.typeahead, .tt-query, .tt-hint {
+    width: 100%;
+    height: 30px;
+    padding: 20px 12px;
+    font-size: 14px;
+    line-height: 40px;
+}
+
+.tt-query {
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.tt-hint {
+    color: #999
+}
+
+.tt-menu {
+    width: 100%;
+    margin: 5px 0;
+    padding: 8px 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    z-index: 100000 !important;
+}
+
+.tt-suggestion {
+    padding: 3px 20px;
+    font-size: 14px;
+    line-height: 24px;
+    text-align: left;
+}
+
+    .tt-suggestion h4.media-heading {
+        font-size: 14px;
+    }
+
+    .tt-suggestion:hover {
+        cursor: pointer;
+        color: #fff;
+        background-color: #0096ff;
+    }
+
+    .tt-suggestion.tt-cursor {
+        color: #fff;
+        background-color: #0096ff;
+    }
+
+    .tt-suggestion p {
+        margin: 0;
+    }
+
+.gist {
+    font-size: 14px;
+}
+
+/* SHIMMER  */
+.shimmer-box {
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0px 0px 3px #ccc;
+    margin-bottom: 5px;
+}
+
+.shimmer {
+    background: #f6f7f8;
+    background-image: linear-gradient(to right, #f6f7f8 0%, #edeef1 20%, #f6f7f8 40%, #f6f7f8 100%);
+    background-repeat: no-repeat;
+    background-size: 800px 104px;
+    display: inline-block;
+    position: relative;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: placeholderShimmer;
+    -webkit-animation-timing-function: linear;
+}
+
+box.shimmer {
+    height: 150px;
+    width: 30%;
+}
+
+.shimmer-box.mobile box.shimmer {
+    width: 100%;
+}
+
+div.shimmer-div {
+    display: inline-flex;
+    flex-direction: column;
+    margin-left: 3%;
+    margin-top: 15px;
+    vertical-align: top;
+    width: 65%;
+    margin-top: 0px;
+}
+
+.shimmer-box.mobile div.shimmer-div {
+    margin-left: 0px;
+    width: 100%;
+}
+
+lines.shimmer {
+    height: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+photo.shimmer {
+    display: block !important;
+    width: 325px;
+    height: 100px;
+    margin-top: 15px;
+}
+
+@-webkit-keyframes placeholderShimmer {
+    0% {
+        background-position: -468px 0;
+    }
+
+    100% {
+        background-position: 468px 0;
+    }
+}
+/* END SHIMMER  */
+.box-scroll-top {
+    text-align: center;
+    margin: 20px 0px;
+}
+
+    .box-scroll-top .btn-post-scroll-top {
+        background-color: #FF5E1F;
+        border-radius: 4px;
+        border: 1px solid #ffffff;
+        display: inline-block;
+        cursor: pointer;
+        color: white;
+        font-size: 19px;
+        padding: 16px 105px;
+        text-decoration: none;
+        text-align: center;
+        outline: 0;
+        font-weight: normal;
+    }
+
+        .box-scroll-top .btn-post-scroll-top:hover, .box-scroll-top .btn-post-scroll-top:active {
+            background-color: #FF5E1F;
+            color: #fff;
+        }
+
+.main-box-content .box-scroll-top .btn-post-scroll-top {
+    background-color: #FF5E1F;
+    border-radius: 4px;
+    border: 1px solid #ffffff;
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+    padding: 16px;
+    text-align: center;
+    outline: 0;
+    font-weight: normal;
+}
+
+/* BREADCRUMB */
+#breadcrumb-default {
+    max-width: 1140px;
+    margin: auto;
+}
+
+    #breadcrumb-default .breadcrumb {
+        font-family: 'os_semi_bold';
+        font-size: 13px;
+        padding: 8px 0px;
+        background: transparent;
+    }
+
+        #breadcrumb-default .breadcrumb span {
+            color: #085ae8;
+        }
+
+        #breadcrumb-default .breadcrumb a {
+            text-decoration: none;
+        }
+
+            #breadcrumb-default .breadcrumb a span {
+                color: #191919;
+            }
+/* END BREADCRUMB */
+
+/* icon ui vnbk */
+.icon-vnbk {
+    background-image: url('https://data.vietnambooking.com/common/ui_icon/ui_icon_vnbk.svg');
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    vertical-align: middle;
+}
+
+    .icon-vnbk.icon-arrow-right-0-0 {
+        background-position: 0px 0px;
+    }
+
+    .icon-vnbk.icon-arrow-left-48-0 {
+        background-position: -48px 0px;
+    }
+
+    .icon-vnbk.icon-arrow-down-blue-96-0 {
+        background-position: -96px 0px;
+    }
+
+    .icon-vnbk.icon-arrow-up-blue-144-0 {
+        background-position: -144px 0px;
+    }
+
+    .icon-vnbk.icon-arrow-down-gray-192-0 {
+        background-position: -192px 0px;
+    }
+
+    .icon-vnbk.icon-arrow-up-gray-240-0 {
+        background-position: -240px 0px;
+    }
+
+    .icon-vnbk.icon-arrow-left-large-288-0 {
+        background-position: -288px 0px;
+    }
+
+    .icon-vnbk.icon-arrow-right-large-336-0 {
+        background-position: -336px 0px;
+    }
+
+    .icon-vnbk.icon-times-384â€¬-0 {
+        background-position: -384px 0px;
+    }
+
+    .icon-vnbk.icon-long-arrow-right-432â€¬â€¬-0 {
+        background-position: -432px 0px;
+    }
+
+    .icon-vnbk.icon-map-marker-blue-480-0 {
+        background-position: -480px 0px;
+    }
+
+    .icon-vnbk.icon-map-marker-gray-528â€¬â€¬-0 {
+        background-position: -528px 0px;
+    }
+
+    .icon-vnbk.icon-map-book-612-0 {
+        background-position: -612px 0px;
+    }
+
+    .icon-vnbk.icon-long-arrow-left-660-0 {
+        background-position: -660px 0px;
+    }
+
+    .icon-vnbk.icon-delete-708-0 {
+        background-position: -708px 0px;
+    }
+
+    .icon-vnbk.icon-user-0-48 {
+        background-position: 0px -48px;
+    }
+
+    .icon-vnbk.icon-email-48-48 {
+        background-position: -48px -48px;
+    }
+
+    .icon-vnbk.icon-phone-96-48 {
+        background-position: -96px -48px;
+    }
+
+    .icon-vnbk.icon-special-request-144-48 {
+        background-position: -144px -48px;
+    }
+
+    .icon-vnbk.icon-refund-192-48 {
+        background-position: -192px -48px;
+    }
+
+    .icon-vnbk.icon-vietnam-flag-240-48 {
+        background-position: -240px -48px;
+    }
+
+    .icon-vnbk.icon-booking-id-288-48 {
+        background-position: -288px -48px;
+    }
+
+    .icon-vnbk.icon-visa-336-48 {
+        background-position: -336px -48px;
+    }
+
+    .icon-vnbk.icon-customers-384-48 {
+        background-position: -384px -48px;
+    }
+
+    .icon-vnbk.icon-lock-432-48 {
+        background-position: -432px -48px;
+    }
+
+    .icon-vnbk.icon-voucher-480-48 {
+        background-position: -480px -48px;
+    }
+
+    .icon-vnbk.icon-marker-528-48 {
+        background-position: -528px -48px;
+    }
+
+    .icon-vnbk.icon-calendar-from-570-48 {
+        background-position: -570px -48px;
+    }
+
+    .icon-vnbk.icon-calendar-to-612-48 {
+        background-position: -614px -48px;
+    }
+
+    .icon-vnbk.icon-calendar-small-0-96 {
+        background-position: 0px -96px;
+    }
+
+    .icon-vnbk.icon-calendar-big-48-96 {
+        background-position: -48px -96px;
+    }
+
+    .icon-vnbk.icon-bolt-small-96-96 {
+        background-position: -96px -96px;
+    }
+
+    .icon-vnbk.icon-bolt-large-144-96 {
+        background-position: -144px -96px;
+    }
+
+    .icon-vnbk.icon-refund-gray-192-96 {
+        background-position: -192px -96px;
+    }
+
+    .icon-vnbk.icon-refund-240-96 {
+        background-position: -240px -96px;
+    }
+
+    .icon-vnbk.icon-minus-circle-disable-288-96 {
+        background-position: -288px -96px;
+    }
+
+    .icon-vnbk.icon-minus-circle-enable-336-96 {
+        background-position: -336px -96px;
+    }
+
+    .icon-vnbk.icon-question-disable-432-96 {
+        background-position: -432px -96px;
+    }
+
+    .icon-vnbk.icon-question-480-96 {
+        background-position: -479px -96px;
+    }
+
+    .icon-vnbk.icon-question-enable-528-96 {
+        background-position: -528px -96px;
+    }
+
+    .icon-vnbk.icon-passenger-528-96 {
+        background-position: -528px -96px;
+    }
+
+    .icon-vnbk.icon-room-576-96 {
+        background-position: -570px -96px;
+    }
+
+    .icon-vnbk.icon-passenger-624-96 {
+        background-position: -614px -96px;
+    }
+
+    .icon-vnbk.icon-filter-0-144 {
+        background-position: 0px -144px;
+    }
+
+    .icon-vnbk.icon-sort-48-144 {
+        background-position: -48px -144px;
+    }
+
+    .icon-vnbk.icon-radio-check-96-144 {
+        background-position: -96px -144px;
+    }
+
+    .icon-vnbk.icon-radio-uncheck-144-144 {
+        background-position: -144px -144px;
+    }
+
+    .icon-vnbk.icon-checkbox-check-192-144 {
+        background-position: -192px -144px;
+    }
+
+    .icon-vnbk.icon-checkbox-uncheck-240-144 {
+        background-position: -240px -144px;
+    }
+
+    .icon-vnbk.icon-step-point-288-144 {
+        background-position: -288px -144px;
+    }
+
+    .icon-vnbk.icon-tick-336-144 {
+        background-position: -336px -144px;
+    }
+
+    .icon-vnbk.icon-star-384-144 {
+        background-position: -384px -144px;
+    }
+
+    .icon-vnbk.icon-star-half-432-144 {
+        background-position: -240px -144px;
+    }
+
+    .icon-vnbk.icon-facebook-0-192 {
+        background-position: 0px -192px;
+    }
+
+    .icon-vnbk.icon-instagram-48-192 {
+        background-position: -48px -192px;
+    }
+
+    .icon-vnbk.icon-youtube-96-192 {
+        background-position: 96px -192px;
+    }
+/* ****************** */
+/* end icon ui vnbk */
+
+/* FLIGHT MONTH */
+.box-data-month-price {
+    margin: 20px auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+    .box-data-month-price .box-data-month-price-inner {
+        display: grid;
+        grid-template-columns: 14.2% 14.2% 14.2% 14.2% 14.2% 14.2% 14.8%;
+        border: 1px solid #d4d9eb;
+        border-top: 0px;
+        border-bottom: 0px;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+        .box-data-month-price .box-data-month-price-inner:after {
+            content: "";
+            border-bottom: 1px solid #d4d9eb;
+            width: 100%;
+            position: absolute;
+            bottom: 0px;
+        }
+
+        .box-data-month-price .box-data-month-price-inner.loadding:after {
+            position: static;
+        }
+
+        .box-data-month-price .box-data-month-price-inner.loadding {
+            display: block;
+        }
+
+
+    .box-data-month-price .box-action-data-month {
+        margin-bottom: 0px;
+        background: #202d66;
+        color: #fff;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        padding: 15px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    .box-data-month-price.type-mobile .box-action-data-month {
+        grid-template-columns: auto auto;
+    }
+
+    .box-data-month-price .box-action-data-month > div {
+        padding: 0px 7.5px;
+    }
+
+        .box-data-month-price .box-action-data-month > div:first-child {
+        }
+
+        .box-data-month-price .box-action-data-month > div:last-child {
+        }
+
+    .box-data-month-price .box-action-data-month label {
+        font-weight: normal;
+        color: #ffffff;
+        font-family: 'os_regular';
+        font-size: 13px;
+    }
+
+    .box-data-month-price .box-action-data-month select {
+        font-size: 13px;
+        color: #202d66;
+        font-family: 'os_semi_bold';
+        padding: 0px;
+        border-radius: 3px;
+        height: 42px;
+    }
+
+    .box-data-month-price .box-data-month-price-inner .box-title {
+        background: #f1f3f9;
+        font-size: 16px;
+        color: #191919;
+        font-family: 'os_regular';
+        text-align: center;
+        line-height: 42px;
+        border-bottom: 1px solid #d4d9eb;
+    }
+
+    .box-data-month-price .box-data-month-price-inner .box-content {
+        border-left: 1px solid #d4d9eb;
+        border-bottom: 1px solid #d4d9eb;
+        min-height: 75px;
+    }
+
+        .box-data-month-price .box-data-month-price-inner .box-content:not(.type-null) {
+            cursor: pointer;
+        }
+
+        .box-data-month-price .box-data-month-price-inner .box-content.day-of-week-2 {
+            border-left: 0px !important;
+        }
+
+        .box-data-month-price .box-data-month-price-inner .box-content:last-child {
+            border-right: 1px solid #d4d9eb;
+        }
+
+        .box-data-month-price .box-data-month-price-inner .box-content.type-null {
+            font-size: 16px;
+            color: #191919;
+            font-family: 'os_regular';
+            padding: 10px;
+            border-left: 1px solid #d4d9eb;
+            border-bottom: 1px solid #d4d9eb;
+        }
+
+        .box-data-month-price .box-data-month-price-inner .box-content .content-top {
+            padding: 10px;
+            position: relative;
+            margin-top: 0px;
+        }
+
+            .box-data-month-price .box-data-month-price-inner .box-content .content-top .day-of-month {
+                font-size: 15px;
+                color: #515151;
+                font-family: 'os_regular';
+            }
+
+            .box-data-month-price .box-data-month-price-inner .box-content .content-top .logo-airlines {
+                text-align: right;
+                position: absolute;
+                right: 5px;
+                top: 10px;
+            }
+
+    .box-data-month-price.type-mobile .box-data-month-price-inner .box-content .content-top {
+        padding: 0px;
+    }
+
+        .box-data-month-price.type-mobile .box-data-month-price-inner .box-content .content-top .day-of-month {
+            font-size: 14px;
+            color: #515151;
+            font-family: 'os_semi_bold';
+            display: block;
+            text-align: center;
+            padding-top: 20px;
+        }
+
+    .box-data-month-price .box-data-month-price-inner .box-content.type-null {
+        font-size: 14px;
+        color: #515151;
+        font-family: 'os_semi_bold';
+        display: block;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    .box-data-month-price.type-mobile .box-data-month-price-inner .box-content .content-bottom {
+        padding: 0px;
+        text-align: center;
+    }
+
+    .box-data-month-price.type-mobile .box-data-month-price-inner .box-content .content-top .logo-airlines {
+        display: block;
+        text-align: center;
+    }
+
+    .box-data-month-price .box-data-month-price-inner .box-content .content-top .logo-airlines img {
+        height: 20px;
+    }
+
+    .box-data-month-price .box-data-month-price-inner .box-content .content-bottom {
+        padding-bottom: 5px;
+        text-align: right;
+        padding-right: 5px;
+    }
+
+        .box-data-month-price .box-data-month-price-inner .box-content .content-bottom .box-price {
+            font-size: 15px;
+            font-family: 'os_bold';
+            color: #2ab56d;
+        }
+
+table.tlb-data-popup-month tr td {
+    border-top: 0px;
+}
+
+    table.tlb-data-popup-month tr td label {
+        color: #434343;
+        font-size: 14px;
+        font-family: 'os_regular';
+        text-align: left;
+        display: block;
+        font-weight: normal;
+    }
+
+    table.tlb-data-popup-month tr td .box-date-input {
+        display: grid;
+        grid-template-columns: auto auto;
+        text-align: left;
+    }
+
+        table.tlb-data-popup-month tr td .box-date-input label {
+            color: #434343;
+            font-size: 14px;
+            font-family: 'os_regular';
+        }
+
+        table.tlb-data-popup-month tr td .box-date-input input {
+            color: #202d66;
+            font-family: 'os_semi_bold';
+            font-size: 13px;
+            background: #fff;
+        }
+
+        table.tlb-data-popup-month tr td .box-date-input > div:first-child {
+            padding-right: 10px;
+        }
+
+    table.tlb-data-popup-month tr td .box-type-itinerary label {
+        color: #434343;
+        font-size: 14px;
+        font-family: 'os_regular';
+        min-width: 120px;
+        cursor: pointer;
+    }
+
+table.table.tlb-data-popup-month .box-type-itinerary label {
+    display: inline-block;
+    vertical-align: top;
+}
+/* END FLIGHT MONTH*/

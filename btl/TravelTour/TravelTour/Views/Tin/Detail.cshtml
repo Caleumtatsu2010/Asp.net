@@ -1,0 +1,223 @@
+﻿@model TravelTour.Models.TinTuc
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/clientlayout.cshtml";
+}
+
+<!--  FORM  FRONTPAGE --><div class="single-box-content">
+    <div class="container_12">
+        <div class="grid_12">
+            <div class="grid_8 alpha">
+                <div class="single-box-content-inner">
+                    <h1>@Model.tieuDe</h1>
+                    <div class="single-content">
+
+                        <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+                        @*<html>
+                                <body>
+                                    <p style="text-align: justify;">
+                                        <span><span style="">N&#7871;u n&oacute;i &#273;&#7871;n nh&#7919;ng &#273;i&#7875;m&nbsp;<a href="https://www.vietnambooking.com/du-lich/tour-du-lich/du-lich-ha-noi.html"><strong>du l&#7883;ch H&agrave; N&#7897;i</strong></a> khu v&#7921;c g&#7847;n&nbsp;kho&#7843;ng 200 km<a href="https://www.vietnambooking.com/du-lich/tour-du-lich/du-lich-ha-noi.html"> </a>th&igrave; c&oacute; kh&aacute; nhi&#7873;u b&atilde;i bi&#7875;n kh&aacute; &#273;&#7865;p v&agrave; ch&#7845;t, l&agrave; l&#7921;a ch&#7885;n l&yacute; t&#432;&#7903;ng d&agrave;nh cho du kh&aacute;ch v&agrave;o nh&#7919;ng ng&agrave;y cu&#7889;i tu&#7847;n, d&#7883;p ngh&#7881; l&#7877;. &#272;&#7871;n v&#7899;i nh&#7919;ng thi&ecirc;n &#273;&#432;&#7901;ng bi&#7875;n g&#7847;n H&agrave; N&#7897;i, du kh&aacute;ch kh&ocirc;ng ch&#7881; &#273;&#432;&#7907;c t&#7853;n h&#432;&#7903;ng kh&ocirc;ng kh&iacute; trong l&agrave;nh, &#273;&#7855;m m&igrave;nh trong l&agrave;n n&#432;&#7899;c bi&#7875;n trong xanh m&agrave; c&ograve;n th&#432;&#7903;ng th&#7913;c nhi&#7873;u h&#7843;i s&#7843;n t&#432;&#417;i ngon v&agrave; tham gia nhi&#7873;u ho&#7841;t &#273;&#7897;ng tr&ecirc;n bi&#7875;n th&uacute; v&#7883;&hellip;&nbsp;Ch&#7881; c&#7847;n thu x&#7871;p hai ng&agrave;y cu&#7889;i tu&#7847;n l&agrave; du kh&aacute;ch &#273;&atilde; c&oacute; &#273;&#7911; th&#7901;i gian &#273;&#7875; tr&#7843;i nghi&#7879;m &nbsp;5 b&atilde;i bi&#7875;n tuy&#7879;t &#273;&#7865;p g&#7847;n H&agrave; N&#7897;i r&#7891;i &#273;&#7845;y nh&eacute;.</span></span>
+                                    </p>
+
+                                    <h2 style="text-align: justify;">
+                                        <span><span style=""><strong>L&ecirc;n l&#7883;ch kh&aacute;m ph&aacute; 5 thi&ecirc;n &#273;&#432;&#7901;ng bi&#7875;n tuy&#7879;t &#273;&#7865;p g&#7847;n H&agrave; N&#7897;i&nbsp;</strong></span></span>
+                                    </h2>
+
+                                    <h3 style="text-align: justify;">
+                                        <span><span style=""><strong>Tr&agrave; C&#7893;, M&oacute;ng C&aacute;i</strong></span></span>
+                                    </h3>
+
+                                    <p style="text-align: justify;">
+                                        <span><span style="">N&#7857;m c&aacute;ch H&agrave; N&#7897;i kho&#7843;ng 300km, &#273;&acirc;y l&agrave; &#273;&#7883;a &#273;i&#7875;m l&yacute; t&#432;&#7903;ng &#273;&#7875; du kh&aacute;ch c&oacute; th&#7875; b&#7893; sung&rdquo;vitamin sea&rdquo; sau nh&#7919;ng ng&agrave;y h&#7885;c t&#7853;p, l&agrave;m vi&#7879;c c&#259;ng th&#7859;ng. Bi&#7875;n Tr&agrave; C&#7893; c&oacute; nhi&#7873;u kh&aacute;ch s&#7841;n, nh&agrave; ngh&#7881; v&#7899;i gi&aacute; h&#7907;p l&yacute; s&#7861;n s&agrave;ng ph&#7909;c v&#7909; nhu c&#7847;u ngh&#7881; d&#432;&#7905;ng vui ch&#417;i c&#7911;a du kh&aacute;ch trong 2 ng&agrave;y cu&#7889;i tu&#7847;n. Tr&agrave; C&#7893; c&oacute; b&atilde;i t&#7855;m r&#7897;ng v&agrave; b&#7857;ng ph&#7859;ng, c&aacute;t tr&#7855;ng m&#7883;n, n&#432;&#7899;c trong xanh su&#7889;t b&#7889;n m&ugrave;a.</span></span>
+                                    </p>
+
+                                    <p style="text-align: center;">
+                                        <img alt="du lich gan ha noi gia tu tuc" class="lazy alignnone size-full wp-image-38657" height="420" src="https://data.vietnambooking.com/common/svg/icon_img_default.svg" style="" title="Du l&#7883;ch bi&#7875;n Tr&agrave; C&#7893;" width="650" data-src="https://www.vietnambooking.com/wp-content/uploads/2017/08/du-lich-ha-noi-16-8-2017-di-bien-2.jpg">
+                                    </p>
+
+                                    <p style="text-align: justify;">
+                                        <span><span style="">Du kh&aacute;ch &#273;i <a href="https://www.vietnambooking.com/du-lich"><strong>du l&#7883;ch gi&aacute; r&#7867;</strong></a> khi &#273;&#7871;n Tr&agrave; C&#7893; s&#7869; b&#7883; quy&#7871;n r&#361; b&#7903;i kh&iacute; h&#7853;u m&aacute;t m&#7867; &#7903; n&#417;i &#273;&acirc;y, kh&ocirc;ng gian y&ecirc;n &#7843;, nh&#7865; nh&agrave;ng, mang &#273;&#7853;m n&eacute;t hoang s&#417; b&#7903;i nh&#7919;ng c&#7891;n c&aacute;t v&agrave; h&#7879; th&#7889;ng sinh th&aacute;i r&#7915;ng ng&#7853;p m&#7863;n &#273;&#7863;c tr&#432;ng. Ch&iacute;nh nh&#7901; s&#7921; hoang s&#417; v&#7889;n c&oacute; n&ecirc;n du kh&aacute;ch c&oacute; th&#7875; th&#432;&#7903;ng th&#7913;c h&#7843;i s&#7843;n t&#432;&#417;i roi r&oacute;i ngay b&ecirc;n b&#7901; bi&#7875;n khi thuy&#7873;n ch&agrave;i ng&#432; d&acirc;n v&#7915;a m&#7899;i &#273;&aacute;nh b&#7855;t v&#7873;. Th&#7853;t l&agrave; qu&aacute; &#273;&atilde; v&#7899;i nh&#7919;ng t&iacute;n &#273;&#7891; m&ecirc; h&#7843;i s&#7843;n. Ngo&agrave;i ra, &#7903; Tr&agrave; C&#7893; du kh&aacute;ch c&oacute; th&#7875; tham quan C&#7891;n Mang m&#7897;t &#273;&#7883;a &#273;i&#7875;m c&#7921;c l&yacute; t&#432;&#7903;ng cho nh&#7919;ng c&#7863;p &#273;&ocirc;i khi c&oacute; th&#7875; c&ugrave;ng nhau ng&#7855;m b&igrave;nh minh v&agrave; ho&agrave;ng h&ocirc;n t&#7841;i &#273;&acirc;y. Hay tr&#7843;i nghi&#7879;m c&#7843;m gi&aacute;c th&uacute; v&#7883; khi &#273;&#7913;ng gi&#7919;a thi&ecirc;n nhi&ecirc;n, h&ograve;a m&igrave;nh c&ugrave;ng l&agrave;n gi&oacute; m&aacute;t l&agrave;nh ng&#7855;m tr&#7885;n b&#7901; bi&#7875;n Tr&agrave; C&#7893; t&#7841;i m&#361;i Sa v&#297;, &#273;i&#7875;m &#273;&#7883;a &#273;&#7847;u ph&iacute;a &#272;&ocirc;ng B&#7855;c Vi&#7879;t Nam.</span></span>
+                                    </p>
+
+                                    <h3 style="text-align: justify;">
+                                        <span><strong><span style="">&#272;&#7843;o C&aacute;i Chi&ecirc;n</span></strong></span>
+                                    </h3>
+
+                                    <p style="text-align: justify;">
+                                        <span><span style="">Nh&#7855;c &#273;&#7871;n Qu&#7843;ng Ninh th&igrave; bao gi&#7901; C&ocirc; T&ocirc; hay Quan L&#7841;n c&#361;ng &#273;&#432;&#7907;c nh&#7899; &#273;&#7871;n &#273;&#7847;u ti&ecirc;n, th&#7871; nh&#432;ng ngo&agrave;i nh&#7919;ng &#273;i&#7875;m du l&#7883;ch n&#7893;i ti&#7871;ng th&igrave; &#273;&#7843;o C&aacute;i Chi&ecirc;n c&#361;ng l&agrave; m&#7897;t trong nhi&#7873;u &#273;&#7883;a &#273;i&#7875;m &#273;&#432;&#7907;c ch&uacute; &yacute; trong th&#7901;i gian g&#7847;n &#273;&acirc;y.&nbsp;</span></span>
+                                    </p>
+
+                                    <p style="text-align: center;">
+                                        <img alt="du lich cach ha noi 200km" class="lazy alignnone size-full wp-image-38656" height="420" src="https://data.vietnambooking.com/common/svg/icon_img_default.svg" style="" title="&#272;&#7843;o C&aacute;i Chi&ecirc;n" width="650" data-src="https://www.vietnambooking.com/wp-content/uploads/2017/08/du-lich-ha-noi-16-8-2017-di-bien-1.jpg">
+                                    </p>
+
+                                    <p style="text-align: justify;">
+                                        <span><span style="">V&igrave; c&ograve;n kh&aacute; m&#7899;i m&#7867; n&ecirc;n &#273;&#7843;o C&aacute;i Chi&ecirc;n v&#7851;n c&ograve;n gi&#7919; &#273;&#432;&#7907;c v&#7867; &#273;&#7865;p hoang s&#417; v&agrave; thanh b&igrave;nh, th&iacute;ch h&#7907;p cho nh&#7919;ng du kh&aacute;ch mu&#7889;n tr&#7843;i nghi&#7879;m c&#7843;m gi&aacute;c y&ecirc;n b&igrave;nh, tr&aacute;nh xa nh&#7919;ng &#7891;n &agrave;o, th&#7883; phi c&#7911;a th&agrave;nh ph&#7889;. &#272;&#7843;o C&aacute;i Chi&ecirc;n l&agrave; n&#417;i v&#7915;a c&oacute; c&#7843; &#273;&#7891;i n&uacute;i v&agrave; bi&#7875;n. B&#7901; bi&#7875;n d&agrave;i kho&#7843;ng 2km v&#7899;i ba b&atilde;i t&#7855;m l&agrave; V&#7841;n C&#7843;, C&aacute;i Chi&ecirc;n v&agrave; &#272;&#7847;u R&#7891;ng m&ecirc; ho&#7863;c du kh&aacute;ch b&#7903;i nh&#7919;ng b&atilde;i c&aacute;t tr&#7855;ng m&#7883;n, n&#432;&#7899;c bi&#7875;n s&#7841;ch, trong v&#7855;t. Tr&ecirc;n &#273;&#7843;o C&aacute;i Chi&ecirc;n c&#361;ng c&oacute; &#273;&#7847;y &#273;&#7911; c&aacute;c d&#7883;ch v&#7909; &#273;&aacute;p &#7913;ng nhu c&#7847;u ngh&#7881; d&#432;&#7905;ng, vui ch&#417;i c&#7911;a du kh&aacute;ch nh&#432; homestay, l&#7873;u tr&#7841;i v&agrave;&nbsp; &#259;n u&#7889;ng...</span></span>
+                                    </p>
+
+                                    <p style="text-align: justify;">
+                                        <span><span style="">&#272;&#7871;n v&#7899;i &#273;&#7843;o C&aacute;i Chi&ecirc;n trong chuy&#7871;n h&agrave;nh tr&igrave;nh du l&#7883;ch g&#7847;n H&agrave; n&#7897;i trong 2 ng&agrave;y, du kh&aacute;ch s&#7869; c&oacute; &#273;&#432;&#7907;c m&#7897;t chuy&#7871;n &#273;i th&#432; gi&atilde;n &#273;&#7847;y th&uacute; v&#7883; s&#7861;n s&agrave;ng cho m&#7897;t tu&#7847;n l&agrave;m vi&#7879;c &#273;&#7847;y n&#259;ng l&#432;&#7907;ng.</span></span>
+                                    </p>
+
+                                    <h3 style="text-align: justify;">
+                                        <strong><span><span style="">C&aacute;t B&agrave;, H&#7843;i Ph&ograve;ng</span></span></strong>
+                                    </h3>
+
+                                    <p style="text-align: justify;">
+                                        <span><span style="">&#272;&#432;&#7907;c m&#7879;nh danh l&agrave; &ldquo;H&ograve;n ng&#7885;c c&#7911;a V&#7883;nh B&#7855;c B&#7897;", C&aacute;t B&agrave; v&#7889;n kh&ocirc;ng c&ograve;n xa l&#7841; &#273;&#7889;i v&#7899;i du kh&aacute;ch &#273;i <a href="https://www.vietnambooking.com/du-lich-trong-nuoc.html"><strong>tour du l&#7883;ch gi&aacute; r&#7867; trong n&#432;&#7899;c</strong></a>. Th&#7871; nh&#432;ng, d&ugrave; kh&aacute; nhi&#7873;u kh&aacute;ch du l&#7883;ch &#273;&#7871;n &#273;&acirc;y v&agrave;o d&#7883;p cu&#7889;i tu&#7847;n, l&#7877; hay t&#7871;t th&igrave; n&#417;i n&agrave;y v&#7851;n ch&#7859;ng m&#7845;t &#273;i v&#7867; nguy&ecirc;n s&#417;, h&ugrave;ng v&#297; v&#7889;n c&oacute; c&#7911;a m&igrave;nh. V&igrave; th&#7871; du l&#7883;ch bi&#7875;n C&aacute;t B&agrave; ng&agrave;y ng&agrave;y v&#7851;n &#273;&oacute;n ti&#7871;p h&agrave;ng tr&#259;m l&#432;&#7907;t kh&aacute;ch gh&eacute; th&#259;m, ngh&#7881; ng&#417;i th&#432; gi&atilde;n.</span></span>
+                                    </p>
+
+                                    <p style="text-align: center;">
+                                        <img alt="du lich 2 ngay gan ha noi" class="lazy alignnone size-full wp-image-38659" height="420" src="https://data.vietnambooking.com/common/svg/icon_img_default.svg" style="" title="Du l&#7883;ch C&aacute;t B&agrave; - H&#7843;i Ph&ograve;ng" width="650" data-src="https://www.vietnambooking.com/wp-content/uploads/2017/08/du-lich-ha-noi-16-8-2017-di-bien-4.jpg">
+                                    </p>
+
+                                    <p style="text-align: justify;">
+                                        <span><span style="">C&aacute;c b&atilde;i t&#7855;m &#7903; C&aacute;t B&agrave; kh&aacute; y&ecirc;n b&igrave;nh, &#273;&#432;&#7907;c n&#7889;i v&#7899;i nhau b&#7857;ng m&#7897;t con &#273;&#432;&#7901;ng nh&#7887; men theo tri&#7873;n n&uacute;i. M&#7897;t g&#7907;i &yacute; l&yacute; t&#432;&#7903;ng d&agrave;nh cho du kh&aacute;ch khi &#273;i <strong>du l&#7883;ch 2 ng&agrave;y g&#7847;n H&agrave; N&#7897;i</strong> &#273;&#7871;n v&#7899;i C&aacute;t B&agrave; l&agrave; n&ecirc;n thu&ecirc; m&#7897;t chi&#7871;c t&agrave;u du l&#7883;ch &#273;&#7875; chu du kh&#7855;p v&#7883;nh Lan H&#7841;, kh&aacute;m ph&aacute; nh&#7919;ng b&atilde;i t&#7855;m tuy&#7879;t &#273;&#7865;p c&oacute; m&#7863;t &#7903; &#273;&acirc;y nh&#432; C&aacute;t C&ograve;, B&#7871;n B&egrave;o, C&ocirc; Ti&ecirc;n...hay chi&ecirc;m ng&#432;&#7905;ng nh&#7919;ng hang &#273;&#7897;ng Trung Trang, Thi&ecirc;n Long &#273;&#7875; c&#7843;m nh&#7853;n thi&ecirc;n nhi&ecirc;n k&#7923; th&uacute; c&#7911;a n&#417;i &#273;&acirc;y. Sau &#273;&oacute; d&#7915;ng l&#7841;i &#7903; m&#7897;t v&#7883;nh nho nh&#7887; &#273;&#7875; c&acirc;u c&aacute;, r&#7891;i nh&acirc;m nhi h&#7843;i s&#7843;n gi&#7919;a bi&#7875;n kh&#417;i.</span></span>
+                                    </p>
+
+                                    <h3 style="text-align: justify;">
+                                        <span><strong><span style="">&#272;&#7843;o C&ocirc; T&ocirc; &ndash; Qu&#7843;ng Ninh</span></strong></span>
+                                    </h3>
+
+                                    <p style="text-align: justify;">
+                                        <span><span style="">&#272;&#432;&#7907;c m&#7879;nh danh l&agrave; h&ograve;n &#273;&#7843;o &#273;&#7865;p nh&#7845;t mi&#7873;n B&#7855;c, C&ocirc; &nbsp;T&ocirc; &#273;&#432;&#7907;c thi&ecirc;n nhi&ecirc;n &#432;u &aacute;i ban t&#7863;ng m&#7897;t v&#7867; &#273;&#7865;p hoang s&#417; &#273;&#7897;c &#273;&aacute;o v&#7899;i n&#432;&#7899;c bi&#7875;n xanh trong, nh&#7919;ng b&atilde;i c&aacute;t tr&#7855;ng m&#7883;n m&agrave;ng, thoai tho&#7843;i tr&#7843;i d&agrave;i ng&uacute;t t&#7847;m m&#7855;t. </span></span>
+                                    </p>
+
+                                    <p style="text-align: center;">
+                                        <img alt="du lich gan ha noi 2 ngay" class="lazy alignnone size-full wp-image-38658" height="420" src="https://data.vietnambooking.com/common/svg/icon_img_default.svg" style="" title="&#272;&#7843;o C&ocirc; T&ocirc; " width="650" data-src="https://www.vietnambooking.com/wp-content/uploads/2017/08/du-lich-ha-noi-16-8-2017-di-bien-3.jpg">
+                                    </p>
+
+                                    <p style="text-align: justify;">
+                                        <span><span style="">&#272;&#7871;n v&#7899;i C&ocirc; T&ocirc;, du kh&aacute;ch s&#7869; &#273;&#432;&#7907;c t&#7853;n h&#432;&#7903;ng kh&ocirc;ng kh&iacute; trong l&agrave;nh v&agrave;&nbsp; &#273;&#7855;m m&igrave;nh trong l&agrave;n n&#432;&#7899;c trong xanh &#7903; b&atilde;i bi&#7875;n H&#7891;ng V&agrave;n, V&agrave;n Ch&#7843;y, T&agrave;i V&agrave;n&hellip;hay tham gia v&agrave;o nh&#7919;ng chuy&#7871;n l&#7863;n bi&#7875;n ng&#7855;m h&agrave;ng tr&#259;m lo&agrave;i san h&ocirc; nhi&#7873;u m&agrave;u s&#7855;c r&#7921;c r&#7905;. Ngo&agrave;i c&aacute;c d&#7883;ch v&#7909; vui ch&#417;i gi&#7843;i tr&iacute; tr&ecirc;n bi&#7875;n th&igrave; khi &#273;&#7871;n v&#7899;i C&ocirc; T&ocirc; trong chuy&#7871;n du l&#7883;ch g&#7847;n H&agrave; N&#7897;i th&igrave; du kh&aacute;ch c&oacute; th&#7875; k&#7871;t h&#7907;p tham quan t&#432;&#7907;ng &#273;&agrave;i B&aacute;c H&#7891;, nh&agrave; t&#432;&#7903;ng ni&#7879;m B&aacute;c H&#7891;, H&#7843;i &#272;&#259;ng C&ocirc; T&ocirc; &ldquo;n&oacute;c nh&agrave; c&#7911;a &#273;&#7843;o ng&#7885;c&rdquo; hay ch&#7909;p h&igrave;nh l&#432;u gi&#7919; k&#7881; ni&#7879;m &#7903; kh&#7855;p ng&oacute;c ng&aacute;ch tr&ecirc;n &#273;&#7843;o.</span></span>
+                                    </p>
+
+                                </body>
+                            </html>*@
+
+
+                    </div>
+
+                    <div class="box-info-editor">
+                        <div class="box-date-posts-single">
+                            <span class="count-views">81 lượt xem</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid_4 omega">
+                <div class="sidebar-box-item">
+                    <h3>Các tour có thể bạn quan tâm</h3>
+                    <div class="sidebar-box-content sidebar-tour-product-relative sidebar-type-default">
+                        <ul><li><a href=""><div class="box-img"><img alt="Tour Tây Bắc 5 ngày 4 đêm: Hà Nội – Mai Châu – Mộc Châu – Điện Biên – Sapa" src="https://www.vietnambooking.com/wp-content/uploads/2019/10/tour-ha-noi-mai-chau-dien-bien-sapa-4-150x150.jpg" /></div><div class="box-content"><h4>Tour Tây Bắc 5 ngày 4 đêm: Hà Nội – Mai Châu – Mộc Châu – Điện Biên – Sapa</h4><div class="box-price">Giá: <span>6,699,000 VND</span></div></div></a></li><li><a href=""><div class="box-img"><img alt="Tour du lịch Sài Gòn Mũi Né | Liên tuyến Trung &#8211; Nam hấp dẫn" src="https://www.vietnambooking.com/wp-content/uploads/2020/12/tour-du-lich-sai-gon-vung-tau-mui-ne-4-150x150.jpg" /></div><div class="box-content"><h4>Tour du lịch Sài Gòn Mũi Né | Liên tuyến Trung &#8211; Nam hấp dẫn</h4><div class="box-price">Giá: <span>4,899,000 VND</span></div></div></a></li><li><a href=""><div class="box-img"><img alt="Tour du lịch Hà Nội Nha Trang 4 ngày 3 đêm | Khám phá miền cát trắng &#8211; Vinpearl Land" src="https://www.vietnambooking.com/wp-content/uploads/2020/07/Tour-du-lich-Ha-Noi-Nha-Trang-4N3D-8-150x150.jpg" /></div><div class="box-content"><h4>Tour du lịch Hà Nội Nha Trang 4 ngày 3 đêm | Khám phá miền cát trắng &#8211; Vinpearl Land</h4><div class="box-price">Giá: <span>5,299,000 VND</span></div></div></a></li><li><a href=""><div class="box-img"><img alt="Tour du lịch Hà Nội Quảng Ninh 2 ngày 1 đêm: Cảnh đẹp Vịnh Hạ Long &#8211; Kì quan Thế Giới" src="https://www.vietnambooking.com/wp-content/uploads/2018/04/tour-ha-long-26042019-1-150x150.jpg" /></div><div class="box-content"><h4>Tour du lịch Hà Nội Quảng Ninh 2 ngày 1 đêm: Cảnh đẹp Vịnh Hạ Long &#8211; Kì quan Thế Giới</h4><div class="box-price">Giá: <span>1,799,000 VND</span></div></div></a></li><li><a href=""><div class="box-img"><img alt="Tour Làng Vũ Đại &#8211; Khu du lịch tâm linh Tam Chúc &#8211; Ngũ Động Thi Sơn 2 ngày 1 đêm" src="https://www.vietnambooking.com/wp-content/uploads/2021/01/tour-lang-vu-dai-khu-du-lich-tam-chuc-ngu-dong-thi-son-2-ngay-1-dem-150x150.jpg" /></div><div class="box-content"><h4>Tour Làng Vũ Đại &#8211; Khu du lịch tâm linh Tam Chúc &#8211; Ngũ Động Thi Sơn 2 ngày 1 đêm</h4><div class="box-price">Giá: <span>1,899,000 VND</span></div></div></a></li></ul>
+                    </div>
+                </div>
+                <div class='sidebar-box-item'>
+                    <h3>TỔNG ĐÀI TƯ VẤN</h3>
+                    <div class='sidebar-box-content sidebar-hotline'>
+                        <label>Mọi thắc mắc của Quý khách</label>
+                        vui lòng gọi:<a href="tel:19003398">1900 3398</a>
+                        <!--                    <div>Hoặc</div>
+                                            <div><span class='span-city'>TP. HCM:</span> <span class='span-hotline'>028 3956 2142 - 028 3827 0404</span></div>
+                                            <div><span class='span-city'>Hà Nội:</span> <span class='span-hotline'>024 7307 3030</span></div>
+                                            <div><span class='span-city'>Đà Nẵng:</span> <span class='span-hotline'>0236 7300 174</span></div>-->
+                        <span class='span-note'>Chúng tôi hỗ trợ 24/7</span>
+                    </div>
+                </div>
+
+                <div class='sidebar-box-item'>
+                    <h3>HÌNH THỨC THANH TOÁN</h3>
+                    <div class='sidebar-box-content sidebar-payment'>
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="item-payment-home">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-item-payment-home" aria-expanded="true" aria-controls="collapse-item-payment-home">
+                                            <img src="https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/images/index/sidebar_icon_flight_payment_home.png" alt="payment home" /> Thanh toán tại nhà
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse-item-payment-home" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="item-payment-home">
+                                    <div class="panel-body">
+                                        Vietnam Booking  sẽ hỗ trợ giao vé miễn phí và thanh toán tại nhà cho những Quý khách hàng nào ở trong nội thành Hà Nội, Đà Nẵng Và TP. Hồ Chí Minh.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="item-payment-office">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-item-payment-office" aria-expanded="false" aria-controls="collapse-item-payment-office">
+                                            <img src="https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/images/index/sidebar_icon_flight_payment_city.png" alt="payment office" /> Tại văn phòng chúng tôi
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse-item-payment-office" class="panel-collapse collapse" role="tabpanel" aria-labelledby="item-payment-office">
+                                    <div class="panel-body">
+                                        <h4>Hồ Chí Minh</h4><h5> - 164 Lê Thánh Tôn, Bến Thành, Q. 1</h5><h5> - 54 Phạm Hồng Thái, Bến Thành, Q. 1</h5><h5> - 190 Trần Quý, 6, Q. 11</h5><h5> - 192 Trần Quý, 6, Q. 11</h5><h4>Đà Nẵng</h4><h5> - 174 Nguyễn Văn Linh, , Q. Thanh Khê</h5><h4>Hà Nội</h4><h5> - 30 Phan Chu Trinh, , Q. Hoàn Kiếm</h5>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="item-payment-bank">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-item-payment-bank" aria-expanded="false" aria-controls="collapse-item-payment-bank">
+                                            <img src="https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/images/index/sidebar_icon_flight_payment_bank.png" alt="payment bank" /> Chuyển khoản ngân hàng
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse-item-payment-bank" class="panel-collapse collapse" role="tabpanel" aria-labelledby="item-payment-bank">
+                                    <div class="panel-body">
+                                        <img src="https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/images/index/sidebar_icon_flight_list_bank.jpg" alt="list bank" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="fb-like-box" data-href="https://www.facebook.com/pages/Vi%E1%BB%87t-Nam-Booking/335707403285411?ref=bookmarks" data-width="300" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="false"></div>
+
+
+            </div>
+            <div class="clearfix"></div>
+            <div class="single-box-content-inner">
+                <div class="grid_8">
+                    <br /><div class="box-tag-post-single">
+                    </div><br />
+                    <div class="clearfix"></div>
+                    <div class="box-posts-relation">
+                        <h4>Bài viết mới nhất</h4>
+                        <ul>
+                            <li><a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i> Gần ngay Hà Nội có một ngọn đồi Bắc Âu đẹp rụng tim, bạn đã biết chưa?</a></li>
+                            <li><a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i> Kinh nghiệm lựa chọn phương tiện để đi tham quan Hà Nội</a></li>
+                            <li><a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i> Những món quà tạo nên đặc trưng cho du lịch Hội An</a></li>
+                            <li><a href=""><i class="fa fa-chevron-right" aria-hidden="true"></i> 2 địa chỉ du lịch gần Hà Nội thích hợp cho kỳ nghỉ dưỡng trong 3 ngày</a></li>
+                        </ul>
+                    </div>
+                    <div class="box-social">
+                        <div class="box-rate-star"></div>                <div class="box-icon-click">
+                            <!-- <img src=""  alt="click social" /> -->
+                        </div>
+                        <!--                <div class="box-facebook-social">
+                                            <div class="fb-like" data-href="" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                                            <div class="fb-send" data-href=""></div>
+                                        </div>-->
+                        <div class="box-hotline">
+                            <img class="lazy" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://data.vietnambooking.com/common/single/single_banner_tour.jpg" alt="banner contact" />
+                        </div>
+                    </div>
+                    <div class="box-comment">
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="clearfix"></div>
+
+        </div>
+    </div>
+
+

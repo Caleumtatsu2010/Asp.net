@@ -1,0 +1,860 @@
+﻿@model VnSport.Models.SanPham
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/clientlayout.cshtml";
+
+
+}
+
+@{
+    var ListRelatedProducts = ViewBag.RelatedProducts as IEnumerable<VnSport.Models.SanPham>;
+}
+
+
+<div id="contain">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <p id="breadcrumbs">
+                    <span>
+                        <span>
+                            <a href="@Url.Action("Index", "Home")">Trang chủ</a> » <span>
+                                <a href="@Url.Action("Index", "SanPham", new { id = 0})">Sản Phẩm</a> » <span class="breadcrumb_last" aria-current="page">
+                                    @Model.tenSanPham
+                                </span>
+                            </span>
+                        </span>
+                    </span>
+                </p>
+            </div>
+            <div class="col-sm-12">
+                <div class="woocommerce-notices-wrapper"></div>
+            </div>
+            <div class="col-sm-12">
+                <div class="row">
+                    <div class="col-sm-6 col-ms-6 col-mm-12 col-xs-12 mb-15px">
+                        <div class="main-thumbnail mb-5px">
+                            <image class='khungvien'
+                                   src='https://vnsport.com.vn/wp-content/uploads/2021/02/vnsport-glofit-3.png' />
+                            <img id="zoom1" src="~/image/@Model.anh1" />
+                        </div>
+                        <div class="wp-listthumb relative">
+
+
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-ms-6 col-mm-12 col-xs-12 mb-15px infop">
+                        <h1 class="title-sing-pro">@Model.tenSanPham</h1>
+
+                        <div class="gia giasing" data-giabd="290,000đ" data-giasau="220,000đ" data-percentage="24"
+                             data-htmlprice='null'>
+                            <del class="price-old">
+                                <span class="woocommerce-Price-amount amount price-new">
+                                    @Model.giaCu<span class="woocommerce-Price-currencySymbol">₫</span>
+                                </span>
+                            </del> <ins class="price-new">
+                                <span class="woocommerce-Price-amount amount price-new">
+                                    @Model.giaMoi<span class="woocommerce-Price-currencySymbol">₫</span>
+                                </span>
+                            </ins> <span class="per"></span>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="wpchon mb-10px">
+                            <p class="title-chon">MÀU</p><span class="pamau itemc choosecolor active"
+                                                               attr-input="attribute_pa_mau-sac" attr-slug="den">
+                                <p>@Model.mau</p>
+                            </span>
+                        </div>
+                        <div class="wpchon mb-10px">
+                            <p class="title-chon">CHỌN SIZE</p><span class="pasize itemc mb-10px active"
+                                                                     attr-input="attribute_pa_kich-thuoc" attr-id="222"
+                                                                     attr-slug="freesize"><span>@Model.kichThuoc</span></span>
+                                                                </div>
+
+                                                                @using (Html.BeginForm("AddItem", "Cart", FormMethod.Get, new { @class = "cartsing" }))
+                                                                {
+                                                                    <input type="hidden" name="productId" value="@Model.maSanPham" />
+                                                                    <div class="uudai">
+                                                                        <ul>
+                                                                            <li>Nhận H&agrave;ng &raquo; Kiểm Tra &raquo; Thanh To&aacute;n</li>
+                                                                            <li>
+                                                                                Quy định Vận chuyển&nbsp;&raquo;&nbsp;<a href=""
+                                                                                                                         title="Quy Định Vận Chuyển VNSPORT">Xem th&ecirc;m</a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <strong>ĐẶT MUA:&nbsp;</strong><a href="tel:0966337448">0966 337 448</a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <strong>G&Oacute;P &Yacute;:&nbsp;</strong><a href="tel:0936061456">
+                                                                                    0936 061
+                                                                                    456
+                                                                                </a>&nbsp;(zalo/viber/whatsapp)
+                                                                            </li>
+                                                                        </ul>
+                                                                        <p>&nbsp;</p>
+                                                                        <div id="quatang">
+                                                                            <h5>Chọn Thêm Một Trong Các Khuyến Mãi</h5>
+                                                                            <p class="text-danger"></p>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div id="textsl">Số Lượng</div>
+                                                                    <div class="input-group" style="width: 100px; ">
+                                                                        <input id="quantity" title="số lượng" name="quantity" class="quantity" type="number" min="1" max="9" value="" style="width:50px;">
+                                                                    </div>
+                                                                    <div class="clearfix"></div>
+
+
+
+                                                                    <div id="wrapbutton" class="mb-10px pull-right">
+                                                                        <input type="hidden" name="add-to-cart"
+                                                                               value="5518" /> <input type="hidden" name="attribute_pa_mau-sac" value="den" />
+                                                                        <input type="hidden" name="attribute_pa_kich-thuoc" value="freesize" /> <input type="hidden" name="variation_id" value="5529" />
+                                                                        @if (Session["UserName"] == null)// chua dang nhap click them gio hang bat dang nhap
+                                                                        {
+                                                                            <a style="background-color: rgb(226, 226, 226);" href="@Url.Action("Login", "Account")"
+                                                                               class="add-to-cart muahang buy btn mr-10px ">
+                                                                                <i class="fa fa-plus"></i> Thêm Vào
+                                                                                Giỏ
+                                                                            </a>
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            <input type="submit" value="Thêm Vào Giỏ" style="background-color: rgb(226, 226, 226);"
+                                                                                   class="add-to-cart muahang buy btn mr-10px ">
+                                                                        }
+                                                                        @if (Session["UserName"] == null)// chua dang nhap click gio hang bat dang nhap
+                                                                        {
+                                                                            <a style="background-color: rgb(192, 240, 224);" href="@Url.Action("Login", "Account")" class="add-to-cart muangay buy btn ">
+                                                                                <i class="fa fa-shopping-bag"></i> Mua Ngay
+                                                                            </a>
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            <input value="Mua Ngay" type="submit" style="background-color: rgb(192, 240, 224);" class="add-to-cart muangay buy btn ">
+
+                                                                            </input>
+                                                                        }
+                                                                    </div>
+                                                                    @*<i class="fa fa-plus"></i>*@
+                                                                    <div class="clearfix"></div>
+                                                                }
+
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-sm-9 col-mm-8 col-ms-12 col-xs-12 col-xxs-12">
+                                                        <div class="panel-group" id="accordion">
+                                                            <div class="panel panel-default">
+                                                                <div class="panel-heading">
+                                                                    <h5 class="panel-title">
+                                                                        <a data-toggle="collapse" data-parent="#accordion"
+                                                                           href="#collapse1">Tổng Quan Sản Phẩm</a>
+                                                                    </h5>
+                                                                </div>
+
+                                                                <div id="collapse1" class="panel-collapse collapse in">
+                                                                    <div class="panel-body content">
+                                                                        @(new HtmlString(Model.moTa))
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="wraper-related row">
+                                                            <div class="title-related-sing col-sm-12">
+                                                                <span>Sản Phẩm Liên Quan Đến</span> "<h2>
+                                                                    @Model.tenSanPham
+                                                                </h2>"
+                                                            </div>
+                                                            <div class="col-sm-12 mb-15px">
+                                                                <div class="wpcat">
+                                                                    <div class="wp-list-cat">
+                                                                        @foreach (var item in ListRelatedProducts)
+                                                                        {
+                                                                            <div class="cot5 dv col-xxs-6 col-ms-4 col-mm-4 col-mxs-6 woocommerce post-5518 product type-product status-publish has-post-thumbnail product_cat-bang-bao-ve-dau-goi first instock sale shipping-taxable purchasable product-type-variable">
+                                                                                <div class="wp-hover thumbnail-pro-cat">
+                                                                                    <a href="@Url.Action("Detail", "SanPham", new { id = item.maSanPham})">
+
+
+                                                                                        <image class='khungvien'
+                                                                                               src='//vnsport.com.vn/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif' />
+                                                                                        <img src="~/image/@item.anh1" />
+
+                                                                                    </a>
+
+                                                                                    <div class="clearfix"></div>
+                                                                                </div>
+
+                                                                                <a href="@Url.Action("Detail", "SanPham", new { id = item.maSanPham})">
+                                                                                    <h3 title="@item.tenSanPham" class="mb-5px title-pro-cat">
+                                                                                        @item.tenSanPham
+                                                                                    </h3>
+                                                                                </a>
+                                                                                <div class="codepro"> <span class="code">Mã SP</span>: @item.maSanPham</div>
+                                                                                <div class="gia">
+                                                                                    <del class="price-old">
+                                                                                        <span class="woocommerce-Price-amount amount price-new">
+                                                                                            @{
+                                                                                                if (item.giaCu != null)
+                                                                                                {
+                                                                                                    <bdi>
+                                                                                                        @item.giaCu<span class="woocommerce-Price-currencySymbol">&#8363;</span>
+                                                                                                    </bdi>
+                                                                                                }
+                                                                                            }
+
+
+                                                                                        </span>
+                                                                                    </del>
+                                                                                    <ins class="price-new">
+                                                                                        <span class="woocommerce-Price-amount amount price-new">
+                                                                                            <bdi>
+                                                                                                @item.giaMoi<span class="woocommerce-Price-currencySymbol">&#8363;</span>
+                                                                                            </bdi>
+                                                                                        </span>
+                                                                                    </ins>
+                                                                                </div>
+                                                                            </div>
+                                                                        }
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="clearfix"></div>
+                                                        </div>
+                                                        @*<div class="wpnumberstar">
+                                                                <div class="row">
+                                                                    <div class="starmain col-sm-3"> 0 <i class="fa fa-star"></i></div>
+                                                                    <div class="starcon col-sm-6">
+                                                                        <div>
+                                                                            <span>5 <i class="fa fa-star"></i></span>
+                                                                            <div class="progress">
+                                                                                <div class="progress-bar" role="progressbar" aria-valuenow="NAN"
+                                                                                     aria-valuemin="0" aria-valuemax="100" style="width: NAN%;"></div>
+                                                                            </div> <span class="sodg">0 đánh giá</span>
+                                                                        </div>
+                                                                        <div>
+                                                                            <span>4 <i class="fa fa-star"></i></span>
+                                                                            <div class="progress">
+                                                                                <div class="progress-bar" role="progressbar" aria-valuenow="NAN"
+                                                                                     aria-valuemin="0" aria-valuemax="100" style="width: NAN%;"></div>
+                                                                            </div> <span class="sodg">0 đánh giá</span>
+                                                                        </div>
+                                                                        <div>
+                                                                            <span>3 <i class="fa fa-star"></i></span>
+                                                                            <div class="progress">
+                                                                                <div class="progress-bar" role="progressbar" aria-valuenow="NAN"
+                                                                                     aria-valuemin="0" aria-valuemax="100" style="width: NAN%;"></div>
+                                                                            </div> <span class="sodg">0 đánh giá</span>
+                                                                        </div>
+                                                                        <div>
+                                                                            <span>2 <i class="fa fa-star"></i></span>
+                                                                            <div class="progress">
+                                                                                <div class="progress-bar" role="progressbar" aria-valuenow="NAN"
+                                                                                     aria-valuemin="0" aria-valuemax="100" style="width: NAN%;"></div>
+                                                                            </div> <span class="sodg">0 đánh giá</span>
+                                                                        </div>
+                                                                        <div>
+                                                                            <span>1 <i class="fa fa-star"></i></span>
+                                                                            <div class="progress">
+                                                                                <div class="progress-bar" role="progressbar" aria-valuenow="NAN"
+                                                                                     aria-valuemin="0" aria-valuemax="100" style="width: NAN%;"></div>
+                                                                            </div> <span class="sodg">0 đánh giá</span>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-sm-3 text-center">
+                                                                        <div class="sentcomment">
+                                                                            <a href="#commentform" class="btn btn-primary">
+                                                                                Gửi Đánh Giá
+                                                                                Của Bạn
+                                                                            </a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>*@
+                                                        <div class="mb-15px">
+                                                            <div id="reviews" class="woocommerce-Reviews">
+                                                                <div id="comments">
+                                                                    <h2 class="woocommerce-Reviews-title"> Đánh giá</h2>
+                                                                    <p class="woocommerce-noreviews">Chưa có đánh giá nào.</p>
+                                                                </div>
+                                                                <div id="review_form_wrapper">
+                                                                    <div id="review_form">
+                                                                        <div id="respond" class="comment-respond">
+                                                                            <span id="reply-title"
+                                                                                  class="comment-reply-title">
+                                                                                Hãy là người đầu tiên nhận xét &ldquo;Đai Gối
+                                                                                Rexchi HX02 | 1 Chiếc&rdquo; <small>
+                                                                                    <a rel="nofollow"
+                                                                                       id="cancel-comment-reply-link"
+                                                                                       href="/dai-goi-rexchi-hx02-1-chiec/#respond"
+                                                                                       style="display:none;">Hủy</a>
+                                                                                </small>
+                                                                            </span>
+                                                                            <form action="https://vnsport.com.vn/wp-comments-post.php" method="post"
+                                                                                  id="commentform" class="comment-form">
+                                                                                <p class="comment-notes">
+                                                                                    <span id="email-notes">
+                                                                                        Email của bạn sẽ không được
+                                                                                        hiển thị công khai.
+                                                                                    </span> Các trường bắt buộc được đánh dấu <span class="required">*</span>
+                                                                                </p>
+                                                                                <div class="comment-form-rating">
+                                                                                    <label for="rating">
+                                                                                        Đánh giá của
+                                                                                        bạn&nbsp;<span class="required">*</span>
+                                                                                    </label><select name="rating" id="rating" required>
+                                                                                        <option value="">Xếp hạng&hellip;</option>
+                                                                                        <option value="5">Rất tốt</option>
+                                                                                        <option value="4">Tốt</option>
+                                                                                        <option value="3">Trung bình</option>
+                                                                                        <option value="2">Không tệ</option>
+                                                                                        <option value="1">Rất tệ</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                                <p class="comment-form-comment">
+                                                                                    <label for="comment">
+                                                                                        Nhận xét của
+                                                                                        bạn&nbsp;<span class="required">*</span>
+                                                                                    </label><textarea id="comment" name="comment" cols="45" rows="8" required></textarea>
+                                                                                </p>
+                                                                                <p class="comment-form-author">
+                                                                                    <label for="author">
+                                                                                        Tên&nbsp;<span class="required">*</span>
+                                                                                    </label><input id="author"
+                                                                                                   name="author" type="text" value="" size="30" required />
+                                                                                </p>
+                                                                                <p class="comment-form-email">
+                                                                                    <label for="email">
+                                                                                        Email&nbsp;<span class="required">*</span>
+                                                                                    </label><input id="email" name="email"
+                                                                                                   type="email" value="" size="30" required />
+                                                                                </p>
+                                                                                <p class="comment-form-cookies-consent">
+                                                                                    <input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent"
+                                                                                           type="checkbox" value="yes" /> <label for="wp-comment-cookies-consent">
+                                                                                        Lưu tên của tôi, email, và trang
+                                                                                        web trong trình duyệt này cho lần bình luận kế tiếp của tôi.
+                                                                                    </label>
+                                                                                </p>
+                                                                                <p class="form-submit">
+                                                                                    <input name="submit" type="submit" id="submit"
+                                                                                           class="submit" value="Gửi đi" /> <input type='hidden'
+                                                                                                                                   name='comment_post_ID' value='5518' id='comment_post_ID' /> <input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+                                                                                </p>
+                                                                            </form>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="clear"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-3 col-mm-4 col-ms-12 col-xs-12 col-xxs-12" id="sidebar">
+                                                        <div class="row">
+                                                            <div class="sb mb-15px col-sm-12">
+                                                                <div class="title-page mb-15px">
+                                                                    <h2 class="title">Găng Tay Thể Thao Glofit Go</h2>
+                                                                </div>
+                                                                <div class="content-sb">
+                                                                    <iframe width="560" height="315"
+                                                                            src="https://www.youtube.com/embed/_AOYahY3Kn8" frameborder="0"
+                                                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                                            allowfullscreen></iframe>
+                                                                </div>
+                                                            </div>
+                                                            <div class="sb mb-15px col-sm-12">
+                                                                <div class="title-page mb-15px">
+                                                                    <h2 class="title">Tin Tức Thể Thao</h2>
+                                                                </div>
+                                                                <div class="content-sb">
+                                                                    <div class="post fadeInRight wow" data-wow-duration="2s" data-wow-delay="0.5s">
+                                                                        <a href="https://vnsport.com.vn/thong-bao-lich-nghi-tet-nguyen-dan-2021-vnsport/"
+                                                                           class="thumbnail  pull-left">
+                                                                            <img src="//vnsport.com.vn/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif"
+                                                                                 data-lazy-type="image"
+                                                                                 data-src="https://vnsport.com.vn/wp-content/uploads/2021/02/lich-nghi-tet-2021-1-150x150.jpg"
+                                                                                 class="lazy lazy-hidden img-responsive wp-post-image" alt="" loading="lazy"
+                                                                                 srcset=""
+                                                                                 data-srcset="https://vnsport.com.vn/wp-content/uploads/2021/02/lich-nghi-tet-2021-1-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2021/02/lich-nghi-tet-2021-1-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2021/02/lich-nghi-tet-2021-1-100x100.jpg 100w, https://vnsport.com.vn/wp-content/uploads/2021/02/lich-nghi-tet-2021-1.jpg 600w"
+                                                                                 sizes="(max-width: 150px) 100vw, 150px" /><noscript>
+                                                                                <img src="https://vnsport.com.vn/wp-content/uploads/2021/02/lich-nghi-tet-2021-1-150x150.jpg"
+                                                                                     class="img-responsive wp-post-image" alt="" loading="lazy"
+                                                                                     srcset="https://vnsport.com.vn/wp-content/uploads/2021/02/lich-nghi-tet-2021-1-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2021/02/lich-nghi-tet-2021-1-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2021/02/lich-nghi-tet-2021-1-100x100.jpg 100w, https://vnsport.com.vn/wp-content/uploads/2021/02/lich-nghi-tet-2021-1.jpg 600w"
+                                                                                     sizes="(max-width: 150px) 100vw, 150px" />
+                                                                            </noscript>
+                                                                        </a>
+                                                                        <h2 class="title-post">
+                                                                            <a href="https://vnsport.com.vn/thong-bao-lich-nghi-tet-nguyen-dan-2021-vnsport/">
+                                                                                THÔNG
+                                                                                BÁO: Lịch nghỉ tết Nguyên Đán 2021 &#8211; VNSPORT
+                                                                            </a>
+                                                                        </h2>
+                                                                        <div class="clearfix"></div>
+                                                                    </div>
+                                                                    <div class="post fadeInRight wow" data-wow-duration="2s" data-wow-delay="0.5s">
+                                                                        <a href="https://vnsport.com.vn/uu-dai-ngay-11-11-danh-cho-moi-khach-hang-cua-vnsport/"
+                                                                           class="thumbnail  pull-left">
+                                                                            <img src="//vnsport.com.vn/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif"
+                                                                                 data-lazy-type="image"
+                                                                                 data-src="https://vnsport.com.vn/wp-content/uploads/2020/11/VNSPORT-VNSPORT-6-150x150.jpg"
+                                                                                 class="lazy lazy-hidden img-responsive wp-post-image" alt="" loading="lazy"
+                                                                                 srcset=""
+                                                                                 data-srcset="https://vnsport.com.vn/wp-content/uploads/2020/11/VNSPORT-VNSPORT-6-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2020/11/VNSPORT-VNSPORT-6-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2020/11/VNSPORT-VNSPORT-6-100x100.jpg 100w, https://vnsport.com.vn/wp-content/uploads/2020/11/VNSPORT-VNSPORT-6.jpg 600w"
+                                                                                 sizes="(max-width: 150px) 100vw, 150px" /><noscript>
+                                                                                <img src="https://vnsport.com.vn/wp-content/uploads/2020/11/VNSPORT-VNSPORT-6-150x150.jpg"
+                                                                                     class="img-responsive wp-post-image" alt="" loading="lazy"
+                                                                                     srcset="https://vnsport.com.vn/wp-content/uploads/2020/11/VNSPORT-VNSPORT-6-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2020/11/VNSPORT-VNSPORT-6-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2020/11/VNSPORT-VNSPORT-6-100x100.jpg 100w, https://vnsport.com.vn/wp-content/uploads/2020/11/VNSPORT-VNSPORT-6.jpg 600w"
+                                                                                     sizes="(max-width: 150px) 100vw, 150px" />
+                                                                            </noscript>
+                                                                        </a>
+                                                                        <h2 class="title-post">
+                                                                            <a href="https://vnsport.com.vn/uu-dai-ngay-11-11-danh-cho-moi-khach-hang-cua-vnsport/">
+                                                                                Ưu
+                                                                                đãi ngày 11.11 dành cho mọi khách hàng của VNSPORT
+                                                                            </a>
+                                                                        </h2>
+                                                                        <div class="clearfix"></div>
+                                                                    </div>
+                                                                    <div class="post fadeInRight wow" data-wow-duration="2s" data-wow-delay="0.5s">
+                                                                        <a href="https://vnsport.com.vn/bang-goi-vn017-va-vn019-khach-nhau-diem-gi/"
+                                                                           class="thumbnail  pull-left">
+                                                                            <img src="//vnsport.com.vn/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif"
+                                                                                 data-lazy-type="image"
+                                                                                 data-src="https://vnsport.com.vn/wp-content/uploads/2020/08/bang-khop-goi-bo-goi-vnsport-3-150x150.jpg"
+                                                                                 class="lazy lazy-hidden img-responsive wp-post-image" alt="" loading="lazy"
+                                                                                 srcset=""
+                                                                                 data-srcset="https://vnsport.com.vn/wp-content/uploads/2020/08/bang-khop-goi-bo-goi-vnsport-3-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2020/08/bang-khop-goi-bo-goi-vnsport-3-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2020/08/bang-khop-goi-bo-goi-vnsport-3-600x600.jpg 600w, https://vnsport.com.vn/wp-content/uploads/2020/08/bang-khop-goi-bo-goi-vnsport-3-100x100.jpg 100w, https://vnsport.com.vn/wp-content/uploads/2020/08/bang-khop-goi-bo-goi-vnsport-3.jpg 750w"
+                                                                                 sizes="(max-width: 150px) 100vw, 150px" /><noscript>
+                                                                                <img src="https://vnsport.com.vn/wp-content/uploads/2020/08/bang-khop-goi-bo-goi-vnsport-3-150x150.jpg"
+                                                                                     class="img-responsive wp-post-image" alt="" loading="lazy"
+                                                                                     srcset="https://vnsport.com.vn/wp-content/uploads/2020/08/bang-khop-goi-bo-goi-vnsport-3-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2020/08/bang-khop-goi-bo-goi-vnsport-3-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2020/08/bang-khop-goi-bo-goi-vnsport-3-600x600.jpg 600w, https://vnsport.com.vn/wp-content/uploads/2020/08/bang-khop-goi-bo-goi-vnsport-3-100x100.jpg 100w, https://vnsport.com.vn/wp-content/uploads/2020/08/bang-khop-goi-bo-goi-vnsport-3.jpg 750w"
+                                                                                     sizes="(max-width: 150px) 100vw, 150px" />
+                                                                            </noscript>
+                                                                        </a>
+                                                                        <h2 class="title-post">
+                                                                            <a href="https://vnsport.com.vn/bang-goi-vn017-va-vn019-khach-nhau-diem-gi/">
+                                                                                Băng
+                                                                                Gối VN017 và VN019 Khác Nhau Điểm Gì?
+                                                                            </a>
+                                                                        </h2>
+                                                                        <div class="clearfix"></div>
+                                                                    </div>
+                                                                    <div class="post fadeInRight wow" data-wow-duration="2s" data-wow-delay="0.5s">
+                                                                        <a href="https://vnsport.com.vn/dau-khuyu-tay-dau-cho-trieu-chung-va-nguyen-nhan/"
+                                                                           class="thumbnail  pull-left">
+                                                                            <img src="//vnsport.com.vn/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif"
+                                                                                 data-lazy-type="image"
+                                                                                 data-src="https://vnsport.com.vn/wp-content/uploads/2020/05/tennis-elbow-dau-khuyu-tay-dau-cho-trieu-chung-va-nguyen-nhan-2-150x150.jpg"
+                                                                                 class="lazy lazy-hidden img-responsive wp-post-image" alt="" loading="lazy"
+                                                                                 srcset=""
+                                                                                 data-srcset="https://vnsport.com.vn/wp-content/uploads/2020/05/tennis-elbow-dau-khuyu-tay-dau-cho-trieu-chung-va-nguyen-nhan-2-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2020/05/tennis-elbow-dau-khuyu-tay-dau-cho-trieu-chung-va-nguyen-nhan-2-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2020/05/tennis-elbow-dau-khuyu-tay-dau-cho-trieu-chung-va-nguyen-nhan-2-100x100.jpg 100w"
+                                                                                 sizes="(max-width: 150px) 100vw, 150px" /><noscript>
+                                                                                <img src="https://vnsport.com.vn/wp-content/uploads/2020/05/tennis-elbow-dau-khuyu-tay-dau-cho-trieu-chung-va-nguyen-nhan-2-150x150.jpg"
+                                                                                     class="img-responsive wp-post-image" alt="" loading="lazy"
+                                                                                     srcset="https://vnsport.com.vn/wp-content/uploads/2020/05/tennis-elbow-dau-khuyu-tay-dau-cho-trieu-chung-va-nguyen-nhan-2-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2020/05/tennis-elbow-dau-khuyu-tay-dau-cho-trieu-chung-va-nguyen-nhan-2-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2020/05/tennis-elbow-dau-khuyu-tay-dau-cho-trieu-chung-va-nguyen-nhan-2-100x100.jpg 100w"
+                                                                                     sizes="(max-width: 150px) 100vw, 150px" />
+                                                                            </noscript>
+                                                                        </a>
+                                                                        <h2 class="title-post">
+                                                                            <a href="https://vnsport.com.vn/dau-khuyu-tay-dau-cho-trieu-chung-va-nguyen-nhan/">
+                                                                                [
+                                                                                Đau Khuỷu Tay ]: Triệu Chứng Và Nguyên Nhân
+                                                                            </a>
+                                                                        </h2>
+                                                                        <div class="clearfix"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="sb mb-15px col-sm-12">
+                                                                <div class="title-page mb-15px">
+                                                                    <h2 class="title">Tin Tức Sức Khỏe</h2>
+                                                                </div>
+                                                                <div class="content-sb">
+                                                                    <div class="post fadeInRight wow" data-wow-duration="2s" data-wow-delay="0.5s">
+                                                                        <a href="https://vnsport.com.vn/benh-thoat-vi-dia-dem-co-nguy-hiem-cho-moi-nguoi-khong/"
+                                                                           class="thumbnail  pull-left">
+                                                                            <img src="//vnsport.com.vn/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif"
+                                                                                 data-lazy-type="image"
+                                                                                 data-src="https://vnsport.com.vn/wp-content/uploads/2021/11/benh-thoat-vi-dia-dem-co-nguy-hiem-cho-moi-nguoi-khong-waist-support-hochiminh-vnsport-150x150.jpg"
+                                                                                 class="lazy lazy-hidden img-responsive wp-post-image" alt="" loading="lazy"
+                                                                                 srcset=""
+                                                                                 data-srcset="https://vnsport.com.vn/wp-content/uploads/2021/11/benh-thoat-vi-dia-dem-co-nguy-hiem-cho-moi-nguoi-khong-waist-support-hochiminh-vnsport-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2021/11/benh-thoat-vi-dia-dem-co-nguy-hiem-cho-moi-nguoi-khong-waist-support-hochiminh-vnsport-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2021/11/benh-thoat-vi-dia-dem-co-nguy-hiem-cho-moi-nguoi-khong-waist-support-hochiminh-vnsport-100x100.jpg 100w"
+                                                                                 sizes="(max-width: 150px) 100vw, 150px" /><noscript>
+                                                                                <img src="https://vnsport.com.vn/wp-content/uploads/2021/11/benh-thoat-vi-dia-dem-co-nguy-hiem-cho-moi-nguoi-khong-waist-support-hochiminh-vnsport-150x150.jpg"
+                                                                                     class="img-responsive wp-post-image" alt="" loading="lazy"
+                                                                                     srcset="https://vnsport.com.vn/wp-content/uploads/2021/11/benh-thoat-vi-dia-dem-co-nguy-hiem-cho-moi-nguoi-khong-waist-support-hochiminh-vnsport-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2021/11/benh-thoat-vi-dia-dem-co-nguy-hiem-cho-moi-nguoi-khong-waist-support-hochiminh-vnsport-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2021/11/benh-thoat-vi-dia-dem-co-nguy-hiem-cho-moi-nguoi-khong-waist-support-hochiminh-vnsport-100x100.jpg 100w"
+                                                                                     sizes="(max-width: 150px) 100vw, 150px" />
+                                                                            </noscript>
+                                                                        </a>
+                                                                        <h2 class="title-post">
+                                                                            <a href="https://vnsport.com.vn/benh-thoat-vi-dia-dem-co-nguy-hiem-cho-moi-nguoi-khong/">
+                                                                                Bệnh
+                                                                                Thoát Vị Đĩa Đệm Có Nguy Hiểm Cho Mọi Người Không?
+                                                                            </a>
+                                                                        </h2>
+                                                                        <div class="clearfix"></div>
+                                                                    </div>
+                                                                    <div class="post fadeInRight wow" data-wow-duration="2s" data-wow-delay="0.5s">
+                                                                        <a href="https://vnsport.com.vn/thong-bao-lich-nghi-tet-nguyen-dan-2021-vnsport/"
+                                                                           class="thumbnail  pull-left">
+                                                                            <img src="//vnsport.com.vn/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif"
+                                                                                 data-lazy-type="image"
+                                                                                 data-src="https://vnsport.com.vn/wp-content/uploads/2021/02/lich-nghi-tet-2021-1-150x150.jpg"
+                                                                                 class="lazy lazy-hidden img-responsive wp-post-image" alt="" loading="lazy"
+                                                                                 srcset=""
+                                                                                 data-srcset="https://vnsport.com.vn/wp-content/uploads/2021/02/lich-nghi-tet-2021-1-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2021/02/lich-nghi-tet-2021-1-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2021/02/lich-nghi-tet-2021-1-100x100.jpg 100w, https://vnsport.com.vn/wp-content/uploads/2021/02/lich-nghi-tet-2021-1.jpg 600w"
+                                                                                 sizes="(max-width: 150px) 100vw, 150px" /><noscript>
+                                                                                <img src="https://vnsport.com.vn/wp-content/uploads/2021/02/lich-nghi-tet-2021-1-150x150.jpg"
+                                                                                     class="img-responsive wp-post-image" alt="" loading="lazy"
+                                                                                     srcset="https://vnsport.com.vn/wp-content/uploads/2021/02/lich-nghi-tet-2021-1-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2021/02/lich-nghi-tet-2021-1-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2021/02/lich-nghi-tet-2021-1-100x100.jpg 100w, https://vnsport.com.vn/wp-content/uploads/2021/02/lich-nghi-tet-2021-1.jpg 600w"
+                                                                                     sizes="(max-width: 150px) 100vw, 150px" />
+                                                                            </noscript>
+                                                                        </a>
+                                                                        <h2 class="title-post">
+                                                                            <a href="https://vnsport.com.vn/thong-bao-lich-nghi-tet-nguyen-dan-2021-vnsport/">
+                                                                                THÔNG
+                                                                                BÁO: Lịch nghỉ tết Nguyên Đán 2021 &#8211; VNSPORT
+                                                                            </a>
+                                                                        </h2>
+                                                                        <div class="clearfix"></div>
+                                                                    </div>
+                                                                    <div class="post fadeInRight wow" data-wow-duration="2s" data-wow-delay="0.5s">
+                                                                        <a href="https://vnsport.com.vn/loi-ich-cua-chay-bo-va-nhung-dieu-can-luu-y/"
+                                                                           class="thumbnail  pull-left">
+                                                                            <img src="//vnsport.com.vn/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif"
+                                                                                 data-lazy-type="image"
+                                                                                 data-src="https://vnsport.com.vn/wp-content/uploads/2020/12/loi-ich-cua-chay-bo-150x150.jpg"
+                                                                                 class="lazy lazy-hidden img-responsive wp-post-image" alt="" loading="lazy"
+                                                                                 srcset=""
+                                                                                 data-srcset="https://vnsport.com.vn/wp-content/uploads/2020/12/loi-ich-cua-chay-bo-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2020/12/loi-ich-cua-chay-bo-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2020/12/loi-ich-cua-chay-bo-600x600.jpg 600w, https://vnsport.com.vn/wp-content/uploads/2020/12/loi-ich-cua-chay-bo-100x100.jpg 100w, https://vnsport.com.vn/wp-content/uploads/2020/12/loi-ich-cua-chay-bo.jpg 626w"
+                                                                                 sizes="(max-width: 150px) 100vw, 150px" /><noscript>
+                                                                                <img src="https://vnsport.com.vn/wp-content/uploads/2020/12/loi-ich-cua-chay-bo-150x150.jpg"
+                                                                                     class="img-responsive wp-post-image" alt="" loading="lazy"
+                                                                                     srcset="https://vnsport.com.vn/wp-content/uploads/2020/12/loi-ich-cua-chay-bo-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2020/12/loi-ich-cua-chay-bo-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2020/12/loi-ich-cua-chay-bo-600x600.jpg 600w, https://vnsport.com.vn/wp-content/uploads/2020/12/loi-ich-cua-chay-bo-100x100.jpg 100w, https://vnsport.com.vn/wp-content/uploads/2020/12/loi-ich-cua-chay-bo.jpg 626w"
+                                                                                     sizes="(max-width: 150px) 100vw, 150px" />
+                                                                            </noscript>
+                                                                        </a>
+                                                                        <h2 class="title-post">
+                                                                            <a href="https://vnsport.com.vn/loi-ich-cua-chay-bo-va-nhung-dieu-can-luu-y/">
+                                                                                Lợi
+                                                                                Ích Của Chạy Bộ Và Những Điều Cần Lưu Ý
+                                                                            </a>
+                                                                        </h2>
+                                                                        <div class="clearfix"></div>
+                                                                    </div>
+                                                                    <div class="post fadeInRight wow" data-wow-duration="2s" data-wow-delay="0.5s">
+                                                                        <a href="https://vnsport.com.vn/uu-dai-ngay-11-11-danh-cho-moi-khach-hang-cua-vnsport/"
+                                                                           class="thumbnail  pull-left">
+                                                                            <img src="//vnsport.com.vn/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif"
+                                                                                 data-lazy-type="image"
+                                                                                 data-src="https://vnsport.com.vn/wp-content/uploads/2020/11/VNSPORT-VNSPORT-6-150x150.jpg"
+                                                                                 class="lazy lazy-hidden img-responsive wp-post-image" alt="" loading="lazy"
+                                                                                 srcset=""
+                                                                                 data-srcset="https://vnsport.com.vn/wp-content/uploads/2020/11/VNSPORT-VNSPORT-6-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2020/11/VNSPORT-VNSPORT-6-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2020/11/VNSPORT-VNSPORT-6-100x100.jpg 100w, https://vnsport.com.vn/wp-content/uploads/2020/11/VNSPORT-VNSPORT-6.jpg 600w"
+                                                                                 sizes="(max-width: 150px) 100vw, 150px" /><noscript>
+                                                                                <img src="https://vnsport.com.vn/wp-content/uploads/2020/11/VNSPORT-VNSPORT-6-150x150.jpg"
+                                                                                     class="img-responsive wp-post-image" alt="" loading="lazy"
+                                                                                     srcset="https://vnsport.com.vn/wp-content/uploads/2020/11/VNSPORT-VNSPORT-6-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2020/11/VNSPORT-VNSPORT-6-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2020/11/VNSPORT-VNSPORT-6-100x100.jpg 100w, https://vnsport.com.vn/wp-content/uploads/2020/11/VNSPORT-VNSPORT-6.jpg 600w"
+                                                                                     sizes="(max-width: 150px) 100vw, 150px" />
+                                                                            </noscript>
+                                                                        </a>
+                                                                        <h2 class="title-post">
+                                                                            <a href="https://vnsport.com.vn/uu-dai-ngay-11-11-danh-cho-moi-khach-hang-cua-vnsport/">
+                                                                                Ưu
+                                                                                đãi ngày 11.11 dành cho mọi khách hàng của VNSPORT
+                                                                            </a>
+                                                                        </h2>
+                                                                        <div class="clearfix"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="sb mb-15px col-sm-12">
+                                                                <div class="title-page mb-15px">
+                                                                    <h2 class="title">#2 Găng Tay Nam, Nữ Glofit GFST001</h2>
+                                                                </div>
+                                                                <div style="width:100%;" class="wp-video">
+                                                                    <video class="wp-video-shortcode"
+                                                                           id="video-4054-4" preload="metadata" controls="controls">
+                                                                        <source class="lazy lazy-hidden" type="video/youtube"
+                                                                                src="https://youtu.be/17AkoIAOkp4?_=4" />
+                                                                        <a href="https://youtu.be/17AkoIAOkp4">https://youtu.be/17AkoIAOkp4</a>
+                                                                    </video>
+                                                                </div>
+                                                            </div>
+                                                            <div class="sb mb-15px col-sm-12">
+                                                                <div class="title-page mb-15px">
+                                                                    <h2 class="title">#3 Găng Tay Glofit GFST002</h2>
+                                                                </div>
+                                                                <div style="width:100%;" class="wp-video">
+                                                                    <video class="wp-video-shortcode"
+                                                                           id="video-4054-5" preload="metadata" controls="controls">
+                                                                        <source class="lazy lazy-hidden" type="video/youtube"
+                                                                                src="https://www.youtube.com/watch?v=gy-nVvepX-o&#038;_=5" />
+                                                                        <a href="https://www.youtube.com/watch?v=gy-nVvepX-o">https://www.youtube.com/watch?v=gy-nVvepX-o</a>
+                                                                    </video>
+                                                                </div>
+                                                            </div>
+                                                            <div class="widget_text sb mb-15px col-sm-12">
+                                                                <div class="textwidget custom-html-widget">
+                                                                    <script async defer src="//assets.pinterest.com/js/pinit.js"></script> <a data-pin-do="embedUser" data-pin-lang="vi" data-pin-board-width="400"
+                                                                                                                                              data-pin-scale-height="240" data-pin-scale-width="80"
+                                                                                                                                              href="https://www.pinterest.com/dungcuthethaovnsport/"></a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="widget_text sb mb-15px col-sm-12">
+                                                                <div class="title-page mb-15px">
+                                                                    <h2 class="title">Quy Định Vận Chuyển</h2>
+                                                                </div>
+                                                                <div class="textwidget custom-html-widget">
+                                                                    <marquee id="marq" scrollamount="3" direction="left" loop="50" scrolldelay="0"
+                                                                             onmouseover="this.stop()" onmouseout="this.start()">
+                                                                        <a href="https://vnsport.com.vn/quy-dinh-van-chuyen/"
+                                                                           target="Quy Định Vận Chuyển - VNSPORT" rel="noopener">
+                                                                            <img class="lazy lazy-hidden"
+                                                                                 src="//vnsport.com.vn/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif"
+                                                                                 data-lazy-type="image"
+                                                                                 data-src="https://vnsport.com.vn/wp-content/uploads/2019/04/free-ship-phai-qua1.png"><noscript>
+                                                                                <img src="https://vnsport.com.vn/wp-content/uploads/2019/04/free-ship-phai-qua1.png">
+                                                                            </noscript>
+                                                                        </a>
+                                                                    </marquee>
+                                                                </div>
+                                                            </div>
+                                                            <div class="sb mb-15px col-sm-12">
+                                                                <img width="240" height="160"
+                                                                     src="//vnsport.com.vn/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif"
+                                                                     data-lazy-type="image"
+                                                                     data-src="https://vnsport.com.vn/wp-content/uploads/2019/04/cam-ket-hai-long-3.png"
+                                                                     class="lazy lazy-hidden image wp-image-1162  attachment-full size-full" alt=""
+                                                                     loading="lazy" style="max-width: 100%; height: auto;" /><noscript>
+                                                                    <img width="240"
+                                                                         height="160"
+                                                                         src="https://vnsport.com.vn/wp-content/uploads/2019/04/cam-ket-hai-long-3.png"
+                                                                         class="image wp-image-1162  attachment-full size-full" alt="" loading="lazy"
+                                                                         style="max-width: 100%; height: auto;" />
+                                                                </noscript>
+                                                            </div>
+                                                            <div class="sb mb-15px col-sm-12">
+                                                                <div class="title-page mb-15px">
+                                                                    <h2 class="title">Sản phẩm vừa xem</h2>
+                                                                </div>
+                                                                <ul class="product_list_widget">
+                                                                    <li>
+                                                                        <a href="https://vnsport.com.vn/bang-keo-dan-co-kinesiology-tape-5x5m/">
+                                                                            <img width="300" height="300"
+                                                                                 src="//vnsport.com.vn/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif"
+                                                                                 data-lazy-type="image"
+                                                                                 data-src="https://vnsport.com.vn/wp-content/uploads/2021/10/bang-keo-dan-co-the-thao-1-300x300.jpg"
+                                                                                 class="lazy lazy-hidden attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                                                                 alt="" loading="lazy" srcset=""
+                                                                                 data-srcset="https://vnsport.com.vn/wp-content/uploads/2021/10/bang-keo-dan-co-the-thao-1-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-keo-dan-co-the-thao-1-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-keo-dan-co-the-thao-1-600x600.jpg 600w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-keo-dan-co-the-thao-1-100x100.jpg 100w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-keo-dan-co-the-thao-1-64x64.jpg 64w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-keo-dan-co-the-thao-1.jpg 750w"
+                                                                                 sizes="(max-width: 300px) 100vw, 300px" /><noscript>
+                                                                                <img width="300"
+                                                                                     height="300"
+                                                                                     src="//vnsport.com.vn/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif"
+                                                                                     data-lazy-type="image"
+                                                                                     data-src="https://vnsport.com.vn/wp-content/uploads/2021/10/bang-keo-dan-co-the-thao-1-300x300.jpg"
+                                                                                     class="lazy lazy-hidden attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                                                                     alt="" loading="lazy" srcset=""
+                                                                                     data-srcset="https://vnsport.com.vn/wp-content/uploads/2021/10/bang-keo-dan-co-the-thao-1-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-keo-dan-co-the-thao-1-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-keo-dan-co-the-thao-1-600x600.jpg 600w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-keo-dan-co-the-thao-1-100x100.jpg 100w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-keo-dan-co-the-thao-1-64x64.jpg 64w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-keo-dan-co-the-thao-1.jpg 750w"
+                                                                                     sizes="(max-width: 300px) 100vw, 300px" /><noscript>
+                                                                                    <img width="300"
+                                                                                         height="300"
+                                                                                         src="https://vnsport.com.vn/wp-content/uploads/2021/10/bang-keo-dan-co-the-thao-1-300x300.jpg"
+                                                                                         class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                                                                         alt="" loading="lazy"
+                                                                                         srcset="https://vnsport.com.vn/wp-content/uploads/2021/10/bang-keo-dan-co-the-thao-1-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-keo-dan-co-the-thao-1-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-keo-dan-co-the-thao-1-600x600.jpg 600w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-keo-dan-co-the-thao-1-100x100.jpg 100w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-keo-dan-co-the-thao-1-64x64.jpg 64w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-keo-dan-co-the-thao-1.jpg 750w"
+                                                                                         sizes="(max-width: 300px) 100vw, 300px" />
+                                                                                </noscript>
+                                                                            </noscript>
+                                                                            <span class="product-title">Băng Keo Dán Cơ Kinesiology Tape 5x5m</span>
+                                                                        </a>
+                                                                        <del class="price-old">
+                                                                            <span class="woocommerce-Price-amount amount price-new">
+                                                                                <bdi>
+                                                                                    90,000<span class="woocommerce-Price-currencySymbol">&#8363;</span>
+                                                                                </bdi>
+                                                                            </span>
+                                                                        </del>
+                                                                        <ins class="price-new">
+                                                                            <span class="woocommerce-Price-amount amount price-new">
+                                                                                <bdi>
+                                                                                    60,000<span class="woocommerce-Price-currencySymbol">&#8363;</span>
+                                                                                </bdi>
+                                                                            </span>
+                                                                        </ins>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a href="https://vnsport.com.vn/bang-bao-ve-khop-goi-360-vn040/">
+                                                                            <img width="300"
+                                                                                 height="300"
+                                                                                 src="//vnsport.com.vn/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif"
+                                                                                 data-lazy-type="image"
+                                                                                 data-src="https://vnsport.com.vn/wp-content/uploads/2020/11/bang-bao-ve-khop-goi-360-vn040_2-300x300.jpg"
+                                                                                 class="lazy lazy-hidden attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                                                                 alt="" loading="lazy" srcset=""
+                                                                                 data-srcset="https://vnsport.com.vn/wp-content/uploads/2020/11/bang-bao-ve-khop-goi-360-vn040_2-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2020/11/bang-bao-ve-khop-goi-360-vn040_2-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2020/11/bang-bao-ve-khop-goi-360-vn040_2-768x768.jpg 768w, https://vnsport.com.vn/wp-content/uploads/2020/11/bang-bao-ve-khop-goi-360-vn040_2-600x600.jpg 600w, https://vnsport.com.vn/wp-content/uploads/2020/11/bang-bao-ve-khop-goi-360-vn040_2-100x100.jpg 100w, https://vnsport.com.vn/wp-content/uploads/2020/11/bang-bao-ve-khop-goi-360-vn040_2-64x64.jpg 64w, https://vnsport.com.vn/wp-content/uploads/2020/11/bang-bao-ve-khop-goi-360-vn040_2.jpg 800w"
+                                                                                 sizes="(max-width: 300px) 100vw, 300px" /><noscript>
+                                                                                <img width="300"
+                                                                                     height="300"
+                                                                                     src="//vnsport.com.vn/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif"
+                                                                                     data-lazy-type="image"
+                                                                                     data-src="https://vnsport.com.vn/wp-content/uploads/2020/11/bang-bao-ve-khop-goi-360-vn040_2-300x300.jpg"
+                                                                                     class="lazy lazy-hidden attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                                                                     alt="" loading="lazy" srcset=""
+                                                                                     data-srcset="https://vnsport.com.vn/wp-content/uploads/2020/11/bang-bao-ve-khop-goi-360-vn040_2-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2020/11/bang-bao-ve-khop-goi-360-vn040_2-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2020/11/bang-bao-ve-khop-goi-360-vn040_2-768x768.jpg 768w, https://vnsport.com.vn/wp-content/uploads/2020/11/bang-bao-ve-khop-goi-360-vn040_2-600x600.jpg 600w, https://vnsport.com.vn/wp-content/uploads/2020/11/bang-bao-ve-khop-goi-360-vn040_2-100x100.jpg 100w, https://vnsport.com.vn/wp-content/uploads/2020/11/bang-bao-ve-khop-goi-360-vn040_2-64x64.jpg 64w, https://vnsport.com.vn/wp-content/uploads/2020/11/bang-bao-ve-khop-goi-360-vn040_2.jpg 800w"
+                                                                                     sizes="(max-width: 300px) 100vw, 300px" /><noscript>
+                                                                                    <img width="300"
+                                                                                         height="300"
+                                                                                         src="https://vnsport.com.vn/wp-content/uploads/2020/11/bang-bao-ve-khop-goi-360-vn040_2-300x300.jpg"
+                                                                                         class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                                                                         alt="" loading="lazy"
+                                                                                         srcset="https://vnsport.com.vn/wp-content/uploads/2020/11/bang-bao-ve-khop-goi-360-vn040_2-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2020/11/bang-bao-ve-khop-goi-360-vn040_2-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2020/11/bang-bao-ve-khop-goi-360-vn040_2-768x768.jpg 768w, https://vnsport.com.vn/wp-content/uploads/2020/11/bang-bao-ve-khop-goi-360-vn040_2-600x600.jpg 600w, https://vnsport.com.vn/wp-content/uploads/2020/11/bang-bao-ve-khop-goi-360-vn040_2-100x100.jpg 100w, https://vnsport.com.vn/wp-content/uploads/2020/11/bang-bao-ve-khop-goi-360-vn040_2-64x64.jpg 64w, https://vnsport.com.vn/wp-content/uploads/2020/11/bang-bao-ve-khop-goi-360-vn040_2.jpg 800w"
+                                                                                         sizes="(max-width: 300px) 100vw, 300px" />
+                                                                                </noscript>
+                                                                            </noscript>
+                                                                            <span class="product-title">
+                                                                                Băng Bảo Vệ Khớp Gối 360° VN040 - VNSPORT | 1
+                                                                                Chiếc
+                                                                            </span>
+                                                                        </a> <del class="price-old">
+                                                                            <span class="woocommerce-Price-amount amount price-new">
+                                                                                <bdi>
+                                                                                    470,000<span class="woocommerce-Price-currencySymbol">&#8363;</span>
+                                                                                </bdi>
+                                                                            </span>
+                                                                        </del>
+                                                                        <ins class="price-new">
+                                                                            <span class="woocommerce-Price-amount amount price-new">
+                                                                                <bdi>
+                                                                                    390,000<span class="woocommerce-Price-currencySymbol">&#8363;</span>
+                                                                                </bdi>
+                                                                            </span>
+                                                                        </ins>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                            <div class="sb mb-15px col-sm-12">
+                                                                <div class="title-page mb-15px">
+                                                                    <h2 class="title">Danh mục sản phẩm</h2>
+                                                                </div><select name='product_cat' id='product_cat' class='dropdown_product_cat'>
+                                                                    <option value='' selected='selected'>Chọn danh mục</option>
+                                                                    <option class="level-0" value="bong-tap-yoga">Bóng Tập Yoga</option>
+                                                                    <option class="level-0" value="bang-bao-ve-dau-goi">
+                                                                        Băng Bảo Vệ Đầu Gối &#8211; Knee
+                                                                        Brace
+                                                                    </option>
+                                                                    <option class="level-0" value="phu-kien-the-thao">Phụ Kiện Thể Thao</option>
+                                                                    <option class="level-0" value="tham-yoga">Thảm Yoga</option>
+                                                                    <option class="level-0" value="tui-dung-tham-yoga">Túi Đựng Thảm Yoga</option>
+                                                                    <option class="level-0" value="phu-kien-yoga">Phụ Kiện Yoga</option>
+                                                                    <option class="level-0" value="bang-bao-ve-co-tay">Băng Bảo Vệ Cổ Tay</option>
+                                                                    <option class="level-0" value="bang-bao-ve-khuyu-tay">
+                                                                        Băng Bảo Vệ Khuỷu Tay &#8211; Cánh
+                                                                        Tay
+                                                                    </option>
+                                                                    <option class="level-0" value="bang-bao-ve-co-chan">
+                                                                        Băng Bảo Vệ Cổ Chân &#8211; Ankle
+                                                                        Support
+                                                                    </option>
+                                                                    <option class="level-0" value="bang-bao-ve-that-lung">
+                                                                        Đai Thắt Lưng &#8211; Waist Belts
+                                                                    </option>
+                                                                    <option class="level-0" value="glofit-viet-nam">Glofit Việt Nam</option>
+                                                                    <option class="level-0" value="balo-tui-xach-the-thao">
+                                                                        Balo &#8211; Túi Xách Thể Thao
+                                                                    </option>
+                                                                    <option class="level-0" value="san-pham-chua-phan-loai">Sản Phẩm Chưa Phân Loại</option>
+                                                                </select>
+                                                            </div>
+                                                            <div class="sb mb-15px col-sm-12">
+                                                                <div class="title-page mb-15px">
+                                                                    <h2 class="title">Bó Gối VN030 | Knee Support VN030</h2>
+                                                                </div><a href="https://vnsport.com.vn/bo-goi-bong-ro-bong-chuyen-vn030/">
+                                                                    <img width="300"
+                                                                         height="300"
+                                                                         src="//vnsport.com.vn/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif"
+                                                                         data-lazy-type="image"
+                                                                         data-src="https://vnsport.com.vn/wp-content/uploads/2021/10/bang-goi-360-do-glofit-full-black-vn030-bo-goi-vn030-knee-support-glofit-vn030-300x300.jpg"
+                                                                         class="lazy lazy-hidden image wp-image-5476  attachment-medium size-medium" alt=""
+                                                                         loading="lazy" style="max-width: 100%; height: auto;"
+                                                                         title="Bó Gối VN030 - Glofit Việt Nam" srcset=""
+                                                                         data-srcset="https://vnsport.com.vn/wp-content/uploads/2021/10/bang-goi-360-do-glofit-full-black-vn030-bo-goi-vn030-knee-support-glofit-vn030-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-goi-360-do-glofit-full-black-vn030-bo-goi-vn030-knee-support-glofit-vn030-1024x1024.jpg 1024w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-goi-360-do-glofit-full-black-vn030-bo-goi-vn030-knee-support-glofit-vn030-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-goi-360-do-glofit-full-black-vn030-bo-goi-vn030-knee-support-glofit-vn030-768x768.jpg 768w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-goi-360-do-glofit-full-black-vn030-bo-goi-vn030-knee-support-glofit-vn030-1536x1536.jpg 1536w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-goi-360-do-glofit-full-black-vn030-bo-goi-vn030-knee-support-glofit-vn030-2048x2048.jpg 2048w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-goi-360-do-glofit-full-black-vn030-bo-goi-vn030-knee-support-glofit-vn030-600x600.jpg 600w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-goi-360-do-glofit-full-black-vn030-bo-goi-vn030-knee-support-glofit-vn030-100x100.jpg 100w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-goi-360-do-glofit-full-black-vn030-bo-goi-vn030-knee-support-glofit-vn030-64x64.jpg 64w"
+                                                                         sizes="(max-width: 300px) 100vw, 300px" /><noscript>
+                                                                        <img width="300" height="300"
+                                                                             src="https://vnsport.com.vn/wp-content/uploads/2021/10/bang-goi-360-do-glofit-full-black-vn030-bo-goi-vn030-knee-support-glofit-vn030-300x300.jpg"
+                                                                             class="image wp-image-5476  attachment-medium size-medium" alt="" loading="lazy"
+                                                                             style="max-width: 100%; height: auto;" title="Bó Gối VN030 - Glofit Việt Nam"
+                                                                             srcset="https://vnsport.com.vn/wp-content/uploads/2021/10/bang-goi-360-do-glofit-full-black-vn030-bo-goi-vn030-knee-support-glofit-vn030-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-goi-360-do-glofit-full-black-vn030-bo-goi-vn030-knee-support-glofit-vn030-1024x1024.jpg 1024w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-goi-360-do-glofit-full-black-vn030-bo-goi-vn030-knee-support-glofit-vn030-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-goi-360-do-glofit-full-black-vn030-bo-goi-vn030-knee-support-glofit-vn030-768x768.jpg 768w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-goi-360-do-glofit-full-black-vn030-bo-goi-vn030-knee-support-glofit-vn030-1536x1536.jpg 1536w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-goi-360-do-glofit-full-black-vn030-bo-goi-vn030-knee-support-glofit-vn030-2048x2048.jpg 2048w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-goi-360-do-glofit-full-black-vn030-bo-goi-vn030-knee-support-glofit-vn030-600x600.jpg 600w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-goi-360-do-glofit-full-black-vn030-bo-goi-vn030-knee-support-glofit-vn030-100x100.jpg 100w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-goi-360-do-glofit-full-black-vn030-bo-goi-vn030-knee-support-glofit-vn030-64x64.jpg 64w"
+                                                                             sizes="(max-width: 300px) 100vw, 300px" />
+                                                                    </noscript>
+                                                                </a>
+                                                            </div>
+                                                            <div class="sb mb-15px col-sm-12">
+                                                                <div class="title-page mb-15px">
+                                                                    <h2 class="title">Đai Khớp Gối Dây Quấn Glofit – GFHX031 | 1 Chiếc</h2>
+                                                                </div><a href="https://vnsport.com.vn/dai-khop-goi-day-quan-glofit-gfhx031-1-chiec/">
+                                                                    <img width="300" height="300"
+                                                                         src="//vnsport.com.vn/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif"
+                                                                         data-lazy-type="image"
+                                                                         data-src="https://vnsport.com.vn/wp-content/uploads/2021/11/dai-khop-goi-day-quan-glofit-gfhx031-1-chiec-mau-den-knee-support-glofit_16-300x300.jpg"
+                                                                         class="lazy lazy-hidden image wp-image-5559  attachment-medium size-medium" alt=""
+                                                                         loading="lazy" style="max-width: 100%; height: auto;"
+                                                                         title="Đai Khớp Gối Dây Quấn Glofit – GFHX031 | 1 Chiếc" srcset=""
+                                                                         data-srcset="https://vnsport.com.vn/wp-content/uploads/2021/11/dai-khop-goi-day-quan-glofit-gfhx031-1-chiec-mau-den-knee-support-glofit_16-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2021/11/dai-khop-goi-day-quan-glofit-gfhx031-1-chiec-mau-den-knee-support-glofit_16-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2021/11/dai-khop-goi-day-quan-glofit-gfhx031-1-chiec-mau-den-knee-support-glofit_16-768x768.jpg 768w, https://vnsport.com.vn/wp-content/uploads/2021/11/dai-khop-goi-day-quan-glofit-gfhx031-1-chiec-mau-den-knee-support-glofit_16-600x600.jpg 600w, https://vnsport.com.vn/wp-content/uploads/2021/11/dai-khop-goi-day-quan-glofit-gfhx031-1-chiec-mau-den-knee-support-glofit_16-100x100.jpg 100w, https://vnsport.com.vn/wp-content/uploads/2021/11/dai-khop-goi-day-quan-glofit-gfhx031-1-chiec-mau-den-knee-support-glofit_16-64x64.jpg 64w, https://vnsport.com.vn/wp-content/uploads/2021/11/dai-khop-goi-day-quan-glofit-gfhx031-1-chiec-mau-den-knee-support-glofit_16.jpg 800w"
+                                                                         sizes="(max-width: 300px) 100vw, 300px" /><noscript>
+                                                                        <img width="300" height="300"
+                                                                             src="https://vnsport.com.vn/wp-content/uploads/2021/11/dai-khop-goi-day-quan-glofit-gfhx031-1-chiec-mau-den-knee-support-glofit_16-300x300.jpg"
+                                                                             class="image wp-image-5559  attachment-medium size-medium" alt="" loading="lazy"
+                                                                             style="max-width: 100%; height: auto;"
+                                                                             title="Đai Khớp Gối Dây Quấn Glofit – GFHX031 | 1 Chiếc"
+                                                                             srcset="https://vnsport.com.vn/wp-content/uploads/2021/11/dai-khop-goi-day-quan-glofit-gfhx031-1-chiec-mau-den-knee-support-glofit_16-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2021/11/dai-khop-goi-day-quan-glofit-gfhx031-1-chiec-mau-den-knee-support-glofit_16-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2021/11/dai-khop-goi-day-quan-glofit-gfhx031-1-chiec-mau-den-knee-support-glofit_16-768x768.jpg 768w, https://vnsport.com.vn/wp-content/uploads/2021/11/dai-khop-goi-day-quan-glofit-gfhx031-1-chiec-mau-den-knee-support-glofit_16-600x600.jpg 600w, https://vnsport.com.vn/wp-content/uploads/2021/11/dai-khop-goi-day-quan-glofit-gfhx031-1-chiec-mau-den-knee-support-glofit_16-100x100.jpg 100w, https://vnsport.com.vn/wp-content/uploads/2021/11/dai-khop-goi-day-quan-glofit-gfhx031-1-chiec-mau-den-knee-support-glofit_16-64x64.jpg 64w, https://vnsport.com.vn/wp-content/uploads/2021/11/dai-khop-goi-day-quan-glofit-gfhx031-1-chiec-mau-den-knee-support-glofit_16.jpg 800w"
+                                                                             sizes="(max-width: 300px) 100vw, 300px" />
+                                                                    </noscript>
+                                                                </a>
+                                                            </div>
+                                                            <div class="sb mb-15px col-sm-12">
+                                                                <div class="title-page mb-15px">
+                                                                    <h2 class="title">Bóng Tập Gymball, Yogaball GFY001</h2>
+                                                                </div><a href="https://vnsport.com.vn/bong-tap-the-hinh-tap-yoga-tap-vat-ly-tri-lieu-vui-choi-giai-tri-65cm-75cm-glofit-gfy001/">
+                                                                    <img width="300" height="300"
+                                                                         src="//vnsport.com.vn/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif"
+                                                                         data-lazy-type="image"
+                                                                         data-src="https://vnsport.com.vn/wp-content/uploads/2020/05/bong-tạp-yoga-tap-gym-tap-vat-ly-tri-lieu-glofit-1-300x300.jpg"
+                                                                         class="lazy lazy-hidden image wp-image-3061  attachment-medium size-medium" alt=""
+                                                                         loading="lazy" style="max-width: 100%; height: auto;" srcset=""
+                                                                         data-srcset="https://vnsport.com.vn/wp-content/uploads/2020/05/bong-tạp-yoga-tap-gym-tap-vat-ly-tri-lieu-glofit-1-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2020/05/bong-tạp-yoga-tap-gym-tap-vat-ly-tri-lieu-glofit-1-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2020/05/bong-tạp-yoga-tap-gym-tap-vat-ly-tri-lieu-glofit-1.jpg 600w, https://vnsport.com.vn/wp-content/uploads/2020/05/bong-tạp-yoga-tap-gym-tap-vat-ly-tri-lieu-glofit-1-100x100.jpg 100w"
+                                                                         sizes="(max-width: 300px) 100vw, 300px" /><noscript>
+                                                                        <img width="300" height="300"
+                                                                             src="https://vnsport.com.vn/wp-content/uploads/2020/05/bong-tạp-yoga-tap-gym-tap-vat-ly-tri-lieu-glofit-1-300x300.jpg"
+                                                                             class="image wp-image-3061  attachment-medium size-medium" alt="" loading="lazy"
+                                                                             style="max-width: 100%; height: auto;"
+                                                                             srcset="https://vnsport.com.vn/wp-content/uploads/2020/05/bong-tạp-yoga-tap-gym-tap-vat-ly-tri-lieu-glofit-1-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2020/05/bong-tạp-yoga-tap-gym-tap-vat-ly-tri-lieu-glofit-1-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2020/05/bong-tạp-yoga-tap-gym-tap-vat-ly-tri-lieu-glofit-1.jpg 600w, https://vnsport.com.vn/wp-content/uploads/2020/05/bong-tạp-yoga-tap-gym-tap-vat-ly-tri-lieu-glofit-1-100x100.jpg 100w"
+                                                                             sizes="(max-width: 300px) 100vw, 300px" />
+                                                                    </noscript>
+                                                                </a>
+                                                            </div>
+                                                            <div class="sb mb-15px col-sm-12 ">
+                                                                <div class="title-page mb-15px">
+                                                                    <h2 class="title">Găng Tay Thể Thao Glofit Go</h2>
+                                                                </div>
+                                                                <div class="content-sb wow pulse" data-wow-delay="0.8s">
+                                                                    <a class="banner" href="">
+                                                                        <img src="https://vnsport.com.vn/wp-content/uploads/2020/06/giao-hang-vnsport.gif"
+                                                                             alt="banner sidebar">
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+

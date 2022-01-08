@@ -1,0 +1,129 @@
+﻿@model TravelTour.Models.Booking
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/share/AdminLayout.cshtml";
+}
+
+<style>
+    table {
+        text-align: center;
+        border-top: 1px solid black;
+    }
+
+        table dt dd {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+    .dl-horizontal {
+        font-size: large
+    }
+</style>
+
+<div>
+    <h4>Chi Tiết</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Member.Username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Member.Username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tour.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tour.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerMail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerMail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerPhone_)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerPhone_)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CustomerAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Note)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Note)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeptTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeptTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDepart)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartDepart)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Payment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Payment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalPeople)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalPeople)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BookingCode }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

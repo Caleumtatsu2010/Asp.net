@@ -1,0 +1,200 @@
+﻿/* FONT */
+@font-face {
+    font-family: 'r_regular';
+    src: url('../../../fonts/roboto/Roboto-Regular.ttf');
+}
+
+.r_regular {
+    font-family: 'r_regular';
+}
+
+@font-face {
+    font-family: 'r_bold';
+    src: url('../../../fonts/roboto/Roboto-Bold.ttf');
+}
+
+.r_bold {
+    font-family: 'r_bold';
+}
+
+@font-face {
+    font-family: 'r_light';
+    src: url('../../../fonts/roboto/Roboto-Light.ttf');
+}
+
+.r_light {
+    font-family: 'r_light';
+}
+
+@font-face {
+    font-family: 'qs_regular';
+    src: url('../../../fonts/Quicksand-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'qs_bold';
+    src: url('../../../fonts/Quicksand-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'r_conde_regular';
+    src: url('../../../fonts/roboto/RobotoCondensed-Regular.ttf');
+}
+/*@font-face{font-family: 'r_conde_regular';src: url('https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto_condensed/robotocondensed-regular-webfont.ttf');}*/
+.r_conde_regular {
+    font-family: 'r_conde_regular';
+}
+
+@font-face {
+    font-family: 'r_conde_bold';
+    src: url('../../../fonts/roboto/RobotoCondensed-Bold.ttf');
+}
+/*@font-face{font-family: 'r_conde_bold';src: url('https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto_condensed/robotocondensed-bold-webfont.ttf');}*/
+.r_conde_bold {
+    font-family: 'r_conde_bold';
+}
+
+@font-face {
+    font-family: 'r_conde_light';
+    src: url('../../../fonts/roboto/RobotoCondensed-Light.ttf');
+}
+/*@font-face{font-family: 'r_conde_light';src: url('https://cdnjs.cloudflare.com/ajax/libs/ink/3.1.10/fonts/Roboto_condensed/robotocondensed-light-webfont.ttf');}*/
+.r_conde_light {
+    font-family: 'r_conde_light';
+}
+
+@font-face {
+    font-family: 'r_conde_italic';
+    src: url('../../../fonts/roboto/RobotoCondensed-Italic.ttf');
+}
+
+.r_conde_italic {
+    font-family: 'r_conde_italic';
+}
+
+@font-face {
+    font-family: 'utm_and';
+    src: url('../../../fonts/UTM Androgyne.ttf');
+}
+
+.utm_and {
+    font-family: 'utm_and';
+}
+
+@font-face {
+    font-family: 'utm_american';
+    src: url('../../../fonts/UTM American Sans.ttf');
+}
+
+.utm_american {
+    font-family: 'utm_american';
+}
+
+@font-face {
+    font-family: 'utm_avo';
+    src: url('../../../fonts/UTM Avo.ttf');
+}
+
+.utm_avo {
+    font-family: 'utm_avo';
+}
+
+@font-face {
+    font-family: 'utm_avo_bold';
+    src: url('../../../fonts/UTM AvoBold.ttf');
+}
+
+.utm_avo {
+    font-family: 'utm_avo_bold';
+}
+
+@font-face {
+    font-family: 'FuturaStdBook';
+    src: url('../../../fonts/Futura/FuturaStd-Book.ttf');
+}
+
+.FuturaStdBook {
+    font-family: 'FuturaStdBook';
+}
+
+@font-face {
+    font-family: 'FuturaStdMedium';
+    src: url('../../../fonts/Futura/FuturaStd-Medium.ttf');
+}
+
+.FuturaStdMedium {
+    font-family: 'FuturaStdMedium';
+}
+
+@font-face {
+    font-family: 'os_regular';
+    src: url('../../../fonts/OpenSans/OpenSans-Regular.ttf');
+}
+
+.os_regular {
+    font-family: 'os_regular';
+}
+
+@font-face {
+    font-family: 'os_semi_bold';
+    src: url('../../../fonts/OpenSans/OpenSans-Semibold.ttf');
+}
+
+.os_semi_bold {
+    font-family: 'os_semi_bold';
+}
+
+@font-face {
+    font-family: 'os_bold';
+    src: url('../../../fonts/OpenSans/OpenSans-Bold.ttf');
+}
+
+.os_bold {
+    font-family: 'os_bold';
+}
+
+@font-face {
+    font-family: 'os_italic';
+    src: url('../../../fonts/OpenSans/OpenSans-Italic.ttf');
+}
+
+.os_italic {
+    font-family: 'os_italic';
+}
+
+/* NOTO */
+@font-face {
+    font-family: 'noto_bold';
+    src: url('../../../fonts/noto/NotoSerif-Bold.ttf');
+}
+
+.noto_bold {
+    font-family: 'noto_bold';
+}
+
+@font-face {
+    font-family: 'noto_bold_italic';
+    src: url('../../../fonts/noto/NotoSerif-BoldItalic.ttf');
+}
+
+.noto_bold_italic {
+    font-family: 'noto_bold_italic';
+}
+
+@font-face {
+    font-family: 'noto_italic';
+    src: url('../../../fonts/noto/NotoSerif-Italic.ttf');
+}
+
+.noto_italic {
+    font-family: 'noto_italic';
+}
+
+@font-face {
+    font-family: 'noto_regular';
+    src: url('../../../fonts/noto/NotoSerif-Regular.ttf');
+}
+
+.noto_italic {
+    font-family: 'noto_regular';
+}

@@ -1,0 +1,57 @@
+﻿@model IEnumerable<VnSport.Models.KhoHang>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Kho Hàng</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="card mb-4">
+    <div class="card-header">
+        <i class="fas fa-table me-1"></i>
+        Kho Hàng
+    </div>
+    <div class="card-body">
+        <table id="datatablesSimple">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SanPham.tenSanPham)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.soLuongTon)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ghiChu)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.SanPham.tenSanPham)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.soLuongTon)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ghiChu)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.maSanPham }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.maSanPham }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.maSanPham })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
+

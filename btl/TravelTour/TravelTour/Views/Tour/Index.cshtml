@@ -1,0 +1,708 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/clientlayout.cshtml";
+
+    var ListProduct = ViewBag.AllProducts as IEnumerable<TravelTour.Models.Tour>;
+
+}
+
+
+<div class="category-list-tour category-box-list-default category-box-sidebar-default">
+    <div class="container_12">
+        <div class="grid_12">
+            <div class="grid_9 alpha">
+                <div class="category-box-list-default-inner">
+                    <h1>@ViewBag.TourName</h1>
+                    <ul>
+
+                        @foreach (var item in ListProduct)
+                        {
+
+                            <li>
+                                <div class="box-img">
+                                    <a href="@Url.Action("Detail", "Tour", new { id = item.TourCode})">
+                                        <img alt=""
+                                             src="~/image/@item.Image1" />
+
+                                        <button>
+                                            Đặt
+                                            tour
+                                        </button>
+                                    </a>
+                                </div>
+                                <div class="box-content">
+
+                                    <div class="box-content-promotion box-content-promotion-tour">
+                                        <div class="box-title-content">
+                                            <h3 class="title-h3">
+                                                <a href="@Url.Action("Detail", "Tour", new { id = item.TourCode})">
+                                                    @item.Name
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div class="box-summary-content-tour">
+                                            <table class="table tlb-time-and-traffic-tour">
+                                                <tr>
+                                                    <td> Mã Tour: @item.TourCode </td>
+                                                    <td>
+                                                        <i class="fa fa-clock-o" aria-hidden="true"></i> @item.Day Ngày
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3">Điểm Đến: @item.Destination</td>
+                                                </tr>
+                                            </table>
+
+                                            <div class="box-tour-note-extra">
+                                                <ul class="list-tour-note-extra">
+                                                    <li>Giá siêu ưu đãi</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="box-price-promotion-tour">
+                                            Giá 1 khách:
+                                            <span>@item.newPrice<sup>đ</sup></span>
+                                            @if (@item.oldPrice != null)
+                                            {
+                                                <del>
+                                                    @item.oldPrice
+                                                    <sup>đ</sup>
+                                                </del>
+                                            }
+                                        </div>
+                                        @if (Session["UserName"] != null)
+                                        {
+                                            <a style="background-color:orange; color:snow;border-radius:4px;padding:5px; text-decoration:none"
+                                               href="@Url.Action("AddItem", "Cart", new { id = item.TourCode})">
+                                                Thêm Vào Giỏ
+                                            </a>
+                                        }
+                                        else
+                                        {
+                                            <a style="background-color:orange; color:snow;border-radius:4px;padding:5px; text-decoration:none"
+                                               href="@Url.Action("Login", "Account")">
+                                                Thêm Vào Giỏ
+                                            </a>
+
+                                        }
+
+                                        <a class="btn btn-success btn-xs btn-readmore"
+                                           href="@Url.Action("Detail", "Tour", new { id = item.TourCode})">
+                                            Chi
+                                            tiết
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                        }
+
+                        </ul>
+
+
+                </div>
+
+                <div class="single-box-content">
+                    <div class="content-post single-content">
+                        <h2 style="text-align: center;">
+                            <strong>
+                                DU LỊCH TRONG NƯỚC&nbsp;| CH&Ugrave;M TOUR DU LỊCH TRONG NƯỚC GI&Aacute; RẺ
+                                2021
+                            </strong>
+                        </h2>
+
+                        <p style="text-align: justify;">
+                            <strong>Tour du lịch trong nước</strong> của Vietnam Booking nổi bật với chất lượng dịch
+                            vụ c&ugrave;ng sản phẩm tour đa dạng, đưa qu&yacute; kh&aacute;ch kh&aacute;m ph&aacute;
+                            vẻ đẹp tiềm ẩn của dải đất h&igrave;nh chữ S xinh đẹp. Tour trong nước trải d&agrave;i
+                            từ Bắc v&agrave;o Nam, theo nhiều chủ đề tuyến tour nổi bật như H&agrave; Nội, Sapa,
+                            Ninh B&igrave;nh, Đ&agrave; Nẵng&nbsp; - Huế - Hội An, Đ&agrave; Lạt &ndash; T&acirc;y
+                            Nguy&ecirc;n, Miền T&acirc;y, Biển đảo C&ocirc;n Đảo, Mũi N&eacute;, Ph&uacute;
+                            Quốc&hellip;.
+                        </p>
+
+                        <h2 style="text-align: justify;">
+                            <strong>
+                                C&Aacute;C TOUR DU LỊCH TRONG NƯỚC GI&Aacute; RẺ ĐƯỢC Y&Ecirc;U TH&Iacute;CH
+                                NHẤT NĂM
+                            </strong>
+                        </h2>
+
+                        <h3 style="text-align: justify;">
+                            <span style="font-size:20px;">
+                                <span style="color:#B22222;">
+                                    <strong>
+                                        Tour Miền Bắc non
+                                        s&ocirc;ng h&ugrave;ng vĩ
+                                    </strong>
+                                </span>
+                            </span>
+                        </h3>
+
+                        <p style="text-align: justify;">
+                            <meta charset="utf-8" />
+                        </p>
+
+                        <h4 dir="ltr" style="text-align: justify;">
+                            <span style="font-size:18px;"><strong>Sapa - Thị trấn sương m&ugrave;</strong></span>
+                        </h4>
+
+                        <p dir="ltr" style="text-align: justify;">
+                            <strong>Sapa</strong> l&agrave; một thị trấn ẩn m&igrave;nh trong biển m&acirc;y
+                            ng&agrave;n nơi v&ugrave;ng cao T&acirc;y Bắc. C&oacute; lẽ nơi đ&acirc;y đ&atilde;
+                            qu&aacute; nổi tiếng với những ai y&ecirc;u <strong>
+                                du lịch trong nước gi&aacute;
+                                rẻ
+                            </strong>, đặc biệt l&agrave; du lịch đến v&ugrave;ng n&uacute;i cao của Việt Nam.
+                            Đến với <strong>
+                                <a href="">
+                                tour
+                                du lịch Sapa
+                                </a>
+                            </strong>, du kh&aacute;ch sẽ được tận hưởng những ng&agrave;y
+                            nghỉ dưỡng nơi kh&iacute; hậu trong l&agrave;nh v&agrave; chi&ecirc;m ngưỡng khung cảnh
+                            n&uacute;i đồi trập tr&ugrave;ng thơ mộng. Giữa m&agrave;u xanh mướt m&aacute;t mẻ của
+                            rừng c&acirc;y l&agrave; những biển hoa dịu d&agrave;ng, m&ecirc;nh m&ocirc;ng dưới bầu
+                            trời xanh trong cao vời vợi. Điểm xuyết cho bức tranh th&ecirc;m phần rực rỡ l&agrave;
+                            những t&agrave; v&aacute;y sặc sỡ sắc m&agrave;u của c&aacute;c c&ocirc; thiếu nữ hay em
+                            b&eacute; đồng b&agrave;o d&acirc;n tộc. Quả thật l&agrave; một khung cảnh n&ecirc;n thơ
+                            khiến bất cứ du kh&aacute;ch n&agrave;o lỡ gh&eacute; qua đều sẽ &ldquo;tr&oacute;t phải
+                            l&ograve;ng&rdquo; thị trấn cổ n&agrave;y.
+                        </p>
+
+                        <p dir="ltr" style="text-align: center;">
+                            <img alt="du lich trong nuoc" class="alignnone size-full wp-image-248753" height="430"
+                            src="https://www.vietnambooking.com/wp-content/uploads/2019/11/tour-du-lich-trong-nuoc.jpg"
+                            style="" title="ruộng bậc thang Sapa" width="650" />
+                        </p>
+
+                        <p dir="ltr" style="text-align: center;">
+                            <em>
+                                Sapa c&oacute; vẻ đẹp h&ugrave;ng vĩ đầy thơ mộng với những thửa ruộng bậc thang
+                                m&ecirc;nh m&ocirc;ng. Ảnh: ST
+                            </em>
+                        </p>
+
+                        <p dir="ltr" style="text-align: justify;">
+                            <strong>C&aacute;c tour du lịch trong nước</strong> đi Sapa sẽ mang du kh&aacute;ch đến
+                            với những bản l&agrave;ng d&acirc;n tộc đẹp tựa như tranh. Du kh&aacute;ch cũng
+                            c&oacute; dịp tham gia phi&ecirc;n chợ n&aacute;o nhiệt của đồng b&agrave;o người
+                            H&#39;M&ocirc;ng, Dao đỏ, T&agrave;y, Gi&aacute;y v&agrave; X&atilde; Ph&oacute;.
+                            V&agrave; biết bao địa danh thi&ecirc;n nhi&ecirc;n nổi tiếng kh&aacute;c như:
+                            đ&egrave;o &Ocirc; Quy Hồ h&ugrave;ng vĩ, th&aacute;c Bạc, cầu M&acirc;y, nh&agrave; thờ
+                            Đ&aacute;, bản C&aacute;t C&aacute;t, n&uacute;i H&agrave;m Rồng v&agrave; đặc biệt
+                            l&agrave; Fansipan - n&oacute;c nh&agrave;<br />
+                            Đ&ocirc;ng Dương.&nbsp;
+                        </p>
+
+                        <h4 dir="ltr" style="text-align: justify;">
+                            <span style="font-size:18px;">
+                                <strong>
+                                    Thủ đ&ocirc; ngh&igrave;n năm văn hiến H&agrave;
+                                    Nội
+                                </strong>
+                            </span>
+                        </h4>
+
+                        <p dir="ltr" style="text-align: justify;">
+                            Nhắc đến <em><strong>tour du lịch trong nước</strong></em> miền Bắc, chắc chắn
+                            <strong>H&agrave; Nội</strong> l&agrave; nơi triệu tr&aacute;i tim Việt Nam hướng về.
+                            Nơi đ&acirc;y c&oacute; một bề d&agrave;y lịch sử h&agrave;o h&ugrave;ng v&agrave; một
+                            nền văn h&oacute;a in đậm bản sắc d&acirc;n tộc. Điều n&agrave;y được thể hiện r&otilde;
+                            qua những c&ocirc;ng tr&igrave;nh kiến tr&uacute;c cổ k&iacute;nh, những di t&iacute;ch
+                            lịch sử l&acirc;u đời hay chỉ đơn giản l&agrave; những khu phố cổ nhẹ nh&agrave;ng trong
+                            một buổi sớm. Kh&ocirc;ng chỉ thế, H&agrave; Nội c&ograve;n l&agrave;m say l&ograve;ng
+                            du kh&aacute;ch với những m&ugrave;a hoa dịu d&agrave;ng ng&aacute;t hương, những
+                            m&oacute;n ăn được xem l&agrave; tinh t&uacute;y ẩm thực Việt, hoặc đơn thuần chỉ
+                            l&agrave; một tiếng rao vang vọng từ những g&aacute;nh h&agrave;ng rong cũng khiến du
+                            kh&aacute;ch đong đầy cảm x&uacute;c.
+                        </p>
+
+                        <p dir="ltr" style="text-align: justify;">
+                            Đến với <strong>
+                                <a href="https://www.vietnambooking.com/du-lich/tour-du-lich/du-lich-ha-noi.html">
+                                tour
+                                du lịch H&agrave; Nội
+                                </a>
+                            </strong>, du kh&aacute;ch sẽ c&oacute; dịp gh&eacute;
+                            thăm những địa danh như: lăng B&aacute;c, văn miếu Quốc Tử Gi&aacute;m, ch&ugrave;a Một
+                            Cột, ch&ugrave;a Trấn Quốc, hồ Gươm, đền Ngọc Sơn, ho&agrave;ng th&agrave;nh Thăng Long,
+                            cầu Long Bi&ecirc;n,... Du kh&aacute;ch cũng đừng bỏ qua những m&oacute;n ngon đặc trưng
+                            của thủ đ&ocirc; như: Phở, b&uacute;n đậu mắm t&ocirc;m,,chả c&aacute; L&atilde; Vọng,
+                            b&aacute;nh t&ocirc;m Hồ T&acirc;y, cốm l&agrave;ng V&ograve;ng,&hellip;
+                        </p>
+
+                        <h4 dir="ltr" style="text-align: justify;">
+                            <span style="font-size:18px;">
+                                <strong>
+                                    Di sản thi&ecirc;n nhi&ecirc;n thế giới Vịnh Hạ
+                                    Long
+                                </strong>
+                            </span>
+                        </h4>
+
+                        <p dir="ltr" style="text-align: justify;">
+                            Kh&ocirc;ng phải tự nhi&ecirc;n m&agrave; <strong>Hạ Long</strong> lại thu h&uacute;t du
+                            kh&aacute;ch trong v&agrave; ngo&agrave;i nước đến như vậy phải kh&ocirc;ng n&agrave;o?
+                            Nơi đ&acirc;y dường như đ&atilde; nhận hết sự ưu &aacute;i từ thi&ecirc;n nhi&ecirc;n
+                            khi sở hữu những cảnh đẹp h&ugrave;ng vĩ, đầy chất thơ kh&oacute; nơi n&agrave;o
+                            c&oacute; được.&nbsp;
+                        </p>
+
+                        <p dir="ltr" style="text-align: center;">
+                            <img alt="tour du lich trong nuoc" class="alignnone size-full wp-image-248758"
+                            height="433"
+                            src="https://www.vietnambooking.com/wp-content/uploads/2019/11/tour-du-lich-trong-nuoc-2.jpg"
+                            style="" title="vịnh Hạ Long" width="650" />
+                        </p>
+
+                        <p dir="ltr" style="text-align: center;">
+                            <em>
+                                Vẻ đẹp huyền ảo kh&oacute; tin của vịnh Hạ Long trong &aacute;nh chiều t&agrave;.
+                                Ảnh: ST
+                            </em>
+                        </p>
+
+                        <p dir="ltr" style="text-align: justify;">
+                            Lựa chọn vịnh Hạ Long, du kh&aacute;ch sẽ c&oacute; cơ hội tham quan, kh&aacute;m
+                            ph&aacute; một trong những tuyệt t&aacute;c của thi&ecirc;n nhi&ecirc;n. Đ&oacute;
+                            l&agrave; h&agrave;ng ng&agrave;n đảo v&agrave; hang động lớn nhỏ được tạo ra qua
+                            qu&aacute; tr&igrave;nh karst, b&agrave;o m&ograve;n, phong h&oacute;a như: đảo Ti Tốp,
+                            đảo Tuần Ch&acirc;u, h&ograve;n Trống M&aacute;i, h&ograve;n Ch&oacute; Đ&aacute;, hang
+                            Đầu Gỗ, động M&ecirc; Cung,&hellip; B&ecirc;n cạnh đ&oacute;, du kh&aacute;ch sẽ
+                            c&oacute; dịp được trải nghiệm c&aacute;c hoạt động th&uacute; vị như tắm biển,
+                            ch&egrave;o thuyền kayaking, lặn snorkeling, ngắm ho&agrave;ng h&ocirc;n tr&ecirc;n
+                            boong t&agrave;u, du thuyền đ&ecirc;m,...
+                        </p>
+
+                        <h4 dir="ltr" style="text-align: justify;">
+                            <span style="font-size:18px;">
+                                <strong>
+                                    Ninh B&igrave;nh non nước hữu
+                                    t&igrave;nh
+                                </strong>
+                            </span>
+                        </h4>
+
+                        <p dir="ltr" style="text-align: justify;">
+                            Được mệnh danh l&agrave; v&ugrave;ng đất Cố đ&ocirc;, <strong>Ninh B&igrave;nh</strong>
+                            kh&ocirc;ng những sở hữu vẻ đẹp thi&ecirc;n nhi&ecirc;n quyến rũ kh&oacute; cưỡng
+                            m&agrave; c&ograve;n hội tụ những di t&iacute;ch lịch sử - văn h&oacute;a khiến bao lữ
+                            kh&aacute;ch đắm say. N&agrave;o l&agrave; Tr&agrave;ng An với những th&agrave;nh
+                            tr&igrave; v&agrave; n&uacute;i đ&aacute; v&ocirc;i h&ugrave;ng vĩ tr&ecirc;n mặt nước,
+                            n&agrave;o l&agrave; Tam Cốc - B&iacute;ch Động với &ldquo;Nam thi&ecirc;n đệ nhị
+                            động&rdquo; lừng danh. Chưa hết, du kh&aacute;ch c&ograve;n c&oacute; dịp chinh phục
+                            trăm bậc thang đ&aacute; tựa như &ldquo;Vạn L&yacute; Trường Th&agrave;nh&rdquo; đi
+                            l&ecirc;n đỉnh hang M&uacute;a, thu trọn v&agrave;o tầm mắt cả một trời non s&ocirc;ng.
+                            Đặc biệt, nếu c&oacute; dịp đi <u>c&aacute;c&nbsp;tour du lịch trong nước</u> đến Ninh
+                            B&igrave;nh m&ugrave;a l&uacute;a ch&iacute;n, du kh&aacute;ch hẳn sẽ cho&aacute;ng ngợp
+                            kh&ocirc;ng th&ocirc;i với biển l&uacute;a v&agrave;ng ươm rực rỡ bao phủ khắp
+                            s&ocirc;ng ng&ograve;i.&nbsp;
+                        </p>
+
+                        <h3 dir="ltr" style="text-align: justify;">
+                            <span style="color:#B22222;">
+                                <span style="font-size:20px;">
+                                    <strong>
+                                        Tour h&agrave;nh
+                                        tr&igrave;nh di sản miền Trung
+                                    </strong>
+                                </span>
+                            </span>
+                        </h3>
+
+                        <h4 dir="ltr" style="text-align: justify;">
+                            <span style="font-size:18px;">
+                                <strong>
+                                    Đ&agrave; Nẵng - Th&agrave;nh phố đ&aacute;ng sống
+                                    nhất Việt Nam
+                                </strong>
+                            </span>
+                        </h4>
+
+                        <p dir="ltr" style="text-align: justify;">
+                            Để mở đầu cho h&agrave;nh tr&igrave;nh di sản miền Trung, phần lớn du kh&aacute;ch sẽ
+                            chọn đến với <strong>
+                                <a href="https://www.vietnambooking.com/du-lich/tour-du-lich/du-lich-da-nang.html">
+                                Đ&agrave;
+                                Nẵng
+                                </a>
+                            </strong> trước ti&ecirc;n. Nơi đ&acirc;y thu h&uacute;t du kh&aacute;ch
+                            bởi vẻ đẹp văn minh, hiện đại c&ugrave;ng với nhiều thắng cảnh thi&ecirc;n nhi&ecirc;n
+                            đặc sắc. Một số c&ocirc;ng tr&igrave;nh độc đ&aacute;o du kh&aacute;ch kh&ocirc;ng
+                            n&ecirc;n bỏ qua khi đến với <strong>Đ&agrave; Nẵng</strong> l&agrave;: cầu V&agrave;ng
+                            (B&agrave; N&agrave; Hills), cầu Rồng, cầu Trần Thị L&yacute;, cầu s&ocirc;ng
+                            H&agrave;n, v&ograve;ng quay Mặt Trời Sun Wheel, tượng c&aacute; ch&eacute;p h&oacute;a
+                            rồng, cầu t&igrave;nh y&ecirc;u. Ngo&agrave;i ra, du kh&aacute;ch nhớ tắm biển tại
+                            b&atilde;i biển quyến rũ nhất h&agrave;nh tinh Mỹ Kh&ecirc; v&agrave; tham quan
+                            b&aacute;n đảo Sơn Tr&agrave;.
+                        </p>
+
+                        <p dir="ltr" style="text-align: center;">
+                            <img alt="du lich trong nuoc" class="alignnone size-full wp-image-248749" height="446"
+                            src="https://www.vietnambooking.com/wp-content/uploads/2019/11/tour-du-lich-trong-nuoc-3.jpg"
+                            style="" title="Đà Nẵng " width="650" />
+                        </p>
+
+                        <p dir="ltr" style="text-align: center;">
+                            <em>
+                                Đ&agrave; Nẵng th&agrave;nh phố c&oacute; nhiều địa điểm du lịch đặc sắc. Ảnh:
+                                ST
+                            </em>
+                        </p>
+
+                        <p dir="ltr" style="text-align: justify;">
+                            B&ecirc;n cạnh việc sở hữu những n&eacute;t đẹp mới lạ của ri&ecirc;ng m&igrave;nh,
+                            Đ&agrave; Nẵng c&ograve;n thu h&uacute;t du kh&aacute;ch trong nước v&agrave; quốc tế
+                            bởi địa thế rất thuận tiện. Từ đ&acirc;y, du kh&aacute;ch c&oacute; thể dễ d&agrave;ng
+                            đi kh&aacute;m ph&aacute; ba di sản văn ho&aacute; thế giới: Cố đ&ocirc; Huế, phố cổ Hội
+                            An v&agrave; th&aacute;nh địa Mỹ Sơn. Ch&iacute;nh v&igrave; thế m&agrave;
+                            <strong>c&aacute;c</strong>&nbsp;<strong>
+                                tour du lịch trong
+                                nước
+                            </strong>&nbsp;&ldquo;Đ&agrave; Nẵng - Hội An - Huế&rdquo; rất được nhiều du
+                            kh&aacute;ch lựa chọn.
+                        </p>
+
+                        <h4 dir="ltr" style="text-align: justify;">
+                            <span style="font-size:18px;">
+                                <strong>
+                                    Phố cổ Hội An b&igrave;nh
+                                    y&ecirc;n
+                                </strong>
+                            </span>
+                        </h4>
+
+                        <p dir="ltr" style="text-align: justify;">
+                            Đ&acirc;y chắc chắn l&agrave; một trong những điểm dừng ch&acirc;n du kh&aacute;ch sẽ
+                            rất hối tiếc nếu bỏ qua trong h&agrave;nh tr&igrave;nh du lịch kh&aacute;m ph&aacute; di
+                            sản miền Trung n&agrave;y. Hội An từng l&agrave; một thương cảng quốc tế sầm uất, nổi
+                            tiếng v&agrave; nay vẫn c&ograve;n vẹn nguy&ecirc;n n&eacute;t đẹp ho&agrave;i cổ được
+                            thể hiện qua những c&ocirc;ng tr&igrave;nh kiến tr&uacute;c như: ch&ugrave;a Cầu Nhật
+                            Bản, nh&agrave; cổ Tấn K&yacute;, hội qu&aacute;n Ph&uacute;c Kiến, ch&ugrave;a Tam Quan
+                            Thi&ecirc;n Mụ,...
+                        </p>
+
+                        <p dir="ltr" style="text-align: justify;">
+                            Đến với <em>tour du lịch gi&aacute; rẻ trong nước</em>&nbsp;- Hội An, du kh&aacute;ch sẽ
+                            được dạo ch&acirc;n qua những con phố b&igrave;nh y&ecirc;n treo đầy lồng đ&egrave;n rực
+                            rỡ, ngồi thuyền tr&ecirc;n con s&ocirc;ng Ho&agrave;i &ecirc;m đềm, thả những chiếc
+                            đ&egrave;n hoa đăng mang theo lời cầu nguyện may mắn, b&igrave;nh an.&nbsp;
+                        </p>
+
+                        <h3 dir="ltr" style="text-align: justify;">
+                            <span style="color:#B22222;">
+                                <span style="font-size:20px;">
+                                    <strong>
+                                        Tour du lịch biển đảo
+                                        Việt Nam
+                                    </strong>
+                                </span>
+                            </span>
+                        </h3>
+
+                        <p dir="ltr" style="text-align: justify;">
+                            Với đường bờ biển d&agrave;i đến 3260km, Việt Nam ta sở hữu v&ocirc; số b&atilde;i biển
+                            đẹp c&ugrave;ng nhiều h&ograve;n đảo hoang sơ khiến cho những tour du lịch biển đảo
+                            v&ocirc; c&ugrave;ng ph&aacute;t triển. Điển h&igrave;nh trong đ&oacute; c&oacute; thể
+                            kể đến <strong>Nha Trang</strong>, nơi được mệnh danh l&agrave; &ldquo;h&ograve;n ngọc
+                            của biển Đ&ocirc;ng&rdquo;. Nơi đ&acirc;y kh&ocirc;ng những c&oacute; c&aacute;c
+                            b&atilde;i biển đẹp, sống &ecirc;m m&agrave; c&ograve;n sở hữu nhiều resort nghỉ dưỡng
+                            đẳng cấp c&ugrave;ng c&aacute;c khu vui chơi h&agrave;ng đầu. Gần b&ecirc;n Nha Trang
+                            l&agrave; <strong>Phan Thiết - Mũi N&eacute;</strong> với c&aacute;c b&atilde;i biển
+                            hoang vắng v&agrave; đặc biệt l&agrave; những đồi c&aacute;t bay, đồi c&aacute;t trắng
+                            thơ mộng tựa như ở trời T&acirc;y.&nbsp;
+                        </p>
+
+                        <p dir="ltr" style="text-align: center;">
+                            <img alt="tour du lich trong nuoc" class="alignnone size-full wp-image-248751"
+                            height="400"
+                            src="https://www.vietnambooking.com/wp-content/uploads/2019/11/tour-du-lich-trong-nuoc-4.jpg"
+                            style="" title="đảo Yến Nha Trang" width="650" />
+                        </p>
+
+                        <p dir="ltr" style="text-align: center;">
+                            <em>
+                                Đảo Yến (Nha Trang) với vẻ đẹp tuyệt sắc của con đường c&aacute;t trắng vắt ngang
+                                biển. Ảnh: ST
+                            </em>
+                        </p>
+
+                        <p dir="ltr" style="text-align: justify;">
+                            Một địa điểm mới rất được y&ecirc;u th&iacute;ch khi đi tour du lịch biển đảo trong nước
+                            hiện nay ch&iacute;nh l&agrave; <strong>Quy Nhơn - Ph&uacute; Y&ecirc;n</strong>. Với
+                            những khung cảnh b&ecirc;n n&uacute;i non tr&ugrave;ng điệp, cỏ c&acirc;y xanh mướt, một
+                            b&ecirc;n l&agrave; s&oacute;ng vỗ r&igrave; r&agrave;o, hai địa danh n&agrave;y khiến
+                            du kh&aacute;ch c&oacute; một kỳ nghỉ kh&ocirc;ng sao qu&ecirc;n được!
+                        </p>
+
+                        <p dir="ltr" style="text-align: justify;">
+                            Ngo&agrave;i ra, những chuyến vi vu &ldquo;đổi gi&oacute;&rdquo; tại c&aacute;c
+                            h&ograve;n đảo vắng vẻ cũng ng&agrave;y c&agrave;ng được du kh&aacute;ch ch&agrave;o
+                            đ&oacute;n bởi xu hướng hiện nay l&agrave; du lịch sinh th&aacute;i v&agrave; du lịch
+                            đến những điểm vắng vẻ. Ch&iacute;nh v&igrave; thế m&agrave; C&ocirc;n Đảo, Ph&uacute;
+                            Quốc, Nam Du, Ph&uacute; Qu&yacute;, C&ugrave; Lao Ch&agrave;m, L&yacute; Sơn,...
+                            l&agrave; những địa điểm <em><strong>du lịch trong nước</strong></em> &ldquo;hot&rdquo;
+                            nhất h&egrave; năm nay.
+                        </p>
+
+                        <h3 style="text-align: justify;">
+                            <span style="font-size:20px;">
+                                <span style="color:#B22222;">
+                                    <strong>
+                                        Tour T&acirc;y
+                                        Nguy&ecirc;n vọng vang hơi thở đại ng&agrave;n
+                                    </strong>
+                                </span>
+                            </span>
+                        </h3>
+
+                        <p dir="ltr" style="text-align: justify;">
+                            Nhắc đến T&acirc;y Nguy&ecirc;n, hẳn ch&uacute;ng ta sẽ nghĩ ngay đến
+                            &ldquo;th&agrave;nh phố t&igrave;nh y&ecirc;u&rdquo; Đ&agrave; Lạt. Nơi đ&acirc;y
+                            đ&atilde; l&agrave; điểm đến qu&aacute; nổi tiếng với c&aacute;c t&iacute;n đồ
+                            chuy&ecirc;n <strong>du lịch trong nước gi&aacute; rẻ</strong>. Chẳng phải tự
+                            nhi&ecirc;n m&agrave; giới trẻ hay truyền tai nhau c&acirc;u &ldquo;thanh xu&acirc;n
+                            phải một lần đi Đ&agrave; Lạt&rdquo; đ&uacute;ng kh&ocirc;ng n&agrave;o? Đến với
+                            <strong>
+                                <a href="https://www.vietnambooking.com/du-lich/tour-du-lich/du-lich-da-lat.html">
+                                tour
+                                Đ&agrave; Lạt
+                                </a>
+                            </strong>, du kh&aacute;ch sẽ được tận hưởng bầu kh&ocirc;ng
+                            kh&iacute; &ocirc;n đới dễ chịu c&ugrave;ng những khung cảnh l&atilde;ng mạn của rừng
+                            th&ocirc;ng m&ecirc;nh m&ocirc;ng, đồi cỏ hồng thơ mộng hay hồ Tuyền L&acirc;m y&ecirc;n
+                            ả trong m&agrave;n sương m&ugrave; trắng x&oacute;a.&nbsp;
+                        </p>
+
+                        <p dir="ltr" style="text-align: center;">
+                            <img alt="du lich trong nuoc gia re" class="alignnone size-full wp-image-248750"
+                            height="433"
+                            src="https://www.vietnambooking.com/wp-content/uploads/2019/11/tour-du-lich-trong-nuoc-5.jpg"
+                            style="" title="Đà Lạt" width="650" />
+                        </p>
+
+                        <p dir="ltr" style="text-align: center;">
+                            <em>
+                                Một g&oacute;c qu&aacute;n c&agrave; ph&ecirc; tại Đ&agrave; Lạt thơ mộng. Ảnh:
+                                ST
+                            </em>
+                        </p>
+
+                        <p dir="ltr" style="text-align: justify;">
+                            Ngo&agrave;i Đ&agrave; Lạt l&agrave; điểm đến qu&aacute; quen thuộc, th&igrave;
+                            Bu&ocirc;n M&ecirc; Thuột cũng l&agrave; một địa điểm mới được nhiều du kh&aacute;ch ưa
+                            kh&aacute;m ph&aacute; y&ecirc;u th&iacute;ch. Nơi đ&acirc;y thu h&uacute;t giới trẻ bởi
+                            vẻ hoang vắng của n&uacute;i rừng đại ng&agrave;n, những khung cảnh thi&ecirc;n
+                            nhi&ecirc;n h&ugrave;ng vĩ v&agrave; c&aacute;c c&ocirc;ng tr&igrave;nh đặc sắc. Du
+                            kh&aacute;ch h&atilde;y d&agrave;nh thời gian gh&eacute; thăm th&aacute;c Dray Nur, hồ
+                            Ea Kao, bảo t&agrave;ng thế giới C&agrave; ph&ecirc;, Bản Đ&ocirc;n, Đ&aacute; Voi Mẹ,
+                            KDL Ko Tam,...&nbsp;
+                        </p>
+
+                        <h3 dir="ltr" style="text-align: justify;">
+                            <span style="color:#B22222;">
+                                <span style="font-size:20px;">
+                                    <strong>
+                                        Tour du lịch Miền
+                                        T&acirc;y s&ocirc;ng nước y&ecirc;n b&igrave;nh&nbsp;
+                                    </strong>
+                                </span>
+                            </span>
+                        </h3>
+
+                        <p dir="ltr" style="text-align: justify;">
+                            Với những ai y&ecirc;u vẻ đẹp mộc mạc c&ugrave;ng những c&acirc;u h&ograve; b&igrave;nh
+                            dị th&igrave; <strong>
+                                <a href="https://www.vietnambooking.com/du-lich/tour-du-lich/du-lich-mien-tay.html">
+                                tour
+                                miền T&acirc;y
+                                </a>
+                            </strong> thật c&oacute; một sức h&uacute;t kh&ocirc;ng thể
+                            chối từ. Đến đ&acirc;y, du kh&aacute;ch sẽ được trải nghiệm văn h&oacute;a, ẩm thực
+                            v&agrave; chi&ecirc;m ngưỡng&nbsp; phong cảnh tr&ugrave; ph&uacute; của s&ocirc;ng nước
+                            m&ecirc;nh m&ocirc;ng. Những buổi tụ tập nhộn nhịp s&aacute;ng sớm của những chiếc ghe
+                            đầy ắp tr&aacute;i c&acirc;y tr&ecirc;n chợ Nổi C&aacute;i Răng, những c&acirc;u
+                            h&ograve; văng vẳng của người d&acirc;n Nam Bộ, những m&oacute;n ăn d&acirc;n d&atilde;,
+                            miệt vườn,... Tất cả đều sẽ khiến du kh&aacute;ch nhớ thương khi nghĩ về nơi n&agrave;y.
+                        </p>
+
+                        <h2 style="text-align: justify;">
+                            <strong>
+                                TOUR&nbsp;TRONG NƯỚC GI&Aacute; RẺ CỦA VIETNAM BOOKING C&Oacute; G&Igrave; HẤP
+                                DẪN
+                            </strong>
+                        </h2>
+
+                        <ul>
+                            <li style="text-align: justify;">
+                                Nhiều trải nghiệm độc đ&aacute;o: Kh&ocirc;ng chỉ đơn thuần tham quan thắng cảnh,
+                                qu&yacute; kh&aacute;ch c&ograve;n được tham gia v&agrave;o nhiều hoạt động
+                                th&uacute; vị theo văn h&oacute;a của người địa phương.
+                            </li>
+                            <li style="text-align: justify;">
+                                Đa dạng loại h&igrave;nh tour từ tour trọn g&oacute;i, free &amp; easy, tour
+                                đo&agrave;n ri&ecirc;ng, tour gh&eacute;p lẻ &hellip;.
+                            </li>
+                            <li style="text-align: justify;">
+                                Lịch khởi h&agrave;nh cố định, đảm bảo đ&uacute;ng lịch tr&igrave;nh
+                            </li>
+                            <li style="text-align: justify;">
+                                Lu&ocirc;n l&agrave;m mới c&aacute;c tuyến tour truyền thống, cập nhật c&aacute;c
+                                điểm đến đang hot.
+                            </li>
+                        </ul>
+
+                        <p style="text-align: justify;">
+                            Qu&yacute; kh&aacute;ch muốn đặt mua <strong>
+                                tour du lịch trong nước gi&aacute;
+                                rẻ
+                            </strong> h&atilde;y nhanh tay gọi điện <strong>
+                                <a rel="nofollow"
+                                class="sc-hotline hotline-tour " href="tel:19003398">
+                                Hotline: 1900
+                                3398
+                                </a>
+                            </strong> hoặc đến Văn ph&ograve;ng của Vietnam Booking tại TPHCM,
+                            H&agrave; Nội v&agrave; Đ&agrave; Nẵng để được tư vấn <a href="https://www.vietnambooking.com/du-lich"><strong>tour du lịch</strong></a> tốt
+                            nhất !
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="grid_3 omega">
+                <div class="category-box-sidebar-default-inner">
+
+                    <!--<div class='sidebar-box-item'>
+                        <h3>Tìm TOUR</h3>
+                        <div class='sidebar-box-content sidebar-tour-search form-box-default'>
+                            <div class='box-form-tour-default-inner'>
+                                <div class="box-search-tour">
+                                    <label for="sidebar-search-tour-text">Bạn muốn đi du lịch đến:</label>
+                                    <input type="text" id="sidebar-search-tour-text" class="search-tour-text form-control typeahead" placeholder="Địa điểm">
+                                    <button type="button" class="btn-search-tour"><i class="glyphicon glyphicon-search"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>-->
+
+                    <div class='sidebar-box-item type-tour'>
+                        <h3>Blog</h3>
+                        <div class='sidebar-box-content type-top-tour'>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <a href="https://www.vietnambooking.com/du-lich/blog-du-lich/goi-y-nhung-dia-diem-du-lich-bien-gan-ha-noi-thich-hop-di-vao-cuoi-tuan.html">
+                                    <div class="box-img">
+                                    <img alt="Gợi ý những địa điểm du lịch biển gần Hà Nội thích hợp đi vào cuối tuần"
+                                    src="https://www.vietnambooking.com/wp-content/uploads/2017/08/du-lich-ha-noi-16-8-2017-di-bien-300x194.jpg" />
+                                    </div>
+                                    <h4>
+                                    Gợi ý những địa điểm du lịch biển gần Hà Nội thích hợp đi vào cuối tuần
+                                    </h4>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="https://www.vietnambooking.com/du-lich/blog-du-lich/gan-ngay-ha-noi-co-mot-ngon-doi-bac-au-dep-rung-tim-ban-da-biet-chua.html">
+                                    <div class="box-img">
+                                    <img alt="Gần ngay Hà Nội có một ngọn đồi Bắc Âu đẹp rụng tim, bạn đã biết chưa?"
+                                    src="https://www.vietnambooking.com/wp-content/uploads/2017/11/du-lich-hoa-binh-30-11-2017-2-300x200.jpg" />
+                                    </div>
+                                    <h4>
+                                    Gần ngay Hà Nội có một ngọn đồi Bắc Âu đẹp rụng tim, bạn đã biết chưa?
+                                    </h4>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="https://www.vietnambooking.com/du-lich/blog-du-lich/kinh-nghiem-lua-chon-phuong-tien-de-di-tham-quan-ha-noi.html">
+                                    <div class="box-img">
+                                    <img alt="Kinh nghiệm lựa chọn phương tiện để đi tham quan Hà Nội"
+                                    src="https://www.vietnambooking.com/wp-content/uploads/2017/08/du-lich-ha-noi-19-8-2017-phuong-tien-4-300x194.jpg" />
+                                    </div>
+                                    <h4>Kinh nghiệm lựa chọn phương tiện để đi tham quan Hà Nội</h4>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="https://www.vietnambooking.com/du-lich/blog-du-lich/nhung-mon-qua-tao-nen-dac-trung-cho-du-lich-hoi-an.html">
+                                    <div class="box-img">
+                                    <img alt="Những món quà tạo nên đặc trưng cho du lịch Hội An"
+                                    src="https://www.vietnambooking.com/wp-content/uploads/2017/10/du-lich-hoi-an-23-10-2017-4-300x194.jpg" />
+                                    </div>
+                                    <h4>Những món quà tạo nên đặc trưng cho du lịch Hội An</h4>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="https://www.vietnambooking.com/du-lich/blog-du-lich/2-dia-chi-du-lich-gan-ha-noi-thich-hop-cho-ky-nghi-duong-trong-3-ngay.html">
+                                    <div class="box-img">
+                                    <img alt="2 địa chỉ du lịch gần Hà Nội thích hợp cho kỳ nghỉ dưỡng trong 3 ngày"
+                                    src="https://www.vietnambooking.com/wp-content/uploads/2017/08/du-lich-ha-noi-18-8-2017-cua-lo-2-300x194.jpg" />
+                                    </div>
+                                    <h4>
+                                    2 địa chỉ du lịch gần Hà Nội thích hợp cho kỳ nghỉ dưỡng trong 3 ngày
+                                    </h4>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="https://www.vietnambooking.com/du-lich/blog-du-lich/nhung-mon-qua-nen-mua-khi-di-du-lich-ha-noi.html">
+                                    <div class="box-img">
+                                    <img alt="Những món quà nên mua khi đi du lịch Hà Nội"
+                                    src="https://www.vietnambooking.com/wp-content/uploads/2017/08/du-lich-ha-noi-18-8-2017-qua-2-300x194.jpg" />
+                                    </div>
+                                    <h4>Những món quà nên mua khi đi du lịch Hà Nội</h4>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="https://www.vietnambooking.com/du-lich/blog-du-lich/nhung-dieu-tao-nen-ve-dep-cua-ha-noi-trong-mat-du-khach-nuoc-ngoai.html">
+                                    <div class="box-img">
+                                    <img alt="Những điều tạo nên vẻ đẹp của Hà Nội trong mắt du khách nước ngoài"
+                                    src="https://www.vietnambooking.com/wp-content/uploads/2017/08/du-lich-ha-noi-23-8-2017-300x194.jpg" />
+                                    </div>
+                                    <h4>Những điều tạo nên vẻ đẹp của Hà Nội trong mắt du khách nước ngoài</h4>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="https://www.vietnambooking.com/du-lich/blog-du-lich/dia-diem-di-choi-1-minh-o-ha-noi.html">
+                                    <div class="box-img">
+                                    <img alt="Đi chơi 1 mình thì nên đi đâu ở Hà Nội thích hợp nhất?"
+                                    src="https://www.vietnambooking.com/wp-content/uploads/2020/07/di-choi-1-minh-thi-nen-di-dau-o-ha-noi-9-300x225.jpg" />
+                                    </div>
+                                    <h4>Đi chơi 1 mình thì nên đi đâu ở Hà Nội thích hợp nhất?</h4>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="https://www.vietnambooking.com/du-lich/blog-du-lich/tet-o-ha-noi-di-dau-choi.html">
+                                    <div class="box-img">
+                                    <img alt="Tết ở Hà Nội đi đâu chơi ? Các địa điểm du lịch Nguyên Đán đầu năm 2021 HOT nhất"
+                                    src="https://www.vietnambooking.com/wp-content/uploads/2020/01/Du-lich-Ha-Noi-Ngay-tet-300x173.jpg" />
+                                    </div>
+                                    <h4>
+                                    Tết ở Hà Nội đi đâu chơi ? Các địa điểm du lịch Nguyên Đán đầu năm 2021
+                                    HOT nhất
+                                    </h4>
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="https://www.vietnambooking.com/du-lich/blog-du-lich/7-mon-ngon-khong-the-cuong-o-ha-noi.html">
+                                    <div class="box-img">
+                                    <img alt="7 món “ngon không thể cưỡng” ở Hà Nội"
+                                    src="https://www.vietnambooking.com/wp-content/uploads/2017/01/du-lich-ha-noi-18-9-2017-300x194.jpg" />
+                                    </div>
+                                    <h4>7 món “ngon không thể cưỡng” ở Hà Nội</h4>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+        </div>
+    </div>
+</div> 

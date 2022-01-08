@@ -1,0 +1,35 @@
+﻿@model VnSport.Models.LoaiSanPham
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Loại sản phẩm</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.loaiSanPham1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.loaiSanPham1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.gioiThieu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.gioiThieu)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.maLoai }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

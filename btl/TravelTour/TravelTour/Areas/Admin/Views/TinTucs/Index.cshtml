@@ -1,0 +1,86 @@
+﻿@model IEnumerable<TravelTour.Models.TinTuc>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/share/AdminLayout.cshtml";
+}
+
+<style>
+
+    .table td {
+        width: 600px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .table th {
+        /*width: 500px;*/
+        text-align: center;
+    }
+</style>
+
+<p>
+    @Html.ActionLink("Thêm Tin", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            STT
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tieuDe)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.moTa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.anh1)
+
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.anh2)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.ngayDang)
+        </th>
+        <th></th>
+    </tr>
+
+    @{
+        var c = 0;
+        foreach (var item in Model)
+        {
+            c++;
+            <tr>
+                <td>
+                    @c
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.tieuDe)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.moTa)
+                </td>
+                <td>
+                    @*@Html.DisplayFor(modelItem => item.anh1)*@
+
+                    @{
+                        String ImagePath = "~/image/" + item.anh1;
+                    }
+                    <img src="@Url.Content(ImagePath)" width="140" />
+                </td>
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.anh2)
+                </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.ngayDang)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
+    }
+</table>

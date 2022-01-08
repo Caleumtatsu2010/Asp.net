@@ -1,0 +1,75 @@
+﻿@model TravelTour.Models.Passenger
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/share/AdminLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Passenger</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Booking.CustomerName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Booking.CustomerName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DayOfBirth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DayOfBirth)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Passport_)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Passport_)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AgeType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AgeType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image1)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PassID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

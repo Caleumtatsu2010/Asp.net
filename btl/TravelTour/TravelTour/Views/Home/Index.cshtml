@@ -1,0 +1,283 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/clientlayout.cshtml";
+
+
+    var ListProduct1 = ViewBag.NewProducts1 as IEnumerable<TravelTour.Models.Tour>;
+    var ListProduct2 = ViewBag.NewProducts2 as IEnumerable<TravelTour.Models.Tour>;
+    var ListProduct3 = ViewBag.NewProducts3 as IEnumerable<TravelTour.Models.Tour>;
+}
+
+
+
+<div class="category-tour-box-type-country">
+    <div class="container_12">
+        <div class="grid_12">
+            <div class="category-tour-box-type-country-inner">
+
+                <div class="box-title">
+                    <table class="table">
+                        <tr>
+                            <td>
+                                <h2>TOUR ĐÀ NẴNG</h2>
+                            </td>
+                            <td>
+                                <div class="box-link-title">
+                                    <a href="@Url.Action("Index", "Tour", new { id = 1})">
+                                        Xem tất cả
+                                    </a> <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="box-list-tour">
+                    <ul>
+
+                        <!-- ========================================================================= -->
+
+                        @foreach (var item in ListProduct1)
+                        {
+
+
+                            <li>
+                                <div class="box-img">
+                                    <a href="@Url.Action("Detail", "Tour", new { id = item.TourCode})">
+                                        <img class="lazy"
+                                             alt=""
+                                             src="~/image/@item.Image1" />
+
+                                        <button>
+                                            Xem
+                                            tour
+                                        </button>
+                                    </a>
+
+                                </div>
+
+
+                                <div class="box-content-promotion box-content-promotion-tour">
+                                    <div class="box-title-content">
+                                        <h3 class="title-h3">
+                                            <a href="@Url.Action("Detail", "Tour", new { id = item.TourCode})">
+                                                @item.Name
+                                            </a>
+                                        </h3>
+                                    </div>
+                                    <div class="box-summary-content-tour">
+                                        <table class="table tlb-time-and-traffic-tour">
+                                            <tr>
+                                                <td> <i class="fa fa-clock-o" aria-hidden="true"></i> @item.Day Ngày </td>
+                                                <td>
+                                                    <img class="lazy"
+                                                         data-src=""
+                                                         alt="" />
+                                                </td>
+                                            </tr>
+                                        </table>
+
+
+
+                                        <div class="box-place-tour">
+                                            <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
+                                            Điểm Đến: @item.Destination
+                                        </div>
+                                        <div class="box-start-tour">
+                                            <i class="fa fa-calendar-alt" aria-hidden="true"></i>
+                                            KH: Hàng ngày
+                                        </div>
+                                    </div>
+
+                                    <div class="box-price-promotion-tour">
+                                        <span>@item.newPrice <sup>đ</sup></span>
+                                    </div>
+
+                                </div>
+                            </li>
+
+
+
+                            <!-- ============================================================================ -->
+                        }
+                    </ul>
+                </div> <!-- TOUR NỘI ĐỊA -->
+
+
+
+                <div class="box-title">
+                    <table class="table">
+                        <tr>
+                            <td>
+                                <h2>TOUR HÀ NỘI</h2>
+                            </td>
+                            <td>
+                                <div class="box-link-title">
+                                    <a href="@Url.Action("Index", "Tour", new { id = 2})">
+                                        Xem tất cả
+                                    </a> <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="box-list-tour">
+                    <ul>
+
+                        <!-- ========================================================================= -->
+
+                        @foreach (var item in ListProduct2)
+                        {
+
+
+                            <li>
+                                <div class="box-img">
+                                    <a href="@Url.Action("Detail", "Tour", new { id = item.TourCode})">
+                                        <img class="lazy"
+                                             alt=""
+                                             src="~/image/@item.Image1" />
+
+                                        <button>
+                                            Xem
+                                            tour
+                                        </button>
+                                    </a>
+
+                                </div>
+                                <div class="box-country">
+                                    <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
+                                    
+                                </div>
+
+                                <div class="box-content-promotion box-content-promotion-tour">
+                                    <div class="box-title-content">
+                                        <h3 class="title-h3">
+                                            <a href="@Url.Action("Detail", "Tour", new { id = item.TourCode})">
+                                                @item.Name
+                                            </a>
+                                        </h3>
+                                    </div>
+                                    <div class="box-summary-content-tour">
+                                        <table class="table tlb-time-and-traffic-tour">
+                                            <tr>
+                                                <td> <i class="fa fa-clock-o" aria-hidden="true"></i> @item.Day Ngày </td>
+                                                <td>
+                                                    <img class="lazy"
+                                                         data-src=""
+                                                         alt="" />
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                        <div class="box-place-tour">
+                                            <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
+                                            Điểm Đến: @item.Destination
+                                        </div>
+                                        <div class="box-start-tour">
+                                            <i class="fa fa-calendar-alt" aria-hidden="true"></i>
+                                            KH: Hàng ngày
+                                        </div>
+                                    </div>
+
+                                    <div class="box-price-promotion-tour">
+                                        <span>@item.newPrice <sup>đ</sup></span>
+                                    </div>
+
+                                </div>
+                            </li>
+
+
+
+                            <!-- ============================================================================ -->
+                        }
+                    </ul>
+                </div> <!-- TOUR NỘI ĐỊA -->
+
+
+
+                <div class="box-title">
+                    <table class="table">
+                        <tr>
+                            <td>
+                                <h2>TOUR BÀ NÀ</h2>
+                            </td>
+                            <td>
+                                <div class="box-link-title">
+                                    <a href="@Url.Action("Index", "Tour", new { id = 3})">
+                                        Xem tất cả
+                                    </a> <i class="fa fa-angle-right" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="box-list-tour">
+                    <ul>
+
+
+                        @foreach (var item in ListProduct3)
+                        {
+
+                            <li>
+                                <div class="box-img">
+                                    <a href="@Url.Action("Detail", "Tour", new { id = item.TourCode})">
+                                        <img class="lazy"
+                                             alt="" src="~/image/@item.Image1"
+                                             data-src="" />
+                                        
+                                        <button>Xem tour</button>
+                                    </a>
+
+                                </div>
+
+
+                                <div class="box-content-promotion box-content-promotion-tour">
+                                    <div class="box-title-content">
+                                        <h3 class="title-h3">
+                                            <a href="@Url.Action("Detail", "Tour", new { id = item.TourCode})">
+                                                @item.Name
+                                            </a>
+                                        </h3>
+                                    </div>
+                                    <div class="box-summary-content-tour">
+                                        <table class="table tlb-time-and-traffic-tour">
+                                            <tr>
+                                                <td> <i class="fa fa-clock-o" aria-hidden="true"></i> @item.Day Ngày</td>
+                                                <td>
+                                                    <img class="lazy"
+                                                         src=""
+                                                         alt=""  />
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                        <div class="box-place-tour">
+                                            <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
+                                            Điểm Đến: @item.Destination
+                                        </div>
+                                        <div class="box-start-tour">
+                                            <i class="fa fa-calendar-alt" aria-hidden="true"></i>
+                                            KH: Năm 2022
+                                        </div>
+                                    </div>
+
+                                    <div class="box-price-promotion-tour">
+                                        <span>@item.newPrice <sup>đ</sup></span>
+                                    </div>
+
+                                </div>
+                            </li>
+
+
+                        }
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+

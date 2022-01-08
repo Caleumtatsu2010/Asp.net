@@ -1,0 +1,124 @@
+﻿@model IEnumerable<TravelTour.Models.Booking>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/share/AdminLayout.cshtml";
+}
+
+<style>
+
+    .table td {
+        width: 600px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .table th {
+        /*width: 500px;*/
+        text-align: center;
+    }
+</style>
+
+@*<p>
+    @Html.ActionLink("Thêm Book", "Create")
+</p>*@
+<table class="table">
+    <tr>
+        <th>
+            STT
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Member.Username)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Tour.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerMail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerPhone_)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CustomerAddress)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Note)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.DeptTime)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.StartDepart)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Payment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalPeople)
+        </th>
+        <th></th>
+    </tr>
+
+    @{
+        var c = 0;
+        foreach (var item in Model)
+        {
+            c++;
+            <tr>
+                <td>
+                    @c
+                </td>
+                @*<td width="200px">
+                    @Html.DisplayFor(modelItem => item.Member.Username)
+                </td>*@
+                <td width="200px">
+                    @Html.DisplayFor(modelItem => item.Tour.Name)
+                </td>
+                <td width="200px">
+                    @Html.DisplayFor(modelItem => item.CustomerName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerMail)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CustomerPhone_)
+                </td>
+                <td width="200px">
+                    @Html.DisplayFor(modelItem => item.CustomerAddress)
+                </td>
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.Note)
+                </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.DeptTime)
+                </td>
+                @*<td>
+                    @Html.DisplayFor(modelItem => item.StartDepart)
+                </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.Payment)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TotalPeople)
+                </td>
+                <td>
+                    <a href="@Url.Action("Edit", "Bookings", new { id = item.BookingCode })"><i class="mdi mdi-wrench-outline"></i></a><br />
+                    <a href="@Url.Action("Details", "Bookings", new { id = item.BookingCode })"><i class="mdi mdi-open-in-new"></i></a><br />
+                    <a href="@Url.Action("Delete", "Bookings", new { id = item.BookingCode })"><i class="mdi mdi-delete-outline"></i></a>
+                </td>
+            </tr>
+        }
+    }
+
+
+</table>

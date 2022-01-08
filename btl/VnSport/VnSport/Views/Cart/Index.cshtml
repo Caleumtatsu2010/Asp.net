@@ -1,0 +1,498 @@
+﻿@model List<VnSport.Models.CLASS.CartItem>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/clientlayout.cshtml";
+}
+@{
+    var thongtin = ViewBag.UserInfo as VnSport.Models.ThongTinKhachHang;
+}
+
+
+
+<div id="contain">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <p id="breadcrumbs">
+                    <span>
+                        <span>
+                            <a href="">Trang chủ</a> » <span class="breadcrumb_last" aria-current="page">Giỏ hàng</span>
+                        </span>
+                    </span>
+                </p>
+            </div>
+            <div class="col-sm-8 col-sm-offset-2">
+                <div class="title-page mb-10px">
+                    <h1 class="title">Giỏ hàng</h1>
+                </div>
+                <div id="prime" class="mb-15px">
+                    <div style="display: none;"
+                         class="kk-star-ratings kksr-valign-top kksr-align-left kksr-disabled" data-id="6"
+                         data-slug="">
+                        <div class="kksr-stars">
+                            <div class="kksr-stars-inactive">
+                                <div class="kksr-star" data-star="1">
+                                    <div class="kksr-icon" style="width: px; height: px;"></div>
+                                </div>
+                                <div class="kksr-star" data-star="2">
+                                    <div class="kksr-icon" style="width: px; height: px;"></div>
+                                </div>
+                                <div class="kksr-star" data-star="3">
+                                    <div class="kksr-icon" style="width: px; height: px;"></div>
+                                </div>
+                                <div class="kksr-star" data-star="4">
+                                    <div class="kksr-icon" style="width: px; height: px;"></div>
+                                </div>
+                                <div class="kksr-star" data-star="5">
+                                    <div class="kksr-icon" style="width: px; height: px;"></div>
+                                </div>
+                            </div>
+                            <div class="kksr-stars-active" style="width: 0px;">
+                                <div class="kksr-star">
+                                    <div class="kksr-icon" style="width: px; height: px;"></div>
+                                </div>
+                                <div class="kksr-star">
+                                    <div class="kksr-icon" style="width: px; height: px;"></div>
+                                </div>
+                                <div class="kksr-star">
+                                    <div class="kksr-icon" style="width: px; height: px;"></div>
+                                </div>
+                                <div class="kksr-star">
+                                    <div class="kksr-icon" style="width: px; height: px;"></div>
+                                </div>
+                                <div class="kksr-star">
+                                    <div class="kksr-icon" style="width: px; height: px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="kksr-legend">
+                            <span class="kksr-muted"></span>
+                        </div>
+                    </div>
+                    <div class="woocommerce">
+                        <div class="woocommerce-notices-wrapper"></div>
+                        <form class="woocommerce-cart-form" action="" method="get">
+
+                            <table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents"
+                                   cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th class="product-remove">&nbsp;</th>
+                                        <th class="product-name">Sản phẩm</th>
+                                        <th class="product-quantity">Số lượng</th>
+                                        <th class="product-quantity">Tổng</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @{
+
+                                        foreach (var item in Model)
+                                        {
+                                            <tr class="woocommerce-cart-form__cart-item cart_item">
+
+                                                <td class="product-remove">
+                                                    <a href="@Url.Action("Delete", "Cart", new { delId = item.Product.maSanPham})"
+                                                       class="remove" aria-label="Xóa sản phẩm này" data-product_id="5495"
+                                                       data-product_sku="VN6002-MD">&times;</a>
+                                                </td>
+
+                                                <td class="product-thumbnail">
+                                                    <a href="">
+                                                        <img width="150" height="150" src="~/image/@item.Product.anh1" />
+
+                                                        @*<noscript>
+                                                                <img width="300" height="300"
+                                                                     src="//vnsport.com.vn/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif"
+                                                                     data-lazy-type="image"
+                                                                     data-src="https://vnsport.com.vn/wp-content/uploads/2021/10/bang-keo-dan-co-the-thao-1-300x300.jpg"
+                                                                     class="lazy lazy-hidden attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                                                     alt="" loading="lazy" srcset=""
+                                                                     data-srcset="https://vnsport.com.vn/wp-content/uploads/2021/10/bang-keo-dan-co-the-thao-1-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-keo-dan-co-the-thao-1-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-keo-dan-co-the-thao-1-600x600.jpg 600w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-keo-dan-co-the-thao-1-100x100.jpg 100w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-keo-dan-co-the-thao-1-64x64.jpg 64w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-keo-dan-co-the-thao-1.jpg 750w"
+                                                                     sizes="(max-width: 300px) 100vw, 300px" /><noscript>
+                                                                    <img width="300" height="300"
+                                                                         src="https://vnsport.com.vn/wp-content/uploads/2021/10/bang-keo-dan-co-the-thao-1-300x300.jpg"
+                                                                         class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
+                                                                         alt="" loading="lazy"
+                                                                         srcset="https://vnsport.com.vn/wp-content/uploads/2021/10/bang-keo-dan-co-the-thao-1-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-keo-dan-co-the-thao-1-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-keo-dan-co-the-thao-1-600x600.jpg 600w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-keo-dan-co-the-thao-1-100x100.jpg 100w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-keo-dan-co-the-thao-1-64x64.jpg 64w, https://vnsport.com.vn/wp-content/uploads/2021/10/bang-keo-dan-co-the-thao-1.jpg 750w"
+                                                                         sizes="(max-width: 300px) 100vw, 300px" />
+                                                                </noscript>
+                                                            </noscript>*@
+                                                    </a>
+                                                    <a href="">
+                                                        @item.Product.tenSanPham
+                                                    </a>
+                                                    <dl class="variation">
+                                                        <dt class="variation-MuSc">Màu Sắc:</dt>
+                                                        <dd class="variation-MuSc">
+                                                            <p>@item.Product.mau</p>
+                                                        </dd>
+                                                    </dl>
+                                                    <p>
+                                                        <span class="woocommerce-Price-amount amount">
+                                                            <bdi>
+                                                                @item.Product.giaMoi<span class="woocommerce-Price-currencySymbol">&#8363;</span>
+                                                            </bdi>
+                                                        </span>
+                                                    </p>
+                                                </td>
+
+                                                <td class="product-quantity" data-title="Số lượng">
+                                                    <div class="quantity">
+                                                        <label class="screen-reader-text" for="quantity_61b1e37db2051">
+                                                            Băng
+                                                            Keo Dán Cơ Kinesiology Tape 5x5m số lượng
+                                                        </label>
+                                                        <input type="number" id="quantity_61b1e37db2051"
+                                                               class="input-text qty text" step="1" min="0" max=""
+                                                               name="Quantity" value="@item.Quantity"
+                                                               title="SL" size="4" placeholder="" inputmode="numeric" />
+                                                    </div>
+                                                </td>
+
+                                            </tr>
+
+                                        }
+                                    }
+                                    <tr>
+                                    <tr>
+
+                                        <td colspan="3" class="text-right">
+                                            <b>Tổng Cộng</b>
+                                        </td>
+                                        <td class="color-var4">
+                                            <b>@ViewBag.Total đ</b>
+                                        </td>
+                                    </tr>
+                                <td colspan="3" class="text-right">
+                                    <b>Phí ship</b>
+                                </td>
+                                <td class="color-var4">
+                                    20,000 đ
+                                </td>
+                                </tr>
+                                <tr>
+
+                                    <td colspan="3" class="text-right">
+                                        <b>Thanh Toán</b>
+                                    </td>
+                                    <td class="color-var4">
+                                        <b>@ViewBag.TotalPrice đ</b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4" class="actions">
+
+
+
+                                        <button type="submit" class="btn btn-default" name="update_cart"
+                                                value="Cập nhật giỏ hàng">
+                                            Cập nhật giỏ hàng
+                                        </button>
+
+                                        @*<a class="btn btn-default" href="@Url.Action("Index", "ThanhToan") >
+
+                                                Đặt Mua
+                                            </a>*@
+
+                                        <input type="hidden" id="woocommerce-cart-nonce"
+                                               name="woocommerce-cart-nonce" value="460299c132" /><input type="hidden" name="_wp_http_referer" value="/gio-hang/" />
+
+                                    </td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </form>
+                        <div class="cart-collaterals">
+                        </div>
+
+                    </div>
+                    @using (Html.BeginForm("Paid", "ThanhToan", FormMethod.Get))
+                    {
+                        <div class="row">
+                            <div class="col-lg-8 col-12">
+                                <div class="checkout-form">
+                                    <h2>1. Xác Nhận Thông Tin Đơn Hàng</h2>
+                                    @{
+                                        if (thongtin != null)
+                                        {
+                                            <!-- Form -->
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-12">
+                                                    <div class="form-group">
+                                                        <label>Họ Và Tên<span>*</span></label>
+                                                        <input type="text" name="hoTen" placeholder="" required="required" value="@thongtin.hoTen">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-6 col-md-6 col-12">
+                                                    <div class="form-group">
+                                                        <label>Số Điện Thoại<span>*</span></label>
+                                                        <input type="number" name="sdt" placeholder="" required="required" value="@thongtin.sdt">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-12">
+                                                    <div class="form-group">
+                                                        <label>Thành Phố / Tỉnh<span>*</span></label><br />
+                                                        <select name="tinh" id="state-province" value="@thongtin.tinh" >
+                                                            <option value="Hà Nội" selected="selected">Hà Nội</option>
+                                                            <option value="TP Hồ Chí Minh">TP Hồ Chí Minh</option>
+                                                            <option value="Đà Nẵng">Đà Nẵng</option>
+                                                            <option value="Vũng Tàu">Vũng Tàu</option>
+                                                            <option value="Hải Phòng">Hải Phòng</option>
+                                                            <option value="Hải Dương">Hải Dương</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-12">
+                                                    <div class="form-group">
+                                                        <label>Quận / Huyện<span>*</span></label>
+                                                        <input type="text" name="huyen" placeholder="" required="required" value="@thongtin.huyen">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-12">
+                                                    <div class="form-group">
+                                                        <label>Xã / Phường<span>*</span></label>
+                                                        <input type="text" name="xa" placeholder="" required="required" value="@thongtin.xa">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-12">
+                                                    <div class="form-group">
+                                                        <label>Địa Chỉ<span>*</span></label>
+                                                        <input type="text" name="diaChi" placeholder="" required="required" value="@thongtin.diaChi">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-12">
+                                                    <label>Ghi Chú<span>*</span></label>
+                                                    <div class="form-group">
+                                                        <input type="text" name="ghiChu" required="required" value="@thongtin.ghiChu">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <!--/ End Form -->
+                                        }
+                                        else
+                                        {
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-12">
+                                                    <div class="form-group">
+                                                        <label>Họ Và Tên<span>*</span></label>
+                                                        <input type="text" name="hoTen" placeholder="" required="required" value="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-6 col-md-6 col-12">
+                                                    <div class="form-group">
+                                                        <label>Số Điện Thoại<span>*</span></label>
+                                                        <input type="number" name="sdt" placeholder="" required="required" value="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-12">
+                                                    <div class="form-group">
+                                                        <label>Thành Phố / Tỉnh<span>*</span></label><br />
+                                                        <select name="tinh" id="state-province">
+                                                            <option value="Hà Nội" selected="selected">Hà Nội</option>
+                                                            <option value="TP Hồ Chí Minh">TP Hồ Chí Minh</option>
+                                                            <option value="Đà Nẵng">Đà Nẵng</option>
+                                                            <option value="Vũng Tàu">Vũng Tàu</option>
+                                                            <option value="Hải Phòng">Hải Phòng</option>
+                                                            <option value="Hải Dương">Hải Dương</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-12">
+                                                    <div class="form-group">
+                                                        <label>Quận / Huyện<span>*</span></label>
+                                                        <input type="text" name="huyen" placeholder="" required="required" value="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-12">
+                                                    <div class="form-group">
+                                                        <label>Xã / Phường<span>*</span></label>
+                                                        <input type="text" name="xa" placeholder="" required="required" value="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-12">
+                                                    <div class="form-group">
+                                                        <label>Địa Chỉ<span>*</span></label>
+                                                        <input type="text" name="diaChi" placeholder="" required="required" value="">
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-12">
+                                                    <label>Ghi Chú<span>*</span></label>
+                                                    <div class="form-group">
+                                                        <input type="text" name="ghiChu" required="required" value="">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        }
+                                    }
+
+                                </div>
+                                <div class="single-widget">
+                                    <h2>2. Hình Thức Thanh Toán</h2>
+                                    <div class="content" style="display: flex;">
+                                        <div class="checkbox" style="">
+                                            <div style="display: flex;">
+                                                <input name="hinhThucThanhToan" id="a" type="radio" value="Thanh Toán Khi Giao Hàng" required style="height:25px; width:25px; margin-right: 20px; margin-bottom: 20px;" checked>
+                                                <label for="a">Thanh Toán Khi Giao Hàng</label>
+                                            </div>
+                                            <div style="display: flex;">
+                                                <input name="hinhThucThanhToan" id="b" type="radio" value="Thanh Toán Khi Giao Hàng" required style="height:25px; width:25px; margin-right: 20px; margin-bottom: 20px;">
+                                                <label for="b">Thẻ ATM Nội Địa</label>
+                                            </div>
+                                            <div style="display: flex;">
+                                                <input type="radio" id="3" name="hinhThucThanhToan" value="ZaloPay" required style="height:25px; width:25px; margin-right: 20px; margin-bottom: 20px;">
+                                                <label for="3">ZaloPay</label>
+                                            </div>
+                                        </div>
+                                        <div class="checkbox">
+                                            <div style="display: flex;">
+                                                <input type="radio" id="4" name="hinhThucThanhToan" value="Visa/Master/JCB" required style="height:25px; width:25px;margin-right: 20px;  margin-bottom: 20px;">
+                                                <label for="4">Visa/Master/JCB</label>
+                                            </div>
+                                            <div style="display: flex;">
+                                                <input type="radio" id="5" name="hinhThucThanhToan" value="ShoppeePay" required style="height:25px; width:25px;margin-right: 20px;  margin-bottom: 20px;">
+                                                <label for="5">MoMo</label>
+                                            </div>
+                                            <div style="display: flex;">
+                                                <input type="radio" id="6" name="hinhThucThanhToan" value="ShoppeePay" required style="height:25px; width:25px;margin-right: 20px;  margin-bottom: 20px;">
+                                                <label for="6">ShoppeePay</label>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Button Widget -->
+                            <div class="single-widget get-button">
+                                <div class="content">
+                                    <input style="background-color:cadetblue; color:snow; font-size:medium; padding:14px" type="submit" class="btn" value="ĐẶT HÀNG">
+                                </div>
+                            </div>
+                        </div>
+
+                    }
+                    @*<form action="ThanhToan/Paid" method="get">
+                            <div class="row">
+                                <div class="col-lg-8 col-12">
+                                    <div class="checkout-form">
+                                        <h2>1. Xác Nhận Thông Tin Đơn Hàng</h2>
+
+                                        <!-- Form -->
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label>Họ Và Tên<span>*</span></label>
+                                                    <input type="text" name="hoTen" placeholder="" required="required" value="">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label>Số Điện Thoại<span>*</span></label>
+                                                    <input type="number" name="sdt" placeholder="" required="required" value="">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label>Thành Phố / Tỉnh<span>*</span></label><br />
+                                                    <select name="tinh" id="state-province">
+                                                        <option value="Hà Nội" selected="selected">Hà Nội</option>
+                                                        <option value="TP Hồ Chí Minh">TP Hồ Chí Minh</option>
+                                                        <option value="Đà Nẵng">Đà Nẵng</option>
+                                                        <option value="Vũng Tàu">Vũng Tàu</option>
+                                                        <option value="Hải Phòng">Hải Phòng</option>
+                                                        <option value="Hải Dương">Hải Dương</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label>Quận / Huyện<span>*</span></label>
+                                                    <input type="text" name="huyen" placeholder="" required="required" value="">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label>Xã / Phường<span>*</span></label>
+                                                    <input type="text" name="xa" placeholder="" required="required" value="">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-12">
+                                                <div class="form-group">
+                                                    <label>Địa Chỉ<span>*</span></label>
+                                                    <input type="text" name="diaChi" placeholder="" required="required" value="">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-12">
+                                                <label>Ghi Chú<span>*</span></label>
+                                                <div class="form-group">
+                                                    <input type="text" name="ghiChu" required="required" value="">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <!--/ End Form -->
+                                    </div>
+                                    <div class="single-widget">
+                                        <h2>2. Hình Thức Thanh Toán</h2>
+                                        <div class="content" style="display: flex;">
+                                            <div class="checkbox" style="">
+                                                <div style="display: flex;">
+                                                    <input name="hinhThucThanhToan" id="a" type="radio" value="Thanh Toán Khi Giao Hàng" required style="height:25px; width:25px; margin-right: 20px; margin-bottom: 20px;" checked>
+                                                    <label for="a">Thanh Toán Khi Giao Hàng</label>
+                                                </div>
+                                                <div style="display: flex;">
+                                                    <input name="hinhThucThanhToan" id="b" type="radio" value="Thanh Toán Khi Giao Hàng" required style="height:25px; width:25px; margin-right: 20px; margin-bottom: 20px;">
+                                                    <label for="b">Thẻ ATM Nội Địa</label>
+                                                </div>
+                                                <div style="display: flex;">
+                                                    <input type="radio" id="3" name="hinhThucThanhToan" value="ZaloPay" required style="height:25px; width:25px; margin-right: 20px; margin-bottom: 20px;">
+                                                    <label for="3">ZaloPay</label>
+                                                </div>
+                                            </div>
+                                            <div class="checkbox">
+                                                <div style="display: flex;">
+                                                    <input type="radio" id="4" name="hinhThucThanhToan" value="Visa/Master/JCB" required style="height:25px; width:25px;margin-right: 20px;  margin-bottom: 20px;">
+                                                    <label for="4">Visa/Master/JCB</label>
+                                                </div>
+                                                <div style="display: flex;">
+                                                    <input type="radio" id="5" name="hinhThucThanhToan" value="ShoppeePay" required style="height:25px; width:25px;margin-right: 20px;  margin-bottom: 20px;">
+                                                    <label for="5">MoMo</label>
+                                                </div>
+                                                <div style="display: flex;">
+                                                    <input type="radio" id="6" name="hinhThucThanhToan" value="ShoppeePay" required style="height:25px; width:25px;margin-right: 20px;  margin-bottom: 20px;">
+                                                    <label for="6">ShoppeePay</label>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Button Widget -->
+                                <div class="single-widget get-button">
+                                    <div class="content">
+                                        <input style="background-color:cadetblue; color:snow; font-size:medium; padding:14px" type="submit" class="btn" value="ĐẶT HÀNG">
+                                    </div>
+                                </div>
+                            </div>
+                        </form>*@
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

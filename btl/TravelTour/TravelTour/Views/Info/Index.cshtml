@@ -1,0 +1,156 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/clientlayout.cshtml";
+}
+<style>
+    .tlb-step1-register td {
+        padding:17px;
+    }
+</style>
+
+<div class="box-full-account">
+
+
+    <div class="container_12">
+        <div class="grid_12">
+
+            <div class="box-full-inner">
+
+                <div class="box-register-customers">
+                    <form method="post">
+                        <!-- STEP 1 -->
+                        <table class="tlb-step1-register" style="">
+                            <tr>
+                                <td><span class="required">*</span> Tên Đăng Nhập</td>
+                                <td><input type="text" class="form-control" autocomplete="off" name="email_register_customers" /><span class="error email hidden">Vui lòng kiểm tra lại</span></td>
+                                <td><div class="error-email-exists"><code></code></div></td>
+                            </tr>
+
+                            <tr>
+                                <td><span class="required">*</span> Email</td>
+                                <td><input type="email" class="form-control" autocomplete="off" name="email_register_customers" /><span class="error email hidden">Vui lòng kiểm tra lại</span></td>
+                                <td><div class="error-email-exists"><code></code></div></td>
+                            </tr>
+                            <tr>
+                                <td><span class="required">*</span> Họ và tên</td>
+                                <td><input type="text" class="form-control" autocomplete="off" name="fullname_register_customers" /><span class="error fullname hidden">Vui lòng kiểm tra lại</span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><span class="required">*</span> Điện thoại</td>
+                                <td><input type="text" class="form-control" autocomplete="off" name="phone_register_customers" /><span class="error phone hidden">Vui lòng kiểm tra lại</span></td>
+                                <td><div class="error-phone-exists"><code></code></div></td>
+                            </tr>
+
+                            <td>Giới tính</td>
+                            <td colspan="2">
+                                <label for="rad-male"><input checked="checked" id="rad-male" type="radio" value="1" name="rad_sex_register_customers" /> Nam</label>
+                                <label for="rad-female"><input id="rad-female" type="radio" value="2" name="rad_sex_register_customers" /> Nữ</label>
+                                <label for="rad-other"><input id="rad-other" type="radio" value="0" name="rad_sex_register_customers" /> Khác</label>
+                            </td>
+
+                            <tr>
+                                <td><span class="required">*</span> Địa chỉ liên hệ</td>
+                                <td><input type="text" class="form-control" autocomplete="off" name="address_register_customers" /><span class="error address hidden">Vui lòng kiểm tra lại</span></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><span class="required">*</span> Tỉnh/Thành Phố</td>
+                                <td>
+                                    <select name="city_register_customers" class="slc-city-register form-control">
+                                        <option data-value="an_giang">AN GIANG</option>
+                                        <option data-value="ba_ria_vung_tau">BÀ RỊA - VŨNG TÀU</option>
+                                        <option data-value="bac_giang">BẮC GIANG</option>
+                                        <option data-value="bac_kan">BẮC KẠN</option>
+                                        <option data-value="bac_lieu">BẠC LIÊU</option>
+                                        <option data-value="bac_ninh">BẮC NINH</option>
+                                        <option data-value="ben_tre">BẾN TRE</option>
+                                        <option data-value="binh_dinh">BÌNH ĐỊNH</option>
+                                        <option data-value="dinh_duong">BÌNH DƯƠNG</option>
+                                        <option data-value="binh_phuoc">BÌNH PHƯỚC</option>
+                                        <option data-value="binh_thuan">BÌNH THUẬN</option>
+                                        <option data-value="ca_mau">CÀ MAU</option>
+                                        <option data-value="can_tho">CẦN THƠ</option>
+                                        <option data-value="cao_bang">CAO BẰNG</option>
+                                        <option data-value="da_nang">ĐÀ NẴNG</option>
+                                        <option data-value="dak_lak">ĐẮK LẮK</option>
+                                        <option data-value="dak_nong">ĐẮK NÔNG</option>
+                                        <option data-value="dien_bien">ĐIỆN BIÊN</option>
+                                        <option data-value="dong_nai">ĐỒNG NAI</option>
+                                        <option data-value="dong_thap">ĐỒNG THÁP</option>
+                                        <option data-value="gia_lai">GIA LAI</option>
+                                        <option data-value="ha_giang">HÀ GIANG</option>
+                                        <option data-value="ha_nam">HÀ NAM</option>
+                                        <option data-value="ha_noi">HÀ NỘI</option>
+                                        <option data-value="ha_tinh">HÀ TĨNH</option>
+                                        <option data-value="hai_duong">HẢI DƯƠNG</option>
+                                        <option data-value="hai_phong">HẢI PHÒNG</option>
+                                        <option data-value="hau_giang">HẬU GIANG</option>
+                                        <option data-value="ho_chi_minh">HỒ CHÍ MINH</option>
+                                        <option data-value="hoa_binh">HÒA BÌNH</option>
+                                        <option data-value="hung_yen">HƯNG YÊN</option>
+                                        <option data-value="khanh_hoa">KHÁNH HÒA</option>
+                                        <option data-value="kien_giang">KIÊN GIANG</option>
+                                        <option data-value="kon_tum">KON TUM</option>
+                                        <option data-value="lai_chau">LAI CHÂU</option>
+                                        <option data-value="lam_dong">LÂM ĐỒNG</option>
+                                        <option data-value="lang_son">LẠNG SƠN</option>
+                                        <option data-value="lao_cai">LÀO CAI</option>
+                                        <option data-value="long_an">LONG AN</option>
+                                        <option data-value="nam_dinh">NAM ĐỊNH</option>
+                                        <option data-value="nghe_an">NGHỆ AN</option>
+                                        <option data-value="ninh_binh">NINH BÌNH</option>
+                                        <option data-value="ninh_thuan">NINH THUẬN</option>
+                                        <option data-value="phu_tho">PHÚ THỌ</option>
+                                        <option data-value="phu_yen">PHÚ YÊN</option>
+                                        <option data-value="quang_binh">QUẢNG BÌNH</option>
+                                        <option data-value="quang_nam">QUẢNG NAM</option>
+                                        <option data-value="quang_ngai">QUẢNG NGÃI</option>
+                                        <option data-value="quang_ninh">QUẢNG NINH</option>
+                                        <option data-value="quang_tri">QUẢNG TRỊ</option>
+                                        <option data-value="soc_trang">SÓC TRĂNG</option>
+                                        <option data-value="son_la">SƠN LA</option>
+                                        <option data-value="tay_ninh">TÂY NINH</option>
+                                        <option data-value="thai_binh">THÁI BÌNH</option>
+                                        <option data-value="thai_nguyen">THÁI NGUYÊN</option>
+                                        <option data-value="thanh_hoa">THANH HÓA</option>
+                                        <option data-value="thua_thien_hue">THỪA THIÊN - HUẾ</option>
+                                        <option data-value="tien_giang">TIỀN GIANG</option>
+                                        <option data-value="tra_vinh">TRÀ VINH</option>
+                                        <option data-value="tuyen_quang">TUYÊN QUANG</option>
+                                        <option data-value="vinh_long">VĨNH LONG</option>
+                                        <option data-value="vinh_phuc">VĨNH PHÚC</option>
+                                        <option data-value="yen_bai">YÊN BÁI</option>
+                                    </select>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td><span class="required">*</span> Ngày/tháng/năm sinh</td>
+                                <td><input autocomplete="off" placeholder="Ví dụ: 11/01/1980" type="text" class="form-control txt-bithday-register" name="birthday_register_customers" /><span class="error birthday hidden">Vui lòng kiểm tra lại</span></td>
+                                <td></td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="3" class="td-btn-continue"><center><div class="btn-register-continue step1">Tiếp tục</div></center></td>
+                            </tr>
+                        </table>
+                        <!-- END STEP 1 -->
+                        <!-- STEP 5 -->
+                        <!-- END STEP 5 -->
+
+                    </form>
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+

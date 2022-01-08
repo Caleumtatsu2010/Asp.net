@@ -1,0 +1,466 @@
+﻿@model TravelTour.Models.Tour
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/clientlayout.cshtml";
+}
+
+
+
+<div class="single-box-content">
+
+    <div class="container_12">
+        <div class="grid_12">
+            <div class="grid_8 alpha">
+                <div class="single-box-content-inner">
+                    <h1 class="title-tour">
+                        @Model.Name
+                    </h1>
+
+                    <div class="single-content">
+                        <div id="owl-slider-tour-single-feature" class="owl-carousel">
+                            <div class="item">
+                                <img src="~/image/@Model.Image1"
+                                     "  />
+                            </div>
+                            <div class="item">
+                                <img alt=""
+                                     src="~/image/@Model.Image1
+" />
+                            </div>
+
+                        </div>
+
+                        <div class="box-tlb-tour">
+                            <table class="tlb-info-tour">
+                                <tr>
+                                    <td>
+                                        <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
+                                        @Model.Destination
+                                    </td>
+                                    <td>
+                                        <i class="fa fa-clock-o" aria-hidden="true"></i> <span>@Model.Day Ngày</span>
+                                    </td>
+                                    <td>
+                                        <span>Phương tiện: @Model.Vehicle </span>
+                                        <img class='img-traffic' title='Xe'
+                                             src='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/images/index/tour/icon_traffic/o_to.png'
+                                             alt=o_to />
+                                    </td>
+                                    <td>
+                                        <span class="title-tour">Mã tour: </span>
+                                        <span class="id-tour">
+                                            @Model.TourCode
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="4">
+                                        <i class="fa fa-calendar-alt" aria-hidden="true"></i> Khởi hành:
+                                        <span>Hàng ngày</span>
+                                    </td>
+                                </tr>
+                            </table>
+
+                        </div>
+
+                        <div class="box-service-tour">
+                            <h2 class="title-service">Dịch vụ kèm theo</h2>
+                            <ul class="list-extra-services">
+                                <li>
+                                    <img src='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/images/index/tour/icon_services/icon_tick.png'
+                                         alt='bao hiem' />&nbsp;&nbsp;Bảo hiểm
+                                </li>
+                                <li>
+                                    <img src='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/images/index/tour/icon_services/icon_meal.png'
+                                         alt='bua an' />&nbsp;&nbsp;Bữa ăn
+                                </li>
+                                <li>
+                                    <img src='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/images/index/tour/icon_services/icon_guide.png'
+                                         alt='huong dan vien' />&nbsp;&nbsp;Hướng dẫn viên
+                                </li>
+                                <li>
+                                    <img src='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/images/index/tour/icon_services/icon_ticket.png'
+                                         alt='ve tham quan' />&nbsp;&nbsp;Vé tham quan
+                                </li>
+                                <li>
+                                    <img src='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/images/index/tour/icon_services/icon_bus.png'
+                                         alt='Xe đưa đón' />&nbsp;&nbsp;Xe đưa đón
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-content tabs-details-tour">
+                            <div role="tabpanel" class="tab-pane active" id="program-tour">
+                                @Html.Raw(Model.Detail)
+                                <div role="tabpanel" class="tab-pane" id="tour-table-price">
+                                    <table cellpadding="1" cellspacing="1" class="banggia">
+                                        <thead>
+                                            <tr>
+                                                <th colspan="1" rowspan="1" scope="col">
+                                                    KHỞI H&Agrave;NH
+                                                </th>
+                                                <th colspan="3" rowspan="1" scope="col">
+                                                    <p>
+                                                        GI&Aacute; TOUR (VND/ KH&Aacute;CH)
+                                                    </p>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td colspan="1" rowspan="1" style="text-align: center;">
+                                                    &nbsp;
+                                                </td>
+                                                <td>
+                                                    <p style="text-align: center;">
+                                                        NGƯỜI LỚN
+                                                    </p>
+
+                                                    <p style="text-align: center;">
+                                                        (10&nbsp;tuổi trở l&ecirc;n)
+                                                    </p>
+                                                </td>
+                                                <td>
+                                                    <p style="text-align: center;">
+                                                        TRẺ EM
+                                                    </p>
+
+                                                    <p style="text-align: center;">
+                                                        (5&nbsp;- 9&nbsp;tuổi) (Giảm 20%)
+                                                    </p>
+                                                </td>
+                                                <td>
+                                                    <p style="text-align: center;">
+                                                        EM B&Eacute;
+                                                    </p>
+
+                                                    <p style="text-align: center;">
+                                                        (Dưới 5&nbsp;Tuổi)
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="1" rowspan="1">
+                                                    <p style="text-align: center;">
+                                                        H&agrave;ng ng&agrave;y
+                                                    </p>
+                                                </td>
+                                                <td style="text-align: center;">
+                                                    <span style="color:#FF0000;"><strong>@Model.newPrice Đ</strong></span>
+                                                </td>
+                                                @{
+                                                    var kid = Model.newPrice*0.8;
+                                                    <td style="text-align: center;">
+                                                        <span style="color:#FF0000;"><strong>@kid Đ</strong></span>
+                                                    </td>
+                                                }
+
+                                                <td colspan="1" rowspan="1" style="text-align: center;">
+                                                    <strong>Li&ecirc;n hệ​</strong>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+
+
+                                    <h3 style="text-align: center;">
+                                        <span style="color:#B22222;"><u><b>GI&Aacute; TOUR BAO GỒM</b></u></span>
+                                    </h3>
+
+                                    <p style="text-align: justify;">
+                                        <meta charset="utf-8" />
+                                    </p>
+
+                                    <p>
+                                        <meta charset="utf-8" />
+                                    </p>
+
+                                    <ul>
+                                        <li aria-level="1" dir="ltr">
+                                            <p dir="ltr" role="presentation" style="text-align: justify;">
+                                                <strong>Vận chuyển: </strong>Xe &ocirc; t&ocirc; đời mới đưa đ&oacute;n
+                                                theo chương tr&igrave;nh.
+                                            </p>
+                                        </li>
+                                        <li aria-level="1" dir="ltr">
+                                            <p dir="ltr" role="presentation" style="text-align: justify;">
+                                                <strong>Kh&aacute;ch sạn:</strong> 01 đ&ecirc;m ngủ tại kh&aacute;ch sạn
+                                                ti&ecirc;u chuẩn 3 sao.
+                                            </p>
+                                        </li>
+                                        <li aria-level="1" dir="ltr">
+                                            <p dir="ltr" role="presentation" style="text-align: justify;">
+                                                <strong>Ăn uống:</strong>
+                                            </p>
+
+                                            <ul>
+                                                <li aria-level="2" dir="ltr">
+                                                    <p dir="ltr" role="presentation" style="text-align: justify;">
+                                                        03 bữa ăn ch&iacute;nh: Ti&ecirc;u chuẩn 120.000đ/suất
+                                                    </p>
+                                                </li>
+                                                <li aria-level="2" dir="ltr">
+                                                    <p dir="ltr" role="presentation" style="text-align: justify;">
+                                                        01 bữa s&aacute;ng: Buffet theo ti&ecirc;u chuẩn kh&aacute;ch
+                                                        sạn.
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li aria-level="1" dir="ltr">
+                                            <p dir="ltr" role="presentation" style="text-align: justify;">
+                                                <strong>
+                                                    V&eacute; tham quan c&aacute;c địa điểm theo chương
+                                                    tr&igrave;nh.
+                                                </strong>
+                                            </p>
+                                        </li>
+
+                                        <li aria-level="1" dir="ltr">
+                                            <p dir="ltr" role="presentation" style="text-align: justify;">
+                                                Hướng dẫn vi&ecirc;n phục vụ nhiệt t&igrave;nh, th&agrave;nh thạo tuyến
+                                                điểm.
+                                            </p>
+                                        </li>
+                                        <li aria-level="1" dir="ltr">
+                                            <p dir="ltr" role="presentation" style="text-align: justify;">
+                                                Bảo hiểm du lịch.
+                                            </p>
+                                        </li>
+                                        <li aria-level="1" dir="ltr">
+                                            <p dir="ltr" role="presentation" style="text-align: justify;">
+                                                Nước suối: mỗi ng&agrave;y 01 chai 500ml/người.
+                                            </p>
+                                        </li>
+                                    </ul>
+
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div> <!-- end single content -->
+                </div>
+            </div>
+
+
+
+            <div class="grid_4 omega">
+                <div class="sidebar-box-tour">
+                    <div class="box-form-price-tour vertical">
+                        @using (Html.BeginForm("Index", "Pay", FormMethod.Get))
+                        {
+
+                            <table class="tlb-box-price-tour">
+                                <tr>
+                                    <td colspan="2">
+                                        <span class="price-tour">
+                                            <div class="title-price-old"><del></del></div>@Model.newPrice
+                                            <span>VND/người</span>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <input type="hidden" name="TourCode" value="@Model.TourCode" />
+
+
+                                <tr>
+                                    <td><label>Khởi hành</label></td>
+                                    <td>
+                                        <input required="required" name="id" value="334563" type="hidden" />
+                                        <input type="date" data-role="none" value="16/12/2021" name="DeptTime"
+                                               class="" required="required" />
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label>Người Lớn</label></td>
+                                    <td>
+                                        <select data-role="none" data-price="2099000" name="elder"
+                                                class="" required>
+                                            <option value=""></option>
+                                            <option value="1">1 Khách</option>
+                                            <option value="2">2 Khách</option>
+                                            <option value="3">3 Khách</option>
+                                            <option value="4">4 Khách</option>
+                                            <option value="5">5 Khách</option>
+                                            <option value="6">6 Khách</option>
+                                            <option value="7">7 Khách</option>
+                                            <option value="8">8 Khách</option>
+                                            <option value="9">9 Khách</option>
+                                            <option value="10">10 Khách</option>
+                                        </select>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td><label>Trẻ Em (Giảm 20%)</label></td>
+                                    <td>
+                                        <select data-role="none" data-price="2099000" name="kid"
+                                                class="" required>
+                                            <option value=""></option>
+                                            <option value="1">1 Khách</option>
+                                            <option value="2">2 Khách</option>
+                                            <option value="3">3 Khách</option>
+                                            <option value="4">4 Khách</option>
+                                            <option value="5">5 Khách</option>
+                                            <option value="6">6 Khách</option>
+                                            <option value="7">7 Khách</option>
+                                            <option value="8">8 Khách</option>
+                                            <option value="9">9 Khách</option>
+                                            <option value="10">10 Khách</option>
+                                        </select>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        @if (Session["UserName"] != null)
+                                        {
+                                            <button data-role="none" class="btn-submit-set-tour"
+                                                    type="submit">
+                                                Đặt Tour
+                                            </button>
+
+                                        }
+                                        else
+                                        {
+                                            <div class="box-button-tour">
+                                                <a href="@Url.Action("Login", "Account")" style="padding:12px 40px 12px 40px; margin-right:60px; background-color:orange;color:white;border-radius:4px;font-size:large">
+                                                    Đặt Tour
+                                                </a>
+                                            </div>
+
+                                        }
+
+
+
+                                    </td>
+                                </tr>
+                            </table>
+
+                        }
+                    </div>
+                    <script>APPS_TOUR.scroll_fixed_form_tour_sidebar();</script>
+                    <div class='sidebar-box-item'>
+                        <h3>TỔNG ĐÀI TƯ VẤN</h3>
+                        <div class='sidebar-box-content sidebar-hotline'>
+                            <label>Mọi thắc mắc của Quý khách</label>
+                            vui lòng gọi:<a href="">1900 3398</a>
+                            <!--                        <div>Hoặc</div>
+                            <div><span class='span-city'>TP. HCM:</span> <span class='span-hotline'>028 3956 2142 - 028 3827 0404</span></div>
+                            <div><span class='span-city'>Hà Nội:</span> <span class='span-hotline'>024 7307 3030</span></div>
+                            <div><span class='span-city'>Đà Nẵng:</span> <span class='span-hotline'>0236 7300 174</span></div>-->
+                            <span class='span-note'>Chúng tôi hỗ trợ 24/7</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+            <div class="clearfix"></div>
+            <div class="single-box-content-inner">
+                <div class="grid_8">
+                    <div class="box-tour-product-relative  ">
+                        <h4>Các tour khác có thể bạn quan tâm</h4>
+                        <ul>
+
+
+                            <li>
+                                <a href="https://www.vietnambooking.com/du-lich/tour-ta-dung-1-ngay.html">
+                                    <div class="box-img">
+                                        <img alt="Tour Tà Đùng 1 ngày: Khám phá tuyệt tác Tây Nguyên đại ngàn"
+                                             src="https://www.vietnambooking.com/wp-content/uploads/2020/03/tour-ta-dung-6-300x195.jpg" />
+                                    </div>
+                                    <div class="box-content">
+                                        <div class="title-h4">
+                                            Tour Tà Đùng 1 ngày: Khám phá tuyệt tác Tây Nguyên đại
+                                            ngàn
+                                        </div>
+                                        <div class="box-price">Giá: <span>1,099,000 VND</span></div>
+                                        <div class="box-date-start">
+                                            <i class="fa fa-calendar-alt"
+                                               aria-hidden="true"></i> Khởi hành: Tối T7 hàng tuần & Dịp lễ 30/4
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div> <br />
+                    <div class="box-tag-post-single">
+                    </div><br />
+                    <div class="clearfix"></div>
+                    <div class="box-posts-relation">
+                        <h4>Bài viết mới nhất</h4>
+                        <ul>
+                            <li>
+                                <a href="https://www.vietnambooking.com/du-lich/blog-du-lich/goi-y-nhung-dia-diem-du-lich-bien-gan-ha-noi-thich-hop-di-vao-cuoi-tuan.html">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i> Gợi ý những địa điểm du
+                                    lịch biển gần Hà Nội thích hợp đi vào cuối tuần
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.vietnambooking.com/du-lich/blog-du-lich/gan-ngay-ha-noi-co-mot-ngon-doi-bac-au-dep-rung-tim-ban-da-biet-chua.html">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i> Gần ngay Hà Nội có một
+                                    ngọn đồi Bắc Âu đẹp rụng tim, bạn đã biết chưa?
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.vietnambooking.com/du-lich/blog-du-lich/kinh-nghiem-lua-chon-phuong-tien-de-di-tham-quan-ha-noi.html">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i> Kinh nghiệm lựa chọn
+                                    phương tiện để đi tham quan Hà Nội
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.vietnambooking.com/du-lich/blog-du-lich/nhung-mon-qua-tao-nen-dac-trung-cho-du-lich-hoi-an.html">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i> Những món quà tạo nên
+                                    đặc trưng cho du lịch Hội An
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.vietnambooking.com/du-lich/blog-du-lich/2-dia-chi-du-lich-gan-ha-noi-thich-hop-cho-ky-nghi-duong-trong-3-ngay.html">
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i> 2 địa chỉ du lịch gần Hà
+                                    Nội thích hợp cho kỳ nghỉ dưỡng trong 3 ngày
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="box-social">
+                        <div class="box-rate-star"></div>
+                        <div class="box-icon-click">
+                            <!-- <img src=""  alt="click social" /> -->
+                        </div>
+                        <!--                <div class="box-facebook-social">
+                            <div class="fb-like" data-href="" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                            <div class="fb-send" data-href=""></div>
+                        </div>-->
+
+                    </div>
+                    <div class="box-comment">
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="clearfix"></div>
+
+        </div>
+    </div>
+
+    <script>
+
+    </script>
+</div>
+

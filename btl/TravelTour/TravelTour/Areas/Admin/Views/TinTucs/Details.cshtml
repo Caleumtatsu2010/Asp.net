@@ -1,0 +1,72 @@
+﻿@model TravelTour.Models.TinTuc
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/share/AdminLayout.cshtml";
+}
+
+
+<div>
+    <h4>TinTuc</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tieuDe)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tieuDe)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.moTa)
+        </dt>
+
+        <dd>
+            @Html.DisplayNameFor(model => model.moTa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.noiDung)
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.noiDung)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.anh1)
+
+
+        </dt>
+
+        <dd>
+            @*@Html.DisplayFor(model => model.anh1)*@
+            @{
+                String ImagePath = "~/image/" + Model.anh1;
+            }
+            <img src="@Url.Content(ImagePath)" width="200" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.anh2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.anh2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ngayDang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngayDang)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

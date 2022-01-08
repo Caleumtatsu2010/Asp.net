@@ -1,0 +1,346 @@
+﻿@model PagedList.IPagedList<TravelTour.Models.TinTuc>
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/clientlayout.cshtml";
+}
+
+<div class="category-box-slider-default current-default ">
+    <div class="container_12">
+        <div class="grid_12">
+            <div class="category-box-slider-default-inner">
+                <h2>Blog du lịch nổi bật</h2>
+                <div class="category-box-slider-default">
+                    <div id="category-owl-slider-default" class="owl-carousel">
+
+
+                        <div class="item">
+                            <div class="box-img">
+                                <a href="@Url.Action("Detail", "Tin", new { ID = 2})">
+                                    <img class="lazy"
+                                         alt="Gần ngay Hà Nội có một ngọn đồi Bắc Âu đẹp rụng tim, bạn đã biết chưa?"
+                                         src="~/image/du-lich-hoa-binh-30-11-2017-2-300x200.jpg" />
+                                </a>
+                            </div>
+                            <div class="box-content-default">
+                                <div class="box-title-content">
+                                    <h3 class="title-h3">
+                                        <a href="@Url.Action("Detail", "Tin", new { ID = 2})">
+                                            Gần
+                                            ngay Hà Nội có một ngọn đồi Bắc Âu đẹp rụng tim, bạn đã biết chưa?
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div class="box-summary-content">
+                                    Tuổi trẻ ấy mà, có được bao lâu đâu, cứ tranh thủ lúc chân còn khỏe, máu còn
+                                    nóng thì hãy tranh thủ đi ngay mà check-in địa điểm đẹp tuyệt vời đang làm mưa
+                                    làm gió này đi, chẳng đâu xa đâu, chỉ gần ngay Hà Nội thôi nhé. Mang trong mình
+                                    một vẻ đẹp tựa trời Âu, địa điểm đèo Đá Trắng xuất hiện ...
+                                </div>
+
+                                <a class="a-links-details"
+                                   href="@Url.Action("Detail", "Tin", new { ID = 2})">
+                                    Xem
+                                    chi tiết <i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="item">
+                            <div class="box-img">
+                                <a href="@Url.Action("Detail", "Tin", new { ID = 3})">
+                                    <img class="lazy" alt="Kinh nghiệm lựa chọn phương tiện để đi tham quan Hà Nội"
+                                         src="~/image/du-lich-ha-noi-19-8-2017-phuong-tien-4-300x194.jpg" />
+                                </a>
+                            </div>
+                            <div class="box-content-default">
+                                <div class="box-title-content">
+                                    <h3 class="title-h3">
+                                        <a href="@Url.Action("Detail", "Tin", new { ID = 3})">
+                                            Kinh
+                                            nghiệm lựa chọn phương tiện để đi tham quan Hà Nội
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div class="box-summary-content">
+                                    Hà Nội thủ đô ngàn năm văn hiến luôn là điểm đến cuốn hút du khách bởi nét cổ
+                                    kính, yên bình lạ kỳ. Một chuyến du lịch đi tham quan quanh Hà Nội sẽ để lại
+                                    trong lòng du khách những kỷ niệm khó quên về 36 khu phố nghề cổ kính của Hà Nội
+                                    xưa. Thế nhưng để chuẩn bị cho chuyến du lịch đến với du ...
+                                </div>
+
+                                <a class="a-links-details"
+                                   href="@Url.Action("Detail", "Tin", new { ID = 3})">
+                                    Xem
+                                    chi tiết <i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="item">
+                            <div class="box-img">
+                                <a href="@Url.Action("Detail", "Tin", new { ID = 4})">
+                                    <img class="lazy" alt="Những món quà tạo nên đặc trưng cho du lịch Hội An"
+                                         src="~/image/du-lich-hoi-an-23-10-2017-4-300x194.jpg" />
+                                </a>
+                            </div>
+                            <div class="box-content-default">
+                                <div class="box-title-content">
+                                    <h3 class="title-h3">
+                                        <a href="@Url.Action("Detail", "Tin", new { ID = 4})">
+                                            Những
+                                            món quà tạo nên đặc trưng cho du lịch Hội An
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div class="box-summary-content">
+                                    Du lịch Hội An là điểm đến nổi tiếng thu hút hàng ngàn khách du lịch trong và
+                                    ngoài nước mỗi năm. Nhiều du khách đã lựa chọn Hội An là điểm đến thú vị cho
+                                    chuyến du lịch dài ngày của mình nhưng lại chẳng có nhiều kinh nghiệm và hiểu
+                                    biết về những loại đặc sản của địa danh này. Vậy nên, bài viết ...
+                                </div>
+
+                                <a class="a-links-details"
+                                   href="@Url.Action("Detail", "Tin", new { ID = 4})">
+                                    Xem
+                                    chi tiết <i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="item">
+                            <div class="box-img">
+                                <a href="@Url.Action("Detail", "Tin", new { ID = 2})">
+                                    <img class="lazy"
+                                         alt="Gần ngay Hà Nội có một ngọn đồi Bắc Âu đẹp rụng tim, bạn đã biết chưa?"
+                                         src="~/image/du-lich-hoa-binh-30-11-2017-2-300x200.jpg" />
+                                </a>
+                            </div>
+                            <div class="box-content-default">
+                                <div class="box-title-content">
+                                    <h3 class="title-h3">
+                                        <a href="@Url.Action("Detail", "Tin", new { ID = 2})">
+                                            Gần
+                                            ngay Hà Nội có một ngọn đồi Bắc Âu đẹp rụng tim, bạn đã biết chưa?
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div class="box-summary-content">
+                                    Tuổi trẻ ấy mà, có được bao lâu đâu, cứ tranh thủ lúc chân còn khỏe, máu còn
+                                    nóng thì hãy tranh thủ đi ngay mà check-in địa điểm đẹp tuyệt vời đang làm mưa
+                                    làm gió này đi, chẳng đâu xa đâu, chỉ gần ngay Hà Nội thôi nhé. Mang trong mình
+                                    một vẻ đẹp tựa trời Âu, địa điểm đèo Đá Trắng xuất hiện ...
+                                </div>
+
+                                <a class="a-links-details"
+                                   href="@Url.Action("Detail", "Tin", new { ID = 2})">
+                                    Xem
+                                    chi tiết <i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="item">
+                            <div class="box-img">
+                                <a href="@Url.Action("Detail", "Tin", new { ID = 3})">
+                                    <img class="lazy" alt="Kinh nghiệm lựa chọn phương tiện để đi tham quan Hà Nội"
+                                         src="~/image/du-lich-ha-noi-19-8-2017-phuong-tien-4-300x194.jpg" />
+                                </a>
+                            </div>
+                            <div class="box-content-default">
+                                <div class="box-title-content">
+                                    <h3 class="title-h3">
+                                        <a href="@Url.Action("Detail", "Tin", new { ID = 3})">
+                                            Kinh
+                                            nghiệm lựa chọn phương tiện để đi tham quan Hà Nội
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div class="box-summary-content">
+                                    Hà Nội thủ đô ngàn năm văn hiến luôn là điểm đến cuốn hút du khách bởi nét cổ
+                                    kính, yên bình lạ kỳ. Một chuyến du lịch đi tham quan quanh Hà Nội sẽ để lại
+                                    trong lòng du khách những kỷ niệm khó quên về 36 khu phố nghề cổ kính của Hà Nội
+                                    xưa. Thế nhưng để chuẩn bị cho chuyến du lịch đến với du ...
+                                </div>
+
+                                <a class="a-links-details"
+                                   href="@Url.Action("Detail", "Tin", new { ID = 3})">
+                                    Xem
+                                    chi tiết <i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="item">
+                            <div class="box-img">
+                                <a href="@Url.Action("Detail", "Tin", new { ID = 4})">
+                                    <img class="lazy" alt="Những món quà tạo nên đặc trưng cho du lịch Hội An"
+                                         src="~/image/du-lich-hoi-an-23-10-2017-4-300x194.jpg" />
+                                </a>
+                            </div>
+                            <div class="box-content-default">
+                                <div class="box-title-content">
+                                    <h3 class="title-h3">
+                                        <a href="@Url.Action("Detail", "Tin", new { ID = 4})">
+                                            Những
+                                            món quà tạo nên đặc trưng cho du lịch Hội An
+                                        </a>
+                                    </h3>
+                                </div>
+                                <div class="box-summary-content">
+                                    Du lịch Hội An là điểm đến nổi tiếng thu hút hàng ngàn khách du lịch trong và
+                                    ngoài nước mỗi năm. Nhiều du khách đã lựa chọn Hội An là điểm đến thú vị cho
+                                    chuyến du lịch dài ngày của mình nhưng lại chẳng có nhiều kinh nghiệm và hiểu
+                                    biết về những loại đặc sản của địa danh này. Vậy nên, bài viết ...
+                                </div>
+
+                                <a class="a-links-details"
+                                   href="@Url.Action("Detail", "Tin", new { ID = 4})">
+                                    Xem
+                                    chi tiết <i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i>
+                                </a>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="category-box-list-default category-box-sidebar-default">
+    <div class="container_12">
+        <div class="grid_12">
+            <div class="grid_8 alpha">
+                <div class="category-box-list-default-inner">
+                    <h1>Blog du lịch</h1>
+                    <ul>
+                        @foreach (var item in Model)
+                        {
+                            <li>
+                                <h3>
+                                    <a href="@Url.Action("Detail", "Tin", new { ID = item.ID})">
+                                        @item.tieuDe
+                                    </a>
+                                </h3>
+                                <div class="box-img">
+                                    <a href="@Url.Action("Detail", "Tin", new { ID = item.ID})">
+                                        <img class="lazy"
+                                             alt=""
+                                             src="~/image/@item.anh1" />
+                                    </a>
+                                </div>
+                                <div class="box-content">
+                                    <div class="box-description">
+                                        @item.moTa
+                                    </div>
+                                    <div class="box-extra-info hidden">
+                                        <label>Mở bán</label>
+                                        <span></span>
+                                        <label>Khởi hành</label>
+                                        <span></span>
+                                    </div>
+                                    <a href="@Url.Action("Detail", "Tin", new { ID = item.ID})"
+                                       class="a-readmore">xem chi tiết</a>
+                                </div>
+                            </li>
+                        }
+
+
+                    </ul>
+
+                    <div class="pagination-customer flight-pagination-customer-default"
+                         style="clear:both;text-align: right;padding-top: 10px;">
+
+
+                        Trang @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+                        @Html.PagedListPager(Model, page => Url.Action("Index", new { page, @class = "page-class" }))
+                    </div>
+
+
+                </div>
+
+            </div>
+            <div class="grid_4 omega">
+                <div class='sidebar-box-item'>
+                    <h3>TỔNG ĐÀI TƯ VẤN</h3>
+                    <div class='sidebar-box-content sidebar-hotline'>
+                        <label>Mọi thắc mắc của Quý khách</label>
+                        vui lòng gọi:<a href="tel:19003398">1900 3398</a>
+                        <!--                    <div>Hoặc</div>
+                                <div><span class='span-city'>TP. HCM:</span> <span class='span-hotline'>028 3956 2142 - 028 3827 0404</span></div>
+                                <div><span class='span-city'>Hà Nội:</span> <span class='span-hotline'>024 7307 3030</span></div>
+                                <div><span class='span-city'>Đà Nẵng:</span> <span class='span-hotline'>0236 7300 174</span></div>-->
+                        <span class='span-note'>Chúng tôi hỗ trợ 24/7</span>
+                    </div>
+                </div>
+
+                <div class='sidebar-box-item'>
+                    <h3>HÌNH THỨC THANH TOÁN</h3>
+                    <div class='sidebar-box-content sidebar-payment'>
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="item-payment-home">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-item-payment-home" aria-expanded="true" aria-controls="collapse-item-payment-home">
+                                            <img src="https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/images/index/sidebar_icon_flight_payment_home.png" alt="payment home" /> Thanh toán tại nhà
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse-item-payment-home" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="item-payment-home">
+                                    <div class="panel-body">
+                                        Vietnam Booking  sẽ hỗ trợ giao vé miễn phí và thanh toán tại nhà cho những Quý khách hàng nào ở trong nội thành Hà Nội, Đà Nẵng Và TP. Hồ Chí Minh.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="item-payment-office">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-item-payment-office" aria-expanded="false" aria-controls="collapse-item-payment-office">
+                                            <img src="https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/images/index/sidebar_icon_flight_payment_city.png" alt="payment office" /> Tại văn phòng chúng tôi
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse-item-payment-office" class="panel-collapse collapse" role="tabpanel" aria-labelledby="item-payment-office">
+                                    <div class="panel-body">
+                                        <h4>Hồ Chí Minh</h4><h5> - 164 Lê Thánh Tôn, Bến Thành, Q. 1</h5><h5> - 54 Phạm Hồng Thái, Bến Thành, Q. 1</h5><h5> - 190 Trần Quý, 6, Q. 11</h5><h5> - 192 Trần Quý, 6, Q. 11</h5><h4>Đà Nẵng</h4><h5> - 174 Nguyễn Văn Linh, , Q. Thanh Khê</h5><h4>Hà Nội</h4><h5> - 30 Phan Chu Trinh, , Q. Hoàn Kiếm</h5>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="item-payment-bank">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-item-payment-bank" aria-expanded="false" aria-controls="collapse-item-payment-bank">
+                                            <img src="https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/images/index/sidebar_icon_flight_payment_bank.png" alt="payment bank" /> Chuyển khoản ngân hàng
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="collapse-item-payment-bank" class="panel-collapse collapse" role="tabpanel" aria-labelledby="item-payment-bank">
+                                    <div class="panel-body">
+                                        <img src="https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/images/index/sidebar_icon_flight_list_bank.jpg" alt="list bank" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

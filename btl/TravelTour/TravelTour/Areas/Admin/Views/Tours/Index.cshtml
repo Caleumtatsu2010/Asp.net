@@ -1,0 +1,148 @@
+﻿@model IEnumerable<TravelTour.Models.Tour>
+
+@{
+
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/share/AdminLayout.cshtml";
+}
+
+<style>
+
+    .table td {
+        width: 600px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .table th {
+        /*width: 500px;*/
+        text-align: center;
+    }
+</style>
+
+<p>
+    @Html.ActionLink("Thêm Tour", "Create")
+</p>
+
+@using (Html.BeginForm("ExportToExcel", "Tours", FormMethod.Post))
+{
+    <input class="btn btn-info" type="submit" value="Xuất File Excel" style="margin-bottom: 10px" />
+}
+
+<table class="table">
+    <tr>
+        <th>
+            STT
+        </th>
+        <th>
+            Tên Tour
+        </th>
+        @*<th>
+                Chi Tiết
+            </th>*@
+
+        <th>
+            Chỗ
+        </th>
+        <th>
+            Thời Gian
+        </th>
+        <th>
+            Ngày
+        </th>
+        <th>
+            Phương Tiện
+        </th>
+        <th>
+            Điểm Đến
+        </th>
+        <th>
+            Ảnh 1
+        </th>
+        @*<th>
+                Ảnh 2
+            </th>*@
+        @*<th>
+                Giá Cũ
+            </th>*@
+        <th>
+            Giá Mới
+        </th>
+        <th>
+            Loại Tour
+        </th>
+    </tr>
+
+    @{
+        var c = 0;
+        foreach (var item in Model)
+        {
+            c++;
+            <tr>
+                <td>
+                    @c
+                </td>
+
+                <td width="200px">
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                @*<td width="200px">
+                        @Html.DisplayFor(modelItem => item.Detail)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.Slot)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DeptTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Day)
+
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Vehicle)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Destination)
+                </td>
+                <td>
+                    @{
+                        String ImagePath = "~/image/" + item.Image1;
+                    }
+                    <img src="@Url.Content(ImagePath)" width="100" />
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.Image2)
+                    </td>*@
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.oldPrice)
+                    </td>*@
+                <td>
+                    @Html.DisplayFor(modelItem => item.newPrice)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TourCategory.CategoryName)
+                </td>
+                <td>
+                    <a href="@Url.Action("Edit", "Tours", new { id = item.TourCode })"><i class="mdi mdi-wrench-outline"></i></a><br />
+                    <a href="@Url.Action("Details", "Tours", new { id = item.TourCode })"><i class="mdi mdi-open-in-new"></i></a><br />
+                    <a href="@Url.Action("Delete", "Tours", new { id = item.TourCode })"><i class="mdi mdi-delete-outline"></i></a>
+                </td>
+            </tr>
+        }
+
+    }
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+

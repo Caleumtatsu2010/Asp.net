@@ -1,0 +1,103 @@
+﻿@model IEnumerable<VnSport.Models.SanPham>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Sản phẩm</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="card mb-4">
+    <div class="card-header">
+        <i class="fas fa-table me-1"></i>
+        Sản phẩm
+    </div>
+    <div class="card-body">
+        <table id="datatablesSimple">
+            <thead>
+                <tr>
+                    <th>
+                        STT
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.maSanPham)
+                    </th>
+
+                    <th>
+                        @Html.DisplayNameFor(model => model.tenSanPham)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.mau)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.thuongHieu)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.giaCu)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.giaMoi)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.anh1)
+                    </th>
+                    <th>
+                        Loại sản phẩm
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    var c = 0;
+                    foreach (var item in Model)
+                    {
+                        c++;
+                        <tr>
+                            <td>
+                                @c
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.maSanPham)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.tenSanPham)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.mau)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.thuongHieu)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.giaCu)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.giaMoi)
+                            </td>
+                            <td>
+                                @{
+                                    string ImagePath = "~/image/" + item.anh1;
+                                }
+                                <img src="@Url.Content(ImagePath)" width="100" class="img-thumbnail" /><br />
+                                @Html.DisplayFor(modelItem => item.anh1)
+
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.LoaiSanPham.maLoai)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { id = item.maSanPham }) 
+                                @Html.ActionLink("Details", "Details", new { id = item.maSanPham }) 
+                                @Html.ActionLink("Delete", "Delete", new { id = item.maSanPham })
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

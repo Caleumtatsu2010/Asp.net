@@ -1,0 +1,238 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon"
+          href="https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/images/favicon.ico" />
+    <title>Đăng nhập thành viên Vietnam Booking</title>
+    <meta name="description"
+          content="Khi thanh toán trực tuyến, các thành viên Vietnam Booking cần đăng nhập tài khoản của mình để tích lũy điểm đổi quà, nâng cấp thẻ" />
+    <meta name="keywords"
+          content="dang nhap thanh vien vietnam booking, cach dang nhap thanh vien vietnam booking, cach kich hoat the thanh vien vietnam booking, dang nhap vietnam booking member" />
+    <link rel="canonical" href="" />
+
+
+
+    <link rel='preload' as='style'
+          href='~/Content/wp-content/themes/vietnambooking_master/css/plugins/bootstrap/bootstrap.min.css' />
+    <link rel='stylesheet'
+          href='~/Content/wp-content/themes/vietnambooking_master/css/plugins/bootstrap/bootstrap.min.css' />
+    <link rel='preload' as='style'
+          href='~/Content/wp-content/themes/vietnambooking_master/css/plugins/bootstrap/bootstrap-theme.min.css' />
+    <link rel='stylesheet'
+          href='~/Content/wp-content/themes/vietnambooking_master/css/plugins/bootstrap/bootstrap-theme.min.css' />
+    <link rel='preload' as='style'
+          href='~/Content/wp-content/themes/vietnambooking_master/css/plugins/grid/960.css' />
+    <link rel='stylesheet'
+          href='~/Content/wp-content/themes/vietnambooking_master/css/plugins/grid/960.css' />
+    <link rel='preload' as='style'
+          href='~/Content/wp-content/themes/vietnambooking_master/css/plugins/jquery_ui/jquery-ui.min.css' />
+    <link rel='stylesheet'
+          href='~/Content/wp-content/themes/vietnambooking_master/css/plugins/jquery_ui/jquery-ui.min.css' />
+    <!-- Bootstrap -->
+    @*<link rel='preload' as='style'
+              href='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/css/plugins/bootstrap/bootstrap.min.css' />
+        <link rel='stylesheet'
+              href='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/css/plugins/bootstrap/bootstrap.min.css' />
+        <link rel='preload' as='style'
+              href='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/css/plugins/bootstrap/bootstrap-theme.min.css' />
+        <link rel='stylesheet'
+              href='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/css/plugins/bootstrap/bootstrap-theme.min.css' />
+        <link rel='preload' as='style'
+              href='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/css/plugins/grid/960.css' />
+        <link rel='stylesheet'
+              href='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/css/plugins/grid/960.css' />
+        <link rel='preload' as='style'
+              href='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/css/plugins/jquery_ui/jquery-ui.min.css' />
+        <link rel='stylesheet'
+              href='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/css/plugins/jquery_ui/jquery-ui.min.css' />*@
+   
+    
+    
+    @*<link rel='preload' as='style'
+              href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.7.2/css/all.min.css' />
+        <link href='https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.7.2/css/all.min.css' rel='stylesheet' />*@
+
+
+
+    <link rel='preload' as='style'
+          href='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/css/plugins/common/jquery.dataTables.min.css' />
+    <link rel='stylesheet'
+          href='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/css/plugins/common/jquery.dataTables.min.css' />
+    <link rel='preload' as='style'
+          href='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/css/plugins/common/owl.carousel.css' />
+    <link rel='stylesheet'
+          href='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/css/plugins/common/owl.carousel.css' />
+    <link rel='preload' as='style'
+          href='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/css/custom/common/font_custom.css' />
+    <link rel='stylesheet'
+          href='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/css/custom/common/font_custom.css' />
+    <link rel='preload' as='style'
+          href='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/css/custom/common/base_custom.css' />
+    <link rel='stylesheet'
+          href='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/css/custom/common/base_custom.css' />
+    <link rel='preload' as='style'
+          href='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/css/custom/desktop/user/style.css' />
+    <link rel='stylesheet'
+          href='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/css/custom/desktop/user/style.css' />
+
+
+
+
+    <script type="text/javascript">
+        var adminurl = 'https://www.vietnambooking.com/wp-admin/admin-ajax.php';
+        var link_current = '/account-dang-nhap';
+        var url_link_home = 'https://www.vietnambooking.com';
+        var url_link_bloginfo = 'https://www.vietnambooking.com/wp-content/themes/vietnambooking_master';
+        var url_home = 'https://www.vietnambooking.com/wp-content/themes/vietnambooking_master';
+        var id_post = '69';
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106895544-1"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-748195809"></script>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-523HDNP" height="0" width="0"
+                style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script src='https://code.jquery.com/ui/1.10.3/jquery-ui.min.js'></script>
+    <script src='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/js/plugins/jquery_ui/ui.datepicker.lunar.min.js'></script>
+    <script src='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/js/plugins/jquery_ui/amlich.js'></script>
+    <script src='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/js/plugins/bootstrap/bootstrap.min.js'></script>
+    <script src='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/js/plugins/common/iframeResizer.contentWindow.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/jquery.cookie@1.4.1/jquery.cookie.min.js'></script>
+    <script src='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/js/plugins/common/jquery-scrolltofixed-min.js'></script>
+    <script src='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/js/plugins/common/jquery.lazy.min.js'></script>
+    <script src='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/js/plugins/common/owl.carousel.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/npm/sweetalert2@8.18.3/dist/sweetalert2.all.min.js'></script>
+    <script src='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/js/plugins/datatable/jquery.dataTables.min.js'></script>
+    <script src='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/js/plugins/socket/socket.io.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/corejs-typeahead/0.11.1/typeahead.jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mark.js/7.0.0/jquery.mark.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js'></script>
+    <script src='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/js/plugins/typeahead/publichelper.js'></script>
+    <script src='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/js/custom/common/google_script.js'></script>
+    <script src='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/js/custom/common/apps_base.js'></script>
+    <script src='https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/js/custom/desktop/user/apps.js'></script>
+
+
+    <link rel='dns-prefetch' href='//s.w.org' />
+    <script type="text/javascript">
+        window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "https:\/\/www.vietnambooking.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.8.17" } };
+        !function (t, a, e) { var r, i, n, o = a.createElement("canvas"), l = o.getContext && o.getContext("2d"); function c(t) { var e = a.createElement("script"); e.src = t, e.defer = e.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(e) } for (n = Array("flag", "emoji4"), e.supports = { everything: !0, everythingExceptFlag: !0 }, i = 0; i < n.length; i++)e.supports[n[i]] = function (t) { var e, a = String.fromCharCode; if (!l || !l.fillText) return !1; switch (l.clearRect(0, 0, o.width, o.height), l.textBaseline = "top", l.font = "600 32px Arial", t) { case "flag": return (l.fillText(a(55356, 56826, 55356, 56819), 0, 0), e = o.toDataURL(), l.clearRect(0, 0, o.width, o.height), l.fillText(a(55356, 56826, 8203, 55356, 56819), 0, 0), e === o.toDataURL()) ? !1 : (l.clearRect(0, 0, o.width, o.height), l.fillText(a(55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447), 0, 0), e = o.toDataURL(), l.clearRect(0, 0, o.width, o.height), l.fillText(a(55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447), 0, 0), e !== o.toDataURL()); case "emoji4": return l.fillText(a(55358, 56794, 8205, 9794, 65039), 0, 0), e = o.toDataURL(), l.clearRect(0, 0, o.width, o.height), l.fillText(a(55358, 56794, 8203, 9794, 65039), 0, 0), e !== o.toDataURL() }return !1 }(n[i]), e.supports.everything = e.supports.everything && e.supports[n[i]], "flag" !== n[i] && (e.supports.everythingExceptFlag = e.supports.everythingExceptFlag && e.supports[n[i]]); e.supports.everythingExceptFlag = e.supports.everythingExceptFlag && !e.supports.flag, e.DOMReady = !1, e.readyCallback = function () { e.DOMReady = !0 }, e.supports.everything || (r = function () { e.readyCallback() }, a.addEventListener ? (a.addEventListener("DOMContentLoaded", r, !1), t.addEventListener("load", r, !1)) : (t.attachEvent("onload", r), a.attachEvent("onreadystatechange", function () { "complete" === a.readyState && e.readyCallback() })), (r = e.source || {}).concatemoji ? c(r.concatemoji) : r.wpemoji && r.twemoji && (c(r.twemoji), c(r.wpemoji))) }(window, document, window._wpemojiSettings);
+    </script>
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <script type='text/javascript'
+            src='https://www.vietnambooking.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+    <script type='text/javascript'
+            src='https://www.vietnambooking.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+    <link rel='https://api.w.org/' href='https://www.vietnambooking.com/wp-json/' />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.vietnambooking.com/xmlrpc.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml"
+          href="https://www.vietnambooking.com/wp-includes/wlwmanifest.xml" />
+    <link rel="alternate" type="application/json+oembed"
+          href="https://www.vietnambooking.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.vietnambooking.com%2Faccount-dang-nhap" />
+    <link rel="alternate" type="text/xml+oembed"
+          href="https://www.vietnambooking.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.vietnambooking.com%2Faccount-dang-nhap&#038;format=xml" />
+
+</head>
+
+
+
+<body>
+
+
+    <div class="box-logo-title-login">
+        <a href="https://www.vietnambooking.com">
+            <img src="https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/images/account/logo.png" />
+        </a>
+        <h1 class="title-login">Đăng nhập thành viên</h1>
+    </div>
+
+    <div class="container-customer-login">
+        <div class="box-customer-login-inner">
+            <form method="post" action="Login">
+                <table>
+
+                    <tr>
+                        <td>
+                            <div class="title-id"><label for="code-name-login">TÊN ĐĂNG NHẬP</label></div>
+                            <div>
+                                <input required="required" name="Username" id="code-name-login"
+                                       type="text" value="" class="form-control" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="title-password"><label for="password-login">MẬT KHẨU</label></div>
+                            <div>
+                                <input required="required" name="Password" id="password-login"
+                                       type="password" class="form-control" />
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="title-password"><label for="password-login">@Html.ValidationMessage("tenDangNhap")</label></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="title-password"><label for="password-login">@Html.ValidationMessage("matKhau")</label></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-box-action">
+                            <button class="btn-submit-login" name="btn_submit_login_customers" type="submit">
+                                Đăng
+                                nhập
+                            </button>
+                            <a class="btn-remove-login" href="">Hủy</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="td-box-links-and-policy">
+                            <div class="box-links">
+                                <a href="@Url.Action("Register", "Account")">Đăng ký thành viên</a> |
+                                <a href="">Quên mật khẩu ?</a>
+                            </div>
+
+
+
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+
+    </div>
+
+</body>
+
+
+
+<script type='text/javascript' src='https://www.vietnambooking.com/wp-includes/js/wp-embed.min.js?ver=4.8.17'></script>
+
+</html>
+

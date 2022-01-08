@@ -1,0 +1,265 @@
+﻿@model TravelTour.Models.Tour
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/clientlayout.cshtml";
+}
+
+<div class="book-box-container book-tour">
+    <div class="container_12">
+        <div class="grid_12">
+            <div class="grid_8 alpha">
+                <h2 class="title-book-tour">Thanh toán</h2>
+                <br />
+                <div class="book-content">
+                    <div id="book-details-tour">
+                        <div class="box-details-tour">
+
+                            @using (Html.BeginForm("Paid", "Pay", FormMethod.Get))
+                            {
+
+                                    <div class="box-change-type-payment">
+                                        <label for="rad-van-phong">
+                                            <input data-role="none" checked="checked"
+                                                   id="rad-van-phong" type="radio" name="Payment"
+                                                   value="van phong" /> Thanh toán tại văn phòng
+                                        </label>
+
+                                    </div>
+
+                                    <div class="box-van-phong box-payment">
+                                        <table class="table tlb-payment-office-default">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <img src="https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/images/index/bg_sgn.jpg" />
+                                                    </td>
+                                                    <td>
+                                                        <div class="box-title">TP. Hồ Chí Minh</div>
+
+                                                        <a target="_blank" style="color: #000;text-decoration: none;"
+                                                           href="">
+                                                            <div class="box-address">
+                                                                - Địa chỉ: 164 Lê Thánh Tôn, Bến
+                                                                Thành, Quận 1 <span>
+                                                                    (Đối diện cửa bắc chợ Bến
+                                                                    Thành)
+                                                                </span>
+                                                            </div>
+                                                        </a>
+                                                        <a target="_blank" style="color: #000;text-decoration: none;"
+                                                           href="">
+                                                            <div class="box-address">
+                                                                - Địa chỉ: 54 Phạm Hồng Thái, Bến
+                                                                Thành, Quận 1 <span>
+                                                                    (Đối diện khách sạn New
+                                                                    World)
+                                                                </span>
+                                                            </div>
+                                                        </a>
+                                                        <a target="_blank" style="color: #000;text-decoration: none;"
+                                                           href="">
+                                                            <div class="box-address">
+                                                                - Địa chỉ: 190-192 Trần Quý, Phường
+                                                                6, Quận 11 <span>(Ngay ngã tư Tạ Uyên - Trần Quý)</span>
+                                                            </div>
+                                                        </a>
+
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <img src="https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/images/index/bg_han.jpg" />
+                                                    </td>
+                                                    <td>
+                                                        <div class="box-title">Hà Nội</div>
+                                                        <a style="color: #000;text-decoration: none;"
+                                                           href="">
+                                                            <div class="box-address">
+                                                                - Địa chỉ: 30 Phan Chu Trinh, Quận
+                                                                Hoàn Kiếm <span></span>
+                                                            </div>
+                                                        </a>
+                                                        <!--<div>- Điện thoại: 024 7307 3030</div>-->
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <img src="https://www.vietnambooking.com/wp-content/themes/vietnambooking_master/images/index/bg_dad.jpg" />
+                                                    </td>
+                                                    <td>
+                                                        <div class="box-title">Đà Nẵng</div>
+                                                        <a style="color: #000;text-decoration: none;"
+                                                           href="">
+                                                            <div class="box-address">
+                                                                - Địa chỉ: 174 Nguyễn Văn Linh,
+                                                                Quận Thanh Khê <span></span>
+                                                            </div>
+                                                        </a>
+                                                        <!--<div>- Điện thoại: 0236 7300 174</div>-->
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+
+
+
+
+                                    <script>
+                                        APPS_TOUR.rad_change_payment_page_set_tour();
+                                    </script>
+                                    <h2 class="title-book-tour">Thông tin liên hệ</h2>
+
+                                    <table class="tlb-contact-payment-tour">
+                                        <tr>
+                                            <td>
+                                                <label for="txt_fullname_deputy">
+                                                    Họ và tên<span class="red">*</span>
+                                                </label>
+                                                <input required="required" value="" id="txt_fullname_deputy"
+                                                       name="CustomerName" type="text" class="form-control"
+                                                       autocomplete="off" />
+                                                <input class="txt-id-tour" type="hidden" name="TourCode"
+                                                       value="@Model.TourCode" />
+                                            </td>
+                                            <td>
+                                                <label for="txt_phone_deputy">
+                                                    Điện thoại<span class="red">*</span>
+                                                </label>
+                                                <input required="required" value="" id="txt_phone_deputy"
+                                                       name="CustomerPhone" type="number" class="form-control"
+                                                       autocomplete="off" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <label for="txt_email_deputy">Email<span class="red">*</span></label>
+                                                <input required="required" value="" id="txt_email_deputy"
+                                                       name="CustomerMail" type="email" class="form-control"
+                                                       autocomplete="off" />
+                                            </td>
+                                            <td>
+                                                <label for='txt_address_deputy'>Địa chỉ *</label>
+                                                <input required="required" name="CustomerAddress" value="" id='txt_address_deputy'
+                                                       type="text" class="form-control" autocomplete="off" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="2">
+                                                <input autocomplete="off" readonly="readonly" value="@ViewBag.DeptTime"
+                                                       type="hidden" name="DeptTime" id="txt-date-start"
+                                                       class="form-control txt-date-start" required="required">
+                                                <script>
+                                                    //                                    $(document).ready(function(){
+                                                    //                                        if ($.datepicker != undefined) { $.datepicker.setDefaults($.datepicker.regional['vn']); }
+                                                    //                                        $( "#txt-date-start" ).datepickerlunar({
+                                                    //                                        dateFormat: "dd/mm/yy",
+                                                    //                                        minDate: 0,
+                                                    //                                        numberOfMonths: 1,
+                                                    //                                        beforeShow: function(input, inst){
+                                                    //                                            inst.dpDiv.removeClass('ui-helper-hidden-accessible');
+                                                    //                                            if($(input).prop('disabled')){return false;}
+                                                    //                                        },
+                                                    //                                        });
+                                                    //
+                                                    //                                    });
+                                                </script>
+
+                                                <input name="TotalPrice" value="@ViewBag.TotalPrice" type="hidden" />
+                                                <input name="TotalPeople" value="@ViewBag.TotalPeople" type="hidden" />
+
+
+                                                <label for='txt_note_deputy'>Yêu cầu khác</label>
+                                                <textarea name="Note" id='txt_note_deputy' type="text"
+                                                          class="form-control" autocomplete="off"></textarea>
+
+         
+                                                <div class='box-submit-form-set-tour'>
+                                                    <button class='btn-submit-form-set-tour' type="submit"
+                                                            name='btn_submit_form_set_tour'>
+                                                        HOÀN TẤT ĐẶT TOUR
+                                                    </button>
+                                                    <span class="notify-submit-tour"></span>
+                                                    <script>
+                                                        $(document).ready(function () {
+                                                            $(".btn-submit-form-set-tour").click(function () {
+                                                                var fullname_deputy = $.trim($("#txt_fullname_deputy").val());
+                                                                var phone_deputy = $.trim($("#txt_phone_deputy").val());
+                                                                var email_deputy = $.trim($("#txt_email_deputy").val());
+                                                                if (fullname_deputy != '' && phone_deputy != '' && email_deputy != '') {
+                                                                    $(this).addClass("hidden");
+                                                                    $(".notify-submit-tour").html("<i class='fa fa-spin fa-spinner fa-2x'></i> Chúng tôi đang đặt tour này cho bạn, xin vui lòng đợi...");
+                                                                }
+
+
+                                                            });
+                                                        });
+                                                    </script>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                    </table> <!-- end table contact form -->
+                                    <br />
+                            }
+                            </div>
+                    </div>
+                </div> <!-- end single content -->
+            </div>
+            <div class="grid_4 omega">
+
+                <div class="box-img-feature payment-tour">
+                    <img src="https://www.vietnambooking.com/wp-content/uploads/2019/05/chuacokienancung.jpg"
+                         alt="Tour du lịch Lục tỉnh miền Tây 4 ngày 3 đêm | Khám phá sông nước Nam Kì" />
+                </div>
+                <div class='box-info-tour payment-tour'>
+                    <span class='code-tour'>
+                        Mã Tour: @Model.TourCode <br />
+                        <a href="">
+                            @Model.Name
+
+                        </a>
+                    </span>
+
+                    <table>
+                        <tr>
+                            <td>
+                                <i class="fa fa-map-marker-alt" aria-hidden="true"></i>
+                                @Model.Destination | @ViewBag.TotalPeople Khách
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fa fa-clock" aria-hidden="true"></i> @Model.Day Ngày | Phương tiện: @Model.Vehicle<img class='img-traffic' title='Xe'
+                                                                                                                src=''
+                                                                                                                alt="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fa fa-calendar-alt" aria-hidden="true"></i> Khởi hành: @ViewBag.DeptTime
+                            </td>
+                        </tr>
+                    </table>
+
+                </div>
+                <div class='box-price-tour payment-tour'>
+                    <span>Tổng: </span>@ViewBag.TotalPrice <span>VND</span>
+                </div>
+
+                <div class='box-guide-payment-tour payment-tour'>
+                    Sau khi hoàn tất đơn hàng, nhân viên của www.vietnambooking.com sẽ liên hệ với quý khách để xác
+                    nhận tình trạng tour.
+                    <br />
+                    Mọi thắc mắc, xin Quý khách vui lòng liên hệ tổng đài <span>1900 3398</span>
+                </div>
+
+
+            </div>
+            <div class="clearfix"></div>
+
+        </div>
+    </div>
+</div>
+

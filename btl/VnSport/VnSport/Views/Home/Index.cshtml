@@ -1,0 +1,416 @@
+﻿@{
+
+    var ListProduct1 = ViewBag.NewProducts1 as IEnumerable<VnSport.Models.SanPham>;
+    var ListProduct2 = ViewBag.NewProducts2 as IEnumerable<VnSport.Models.SanPham>;
+    var ListProduct3 = ViewBag.NewProducts3 as IEnumerable<VnSport.Models.SanPham>;
+
+}
+
+
+<!-- ================================================main body ========================== -->
+<div class="theme-default wp-slider mb-20px">
+    <div id="slider" class=""></div>
+</div>
+
+@*=================xem them loai san pham====================*@
+<div id="thaymh">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-mm-6 col-ms-12 wpsmh wow fadeInLeft mb-15px" data-wow-delay="0.5s">
+                <img alt="nhóm sp 1" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     class="lazyload"
+                     data-src="https://vnsport.com.vn/wp-content/uploads/2019/02/bang-bao-ve-dau-goi-360.png">
+                <div class="csmh">
+                    <h4 class="tdv">Băng Bảo Vệ Đầu Gối</h4>
+                    <p>Đai Băng Bảo Vệ Khớp Đầu Gối, Phòng Chấn Thương Khi Chơi Các Môn Thể Thao</p> <a href="@Url.Action("Index", "SanPham", new { id = 1})" class="chitiet">XEM CHI TIẾT</a>
+                </div>
+            </div>
+            <div class="col-sm-4 col-mm-6 col-ms-12 wpsmh wow fadeInUp mb-15px" data-wow-delay="0.9s">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     class="lazyload" alt="nhóm sp 2"
+                     data-src="https://vnsport.com.vn/wp-content/uploads/2019/02/băng-bảo-vệ-cổ-chân.png">
+                <div class="csmh">
+                    <h4 class="tdv">Băng Bảo Vệ Cổ Chân</h4>
+                    <p>Băng Bảo Vệ Khớp Cổ Chân, Phòng Chấn Thương Khi Chơi Các Môn Thể Thao</p> <a href="@Url.Action("Index", "SanPham", new { id = 2})" class="chitiet">XEM CHI TIẾT</a>
+                </div>
+            </div>
+            <div class="col-sm-4 col-mm-6 col-ms-12 wpsmh wow fadeInRight mb-15px" data-wow-delay="0.5s">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     class="lazyload" alt="nhóm sp 3"
+                     data-src="https://vnsport.com.vn/wp-content/uploads/2019/02/băng-bảo-vệ-cổ-tay-1.png">
+                <div class="csmh">
+                    <h4 class="tdv">Găng Tay - Cổ Tay</h4>
+                    <p>Các Sản Phẩm Găng Tay, Dây Quấn Bảo Vệ Cổ Tay Trong Thể Thao Và Thể Hình</p> <a href="@Url.Action("Index", "SanPham", new { id = 3})" class="chitiet">XEM CHI TIẾT</a>
+                </div>
+            </div>
+            <div class="col-sm-4 col-mm-6 col-ms-12 wpsmh wow fadeInLeft mb-15px" data-wow-delay="0.5s">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     class="lazyload" alt="nhóm sp 4"
+                     data-src="https://vnsport.com.vn/wp-content/uploads/2019/02/băng-bảo-vệ-khuỷu-tay.png">
+                <div class="csmh">
+                    <h4 class="tdv">Băng Bảo Vệ Khuỷu Tay</h4>
+                    <p>Băng Bảo Vệ Khớp Khuỷu Tay, Phòng Chấn Thương Khi Chơi Các Môn Thể Thao</p> <a href="@Url.Action("Index", "SanPham", new { id = 4})" class="chitiet">
+                        XEM CHI
+                        TIẾT
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-4 col-mm-6 col-ms-12 wpsmh wow fadeInUp mb-15px" data-wow-delay="0.9s">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     class="lazyload" alt="nhóm sp 5"
+                     data-src="https://vnsport.com.vn/wp-content/uploads/2019/02/đai-bảo-vệ-thắt-lưng.png">
+                <div class="csmh">
+                    <h4 class="tdv">Băng Bảo Vệ Thắt Lưng</h4>
+                    <p>Băng Bảo Vệ Khớp Thắt Lưng, Phòng Chấn Thương Khi Chơi Các Môn Thể Thao</p> <a href="@Url.Action("Index", "SanPham", new { id = 5})" class="chitiet">
+                        XEM CHI
+                        TIẾT
+                    </a>
+                </div>
+            </div>
+            <div class="col-sm-4 col-mm-6 col-ms-12 wpsmh wow fadeInRight mb-15px" data-wow-delay="0.5s">
+                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                     class="lazyload" alt="nhóm sp 6"
+                     data-src="https://vnsport.com.vn/wp-content/uploads/2018/12/PHU-KIEN-THE-THAO.png">
+                <div class="csmh">
+                    <h4 class="tdv">Phụ Kiện Thể Thao</h4>
+                    <p>Phụ Kiện Thể Thao Các Loại</p> <a href="@Url.Action("Index", "SanPham", new { id = 9})"
+                                                         class="chitiet">XEM CHI TIẾT</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="cattmh" class="mb-15px">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3 class="title-cat"><span>PHỤ KIỆN KHỚP GỐI</span></h3> <a class="tabViewMore"
+                                                                             href="@Url.Action("Index", "SanPham", new { id = 1})">XEM THÊM</a>
+            </div>
+
+
+            <div class="col-sm-12">
+                <div class="wpcat">
+                    <div class="wp-list-cat">
+
+                        @foreach (var item in ListProduct1)
+                        {
+                            <div class="cot5 dv col-xxs-6 col-ms-4 col-mm-4 col-mxs-6 woocommerce post-5518 product type-product status-publish has-post-thumbnail product_cat-bang-bao-ve-dau-goi first instock sale shipping-taxable purchasable product-type-variable">
+                                <div class="wp-hover thumbnail-pro-cat">
+                                    <a href="@Url.Action("Detail", "SanPham", new { id = item.maSanPham})">
+
+
+                                        <image class='khungvien'
+                                               src='//vnsport.com.vn/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif' />
+                                        <img src="~/image/@item.anh1" a />
+
+                                    </a>
+
+                                    <div class="clearfix"></div>
+                                </div>
+
+                                <a href="@Url.Action("Detail", "SanPham", new { id = item.maSanPham})">
+                                    <h3 title="@item.tenSanPham" class="mb-5px title-pro-cat">
+                                        @item.tenSanPham
+                                    </h3>
+                                </a>
+                                <div class="codepro"> <span class="code">Mã SP</span>: @item.maSanPham</div>
+                                <div class="gia">
+                                    <del class="price-old">
+                                        <span class="woocommerce-Price-amount amount price-new">
+                                            @{
+                                                if (item.giaCu != null)
+                                                {
+                                                    <bdi>
+                                                        @item.giaCu<span class="woocommerce-Price-currencySymbol">&#8363;</span>
+                                                    </bdi>
+                                                }
+                                            }
+
+                                        </span>
+                                    </del>
+                                    <ins class="price-new">
+                                        <span class="woocommerce-Price-amount amount price-new">
+                                            <bdi>
+                                                @item.giaMoi<span class="woocommerce-Price-currencySymbol">&#8363;</span>
+                                            </bdi>
+                                        </span>
+                                    </ins>
+                                </div>
+                            </div>
+                        }
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+<div id="cattmh" class="mb-15px">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3 class="title-cat"><span>GĂNG TAY - CỔ TAY</span></h3> <a class="tabViewMore"
+                                                                             href="@Url.Action("Index", "Product", new { id = 3})">XEM THÊM</a>
+            </div>
+            <div class="col-sm-12">
+                <div class="wpcat">
+                    <div class="wp-list-cat">
+                        @foreach (var item in ListProduct2)
+                        {
+                            <div class="cot5 dv col-xxs-6 col-ms-4 col-mm-4 col-mxs-6 woocommerce post-5518 product type-product status-publish has-post-thumbnail product_cat-bang-bao-ve-dau-goi first instock sale shipping-taxable purchasable product-type-variable">
+                                <div class="wp-hover thumbnail-pro-cat">
+                                    <a href="@Url.Action("Detail", "SanPham", new { id = item.maSanPham})">
+
+
+                                        <image class='khungvien'
+                                               src='//vnsport.com.vn/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif' />
+                                        <img src="~/image/@item.anh1" a />
+
+                                    </a>
+
+                                    <div class="clearfix"></div>
+                                </div>
+
+                                <a href="@Url.Action("Detail", "SanPham", new { id = item.maSanPham})">
+                                    <h3 title="@item.tenSanPham" class="mb-5px title-pro-cat">
+                                        @item.tenSanPham
+                                    </h3>
+                                </a>
+                                <div class="codepro"> <span class="code">Mã SP</span>: @item.maSanPham</div>
+                                <div class="gia">
+                                    <del class="price-old">
+                                        <span class="woocommerce-Price-amount amount price-new">
+                                            @{
+                                                if (item.giaCu != null)
+                                                {
+                                                    <bdi>
+                                                        @item.giaCu <span class="woocommerce-Price-currencySymbol">&#8363;</span>
+                                                    </bdi>
+                                                }
+                                            }
+                                        </span>
+                                    </del>
+
+                                    <ins class="price-new">
+                                        <span class="woocommerce-Price-amount amount price-new">
+                                            <bdi>
+                                                @item.giaMoi<span class="woocommerce-Price-currencySymbol">&#8363;</span>
+                                            </bdi>
+                                        </span>
+                                    </ins>
+                                </div>
+                            </div>
+                        }
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="cattmh" class="mb-15px">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h3 class="title-cat"><span>PHỤ KIỆN THỂ THAO KHÁC</span></h3> <a class="tabViewMore"
+                                                                                  href="@Url.Action("Index", "Product", new { id = 9})">XEM THÊM</a>
+            </div>
+            <div class="col-sm-12">
+                <div class="wpcat">
+                    <div class="wp-list-cat">
+
+                        @foreach (var item in ListProduct3)
+                        {
+                            <div class="cot5 dv col-xxs-6 col-ms-4 col-mm-4 col-mxs-6 woocommerce post-5518 product type-product status-publish has-post-thumbnail product_cat-bang-bao-ve-dau-goi first instock sale shipping-taxable purchasable product-type-variable">
+                                <div class="wp-hover thumbnail-pro-cat">
+                                    <a href="@Url.Action("Detail", "SanPham", new { id = item.maSanPham})">
+
+
+                                        <image class='khungvien'
+                                               src='//vnsport.com.vn/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif' />
+                                        <img src="~/image/@item.anh1" a />
+
+                                    </a>
+
+                                    <div class="clearfix"></div>
+                                </div>
+
+                                <a href="@Url.Action("Detail", "SanPham", new { id = item.maSanPham})">
+                                    <h3 title="@item.tenSanPham" class="mb-5px title-pro-cat">
+                                        @item.tenSanPham
+                                    </h3>
+                                </a>
+                                <div class="codepro"> <span class="code">Mã SP</span>: @item.maSanPham</div>
+                                <div class="gia">
+                                    <del class="price-old">
+                                        <span class="woocommerce-Price-amount amount price-new">
+                                            @{
+                                                if(item.giaCu != null)
+                                                {
+                                                    <bdi>
+                                                        @item.giaCu<span class="woocommerce-Price-currencySymbol">&#8363;</span>
+                                                    </bdi>
+                                                }
+                                            }
+
+
+                                        </span>
+                                    </del>
+                                    <ins class="price-new">
+                                        <span class="woocommerce-Price-amount amount price-new">
+                                            <bdi>
+                                                @item.giaMoi<span class="woocommerce-Price-currencySymbol">&#8363;</span>
+                                            </bdi>
+                                        </span>
+                                    </ins>
+                                </div>
+                            </div>
+                        }
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container mb-15px latest-blog">
+    <div class="row">
+        <div class="col-sm-12 text-center"> <span class="title-center">Tin Tức Thể Thao Và Sức Khoẻ</span></div>
+        <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4">
+            <div class="blog_inner">
+                <div class="blog-img">
+                    <a href="">
+                        <img src="//vnsport.com.vn/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif"
+                             data-lazy-type="image"
+                             data-src="https://vnsport.com.vn/wp-content/uploads/2021/11/benh-thoat-vi-dia-dem-co-nguy-hiem-cho-moi-nguoi-khong-waist-support-hochiminh-vnsport-300x300.jpg"
+                             class="lazy lazy-hidden attachment-medium size-medium wp-post-image" alt=""
+                             loading="lazy" srcset=""
+                             data-srcset="https://vnsport.com.vn/wp-content/uploads/2021/11/benh-thoat-vi-dia-dem-co-nguy-hiem-cho-moi-nguoi-khong-waist-support-hochiminh-vnsport-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2021/11/benh-thoat-vi-dia-dem-co-nguy-hiem-cho-moi-nguoi-khong-waist-support-hochiminh-vnsport-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2021/11/benh-thoat-vi-dia-dem-co-nguy-hiem-cho-moi-nguoi-khong-waist-support-hochiminh-vnsport-100x100.jpg 100w"
+                             sizes="(max-width: 300px) 100vw, 300px" /><noscript>
+                            <img src="https://vnsport.com.vn/wp-content/uploads/2021/11/benh-thoat-vi-dia-dem-co-nguy-hiem-cho-moi-nguoi-khong-waist-support-hochiminh-vnsport-300x300.jpg"
+                                 class="attachment-medium size-medium wp-post-image" alt="" loading="lazy"
+                                 srcset="https://vnsport.com.vn/wp-content/uploads/2021/11/benh-thoat-vi-dia-dem-co-nguy-hiem-cho-moi-nguoi-khong-waist-support-hochiminh-vnsport-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2021/11/benh-thoat-vi-dia-dem-co-nguy-hiem-cho-moi-nguoi-khong-waist-support-hochiminh-vnsport-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2021/11/benh-thoat-vi-dia-dem-co-nguy-hiem-cho-moi-nguoi-khong-waist-support-hochiminh-vnsport-100x100.jpg 100w"
+                                 sizes="(max-width: 300px) 100vw, 300px" />
+                        </noscript>
+                    </a>
+                </div>
+                <div class="blog-info">
+                    <div class="home-blog-title">
+                        <h3>
+                            <a href="">
+                                Bệnh
+                                Thoát Vị Đĩa Đệm Có Nguy Hiểm Cho Mọi Người Không?
+                            </a>
+                        </h3>
+                        <div class="post-date">
+                            <i class="fa fa-calendar"></i> <time class="entry-date">20/11/2021</time>
+                        </div>
+                    </div>
+                    <div class="homeblog">
+                        <p>
+                            Thông thường, thoát vị đĩa đệm cột sống thắt lưng là căn bệnh thường gặp ở người trong độ
+                            tuổi ...
+                        </p>
+                    </div> <a class="readmore"
+                              href="">
+                        Chi
+                        Tiết
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4">
+            <div class="blog_inner">
+                <div class="blog-img">
+                    <a href="">
+                        <img src="//vnsport.com.vn/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif"
+                             data-lazy-type="image"
+                             data-src="https://vnsport.com.vn/wp-content/uploads/2021/02/lich-nghi-tet-2021-1-300x300.jpg"
+                             class="lazy lazy-hidden attachment-medium size-medium wp-post-image" alt=""
+                             loading="lazy" srcset=""
+                             data-srcset="https://vnsport.com.vn/wp-content/uploads/2021/02/lich-nghi-tet-2021-1-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2021/02/lich-nghi-tet-2021-1-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2021/02/lich-nghi-tet-2021-1-100x100.jpg 100w, https://vnsport.com.vn/wp-content/uploads/2021/02/lich-nghi-tet-2021-1.jpg 600w"
+                             sizes="(max-width: 300px) 100vw, 300px" /><noscript>
+                            <img src="https://vnsport.com.vn/wp-content/uploads/2021/02/lich-nghi-tet-2021-1-300x300.jpg"
+                                 class="attachment-medium size-medium wp-post-image" alt="" loading="lazy"
+                                 srcset="https://vnsport.com.vn/wp-content/uploads/2021/02/lich-nghi-tet-2021-1-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2021/02/lich-nghi-tet-2021-1-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2021/02/lich-nghi-tet-2021-1-100x100.jpg 100w, https://vnsport.com.vn/wp-content/uploads/2021/02/lich-nghi-tet-2021-1.jpg 600w"
+                                 sizes="(max-width: 300px) 100vw, 300px" />
+                        </noscript>
+                    </a>
+                </div>
+                <div class="blog-info">
+                    <div class="home-blog-title">
+                        <h3>
+                            <a href="">
+                                THÔNG
+                                BÁO: Lịch nghỉ tết Nguyên Đán 2021 &#8211; VNSPORT
+                            </a>
+                        </h3>
+                        <div class="post-date">
+                            <i class="fa fa-calendar"></i> <time class="entry-date">09/02/2021</time>
+                        </div>
+                    </div>
+                    <div class="homeblog">
+                        <p>
+                            LỊCH NGHỈ TẾT NGUYÊN ĐÁN 2021 - VNSPORT Lịch nghỉ tết Nguyên Đán 2021 tại showroom: 330
+                            lê Văn Sỹ, ...
+                        </p>
+                    </div> <a class="readmore"
+                              href="">Chi Tiết</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4">
+            <div class="blog_inner">
+                <div class="blog-img">
+                    <a href="">
+                        <img src="//vnsport.com.vn/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif"
+                             data-lazy-type="image"
+                             data-src="https://vnsport.com.vn/wp-content/uploads/2020/12/loi-ich-cua-chay-bo-300x300.jpg"
+                             class="lazy lazy-hidden attachment-medium size-medium wp-post-image" alt=""
+                             loading="lazy" srcset=""
+                             data-srcset="https://vnsport.com.vn/wp-content/uploads/2020/12/loi-ich-cua-chay-bo-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2020/12/loi-ich-cua-chay-bo-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2020/12/loi-ich-cua-chay-bo-600x600.jpg 600w, https://vnsport.com.vn/wp-content/uploads/2020/12/loi-ich-cua-chay-bo-100x100.jpg 100w, https://vnsport.com.vn/wp-content/uploads/2020/12/loi-ich-cua-chay-bo.jpg 626w"
+                             sizes="(max-width: 300px) 100vw, 300px" /><noscript>
+                            <img src="https://vnsport.com.vn/wp-content/uploads/2020/12/loi-ich-cua-chay-bo-300x300.jpg"
+                                 class="attachment-medium size-medium wp-post-image" alt="" loading="lazy"
+                                 srcset="https://vnsport.com.vn/wp-content/uploads/2020/12/loi-ich-cua-chay-bo-300x300.jpg 300w, https://vnsport.com.vn/wp-content/uploads/2020/12/loi-ich-cua-chay-bo-150x150.jpg 150w, https://vnsport.com.vn/wp-content/uploads/2020/12/loi-ich-cua-chay-bo-600x600.jpg 600w, https://vnsport.com.vn/wp-content/uploads/2020/12/loi-ich-cua-chay-bo-100x100.jpg 100w, https://vnsport.com.vn/wp-content/uploads/2020/12/loi-ich-cua-chay-bo.jpg 626w"
+                                 sizes="(max-width: 300px) 100vw, 300px" />
+                        </noscript>
+                    </a>
+                </div>
+                <div class="blog-info">
+                    <div class="home-blog-title">
+                        <h3>
+                            <a href="">
+                                Lợi Ích
+                                Của Chạy Bộ Và Những Điều Cần Lưu Ý
+                            </a>
+                        </h3>
+                        <div class="post-date">
+                            <i class="fa fa-calendar"></i> <time class="entry-date">15/12/2020</time>
+                        </div>
+                    </div>
+                    <div class="homeblog">
+                        <p>
+                            Những Lợi Ích Cho Sức Khỏe Của Việc Thường Xuyên Chạy Bộ
+                            • Giúp xương chắc khỏe và linh hoạt hơn. • ...
+                        </p>
+                    </div> <a class="readmore"
+                              href="">Chi Tiết</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ================================================main body========================== -->

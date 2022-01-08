@@ -1,0 +1,3476 @@
+﻿/*  CAT FLIGHT */
+.cat-box-item-default.cat-box-flight {
+}
+
+    .cat-box-item-default.cat-box-flight h2 {
+        text-align: center;
+        font-size: 28px;
+        color: #15284a;
+        font-family: 'os_semi_bold';
+        margin-bottom: 40px;
+        margin-top: 120px;
+    }
+
+    .cat-box-item-default.cat-box-flight .box-calendar {
+    }
+
+        .cat-box-item-default.cat-box-flight .box-calendar .box-item {
+            padding: 8px;
+            width: 100%;
+            min-height: 148px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 21px 0 rgba(215, 220, 230, 0.72);
+            display: grid;
+            grid-template-columns: 220px auto;
+        }
+
+            .cat-box-item-default.cat-box-flight .box-calendar .box-item .box-img {
+                overflow: hidden;
+                width: 100%;
+                height: 130px;
+                border-radius: 6px;
+            }
+
+                .cat-box-item-default.cat-box-flight .box-calendar .box-item .box-img img {
+                    max-width: 100%;
+                }
+
+            .cat-box-item-default.cat-box-flight .box-calendar .box-item .box-title {
+                padding: 25px 25px 25px 15px;
+            }
+
+                .cat-box-item-default.cat-box-flight .box-calendar .box-item .box-title a {
+                    font-size: 16px;
+                    color: #15284a;
+                    font-family: 'os_bold';
+                    line-height: 30px;
+                }
+
+    .cat-box-item-default.cat-box-flight .category-flight-slider .item {
+        width: 100%;
+        padding: 7.5px;
+    }
+
+        .cat-box-item-default.cat-box-flight .category-flight-slider .item .box-img {
+            height: 175px;
+            overflow: hidden;
+            width: 100%;
+            border-radius: 6px;
+        }
+
+            .cat-box-item-default.cat-box-flight .category-flight-slider .item .box-img img {
+                max-width: 100%;
+            }
+
+        .cat-box-item-default.cat-box-flight .category-flight-slider .item .box-title {
+            min-height: 60px;
+        }
+
+            .cat-box-item-default.cat-box-flight .category-flight-slider .item .box-title h3 {
+                margin: 0px;
+                margin-top: 15px;
+            }
+
+                .cat-box-item-default.cat-box-flight .category-flight-slider .item .box-title h3 a {
+                    color: #15284a;
+                    font-size: 15px;
+                    font-family: 'os_semi_bold';
+                    text-decoration: none;
+                    line-height: 24px;
+                }
+
+        .cat-box-item-default.cat-box-flight .category-flight-slider .item .box-readmore {
+            border-radius: 5px;
+            background-color: #0064d2;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+            .cat-box-item-default.cat-box-flight .category-flight-slider .item .box-readmore a {
+                font-size: 14px;
+                color: #ffffff;
+                font-family: 'os_semi_bold';
+                text-decoration: none;
+                line-height: 40px;
+            }
+
+    .cat-box-item-default.cat-box-flight .category-flight-slider .owl-nav {
+        position: absolute;
+        top: -72px;
+        right: 0px;
+    }
+
+        .cat-box-item-default.cat-box-flight .category-flight-slider .owl-nav button {
+            height: 34px;
+            width: 34px;
+            background: #fff;
+            color: #00266b;
+            font-size: 34px;
+            line-height: 34px;
+            box-shadow: 4px 8px 23px 0 rgb(215 220 230 / 72%);
+            border-radius: 5px;
+        }
+
+            .cat-box-item-default.cat-box-flight .category-flight-slider .owl-nav button.owl-prev {
+            }
+
+            .cat-box-item-default.cat-box-flight .category-flight-slider .owl-nav button.owl-next {
+                margin-left: 10px;
+            }
+
+            .cat-box-item-default.cat-box-flight .category-flight-slider .owl-nav button span {
+                position: relative;
+                top: -2px;
+            }
+
+            .cat-box-item-default.cat-box-flight .category-flight-slider .owl-nav button.disabled {
+                opacity: 0.3;
+            }
+
+    .cat-box-item-default.cat-box-flight #slider-flight-news.category-flight-slider .item {
+        padding: 15px;
+    }
+
+        .cat-box-item-default.cat-box-flight #slider-flight-news.category-flight-slider .item .box-img {
+            height: 160px;
+        }
+
+ul.ul-list-how-to-book {
+    width: 100%;
+    marign: 0px;
+    padding: 0px;
+    display: flex;
+}
+
+    ul.ul-list-how-to-book li {
+        list-style: none;
+        display: block;
+        flex: 1;
+        padding: 10px;
+    }
+
+        ul.ul-list-how-to-book li .box-item-inner {
+            background: #fff;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 6px 17px 0 rgba(215, 220, 230, 0.72);
+        }
+
+            ul.ul-list-how-to-book li .box-item-inner .box-img {
+                margin-bottom: 32px;
+                padding-top: 32px
+            }
+
+                ul.ul-list-how-to-book li .box-item-inner .box-img img {
+                    height: 64px;
+                }
+
+            ul.ul-list-how-to-book li .box-item-inner .description {
+                font-size: 13px;
+                color: #15284a;
+                font-family: 'os_regular';
+                margin-bottom: 8px;
+            }
+
+            ul.ul-list-how-to-book li .box-item-inner .title {
+                font-size: 14px;
+                color: #15284a;
+                font-family: 'os_bold';
+                padding-bottom: 32px;
+            }
+
+
+ul#slider-partner-airlines {
+    margin: 0px;
+    padding: 0px;
+}
+
+    ul#slider-partner-airlines li.item {
+        list-style: none;
+        display: block;
+        text-align: center;
+    }
+
+    ul#slider-partner-airlines .owl-nav {
+        display: none;
+    }
+
+
+.cat-box-item-default.cat-box-flight .box-video-guide {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 395px 50px auto;
+    margin-top: 50px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 6px 17px 0 rgba(215, 220, 230, 0.72);
+}
+
+    .cat-box-item-default.cat-box-flight .box-video-guide .box-content {
+        padding: 32px 35px 58px 32px;
+        border-radius: 8px;
+        background-color: #0064d2;
+        min-height: 350px;
+    }
+
+        .cat-box-item-default.cat-box-flight .box-video-guide .box-content h3 {
+            font-size: 28px;
+            color: #ffffff;
+            font-family: 'os_semi_bold';
+            line-height: 41px;
+            margin-top: 0px;
+        }
+
+        .cat-box-item-default.cat-box-flight .box-video-guide .box-content h4 {
+            font-size: 14px;
+            color: #ffffff;
+            font-family: 'os_regular';
+            line-height: 24px;
+        }
+
+        .cat-box-item-default.cat-box-flight .box-video-guide .box-content .box-border {
+            width: 50%;
+            border-radius: 3px;
+            height: 6px;
+            padding: 0px;
+            background: #fff;
+            margin: 20px 0px;
+        }
+
+    .cat-box-item-default.cat-box-flight .box-video-guide .box-dash {
+        position: relative;
+    }
+
+        .cat-box-item-default.cat-box-flight .box-video-guide .box-dash:after {
+            content: " ";
+            height: 90%;
+            position: absolute;
+            width: 15px;
+            left: 40%;
+            background: url(https://data.vietnambooking.com/common/icon/icon_dash.png) no-repeat top center;
+            top: 5%;
+        }
+
+    .cat-box-item-default.cat-box-flight .box-video-guide .box-video {
+        border-radius: 8px;
+        overflow: hidden;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+        height: 355px;
+    }
+
+
+.cat-box-item-default.cat-box-flight .box-choose-us {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background: #fff;
+    padding-bottom: 40px;
+    box-shadow: 0 6px 17px 0 rgba(215, 220, 230, 0.72);
+    border-radius: 8px;
+}
+
+    .cat-box-item-default.cat-box-flight .box-choose-us div.item {
+        text-align: center;
+        padding: 40px;
+        padding-bottom: 0px;
+    }
+
+        .cat-box-item-default.cat-box-flight .box-choose-us div.item .box-img {
+            text-align: center;
+        }
+
+            .cat-box-item-default.cat-box-flight .box-choose-us div.item .box-img img {
+                width: 140px;
+                margin-bottom: 15px;
+            }
+
+        .cat-box-item-default.cat-box-flight .box-choose-us div.item .box-title {
+            font-family: 'os_bold';
+            color: #15284a;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .cat-box-item-default.cat-box-flight .box-choose-us div.item .box-description {
+            color: #373f58;
+            font-size: 14px;
+            font-family: 'os_regular';
+            line-height: 21px;
+        }
+
+.cat-box-item-default.cat-box-flight.type-download-app {
+    background: #376eed url("https://data.vietnambooking.com/common/bg/home/bg_home_app.jpg") no-repeat bottom center;
+    min-height: 440px;
+    margin-bottom: 0px;
+    margin-top: 120px;
+}
+
+.cat-box-item-default.cat-box-flight .box-download-app .box-content-app-intro {
+    width: 450px;
+    margin: auto;
+    padding-left: 30px;
+    padding-top: 10%;
+}
+
+    .cat-box-item-default.cat-box-flight .box-download-app .box-content-app-intro h2 {
+        color: #ffffff;
+        font-size: 40px;
+        font-family: 'os_semi_bold';
+        margin: 0px;
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+    .cat-box-item-default.cat-box-flight .box-download-app .box-content-app-intro h3 {
+        color: #ffffff;
+        font-size: 24px;
+        font-family: 'os_semi_bold';
+        margin: 0px;
+    }
+
+    .cat-box-item-default.cat-box-flight .box-download-app .box-content-app-intro h4 {
+        font-size: 15px;
+        color: #ffffff;
+        font-family: 'os_regular';
+        margin: 0px;
+        line-height: 22px;
+    }
+
+.cat-box-item-default.cat-box-flight .box-download-app .box-link-app {
+    margin-top: 25px;
+    display: block;
+}
+
+    .cat-box-item-default.cat-box-flight .box-download-app .box-link-app a {
+        padding-right: 15px;
+    }
+
+.cat-box-item-default.cat-box-flight .box-list-faqs {
+    background: #fff;
+    box-shadow: 0 6px 17px 0 rgba(215, 220, 230, 0.72);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+    .cat-box-item-default.cat-box-flight .box-list-faqs .panel {
+        border: 0px;
+        border-bottom: 1px solid #e7eef8;
+        box-shadow: none;
+    }
+
+    .cat-box-item-default.cat-box-flight .box-list-faqs .panel-heading {
+        background: #fff;
+        padding: 0px 20px;
+    }
+
+        .cat-box-item-default.cat-box-flight .box-list-faqs .panel-heading h4.panel-title {
+        }
+
+            .cat-box-item-default.cat-box-flight .box-list-faqs .panel-heading h4.panel-title a {
+                text-decoration: none;
+                display: block;
+                font-size: 14px;
+                color: #15284a;
+                font-family: 'os_bold';
+                padding: 24px 0px;
+            }
+
+                .cat-box-item-default.cat-box-flight .box-list-faqs .panel-heading h4.panel-title a span.pull-right {
+                    transition: all 0.5s;
+                    font-size: 20px;
+                    color: #a6b4c9;
+                }
+
+                .cat-box-item-default.cat-box-flight .box-list-faqs .panel-heading h4.panel-title a:not(.collapsed) span.pull-right {
+                    transform: rotate(180deg);
+                }
+
+    .cat-box-item-default.cat-box-flight .box-list-faqs .panel-body {
+        padding: 20px;
+        border-radius: 5px;
+        background-color: #f1f3f6;
+        border: 0px;
+        font-size: 14px;
+        color: #373f58;
+        line-height: 21px;
+    }
+
+    .cat-box-item-default.cat-box-flight .box-list-faqs .panel-collapse {
+        height: auto;
+        padding: 0px 24px;
+        padding-bottom: 24px;
+    }
+
+    .cat-box-item-default.cat-box-flight .box-list-faqs .box-readmore {
+        padding: 24px;
+        padding-top: 0px;
+    }
+
+        .cat-box-item-default.cat-box-flight .box-list-faqs .box-readmore a {
+            color: #0064d2;
+            font-size: 14px;
+            font-family: 'os_bold';
+            text-decoration: none;
+            border-radius: 8px;
+            border: solid 1px #0064d2;
+            background-color: #ffffff;
+            padding: 16px;
+            display: inline-block;
+        }
+
+.flight-box-content-intro .single-box-content {
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 24px;
+    box-shadow: 0 6px 17px 0 rgba(215, 220, 230, 0.72);
+}
+
+.flight-box-content-intro .single-content {
+    height: 520px;
+    overflow: hidden;
+}
+
+    .flight-box-content-intro .single-content.active {
+        height: inherit;
+    }
+
+.flight-box-content-intro .box-readmore {
+    text-align: center;
+    margin-top: 20px;
+}
+
+    .flight-box-content-intro .box-readmore span {
+        color: #038af1;
+        border: 1px solid #038af1;
+        font-size: 14px;
+        font-family: 'os_semi_bold';
+        padding: 5px 35px;
+        display: inline-block;
+        line-height: 28px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+/*  END CAT FLIGHT */
+
+#circleG {
+    display: table;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.circleG {
+    background-color: #FFFFFF;
+    float: left;
+    height: 32px;
+    margin-left: 17px;
+    width: 32px;
+    -moz-animation-name: bounce_circleG;
+    -moz-animation-duration: 1.2000000000000002s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction: linear;
+    -moz-border-radius: 21px;
+    -webkit-animation-name: bounce_circleG;
+    -webkit-animation-duration: 1.2000000000000002s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: linear;
+    -webkit-border-radius: 21px;
+    -ms-animation-name: bounce_circleG;
+    -ms-animation-duration: 1.2000000000000002s;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-direction: linear;
+    -ms-border-radius: 21px;
+    -o-animation-name: bounce_circleG;
+    -o-animation-duration: 1.2000000000000002s;
+    -o-animation-iteration-count: infinite;
+    -o-animation-direction: linear;
+    -o-border-radius: 21px;
+    animation-name: bounce_circleG;
+    animation-duration: 1.2000000000000002s;
+    animation-iteration-count: infinite;
+    animation-direction: linear;
+    border-radius: 21px;
+}
+
+#circleG_1 {
+    -moz-animation-delay: 0.24000000000000005s;
+    -webkit-animation-delay: 0.24000000000000005s;
+    -ms-animation-delay: 0.24000000000000005s;
+    -o-animation-delay: 0.24000000000000005s;
+    animation-delay: 0.24000000000000005s;
+}
+
+#circleG_2 {
+    -moz-animation-delay: 0.56s;
+    -webkit-animation-delay: 0.56s;
+    -ms-animation-delay: 0.56s;
+    -o-animation-delay: 0.56s;
+    animation-delay: 0.56s;
+}
+
+#circleG_3 {
+    -moz-animation-delay: 0.72s;
+    -webkit-animation-delay: 0.72s;
+    -ms-animation-delay: 0.72s;
+    -o-animation-delay: 0.72s;
+    animation-delay: 0.72s;
+}
+
+@-moz-keyframes bounce_circleG {
+    0% {
+    }
+
+    50% {
+        background-color: #061094
+    }
+
+    100% {
+    }
+}
+
+@-webkit-keyframes bounce_circleG {
+    0% {
+    }
+
+    50% {
+        background-color: #061094
+    }
+
+    100% {
+    }
+}
+
+@-ms-keyframes bounce_circleG {
+    0% {
+    }
+
+    50% {
+        background-color: #061094
+    }
+
+    100% {
+    }
+}
+
+@-o-keyframes bounce_circleG {
+    0% {
+    }
+
+    50% {
+        background-color: #061094
+    }
+
+    100% {
+    }
+}
+
+@keyframes bounce_circleG {
+    0% {
+    }
+
+    50% {
+        background-color: #061094
+    }
+
+    100% {
+    }
+}
+
+.loadding {
+    opacity: 0.7;
+}
+
+/************* BOOKING PRICE MONTH FLIGHT */
+.form-box-price-month table.tlb-form-search-data-month tr td {
+    border-top: 0px;
+}
+
+.single-box-content .single-content table tr td.disabled .price {
+    visibility: hidden;
+}
+
+.single-box-content .single-content table tr td.disabled .ulli-counter {
+    display: none;
+}
+
+.data-month .price, .data-month .price-full {
+    color: #142456;
+    font-weight: bold
+}
+
+    .data-month .price i {
+        font-style: normal;
+    }
+
+.data-month .box-title-price-month {
+    text-align: center;
+    height: 50px;
+}
+
+    .data-month .box-title-price-month a {
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        background: url('../../../../images/form/arow-round.png') no-repeat;
+        margin-right: 20px;
+        float: right;
+        background-size: 30px 30px;
+        cursor: pointer;
+        opacity: 0.3;
+    }
+
+        .data-month .box-title-price-month a.back-month {
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            float: left;
+            margin-left: 20px
+        }
+
+        .data-month .box-title-price-month a:hover {
+            opacity: 0.8
+        }
+
+    .data-month .box-title-price-month h3 {
+        display: inline-block;
+        margin-top: 0px
+    }
+
+.data-month table {
+    width: 100%;
+    margin: 0 auto;
+}
+
+    .data-month table thead tr td span {
+        display: block;
+        font-weight: bold;
+        margin-top: 10px
+    }
+
+    .data-month table tr td {
+        text-align: center;
+        width: 14.2%;
+        padding: 0px;
+    }
+
+    .data-month table tbody tr {
+        height: 65px;
+    }
+
+    .data-month table tbody {
+        border-top: 1px solid #ddd;
+    }
+
+        .data-month table tbody tr td {
+            background-color: #f6f6f6;
+            border: 1px solid #ddd;
+            position: relative
+        }
+
+
+.box-table-note {
+    display: block;
+}
+
+    .box-table-note table {
+        float: right;
+    }
+
+.table-note-price-month tr td {
+    padding: 5px;
+    text-align: center;
+}
+
+.table-note-price-month tr:first-child td div {
+    border-radius: 10px;
+    min-height: 40px;
+    font-size: 12px;
+    color: #000;
+    width: 60px;
+    height: 40px;
+    margin: auto;
+}
+
+.table-note-price-month tr td div.type-hover {
+    background: #ffcccc;
+    border: 1px solid #ff0000;
+}
+
+.table-note-price-month tr td div.type-highest {
+    background-color: #cccde4;
+    border: 1px solid #00107c;
+}
+
+.table-note-price-month tr td div.type-normal {
+    background: #fff3cf;
+    border-radius: 10px;
+    border: 1px solid #ffc537;
+}
+
+.table-note-price-month tr td div.type-lowest {
+    background-color: #cbead9;
+    border: 1px solid #009746;
+    border-radius: 10px;
+}
+
+.data-month table tbody tr td .box-item-day {
+    background: #fff3cf;
+    border-radius: 10px;
+    border: 1px solid #ffc537;
+}
+
+.data-month table tbody tr td.type-lowest .box-item-day {
+    background-color: #cbead9;
+    border: 1px solid #009746;
+    border-radius: 10px;
+}
+
+.data-month table tbody tr td.type-highest .box-item-day {
+    background-color: #cccde4;
+    border: 1px solid #00107c;
+    border-radius: 10px;
+}
+
+.data-month table tbody tr td .box-item-day:hover {
+    background: #ffcccc;
+    border: 1px solid #ff0000;
+}
+
+.data-month table tbody tr td:first-child .ulli-counter, .data-month table tbody tr td:nth-child(2) .ulli-counter {
+    right: -135px;
+}
+
+    .data-month table tbody tr td:first-child .ulli-counter .pop-counter:before, .data-month table tbody tr td:nth-child(2) .ulli-counter .pop-counter:before {
+        right: 170px;
+    }
+
+.data-month table tbody tr td div span {
+    display: block;
+    width: 100%;
+    height: 32.5px;
+    color: #000;
+    font-size: 15px;
+}
+
+    .data-month table tbody tr td div span span {
+        display: none;
+    }
+
+    .data-month table tbody tr td div span.toggle {
+        display: none;
+    }
+
+.data-month table tbody tr td .ulli-counter, .data-month table tbody tr td .box-price-month-full {
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 3;
+    font-size: 11px;
+    cursor: default;
+}
+
+    .data-month table tbody tr td .box-price-month-full.toggle {
+        display: none;
+    }
+
+    .data-month table tbody tr td .ulli-counter .pop-counter, .data-month table tbody tr td .box-price-month-full .pop-counter {
+        background-color: #fff;
+        border: none;
+        box-shadow: 0 0 0 3px rgb(20, 36, 96);
+    }
+
+        .data-month table tbody tr td .ulli-counter .pop-counter div, .data-month table tbody tr td .box-price-month-full .pop-counter div {
+            background-color: #fff;
+        }
+
+            .data-month table tbody tr td .ulli-counter .pop-counter div span, .data-month table tbody tr td .box-price-month-full .pop-counter div span {
+                display: inline-block;
+                border: none;
+                background-color: white;
+                width: 100px;
+                color: black;
+            }
+
+                .data-month table tbody tr td .ulli-counter .pop-counter div span:last-child, .data-month table tbody tr td .box-price-month-full .pop-counter div span:last-child {
+                    color: #302456;
+                    font-weight: bold;
+                }
+
+.data-month table tbody tr td:hover .pop-counter {
+    display: block;
+    opacity: 1;
+}
+
+.pop-counter {
+    position: absolute;
+    bottom: 23px;
+    right: 0px;
+    color: #515460;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.6);
+    border-radius: 3px;
+    padding: 3px 7px;
+    font-size: 12px;
+    transition: all 0.5s ease 0s;
+    -webkit-transition: all 0.5s ease 0s;
+    display: none;
+    opacity: 0;
+}
+
+    .pop-counter i {
+        vertical-align: middle;
+    }
+
+    .pop-counter .block span {
+        color: #142456;
+    }
+
+    .pop-counter:before {
+        content: "";
+        width: 17px;
+        height: 8px;
+        display: inline-block;
+        position: absolute;
+        bottom: -8px;
+        right: 20px;
+        background: url(../../../../images/form/pop-counter-arrow.png) no-repeat;
+    }
+
+    .pop-counter .block {
+        white-space: nowrap;
+        border-bottom: 1px dashed #ccc;
+    }
+
+    .pop-counter div:last-child {
+        border-bottom: 0px;
+    }
+
+
+.table-bordered > thead > tr > td {
+    border-bottom-width: 1px;
+}
+
+.calendar-small .box-title-price-month {
+    height: 50px
+}
+
+    .calendar-small .box-title-price-month a {
+        height: 25px;
+        width: 25px;
+        background-size: 24px 24px;
+        margin-top: 15px
+    }
+
+        .calendar-small .box-title-price-month a.back {
+            margin-right: 0px
+        }
+
+    .calendar-small .box-title-price-month h3 {
+        margin-top: 15px
+    }
+
+.calendar-small table {
+    background-color: white
+}
+
+    .calendar-small table thead span {
+        display: block;
+        font-weight: bold;
+        margin-top: 10px
+    }
+
+    .calendar-small table tbody tr, .calendar-small table thead tr td {
+        height: 37px;
+    }
+
+        .calendar-small table tbody tr td {
+            background-color: #f7f7f7;
+        }
+
+            .calendar-small table tbody tr td.none {
+                background-color: white;
+            }
+
+            .calendar-small table tbody tr td div span {
+                height: 18.5px;
+                padding-top: 1px;
+                font-weight: bold;
+            }
+
+                .calendar-small table tbody tr td div span:last-child {
+                    color: #142456
+                }
+
+.loading-vgt {
+    position: relative;
+    top: 30%;
+    left: 45%;
+    z-index: 100;
+    display: none
+}
+
+#tms-btn-search {
+    right: 5px;
+    top: -2px;
+}
+
+.calendar-small table tbody tr td.active div {
+    background-color: #AFEEEE
+}
+
+.box-content-data-month {
+    padding-top: 20px;
+    max-width: 619px;
+}
+
+
+.box-item-day {
+    cursor: pointer;
+}
+
+    .box-item-day:hover {
+        background: #eee;
+    }
+
+.box-title-price-month h3 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.box-select-airports ul li div.title-domains {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+}
+
+.box-select-airports ul li a {
+    color: #000;
+    font-size: 12px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+    .box-select-airports ul li a:hover {
+        color: red;
+    }
+
+table.tlb-form-search-data-month tr td {
+    vertical-align: bottom;
+}
+
+table.tlb-form-search-data-month ul li a {
+    cursor: pointer;
+    display: block;
+}
+
+/* month tet */
+.box-title-tet {
+    font-size: 27px;
+    color: #f10009;
+    font-family: 'r_conde_bold';
+}
+
+.single-box-content .single-content table.tlb-form-month-tet {
+    background: #011e41;
+    text-align: center;
+    color: #fff;
+}
+
+    .single-box-content .single-content table.tlb-form-month-tet .sp-active-code {
+        cursor: pointer;
+        border: 1px solid #fff;
+        border-radius: 100%;
+        padding: 8px 10px;
+        font-size: 16px;
+        position: relative;
+        top: 15px;
+    }
+
+    .single-box-content .single-content table.tlb-form-month-tet label {
+        font-size: 17px;
+        font-weight: normal;
+        font-family: 'r_conde_regular';
+    }
+
+    .single-box-content .single-content table.tlb-form-month-tet button {
+        background: #ffffff;
+    }
+
+    .single-box-content .single-content table.tlb-form-month-tet tr td {
+        vertical-align: middle;
+    }
+
+    .single-box-content .single-content table.tlb-form-month-tet .box-select-airports {
+        width: 100%;
+    }
+
+.VNBK_lowestfareCalendar .VNBK_lfcBody .VNBK_lfcDay .VNBK_lfcDayContainer {
+    padding: 8px;
+}
+
+.VNBK_lowestfareCalendar .VNBK_lfcDayTittle {
+    color: #333333;
+    text-align: center;
+    width: 14.3%;
+    padding: 5px 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    background: #e9ffc7;
+    margin-top: 20px;
+    display: inline-block;
+    margin-left: -5px;
+    border: 1px solid #ddd;
+    font-family: 'r_conde_bold';
+}
+
+.VNBK_lowestfareCalendar .VNBK_lfcBody .VNBK_lfcDay {
+    width: 14.28571428571429%;
+    position: relative;
+    border: 1px solid #DDD;
+    display: inline-block;
+    margin-left: -5px;
+    vertical-align: top;
+    margin-top: -1px;
+    min-height: 60px;
+    cursor: pointer;
+}
+
+    .VNBK_lowestfareCalendar .VNBK_lfcBody .VNBK_lfcDay:hover {
+        background: #e9ffc7;
+        border: 2px solid #8dc63f;
+    }
+
+    .VNBK_lowestfareCalendar .VNBK_lfcBody .VNBK_lfcDay .VNBK_lfcDayDetail {
+        position: absolute;
+        top: 55px;
+        left: -1px;
+        display: none;
+        background: #e9ffc7;
+        z-index: 10000;
+        padding: 10px 10px 5px 10px;
+        color: #080808;
+        width: 200px;
+    }
+
+    .VNBK_lowestfareCalendar .VNBK_lfcBody .VNBK_lfcDay .VNBK_lfcDayContainer.lfcActive:hover .VNBK_lfcDayDetail {
+        display: block;
+    }
+
+    .VNBK_lowestfareCalendar .VNBK_lfcBody .VNBK_lfcDay .VNBK_lfcDayContainer.lfcActive .VNBK_lfcDayDetail div {
+        display: inline-block;
+        vertical-align: top;
+        width: 49%;
+        margin-left: -3px;
+        line-height: 29px;
+    }
+
+    .VNBK_lowestfareCalendar .VNBK_lfcBody .VNBK_lfcDay .VNBK_lfcDayContainer.lfcActive .VNBK_lfcDayDetail .VNBK_lfcDayDetailPrice {
+        text-align: right;
+    }
+
+    .VNBK_lowestfareCalendar .VNBK_lfcBody .VNBK_lfcDay .VNBK_lfcDayContainer.lfcActive .VNBK_lfcRadio {
+        display: none;
+    }
+
+    .VNBK_lowestfareCalendar .VNBK_lfcBody .VNBK_lfcDay .VNBK_lfcDayContainer.lfcActive .VNBK_lfcDayTitlePrice {
+        font-family: 'r_conde_regular';
+        font-size: 14px;
+        text-align: center;
+        color: #080808;
+    }
+
+.VNBK_lftMonthTitle .choose-month {
+    width: 32.3%;
+    display: inline-block;
+    margin-left: 5px;
+    text-align: center;
+    line-height: 40px;
+    color: #8d97a0;
+    font-size: 17px;
+    border: 1px solid #e0e8f0;
+    font-family: 'r_conde_regular';
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .VNBK_lftMonthTitle .choose-month.active {
+        background: #ff4148;
+        color: #fff;
+    }
+
+    .VNBK_lftMonthTitle .choose-month:first-child {
+        margin-left: 0px;
+    }
+
+.VNBK_lowestfareCalendar .VNBK_lfcBody .VNBK_lfcDay .VNBK_lfcDayTitleDate {
+    color: #286ad8;
+    font-size: 18px;
+    font-family: 'r_conde_bold';
+}
+/* end month tet */
+
+/************* END  BOOKING PRICE MONTH  FLIGHT */
+
+/* frontpage form */
+.box-flights-inner .box-title {
+    font-size: 23px;
+    font-family: 'r_conde_bold';
+    color: #434343;
+    margin-bottom: 10px;
+}
+
+    .box-flights-inner .box-title span {
+        font-size: 45px;
+        font-family: 'r_conde_light';
+    }
+
+.box-flights-inner {
+    width: 100%;
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    padding-top: 0px;
+}
+
+    .box-flights-inner.page-child {
+        border-radius: 8px;
+        padding: 0px;
+        overflow: hidden;
+    }
+
+    .box-flights-inner table tr td i.fa.fa-toggle-off {
+        font-size: 25px;
+        color: #bbd1e9;
+        margin-left: 30px;
+        cursor: pointer;
+        color: transparent;
+        cursor: pointer;
+        background: transparent url(https://data.vietnambooking.com/api/flights/common/icon_toggle_off.png) no-repeat center center;
+    }
+
+    .box-flights-inner table tr td i.fa.fa-toggle-on {
+        font-size: 25px;
+        color: #14c038;
+        cursor: pointer;
+    }
+
+    .box-flights-inner .tlb-box-form tr td {
+        vertical-align: top;
+    }
+
+    .box-flights-inner table.tlb-box-form tr td label {
+        font-size: 16px;
+        color: #434343;
+        font-family: 'r_conde_bold';
+        margin-bottom: 5px;
+        font-weight: normal;
+    }
+
+    .box-flights-inner table.tlb-box-form tr td h1 {
+        font-size: 20px;
+        color: #0070d9;
+        font-family: 'r_conde_regular';
+        margin: 0px;
+        margin-bottom: 10px;
+    }
+
+    .box-flights-inner table.tlb-box-form tr td label.lbl-box-book-week {
+        font-family: 'r_conde_regular';
+        display: none;
+    }
+
+    .box-flights-inner table.tlb-box-form tr > td {
+        width: 49%;
+    }
+
+        .box-flights-inner table.tlb-box-form tr > td:nth-child(2) {
+            width: 50px;
+        }
+
+    .box-flights-inner table.tlb-box-form tr:first-child > td {
+    }
+
+    .box-flights-inner table.tlb-box-form tr td .box-title {
+        margin-bottom: 15px;
+        font-size: 18px;
+        color: #15284a;
+        font-family: 'os_semi_bold';
+        background: #f6f9ff;
+        padding: 20px;
+    }
+
+        .box-flights-inner table.tlb-box-form tr td .box-title img {
+            margin-right: 15px;
+        }
+
+
+    .box-flights-inner .tlb-box-form .box-info-input-last {
+        display: flex;
+    }
+
+        .box-flights-inner .tlb-box-form .box-info-input-last .box-item {
+            flex: 1;
+            position: relative;
+        }
+
+            .box-flights-inner .tlb-box-form .box-info-input-last .box-item:first-child {
+                padding-right: 10px;
+            }
+
+            .box-flights-inner .tlb-box-form .box-info-input-last .box-item .box-toggle-radio {
+                position: absolute;
+                right: 0px;
+                right: 100px;
+            }
+
+    .box-flights-inner .box-flight-step {
+        display: inline-block;
+        padding: 0px 15px;
+        min-height: 265px;
+    }
+
+        .box-flights-inner .box-flight-step table {
+            width: 100%;
+        }
+
+    .box-flights-inner .box-flight-step-1 {
+        vertical-align: top;
+        width: 32%;
+        border-right: 2px solid #0078ff;
+        padding-left: 0px;
+    }
+
+    .box-flights-inner .box-flight-step-2 {
+        display: inline-block;
+        vertical-align: top;
+        width: 33%;
+        border-right: 2px solid #0078ff;
+    }
+
+    .box-flights-inner .box-flight-step-3 {
+        display: inline-block;
+        vertical-align: top;
+        width: 34%;
+        padding-right: 0px;
+    }
+
+    .box-flights-inner .lbl-box-book-week {
+        margin-top: 15px;
+    }
+
+    .box-flights-inner .lbl-box-book-week {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        cursor: pointer;
+        font-size: 18px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        font-family: 'r_conde_bold';
+        font-weight: normal;
+        line-height: 25px;
+    }
+
+        .box-flights-inner .lbl-box-book-week input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        .box-flights-inner .lbl-box-book-week .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: transparent;
+            border: 1px solid #000;
+            border-radius: 3px;
+        }
+
+        .box-flights-inner .lbl-box-book-week:hover input ~ .checkmark {
+            background-color: transparent;
+            border-radius: 3px;
+            border: 1px solid #000;
+        }
+
+        .box-flights-inner .lbl-box-book-week input:checked ~ .checkmark {
+            background-color: #2196F3;
+            border-radius: 3px;
+            border: 1px solid #2196F3;
+        }
+
+        .box-flights-inner .lbl-box-book-week .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        .box-flights-inner .lbl-box-book-week input:checked ~ .checkmark:after {
+            display: block;
+        }
+
+        .box-flights-inner .lbl-box-book-week .checkmark:after {
+            left: 9px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+    .box-flights-inner .box-flight-step label {
+        font-size: 16px;
+        color: #434343;
+        font-family: 'r_conde_regular';
+        margin-bottom: 5px;
+        font-weight: normal;
+        cursor: pointer;
+    }
+
+    .box-flights-inner .box-flight-step input.form-control {
+        color: #434343;
+        font-size: 16px;
+        font-family: 'r_conde_regular';
+        height: 41px;
+        border-radius: 0px;
+        border: 1px solid #9199ac;
+        font-weight: normal;
+    }
+
+    .box-flights-inner .box-flight-step .box-slc-people img {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .box-flights-inner .box-flight-step select {
+        color: #0078ff;
+        font-size: 16px;
+        font-family: 'r_conde_regular';
+        height: 41px;
+        border-radius: 0px;
+        width: 40px;
+        padding: 0px;
+        padding-left: 7px;
+        display: inline-block;
+        margin-left: -4px;
+        border: 0px;
+        box-shadow: none;
+        background: #f6f6f6;
+    }
+
+    .box-flights-inner .box-flight-step label.title-people {
+        font-size: 12.5px;
+        color: #a4a4a4;
+        font-family: 'r_conde_regular';
+    }
+
+    .box-flights-inner .box-flight-step .btn-search-form-vi {
+        background: #0078ff url(../../../../images/form/icon_form/icon_search_flights_front_page.png) no-repeat 78% center;
+        width: 100%;
+        border: 0px;
+        color: #fff;
+        font-size: 16px;
+        font-family: 'r_conde_regular';
+        line-height: 38px;
+        margin-top: 40px;
+    }
+
+.btn-exchange-airports {
+    font-size: 25px;
+    color: #0096ff;
+    text-align: center;
+    width: 100%;
+    margin: 12px 0px;
+    line-height: 21px;
+    margin-top: 32px;
+    padding: 0px 20px;
+    cursor: pointer;
+}
+
+    .btn-exchange-airports span {
+        cursor: pointer;
+    }
+
+.box-rad-way {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+    .box-rad-way label {
+        cursor: pointer;
+    }
+
+.box-container-ajax {
+    position: relative;
+    width: 100%;
+}
+
+.box-item-ajax {
+    position: absolute;
+    z-index: 4;
+    background: #fff;
+    width: 100%;
+    margin-top: -18px;
+}
+
+    .box-item-ajax .box-content-recent-common {
+        padding: 5px;
+        border: 1px solid #ccc;
+    }
+
+        .box-item-ajax .box-content-recent-common div.title-h3 {
+            margin: 0px;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 5px 0px;
+            color: #000;
+            text-align: left;
+            font-family: 'arial';
+        }
+
+        .box-item-ajax .box-content-recent-common ul {
+            padding: 0px;
+            margin: 0px;
+        }
+
+            .box-item-ajax .box-content-recent-common ul li {
+                list-style: none;
+                display: block;
+            }
+
+                .box-item-ajax .box-content-recent-common ul li span {
+                    color: #428bca;
+                    font-size: 11px;
+                    line-height: 15px;
+                    font-weight: bold;
+                    display: block;
+                    cursor: pointer;
+                    padding: 1px 5px;
+                    border-radius: 6px;
+                }
+
+                    .box-item-ajax .box-content-recent-common ul li span:hover {
+                        color: #000;
+                        background: #ADD9F7;
+                        border: 1px solid #428bca;
+                    }
+
+                    .box-item-ajax .box-content-recent-common ul li span img {
+                        height: 20px;
+                    }
+
+.frm-box-full-flight .form-box-input {
+    position: relative;
+}
+
+    .frm-box-full-flight .form-box-input > i {
+        color: #9e9e9e;
+        position: absolute;
+        left: 10px;
+        top: 9px;
+        z-index: 3;
+        display: none;
+    }
+
+#txt-input-diemdi-vi {
+    background: #fff url(https://data.vietnambooking.com/flight/icon_form/icon_location.png) no-repeat 10px center;
+    color: #434343;
+    font-size: 16px;
+    font-family: 'r_conde_regular';
+    height: 32px;
+    box-shadow: none;
+    border: 1px solid #adadad;
+    border-radius: 5px;
+    padding: 0px;
+    padding-left: 45px;
+    padding-right: 10px;
+}
+
+#txt-input-diemden-vi {
+    background: #fff url(https://data.vietnambooking.com/flight/icon_form/icon_location.png) no-repeat 10px center;
+    color: #434343;
+    font-size: 16px;
+    font-family: 'r_conde_regular';
+    height: 32px;
+    box-shadow: none;
+    border: 1px solid #adadad;
+    border-radius: 5px;
+    padding: 0px;
+    padding-left: 45px;
+    padding-right: 10px;
+}
+
+#ngaydiTem_en, #ngayveTem_en, #ngaydiTem_vi, #ngayveTem_vi {
+    padding-left: 45px;
+    background: #fff url(https://data.vietnambooking.com/flight/icon_form/icon_calendar.png) no-repeat 10px center;
+    color: #434343;
+    font-size: 16px;
+    font-family: 'r_conde_regular';
+    height: 32px;
+    box-shadow: none;
+    border: 1px solid #8f8f8f;
+    border-radius: 5px;
+}
+
+#box-info-people {
+    background: #fff;
+    color: #434343;
+    font-size: 16px;
+    font-family: 'r_conde_regular';
+    height: 32px;
+    box-shadow: none;
+    border: 1px solid #8f8f8f;
+    border-radius: 5px;
+    width: 100%;
+    padding-left: 10px;
+    text-align: left;
+    position: relative;
+    z-index: 3;
+    outline: 0;
+}
+
+    #box-info-people .box-title-user i.count-people {
+        font-weight: normal;
+        font-style: normal;
+        font-size: 18px;
+        color: #434343;
+    }
+
+    #box-info-people .box-title-user {
+        padding-left: 40px;
+        background: #fff url(https://data.vietnambooking.com/flight/icon_form/icon_passenger.png) no-repeat 0px center;
+    }
+
+        #box-info-people .box-title-user i.fa {
+            display: none;
+        }
+
+    #box-info-people .caret {
+        float: right;
+        margin-top: 10px;
+        margin-right: 10px;
+        font-size: 20px;
+    }
+
+.tlb-box-form .dropdown-box.open #box-info-people {
+    border: 1px solid #006ef7;
+}
+
+.tlb-box-form .dropdown-box.open .dropdown-box-inner {
+    margin-top: -20px;
+    padding-top: 40px;
+    z-index: 2;
+}
+
+.box-flights-inner table.tlb-box-form tr td .dropdown-box.open .dropdown-box-inner label {
+    color: #9e9e9e;
+    font-family: 'r_conde_regular';
+    font-weight: normal;
+}
+
+.box-flights-inner .dropdown-box.open .dropdown-box-inner table tr td {
+    padding: 10px 0px;
+}
+
+.box-flights-inner table.tlb-box-form tr td .dropdown-box.open .dropdown-box-inner label .title-box {
+    display: flex;
+}
+
+    .box-flights-inner table.tlb-box-form tr td .dropdown-box.open .dropdown-box-inner label .title-box i {
+        flex: 1;
+    }
+
+    .box-flights-inner table.tlb-box-form tr td .dropdown-box.open .dropdown-box-inner label .title-box span {
+        flex: 9;
+    }
+
+
+.box-flights-inner .dropdown-box.open .dropdown-box-inner .box-people {
+    width: 143px;
+    float: right;
+    text-align: right;
+    font-size: 18px;
+    color: #545454;
+    font-family: 'r_conde_bold';
+}
+
+    .box-flights-inner .dropdown-box.open .dropdown-box-inner .box-people .type-button {
+        color: #ff0000;
+        font-size: 14px;
+        font-family: 'r_conde_regular';
+        padding: 2px 18px;
+        border-radius: 5px;
+        box-shadow: none;
+        background: #dedede;
+        outline: 0;
+        border: 0px;
+    }
+
+        .box-flights-inner .dropdown-box.open .dropdown-box-inner .box-people .type-button.type-plus {
+            color: #10ad17;
+        }
+
+    .box-flights-inner .dropdown-box.open .dropdown-box-inner .box-people .btn-value {
+        display: inline-block;
+        min-width: 30px;
+        text-align: center;
+    }
+
+
+.tlb-box-form .btn-search-form-vi {
+    line-height: 42px;
+    background: #f98e04;
+    border: 0px;
+    font-family: 'r_conde_bold';
+    font-size: 18px;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 0px 15px;
+}
+
+    .tlb-box-form .btn-search-form-vi span {
+        padding-left: 10px;
+    }
+
+    .tlb-box-form .btn-search-form-vi i {
+        font-size: 24px;
+        position: relative;
+        top: 3px;
+    }
+
+
+.frm-box-full-flight .tt-menu .dataTitle {
+    margin: 0px;
+    padding: 10px;
+    font-size: 18px;
+    color: #016acb;
+    font-family: 'r_conde_bold';
+    padding-left: 20px;
+}
+
+.frm-box-full-flight .tt-suggestion {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'r_conde_regular';
+}
+
+    .frm-box-full-flight .tt-suggestion.tt-cursor {
+        background: #0096ff;
+        color: #fff;
+    }
+
+.frm-box-full-flight .typeahead-flightcode {
+    color: #222222;
+    font-size: 16px;
+    font-family: 'r_conde_bold';
+    font-weight: normal;
+    padding-right: 15px;
+}
+
+.frm-box-full-flight span mark {
+    background: transparent;
+    padding: 0px;
+}
+
+.frm-box-full-flight .tt-suggestion.tt-cursor span mark {
+    color: #fff;
+}
+
+.frm-box-full-flight .tt-suggestion.tt-cursor .typeahead-flightcode {
+    color: #fff;
+}
+
+    .frm-box-full-flight .tt-suggestion.tt-cursor .typeahead-flightcode mark {
+        color: #fff;
+    }
+
+.frm-box-full-flight .tt-menu {
+    width: 120%;
+}
+
+#ui-datepicker-div.flight-box-date {
+    background: #fff;
+    min-width: 360px;
+    padding: 10px 10px;
+    box-shadow: 0px 3px 6px #9E9E9E;
+}
+
+    #ui-datepicker-div.flight-box-date .ui-datepicker-calendar tr th {
+        font-size: 16px;
+        font-family: 'r_conde_bold';
+        color: #161616;
+    }
+
+        #ui-datepicker-div.flight-box-date .ui-datepicker-calendar tr th.ui-datepicker-week-end {
+            color: #10bef3;
+        }
+
+            #ui-datepicker-div.flight-box-date .ui-datepicker-calendar tr th.ui-datepicker-week-end:last-child {
+                color: #ff0000;
+            }
+
+    #ui-datepicker-div.flight-box-date .ui-datepicker-header {
+        border: 0px;
+        background: #fff;
+        color: #2f2f2f;
+        font-size: 16px;
+        font-family: 'r_conde_bold';
+        font-weight: normal;
+    }
+
+    #ui-datepicker-div.flight-box-date .ui-datepicker-today .ui-state-highlight {
+        background: #efefef;
+        border: 1px solid #efefef;
+    }
+
+    #ui-datepicker-div.flight-box-date .ui-datepicker-current-day .ui-state-active {
+        background: #0096ff;
+        color: #fff;
+    }
+
+        #ui-datepicker-div.flight-box-date .ui-datepicker-current-day .ui-state-active .ui-datepicker-day {
+            color: #fff;
+        }
+
+        #ui-datepicker-div.flight-box-date .ui-datepicker-current-day .ui-state-active .ui-datepicker-lunar {
+            color: #fff;
+        }
+
+    #ui-datepicker-div.flight-box-date .ui-datepicker-day {
+        font-size: 16px;
+        color: #161616;
+        font-family: 'r_conde_bold';
+        padding-left: 5px;
+    }
+
+    #ui-datepicker-div.flight-box-date .ui-datepicker-lunar {
+        font-size: 12px;
+        font-family: 'r_conde_regular';
+        color: #c4c4c4;
+        padding-right: 5px;
+    }
+
+    #ui-datepicker-div.flight-box-date .ui-datepicker-calendar tbody tr td {
+        padding: 3px;
+    }
+
+        #ui-datepicker-div.flight-box-date .ui-datepicker-calendar tbody tr td a {
+            border: 1px solid transparent;
+            border-radius: 7px;
+            outline: 0px;
+        }
+
+    #ui-datepicker-div.flight-box-date .ui-widget-header .ui-datepicker-prev {
+        top: 0px;
+        left: 0px;
+        cursor: pointer;
+    }
+
+        #ui-datepicker-div.flight-box-date .ui-widget-header .ui-datepicker-prev .ui-icon {
+            background: url(../../../../images/index/icon_arrow_left.png) top center no-repeat;
+            padding: 9px;
+        }
+
+    #ui-datepicker-div.flight-box-date .ui-widget-header .ui-datepicker-next {
+        top: 0px;
+        right: 0px;
+        cursor: pointer;
+    }
+
+        #ui-datepicker-div.flight-box-date .ui-widget-header .ui-datepicker-next .ui-icon {
+            background: url(../../../../images/index/icon_arrow_right.png) top center no-repeat;
+            padding: 9px;
+        }
+
+    #ui-datepicker-div.flight-box-date .ui-widget-header .ui-state-hover {
+        border: 1px solid transparent;
+        background: transparent;
+    }
+/* end frontpage form */
+
+/* STEP 0 */
+.box-main-content-flight {
+    background: #eef2f5;
+}
+
+.box-booking {
+    background: transparent;
+}
+
+
+.box-info-flight {
+    font-size: 15px;
+}
+
+    .box-info-flight.toggle-form-flight {
+        padding-bottom: 15px;
+        background: #fff;
+        padding-top: 20px;
+    }
+
+        .box-info-flight.toggle-form-flight .box-toggle-form-flight-inner {
+            border-bottom: 1px solid #e1e1e1;
+            width: 100%;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+
+    .box-info-flight .box-info-flight-inner.itinerary {
+        font-size: 24px;
+        color: #434343;
+        font-family: 'r_conde_regular';
+        font-weight: normal;
+    }
+
+    .box-info-flight .box-info-flight-inner.datetime {
+        font-size: 15px;
+        color: #a9a9a9;
+        font-family: 'r_conde_regular';
+        font-weight: normal;
+    }
+
+        .box-info-flight .box-info-flight-inner.datetime span {
+            color: #434343;
+        }
+
+    .box-info-flight .btn-toggle-change-flight {
+        background: #037dfa;
+        line-height: 36px;
+        border: 0px;
+        padding: 0px;
+        width: 100px;
+        text-align: center;
+        outline: 0;
+        color: #fff;
+        border-radius: 5px;
+        font-size: 16px;
+        font-family: 'r_conde_regular';
+        font-weight: normal;
+    }
+
+.box-loadding-search-flight {
+    min-height: 285px;
+    background: #fff;
+    border-bottom: 1px solid #8dc0f5;
+}
+
+    .box-loadding-search-flight .bar-loadding-flight {
+        height: 85px;
+        background: #6e8ba1;
+        width: 100%;
+    }
+
+        .box-loadding-search-flight .bar-loadding-flight .box-loadding-flight-inner {
+            width: 205px;
+            text-align: center;
+            background: #fff;
+            font-size: 20px;
+            color: #0078ff;
+            font-family: 'r_conde_regular';
+            line-height: 52px;
+            margin-top: 33px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+            .box-loadding-search-flight .bar-loadding-flight .box-loadding-flight-inner i {
+                font-size: 20px;
+                color: #888888;
+            }
+
+    .box-loadding-search-flight .box-loadding-search-flight-inner h3 {
+        font-size: 19px;
+        color: #5a5a5a;
+        font-family: 'r_conde_bold';
+        text-align: center;
+    }
+
+    .box-loadding-search-flight .box-loadding-search-flight-inner h4 {
+        font-size: 16px;
+        color: #5a5a5a;
+        font-family: 'r_conde_regular';
+        text-align: center;
+    }
+
+        .box-loadding-search-flight .box-loadding-search-flight-inner h4 span {
+            font-size: 16px;
+            color: #037dfa;
+            font-family: 'r_conde_regular';
+        }
+
+            .box-loadding-search-flight .box-loadding-search-flight-inner h4 span a {
+                font-family: 'r_conde_bold';
+                color: #037dfa;
+            }
+
+.box-progress-loading-flight {
+    width: 90%;
+    margin: 10px auto;
+}
+
+    .box-progress-loading-flight .progress-bar-info {
+        background-color: #0078ff;
+    }
+
+.box-title-step-flight {
+    min-height: 170px;
+    background: #fff url('../../../../images/form/bg_title_step_flight.jpg') no-repeat top center;
+    width: 100%;
+}
+
+    .box-title-step-flight .box-title {
+        font-size: 14px;
+        color: #ffffff;
+        font-family: 'r_conde_regular';
+        padding-top: 15px;
+        min-height: 80px;
+    }
+
+        .box-title-step-flight .box-title.step-1 {
+            padding-top: 30px;
+        }
+
+        .box-title-step-flight .box-title span {
+            font-size: 18px;
+            text-transform: uppercase;
+            display: block;
+            padding-bottom: 0px;
+        }
+
+    .box-title-step-flight .box-item-step {
+        margin-top: 18px;
+    }
+
+        .box-title-step-flight .box-item-step .box-step {
+            padding: 0px;
+            margin: 0px;
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0px 0px 5px #bbb;
+            background: #fff;
+            color: #6c6c6c;
+        }
+
+            .box-title-step-flight .box-item-step .box-step .box-step-1-2 {
+                display: inline-block;
+                width: 66%;
+                line-height: 35px;
+                vertical-align: top;
+                font-size: 15px;
+                font-family: 'r_conde_regular';
+                margin-left: -4px;
+            }
+
+                .box-title-step-flight .box-item-step .box-step .box-step-1-2 div {
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 50%;
+                    margin-left: -4px;
+                    padding-left: 20px;
+                }
+
+            .box-title-step-flight .box-item-step .box-step .step-3 {
+                display: inline-block;
+                width: 33%;
+                line-height: 35px;
+                vertical-align: top;
+                font-size: 15px;
+                font-family: 'r_conde_regular';
+                padding-left: 20px;
+                margin-left: -4px;
+            }
+
+            .box-title-step-flight .box-item-step .box-step div.active {
+                color: #fff;
+                border-radius: 20px;
+                background: #f69200;
+                background: #f69200;
+                background: -moz-linear-gradient(left, #f69200 0%, #f78c02 15%, #f88903 16%, #f78403 26%, #f98305 26%, #fa7d05 35%, #f97c08 38%, #fa7607 43%, #fd6a0d 61%, #fb630f 69%, #fe6310 69%, #fd5b10 78%, #ff5114 100%);
+                background: -webkit-linear-gradient(left, #f69200 0%,#f78c02 15%,#f88903 16%,#f78403 26%,#f98305 26%,#fa7d05 35%,#f97c08 38%,#fa7607 43%,#fd6a0d 61%,#fb630f 69%,#fe6310 69%,#fd5b10 78%,#ff5114 100%);
+                background: linear-gradient(to right, #f69200 0%,#f78c02 15%,#f88903 16%,#f78403 26%,#f98305 26%,#fa7d05 35%,#f97c08 38%,#fa7607 43%,#fd6a0d 61%,#fb630f 69%,#fe6310 69%,#fd5b10 78%,#ff5114 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f69200', endColorstr='#ff5114',GradientType=1 );
+            }
+
+            .box-title-step-flight .box-item-step .box-step div i {
+                float: right;
+                position: relative;
+                top: 10px;
+                margin-right: 10px;
+                font-size: 16px;
+            }
+
+/*  SYSTEM FILTER FLIGHT */
+.box-system-filter-flight .box-title {
+    width: 100%;
+    min-height: 85px;
+    background: #6e8ba1;
+}
+
+    .box-system-filter-flight .box-title .box-title-inner {
+        font-size: 20px;
+        color: #0078ff;
+        font-family: 'r_conde_regular';
+        width: 205px;
+        line-height: 52px;
+        text-align: center;
+        background: #fff;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        margin-top: 33px;
+    }
+
+.box-system-filter-flight .box-item-filter {
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #8dc0f5;
+    min-height: 65px;
+}
+
+    .box-system-filter-flight .box-item-filter table tr td {
+        border-top: 0px;
+    }
+
+    .box-system-filter-flight .box-item-filter button.btn {
+        background: #fff;
+        color: #55637d;
+        font-size: 15px;
+        font-family: 'r_conde_regular';
+        text-transform: uppercase;
+    }
+
+    .box-system-filter-flight .box-item-filter table {
+        margin-bottom: 0px;
+        margin-top: 10px;
+    }
+
+    .box-system-filter-flight .box-item-filter .open > .dropdown-menu {
+        min-width: 250px;
+        padding: 5px;
+    }
+
+    .box-system-filter-flight .box-item-filter h2.item-title {
+        margin: 0px;
+        padding: 0px;
+        background-color: #061094;
+        line-height: 35px;
+        color: #fff;
+        font-size: 16px;
+        padding-left: 10px;
+        font-weight: bold;
+        margin-top: 15px;
+    }
+
+    .box-system-filter-flight .box-item-filter h3.item-sub-title {
+        margin: 0px;
+        padding: 0px;
+        border-bottom: 1px dashed #6e8ba1;
+        color: #ff5214;
+        font-size: 15px;
+        width: 100%;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+
+    .box-system-filter-flight .box-item-filter .item-content {
+        font-family: 'r_conde_regular';
+        font-size: 15px;
+    }
+
+        .box-system-filter-flight .box-item-filter .item-content .content {
+            padding: 5px;
+        }
+
+        .box-system-filter-flight .box-item-filter .item-content table.tlb-filter-airlines {
+            width: 100%;
+        }
+
+            .box-system-filter-flight .box-item-filter .item-content table.tlb-filter-airlines tr td {
+                padding: 2px 0px;
+                position: relative;
+            }
+
+                .box-system-filter-flight .box-item-filter .item-content table.tlb-filter-airlines tr td label {
+                    margin-left: 5px;
+                    font-weight: normal;
+                }
+
+                    .box-system-filter-flight .box-item-filter .item-content table.tlb-filter-airlines tr td label span {
+                        position: absolute;
+                        right: 0px;
+                        color: blue;
+                        top: 8px;
+                    }
+
+        .box-system-filter-flight .box-item-filter .item-content table.tlb-filter-stop-point {
+            width: 100%;
+        }
+
+            .box-system-filter-flight .box-item-filter .item-content table.tlb-filter-stop-point tr td {
+                padding: 2px 0px;
+                position: relative;
+            }
+
+                .box-system-filter-flight .box-item-filter .item-content table.tlb-filter-stop-point tr td label {
+                    margin-left: 5px;
+                    font-family: arial;
+                    font-weight: normal;
+                }
+
+                    .box-system-filter-flight .box-item-filter .item-content table.tlb-filter-stop-point tr td label span {
+                        position: absolute;
+                        right: 0px;
+                        color: blue;
+                        top: 8px;
+                    }
+
+        /* SLIDER FITLER TIME */
+        .box-system-filter-flight .box-item-filter .item-content table.tlb-filter-airlines tr td .time-depart-slider {
+            width: 100%;
+            position: relative;
+            height: 15px;
+            margin: 10px 0px;
+        }
+
+        .box-system-filter-flight .box-item-filter .item-content table.tlb-filter-airlines tr td .time-return-slider {
+            width: 100%;
+            position: relative;
+            height: 15px;
+            margin: 10px 0px;
+        }
+
+        .box-system-filter-flight .box-item-filter .item-content table.tlb-filter-airlines tr td .time-depart-slider a {
+            outline: 0;
+            margin-top: 4px;
+        }
+
+        .box-system-filter-flight .box-item-filter .item-content table.tlb-filter-airlines tr td .time-return-slider a {
+            outline: 0;
+            margin-top: 4px;
+        }
+
+        .box-system-filter-flight .box-item-filter .item-content table.tlb-filter-airlines tr td .ui-widget-content {
+            max-height: 100%;
+            margin: 0px;
+            overflow: inherit;
+        }
+
+        .box-system-filter-flight .box-item-filter .item-content table.tlb-filter-airlines tr td .ui-slider .ui-slider-handle {
+            width: 15px;
+            height: 15px;
+        }
+
+/* END STEP 0 */
+
+
+/* BOX ERROR */
+.box-error-booking {
+    margin: 20px 5px;
+}
+/* SIDBAR CONTENT COLUMN FLIGHT */
+.box-sidebar-content .content-search-flight {
+    margin-top: 3px;
+}
+
+    .box-sidebar-content .content-search-flight.internation {
+        padding: 0px 0px;
+    }
+
+    .box-sidebar-content .content-search-flight .box-container-results {
+        padding: 0px 0px;
+    }
+
+    .box-sidebar-content .content-search-flight ul.list-date-selected {
+        padding: 0px;
+        padding-left: 3px;
+        margin: 0px;
+        border-bottom: 1px solid #97caff;
+    }
+
+        .box-sidebar-content .content-search-flight ul.list-date-selected li {
+            border-bottom: 0px;
+            list-style: none;
+            display: inline-block;
+            text-align: center;
+            font-family: 'r_conde_bold';
+            font-size: 14px;
+            padding: 7px 0px;
+            color: #215da3;
+            min-width: 13.9%;
+            border: 1px solid #97caff;
+            vertical-align: top;
+            cursor: pointer;
+            background: #ffffff;
+            background: -moz-linear-gradient(top, #ffffff 0%, #ffffff 23%, #f4f4f4 40%, #dcdcdc 67%, #d7d7d7 77%, #d7d7d7 100%);
+            background: -webkit-linear-gradient(top, #ffffff 0%,#ffffff 23%,#f4f4f4 40%,#dcdcdc 67%,#d7d7d7 77%,#d7d7d7 100%);
+            background: linear-gradient(to bottom, #ffffff 0%,#ffffff 23%,#f4f4f4 40%,#dcdcdc 67%,#d7d7d7 77%,#d7d7d7 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d7d7d7',GradientType=0 );
+        }
+
+            .box-sidebar-content .content-search-flight ul.list-date-selected li:first-child {
+                border-top-left-radius: 5px;
+            }
+
+            .box-sidebar-content .content-search-flight ul.list-date-selected li:last-child {
+                border-top-right-radius: 5px;
+            }
+
+            .box-sidebar-content .content-search-flight ul.list-date-selected li.current {
+                background: #fff;
+                cursor: default;
+                border-bottom: 0px;
+            }
+
+            .box-sidebar-content .content-search-flight ul.list-date-selected li span {
+                display: block;
+                font-weight: normal;
+                padding-bottom: 0px;
+                font-family: 'r_conde_regular';
+            }
+
+.box-sidebar-content .search-flight {
+    color: #fff;
+    height: 60px;
+    padding-left: 70px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.box-sidebar-content .box-title-depart.search-flight.box-title-return {
+    height: 65px;
+}
+
+.box-sidebar-content .search-flight.box-title-depart {
+    background: #0d3174 url('../../../../images/form/icon_depart_flight.jpg') no-repeat top left;
+}
+
+.box-sidebar-content .search-flight.box-title-return {
+    background: #0d3174 url('../../../../images/form/icon_return_flight.jpg') no-repeat top left;
+}
+
+
+.box-sidebar-content .search-flight table.tlb-info {
+    width: 100%;
+    height: 60px;
+}
+
+    .box-sidebar-content .search-flight table.tlb-info tr td:first-child {
+        width: 70%;
+        padding-left: 5px;
+        line-height: 18px;
+        padding-right: 0px;
+        font-family: 'r_conde_regular';
+        font-weight: normal;
+        color: #61afff;
+        font-size: 18px;
+    }
+
+        .box-sidebar-content .search-flight table.tlb-info tr td:first-child span.address {
+            font-size: 18px;
+            color: #fff;
+            font-family: 'r_conde_regular';
+            font-weight: normal;
+            line-height: 1.5;
+        }
+
+    .box-sidebar-content .search-flight table.tlb-info tr td:last-child {
+        text-align: right;
+        padding-right: 20px;
+        font-family: 'r_conde_regular';
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 1;
+    }
+
+        .box-sidebar-content .search-flight table.tlb-info tr td:last-child span {
+            font-size: 18px;
+            color: #61afff;
+            font-family: 'r_conde_regular';
+        }
+
+        .box-sidebar-content .search-flight table.tlb-info tr td:last-child div {
+            font-size: 13px;
+        }
+
+            .box-sidebar-content .search-flight table.tlb-info tr td:last-child div span.number-flights {
+                color: #fff;
+                font-size: 13px;
+            }
+
+            .box-sidebar-content .search-flight table.tlb-info tr td:last-child div font.title-price {
+                display: block;
+            }
+
+    .box-sidebar-content .search-flight table.tlb-info tr td {
+        padding: 0px 5px;
+    }
+
+        .box-sidebar-content .search-flight table.tlb-info tr td .step {
+            font-size: 13px;
+            font-weight: normal;
+        }
+
+            .box-sidebar-content .search-flight table.tlb-info tr td .step span {
+                font-weight: bold;
+                color: yellow;
+            }
+
+
+.box-sidebar-content .content-search-flight .box-container-results table.table {
+    border-top: 0px;
+}
+
+    .box-sidebar-content .content-search-flight .box-container-results table.table tr.item {
+        font-family: 'r_conde_regular';
+        cursor: pointer;
+        background: #fff;
+        margin-top: 10px;
+        display: table;
+        width: 100%;
+        border: 1px solid #97caff;
+    }
+
+    .box-sidebar-content .content-search-flight .box-container-results table.table tr.tr-details {
+        background: #fff;
+    }
+
+    .box-sidebar-content .content-search-flight .box-container-results table.table tr.item.selected {
+        background: #f5f5f5;
+    }
+
+    .box-sidebar-content .content-search-flight .box-container-results table.table tr.item td {
+        height: 50px;
+        vertical-align: middle;
+        padding: 5px;
+    }
+
+        .box-sidebar-content .content-search-flight .box-container-results table.table tr.item td .id-plane {
+            color: #4e4e4e;
+            font-size: 13px;
+        }
+
+        .box-sidebar-content .content-search-flight .box-container-results table.table tr.item td .time-flights {
+            font-size: 27px;
+            color: #55637d;
+        }
+
+        .box-sidebar-content .content-search-flight .box-container-results table.table tr.item td .title-airports {
+            font-size: 21px;
+            color: #a1afc9;
+        }
+
+        .box-sidebar-content .content-search-flight .box-container-results table.table tr.item td .name-airports {
+            font-size: 14px;
+            color: #a1afc9;
+        }
+
+        .box-sidebar-content .content-search-flight .box-container-results table.table tr.item td .box-total-time-and-type-flight {
+            font-size: 14px;
+            color: #a1afc9;
+            background: #def1ff;
+            position: relative;
+            line-height: 36px;
+            min-width: 170px;
+            text-align: center;
+            margin-bottom: 3px;
+        }
+
+            .box-sidebar-content .content-search-flight .box-container-results table.table tr.item td .box-total-time-and-type-flight:before {
+                content: " ";
+                position: absolute;
+                border: 18px solid #fff;
+                top: 0px;
+                left: 0px;
+                border-right-color: transparent;
+                border-top-color: transparent;
+                border-bottom-color: transparent;
+            }
+
+            .box-sidebar-content .content-search-flight .box-container-results table.table tr.item td .box-total-time-and-type-flight:after {
+                content: " ";
+                position: absolute;
+                border: 18px solid #fff;
+                top: 0px;
+                right: 0px;
+                border-left-color: transparent;
+            }
+
+    .box-sidebar-content .content-search-flight .box-container-results table.table tr.item.selected .box-total-time-and-type-flight:before {
+        border: 18px solid #f5f5f5;
+        border-right-color: transparent;
+        border-top-color: transparent;
+        border-bottom-color: transparent;
+    }
+
+    .box-sidebar-content .content-search-flight .box-container-results table.table tr.item.selected .box-total-time-and-type-flight:after {
+        border: 18px solid #f5f5f5;
+        border-left-color: transparent;
+    }
+
+    .box-sidebar-content .content-search-flight .box-container-results table.table tr.item td span.airlines {
+        text-align: center;
+        display: block;
+    }
+
+    .box-sidebar-content .content-search-flight .box-container-results table.table tr.item td .id-plane {
+        text-align: center;
+    }
+
+    .box-sidebar-content .content-search-flight .box-container-results table.table tr.item td .btn-next-details {
+        font-size: 14px;
+    }
+
+
+    .box-sidebar-content .content-search-flight .box-container-results table.table tr.item td .price {
+        color: #f21509;
+        font-size: 25px;
+    }
+
+    .box-sidebar-content .content-search-flight .box-container-results table.table tr.item td a {
+        font-size: 13px;
+        color: #4e4e4e;
+        text-decoration: none;
+        padding: 18px 0px;
+    }
+
+        .box-sidebar-content .content-search-flight .box-container-results table.table tr.item td a:hover {
+            color: #CE000C;
+        }
+
+        .box-sidebar-content .content-search-flight .box-container-results table.table tr.item td a.btn-next-details {
+            color: #fff;
+            padding: 0px;
+            padding: 2px 5px;
+        }
+
+    .box-sidebar-content .content-search-flight .box-container-results table.table tr.item td .img-selected {
+        display: block;
+        text-align: center;
+        font-size: 20px;
+        color: #E84E0F;
+        display: none;
+    }
+
+    .box-sidebar-content .content-search-flight .box-container-results table.table tr.tr-details .content-details .box-loading-details-flight {
+        text-align: center;
+    }
+
+    .box-sidebar-content .content-search-flight .box-container-results table.table tr.tr-details .content-details {
+        min-height: 50px;
+        color: #333;
+        font-size: 15px;
+        padding: 10px;
+        font-family: 'r_conde_regular';
+    }
+
+        .box-sidebar-content .content-search-flight .box-container-results table.table tr.tr-details .content-details b {
+            font-weight: normal;
+            font-family: 'r_conde_bold';
+        }
+
+        .box-sidebar-content .content-search-flight .box-container-results table.table tr.tr-details .content-details table {
+            width: 100%;
+        }
+
+            .box-sidebar-content .content-search-flight .box-container-results table.table tr.tr-details .content-details table tr td {
+                padding: 5px;
+            }
+
+        .box-sidebar-content .content-search-flight .box-container-results table.table tr.tr-details .content-details .box-people-details {
+            padding: 5px 0px;
+            margin: 10px 0px;
+            border: 1px dashed #ccc;
+            border-right: 0px;
+            border-left: 0px;
+            padding-top: 10px;
+        }
+
+            .box-sidebar-content .content-search-flight .box-container-results table.table tr.tr-details .content-details .box-people-details table tr th {
+                color: #999;
+                text-align: center;
+                font-weight: normal;
+            }
+
+            .box-sidebar-content .content-search-flight .box-container-results table.table tr.tr-details .content-details .box-people-details table tr td {
+                text-align: center;
+                line-height: 30px;
+                vertical-align: middle;
+            }
+
+                .box-sidebar-content .content-search-flight .box-container-results table.table tr.tr-details .content-details .box-people-details table tr td .price {
+                    color: #f21509;
+                    font-size: 25px;
+                }
+
+
+.box-title-stop-point {
+    text-align: center;
+    border: 1px solid #FCDABF;
+    padding: 5px;
+}
+
+.box-title-trip {
+    text-align: center;
+    border: 0px;
+    font-size: 20px;
+    font-family: 'r_conde_bold';
+    color: #0073da;
+    padding: 5px;
+    border-bottom: 1px dashed #0073da;
+    width: 50%;
+    margin: auto;
+}
+
+a.view-map-airports {
+    font-size: 12px;
+    color: #CE000C;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* LOADDING FLIGHTS */
+.box-container-results.loadding {
+    opacity: 0.7;
+}
+
+.box-loadding-flights {
+    padding: 20px;
+    display: table;
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.page-box-content .box-booking .title-waitting {
+    text-align: center;
+    font-size: 14px;
+    color: #CE000C;
+    width: 100%;
+}
+
+.page-box-content .box-booking .box-address {
+    font-weight: bold;
+    color: #000;
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+}
+
+.page-box-content .box-booking .box-continue {
+    padding: 20px 10px;
+    background: url('../../../../images/form/paperRoll.png') no-repeat top right;
+    padding-left: 90px;
+}
+
+    .page-box-content .box-booking .box-continue table {
+        width: 100%;
+    }
+
+        .page-box-content .box-booking .box-continue table tr td {
+            width: 50%;
+        }
+
+            .page-box-content .box-booking .box-continue table tr td:last-child {
+                text-align: right;
+            }
+
+            .page-box-content .box-booking .box-continue table tr td span.title-continue {
+                background: url('../../../../images/form/arrowdownScroll.png') no-repeat left center;
+                display: block;
+                margin-top: 15px;
+                font-size: 18px;
+                padding-left: 20px;
+            }
+
+/* END CHUYEN BAY */
+
+
+/* CONFIRM */
+
+.box-full-confirm {
+    display: block;
+}
+
+    .box-full-confirm .box-item-confirm {
+        margin-bottom: 15px;
+    }
+
+        .box-full-confirm .box-item-confirm table tr td {
+            border-top: 0px;
+        }
+
+        .box-full-confirm .box-item-confirm h2.item-title {
+            margin: 0px;
+            padding: 0px;
+            background-color: #037dfa;
+            line-height: 35px;
+            color: #fff;
+            font-size: 16px;
+            padding-left: 10px;
+            font-weight: bold;
+        }
+
+        .box-full-confirm .box-item-confirm h3.item-sub-title {
+            margin: 0px;
+            padding: 0px;
+            background: #f1f1f1 none repeat scroll 0 0;
+            border-bottom: 1px solid #ddd;
+            color: #858484;
+            display: inline-block;
+            font-size: 13px;
+            height: 25px;
+            line-height: 25px;
+            text-indent: 10px;
+            width: 100%;
+        }
+
+            .box-full-confirm .box-item-confirm h3.item-sub-title span {
+                float: right;
+                padding-right: 10px;
+            }
+
+        .box-full-confirm .box-item-confirm .item-content {
+            border: 1px solid #cacfe3;
+            background: #fff;
+            box-shadow: 0px 1px 10px #ccc;
+            margin-bottom: 15px;
+        }
+
+            .box-full-confirm .box-item-confirm .item-content .content {
+                padding: 5px;
+            }
+
+                .box-full-confirm .box-item-confirm .item-content .content .box-fee-trade {
+                    text-align: right;
+                    color: red;
+                    font-weight: bold;
+                    font-size: 16px;
+                }
+
+                .box-full-confirm .box-item-confirm .item-content .content .box-container-condition-in-confirm {
+                    text-align: center;
+                }
+
+                    .box-full-confirm .box-item-confirm .item-content .content .box-container-condition-in-confirm table table tr td {
+                        vertical-align: top;
+                        border-bottom: 1px solid #ebebeb;
+                    }
+
+                .box-full-confirm .box-item-confirm .item-content .content .box-condition-in-confirm {
+                    font-size: 13px;
+                }
+
+                .box-full-confirm .box-item-confirm .item-content .content .popover {
+                    max-width: 500px;
+                }
+
+        .box-full-confirm .box-item-confirm table.table.tlb-info-details-confirm tr td {
+            width: 20%;
+        }
+
+.box-item-confirm .note-voucher {
+    font-size: 14px;
+    color: #0853b9;
+    font-family: 'r_conde_regular';
+}
+
+.box-item-confirm .error-code-voucher {
+    color: red;
+    font-size: 14px;
+    font-family: 'r_conde_regular';
+}
+
+.box-full-confirm input, .box-full-confirm select, .box-full-confirm textarea {
+    border-radius: 0px;
+    border: 1px solid #cacfe3;
+    box-shadow: none;
+}
+
+.box-full-confirm table {
+    margin-bottom: 0px;
+}
+
+    .box-full-confirm table tr td {
+        padding: 5px;
+        margin-top: 0px;
+    }
+
+.box-full-confirm .td-airlines {
+    text-align: center;
+}
+
+    .box-full-confirm .td-airlines .name-airlines {
+        font-size: 11px;
+    }
+
+.box-full-confirm .td-depart {
+}
+
+    .box-full-confirm .td-depart .name-city {
+        color: #0066cc;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .box-full-confirm .td-depart .name-airports {
+        font-size: 12px;
+    }
+
+    .box-full-confirm .td-depart .box-datetime {
+        font-size: 12px;
+    }
+
+        .box-full-confirm .td-depart .box-datetime .datetime {
+            color: #696969;
+        }
+
+.box-full-confirm .td-direct .title-flight {
+    font-size: 12px;
+}
+
+.box-full-confirm .td-direct .box-img-direct {
+}
+
+.box-full-confirm .td-direct .title-time {
+    font-size: 12px;
+}
+
+.box-full-confirm .td-return .name-city {
+    color: #0066cc;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.box-full-confirm .td-return .name-airports {
+    font-size: 12px;
+}
+
+.box-full-confirm .td-return .box-datetime {
+    font-size: 12px;
+}
+
+    .box-full-confirm .td-return .box-datetime .datetime {
+        color: #696969;
+    }
+
+.box-full-confirm .box-info-details {
+    font-size: 12px;
+}
+
+.box-full-confirm .box-title-stop-point.info-flight {
+    font-size: 12px;
+}
+
+.box-full-confirm .box-info-details span {
+    display: block;
+}
+
+
+
+/* box price */
+.box-full-confirm table.table.tlb-total-prices-flights {
+    font-size: 13px;
+}
+
+    .box-full-confirm table.table.tlb-total-prices-flights tr td {
+        border-top: 0px;
+        font-size: 15px;
+        font-family: 'r_conde_regular';
+        padding: 2px 10px;
+    }
+
+        .box-full-confirm table.table.tlb-total-prices-flights tr td:first-child {
+            color: #95a9cf;
+        }
+
+    .box-full-confirm table.table.tlb-total-prices-flights td:last-child {
+        color: #55637d;
+    }
+
+    .box-full-confirm table.table.tlb-total-prices-flights tr td:nth-child(2) {
+        text-align: right;
+        white-space: nowrap;
+    }
+
+    .box-full-confirm table.table.tlb-total-prices-flights tr td h2 {
+        margin: 5px 0px;
+        padding: 0px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .box-full-confirm table.table.tlb-total-prices-flights tr td h3 {
+        border: 0px;
+        background: transparent;
+        text-indent: 0px;
+        margin: 5px 0px;
+        padding: 0px;
+        font-size: 14px;
+        font-size: 15px;
+        color: #037dfa;
+        font-family: 'r_conde_regular';
+    }
+
+    .box-full-confirm table.table.tlb-total-prices-flights tr td h4 {
+        margin: 5px 0px;
+        padding: 0px;
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    .box-full-confirm table.table.tlb-total-prices-flights tr td h5 {
+        margin: 5px 0px;
+        padding: 0px;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .box-full-confirm table.table.tlb-total-prices-flights tr td hr {
+        margin: 5px 0px;
+    }
+
+    .box-full-confirm table.table.tlb-total-prices-flights tr.tr-box-prices {
+        background: #ff4d4d;
+        font-size: 16px;
+        font-family: 'r_conde_bold';
+    }
+
+        .box-full-confirm table.table.tlb-total-prices-flights tr.tr-box-prices td {
+            line-height: 30px;
+            color: #fff;
+            font-size: 18px;
+        }
+
+.box-full-confirm table.table.tlb-submit-form {
+    margin: 10px 0px;
+}
+
+    .box-full-confirm table.table.tlb-submit-form tr td {
+        vertical-align: middle;
+    }
+
+        .box-full-confirm table.table.tlb-submit-form tr td:last-child {
+            text-align: right;
+        }
+
+.box-full-confirm table.table.tlb-food {
+}
+
+    .box-full-confirm table.table.tlb-food ul {
+        padding: 0px;
+        margin: 0px;
+    }
+
+        .box-full-confirm table.table.tlb-food ul li {
+            list-style: none;
+            display: inline-block;
+            width: 31%;
+            vertical-align: top;
+            margin: 5px;
+            min-height: 200px;
+        }
+
+            .box-full-confirm table.table.tlb-food ul li label {
+                display: block;
+                text-align: center;
+            }
+
+            .box-full-confirm table.table.tlb-food ul li .box-img-food {
+                width: 100%;
+            }
+
+                .box-full-confirm table.table.tlb-food ul li .box-img-food img {
+                    width: 100%;
+                    max-height: 180px;
+                }
+
+            .box-full-confirm table.table.tlb-food ul li .prices-food {
+                color: #fe0000;
+                font-size: 15px;
+                display: block;
+                text-align: center;
+            }
+
+.box-full-confirm .box-come-back-search {
+    margin: 10px;
+}
+
+.box-full-confirm ul.list-how-booking {
+    padding: 0px;
+    margin: 0px;
+}
+
+    .box-full-confirm ul.list-how-booking li {
+        list-style: none;
+        display: block;
+        padding: 5px;
+        border-bottom: 1px dotted #ccc;
+    }
+
+        .box-full-confirm ul.list-how-booking li:last-child {
+            border-bottom: 0px;
+        }
+
+        .box-full-confirm ul.list-how-booking li a {
+            display: block;
+            color: #000;
+            font-size: 13px;
+        }
+/* end box price */
+
+/* INSURE */
+.box-select-travel-care label {
+    white-space: normal;
+    font-size: 13px;
+}
+
+    .box-select-travel-care label a {
+        color: #000;
+        text-decoration: underline;
+    }
+
+.note-travel-care, .description-travel-care {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+    .note-travel-care a {
+        text-decoration: underline;
+        color: #000;
+    }
+
+.right-travel-care ul {
+    padding: 0px;
+    margin: 0px;
+    margin: 10px 0px;
+}
+
+    .right-travel-care ul li {
+        list-style: none;
+        display: block;
+        padding: 3px;
+        border-bottom: 1px dotted #ccc;
+        padding-left: 20px;
+        font-size: 13px;
+    }
+
+    .right-travel-care ul.vietjet li {
+        background: url('../../../../images/form/plane_bullet.png') no-repeat center left;
+    }
+
+.box-total-price-travel-care {
+    padding: 5px;
+    box-shadow: 2px 2px 5px 0px rgba(50, 50, 50, 0.75);
+    background-color: white;
+    font-size: 12px;
+    margin: 10px;
+}
+
+    .box-total-price-travel-care span {
+        font-size: 16px;
+        color: red;
+        font-weight: bold;
+    }
+
+
+/* END INSURE */
+
+
+/* SUBMIT FORM */
+table.tlb-details-prices tr th {
+    border-top: 0px;
+}
+
+table.tlb-details-prices.tlb-details-services tr th:last-child {
+    text-align: right;
+}
+
+.box-price-insure {
+    text-align: right;
+    padding: 3px 0px;
+}
+
+    .box-price-insure span {
+        font-weight: bold;
+    }
+
+span.price-services, span.price-ticket {
+    text-align: right;
+    display: block;
+}
+
+.box-total-fee-flights {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: right;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+}
+
+    .box-total-fee-flights span {
+        color: red;
+    }
+
+.box-total-voucher {
+    font-size: 14px;
+    font-weight: normal;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px dashed #333;
+    color: #333
+}
+
+    .box-total-voucher span {
+        color: #333;
+    }
+
+/* SUBMIT FORM */
+
+/* payment */
+.h2-payment {
+    font-weight: normal;
+    color: #0c55ab;
+    font-size: 18px;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1;
+}
+
+.description-payment {
+    color: #222222;
+    font-size: 13px;
+}
+
+.tlb-payment-page {
+    margin-top: 10px;
+}
+
+    .tlb-payment-page tr.tr-payment-page:nth-child(odd) {
+        background: #f4f9ff;
+    }
+
+    .tlb-payment-page tr.tr-payment-page:nth-child(even) {
+        background: #e4f2ff;
+    }
+
+    .tlb-payment-page tr.tr-payment-page > td {
+        padding: 10px 20px;
+    }
+
+        .tlb-payment-page tr.tr-payment-page > td:last-child {
+            text-align: right;
+        }
+
+    .tlb-payment-page tr td table tr td {
+        font-size: 12px;
+        color: #022328;
+        padding: 2px 0px;
+    }
+
+        .tlb-payment-page tr td table tr td h3 {
+            margin: 0px;
+            padding: 0px;
+            line-height: 1;
+            font-size: 14px;
+            font-weight: bold;
+            color: #003c83;
+        }
+
+        .tlb-payment-page tr td table tr td span {
+            color: #0c55ab;
+        }
+
+.box-border {
+    border: 1px solid #0c55ab;
+    border-radius: 5px;
+    position: relative;
+    padding: 25px 10px 10px 20px;
+}
+
+    .box-border .h2-payment.title-border {
+        position: absolute;
+        z-index: 10;
+        top: -13px;
+        left: 20px;
+        background: #fff;
+        padding: 0px 10px;
+    }
+
+.box-thanh-toan-bang-tien-mat {
+    margin-top: 30px;
+}
+
+    .box-thanh-toan-bang-tien-mat table tr td {
+        font-size: 13px;
+        color: #000000;
+        vertical-align: top;
+    }
+
+        .box-thanh-toan-bang-tien-mat table tr td .box-img {
+            margin-bottom: 10px;
+        }
+
+        .box-thanh-toan-bang-tien-mat table tr td h3 {
+            margin: 0px;
+            padding: 0px;
+            line-height: 1;
+            color: #000000;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .box-thanh-toan-bang-tien-mat table tr td ul {
+            padding-left: 18px;
+        }
+
+            .box-thanh-toan-bang-tien-mat table tr td ul li {
+                color: #004ab2;
+                font-size: 16px;
+            }
+
+                .box-thanh-toan-bang-tien-mat table tr td ul li span {
+                    font-size: 13px;
+                    color: #000000;
+                    ;
+                }
+
+.box-thanh-toan-tai-nha {
+    font-size: 13px;
+    color: #000000;
+    margin-top: 40px;
+}
+/* end payment */
+
+/* page lien he */
+#content-layout-page-thong-tin-lien-he {
+    background: #fff;
+}
+
+.container-map-contact {
+    min-height: 300px;
+}
+
+.list-menu-lien-he ul {
+    padding: 0px;
+    margin: 0px;
+    margin-top: 10px;
+}
+
+    .list-menu-lien-he ul li {
+        cursor: pointer;
+        font-family: r_regular;
+        list-style: none;
+        padding: 0px 5px;
+        border-right: 1px solid black;
+        display: inline-block;
+        font-size: 13px;
+        text-align: center;
+    }
+
+        .list-menu-lien-he ul li.active-map {
+            font-family: r_bold;
+        }
+
+        .list-menu-lien-he ul li:last-child {
+            border: 0px;
+        }
+
+.btn-contact:hover, .btn-contact:focus {
+    color: white;
+}
+
+.btn-contact {
+    color: white;
+    background: #176dd4;
+}
+
+    .btn-contact:hover {
+        box-shadow: 0px 0px 1px #000;
+    }
+
+.tlb-send-contact {
+    background: url('../images/bg_global_page_contact.jpg') no-repeat bottom left;
+}
+
+table.table.tlb-send-contact tbody tr td {
+    border-top: 0px;
+}
+/* end page lien he */
+
+.box-change-type-payment label {
+    margin: 10px;
+}
+
+.box-home {
+    text-align: center;
+}
+
+.box-container-results.box-depart table tr td.Oneway {
+    display: none;
+}
+
+
+/* LOADDDING SUBMIT FORM  */
+.box-loadding-submit-flights {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+    .box-loadding-submit-flights .box-container-loadding {
+        display: table;
+        max-width: 500px;
+        margin: auto;
+        height: 100%;
+    }
+
+    .box-loadding-submit-flights .box-loadding {
+        padding: 20px;
+        font-size: 13px;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+.box-loadding .box-data {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 1px 2px 8px #000;
+}
+
+.box-loadding-submit-flights .box-loadding .progress {
+    margin-top: 20px;
+}
+
+
+.confirm-box-data {
+    background: #fff;
+}
+
+
+.box-total-pay-online-confirm {
+    text-align: right;
+}
+
+/* END CONFIRM */
+
+
+/* TABLE PRICE DATE OF WEEK */
+table.tlb-booking-week-gds {
+    background: #eee;
+}
+
+    table.tlb-booking-week-gds tr th {
+        border-top: 0px;
+    }
+
+        table.tlb-booking-week-gds tr th.actived {
+            background: #1a2a5b;
+        }
+
+            table.tlb-booking-week-gds tr th.actived .column-date-of-week {
+                color: #fff;
+            }
+
+            table.tlb-booking-week-gds tr th.actived .column-day-of-week {
+                color: #fff;
+            }
+
+    table.tlb-booking-week-gds tr .item-hover {
+        background: #ddd;
+    }
+
+    table.tlb-booking-week-gds tr td.item-price {
+        cursor: pointer;
+    }
+
+        table.tlb-booking-week-gds tr td.item-price span {
+            padding-top: 5px;
+            display: block;
+        }
+
+    table.tlb-booking-week-gds tr td.actived {
+        background: #1a2a5b;
+    }
+
+    table.tlb-booking-week-gds tr td.item-price:hover {
+        background: #ddd;
+        color: #333
+    }
+
+    table.tlb-booking-week-gds tr td.item-price.actived:hover {
+        background: #1a2a5b;
+        color: #fff;
+    }
+
+    table.tlb-booking-week-gds tr td.actived {
+        color: #fff;
+    }
+
+        table.tlb-booking-week-gds tr td.actived .row-date-of-week {
+            color: #fff;
+        }
+
+        table.tlb-booking-week-gds tr td.actived .row-day-of-week {
+            color: #fff;
+        }
+
+    table.tlb-booking-week-gds tr td.lowest-price {
+        background: #ccc;
+    }
+
+        table.tlb-booking-week-gds tr td.lowest-price.actived {
+            background: #1a2a5b;
+        }
+
+
+    table.tlb-booking-week-gds tr td {
+        vertical-align: middle;
+        text-align: center;
+        font-size: 14px;
+        font-family: 'r_conde_regular';
+    }
+
+        table.tlb-booking-week-gds tr td img {
+            height: 29px;
+        }
+
+.row-date-of-week {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: 'r_conde_bold'
+}
+
+.row-day-of-week {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #8e8e8e;
+    font-weight: normal;
+    font-family: 'r_conde_regular'
+}
+
+.column-date-of-week {
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: 'r_conde_bold'
+}
+
+.column-day-of-week {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #8e8e8e;
+    font-weight: normal;
+    font-family: 'r_conde_regular'
+}
+
+
+
+/* END TABLE PRICE DATE OF WEEK */
+
+/* TABLE SEARCH BOOK WEEK */
+table.tlb-search-book-week {
+    width: 100%;
+}
+
+    table.tlb-search-book-week tr td {
+        border-top: 0px;
+        padding: 5px;
+    }
+
+        table.tlb-search-book-week tr td label {
+            display: block;
+        }
+
+        table.tlb-search-book-week tr td select {
+        }
+
+.box-info-book-week {
+    font-family: "r_conde_regular";
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 10px 0px;
+}
+
+    .box-info-book-week span {
+        font-family: 'r_conde_bold';
+        color: #1a2a5b;
+    }
+/* END TABLE SEARCH BOOK WEEK */
+
+
+.page-box-content .box-booking input.form-control, .page-box-content .box-booking select.form-control {
+    height: 30px;
+    border: 1px solid #738dc0;
+    color: #000000;
+    font-size: 13px;
+    border-radius: 0px;
+}
+
+.page-box-content .box-booking label {
+    color: #000;
+    font-size: 14px;
+    font-weight: normal;
+    cursor: pointer;
+    margin-bottom: 0px;
+}
+
+    .page-box-content .box-booking label span {
+        font-size: 11px;
+        font-weight: normal;
+        white-space: nowrap;
+    }
+
+.page-box-content .box-booking table.tlb-select-number tr td span {
+    color: #000;
+    font-size: 11px;
+    font-family: 'r_regular';
+}
+
+.page-box-content .box-booking table.table {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+    .page-box-content .box-booking table.table td {
+        border-top: 0px;
+        padding: 5px;
+    }
+
+.page-box-content .box-booking #ngaydiTem_en, .page-box-content .box-booking #ngayveTem_en, .page-box-content .box-booking #ngaydiTem_vi, #ngayveTem_vi {
+}
+
+.page-box-content .box-booking .btn-search-form-en, .page-box-content .box-booking .btn-search-form-vi {
+    float: right;
+    width: 140px;
+    height: 33px;
+    color: #fff;
+    font-size: 14px;
+    border: 0px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-family: 'r_bold';
+    background: #fffffe;
+    background: -moz-linear-gradient(top, #fffffe 0%, #b1fd1f 3%, #94e71a 24%, #2a9705 79%, #0f8300 100%);
+    background: -webkit-linear-gradient(top, #fffffe 0%,#b1fd1f 3%,#94e71a 24%,#2a9705 79%,#0f8300 100%);
+    background: linear-gradient(to bottom, #fffffe 0%,#b1fd1f 3%,#94e71a 24%,#2a9705 79%,#0f8300 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffffe', endColorstr='#0f8300',GradientType=0 );
+}
+
+@media screen and (max-width: 48.25em) {
+}

@@ -1,0 +1,50 @@
+﻿@model TravelTour.Models.TourCategory
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/share/AdminLayout.cshtml";
+}
+
+<style>
+    table {
+        text-align: center;
+        border-top: 1px solid black;
+    }
+
+        table dt dd {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+    .dl-horizontal {
+        font-size: large
+    }
+</style>
+<h2>Chi Tiết</h2>
+
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CategoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CategoryName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Intro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Intro)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TourCategoryCode }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

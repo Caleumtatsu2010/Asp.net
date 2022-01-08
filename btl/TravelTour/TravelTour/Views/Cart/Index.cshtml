@@ -1,0 +1,100 @@
+﻿@model List<TravelTour.Models.CLASS.CartItem>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/clientlayout.cshtml";
+}
+
+
+
+<div class="category-list-tour category-box-list-default category-box-sidebar-default">
+    <div class="container_12">
+        <div class="grid_12">
+            <div class="grid_9 alpha">
+                <div class="category-box-list-default-inner">
+                    <ul>
+
+                        @foreach (var item in Model)
+                        {
+
+                            <li>
+                                <div class="box-img">
+                                    <a href="@Url.Action("Detail", "Tour", new { id = item.tour.TourCode})">
+                                        <img alt=""
+                                             src="~/image/@item.tour.Image1" />
+
+                                        <button>
+                                            Đặt
+                                            tour
+                                        </button>
+                                    </a>
+                                </div>
+                                <div class="box-content">
+
+                                    <div class="box-content-promotion box-content-promotion-tour">
+                                        <div class="box-title-content">
+                                            <h3 class="title-h3">
+                                                <a href="@Url.Action("Detail", "Tour", new { id = item.tour.TourCode})">
+                                                    @item.tour.Name
+                                                </a>
+                                            </h3>
+                                        </div>
+                                        <div class="box-summary-content-tour">
+                                            <table class="table tlb-time-and-traffic-tour">
+                                                <tr>
+                                                    <td> Mã Tour: @item.tour.TourCode </td>
+                                                    <td>
+                                                        <i class="fa fa-clock-o" aria-hidden="true"></i> @item.tour.Day Ngày
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td colspan="3">Điểm Đến: @item.tour.Destination</td>
+                                                </tr>
+                                            </table>
+
+                                            <div class="box-tour-note-extra">
+                                                <ul class="list-tour-note-extra">
+                                                    <li>Giá siêu ưu đãi</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="box-price-promotion-tour">
+                                            Giá 1 khách:
+                                            <span>@item.tour.newPrice<sup>đ</sup></span>
+                                            @if (@item.tour.oldPrice != null)
+                                            {
+                                                <del>
+                                                    @item.tour.oldPrice
+                                                    <sup>đ</sup>
+                                                </del>
+                                            }
+                                        </div>
+                                        <a style="background-color:orange; color:snow;border-radius:4px;padding:5px; text-decoration:none"
+                                           href="@Url.Action("Delete", "Cart", new { delId = item.tour.TourCode})">
+                                            Xóa Khỏi Giỏ
+                                        </a>
+
+                                        <a class="btn btn-success btn-xs btn-readmore"
+                                           href="@Url.Action("Detail", "Tour", new { id = item.tour.TourCode})">
+                                            Chi
+                                            tiết
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                        }
+
+                    </ul>
+
+
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+</div>

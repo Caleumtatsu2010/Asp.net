@@ -1,0 +1,65 @@
+﻿@model IEnumerable<TravelTour.Models.TourCategory>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/share/AdminLayout.cshtml";
+}
+
+
+<style>
+
+    .table td {
+        width: 600px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .table th {
+        /*width: 500px;*/
+        text-align: center;
+
+    }
+</style>
+
+<p>
+    @Html.ActionLink("Thêm Mới", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            STT
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CategoryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Intro)
+        </th>
+        <th></th>
+    </tr>
+
+    @{
+        var c = 0;
+        foreach (var item in Model)
+        {
+            c++;
+            <tr>
+                <td>
+                    @c
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Intro)
+                </td>
+                <td>
+                    <a href="@Url.Action("Edit", "TourCategories", new { id = item.TourCategoryCode })"><i class="mdi mdi-wrench-outline"></i></a><br />
+                    <a href="@Url.Action("Details", "TourCategories", new { id = item.TourCategoryCode })"><i class="mdi mdi-open-in-new"></i></a><br />
+                    <a href="@Url.Action("Delete", "TourCategories", new { id = item.TourCategoryCode })"><i class="mdi mdi-delete-outline"></i></a>
+                </td>
+            </tr>
+        }
+    }
+
+</table>

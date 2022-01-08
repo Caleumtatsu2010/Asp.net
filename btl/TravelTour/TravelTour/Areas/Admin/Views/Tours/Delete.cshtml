@@ -1,0 +1,131 @@
+﻿@model TravelTour.Models.Tour
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/share/AdminLayout.cshtml";
+}
+<style>
+    table {
+        text-align: center;
+        border-top: 1px solid black;
+    }
+
+        table td {
+            text-align: center;
+            vertical-align: middle;
+        }
+</style>
+<h2>Xóa Tour</h2>
+
+<h3>Bạn có chắc muốn xóa Tour này ?</h3>
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TourCategory.CategoryName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TourCategory.CategoryName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Detail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Detail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Slot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Slot)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeptTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeptTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Day)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Day)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vehicle)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vehicle)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Destination)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Destination)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.oldPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.oldPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.newPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.newPrice)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

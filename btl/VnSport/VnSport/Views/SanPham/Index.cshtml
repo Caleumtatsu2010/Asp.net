@@ -1,0 +1,98 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/clientlayout.cshtml"; 
+
+    var ListProduct = ViewBag.AllProducts as IEnumerable<VnSport.Models.SanPham>;
+
+}
+
+<div id="contain">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-mm-8">
+                <p id="breadcrumbs">
+                    <span>
+                        <span>
+                            <a href="">Trang chủ</a> » <span class="breadcrumb_last" aria-current="page">Sản Phẩm</span>
+                        </span>
+                    </span>
+                </p>
+            </div>
+            <div class="col-sm-12">
+                <div class="title-page mb-10px">
+                    <h1 class="title"></h1>
+                </div>
+                <div id="prime" class=" row">
+                    <div class="col-sm-12">
+                        <div class="woocommerce-notices-wrapper"></div>
+                    </div>
+                    <div class="col-sm-12 mb-15px">
+                        <div class="wpcat">
+                            <div class="wp-list-cat">
+
+                                @foreach (var item in ListProduct)
+                                {
+                                    <div class="cot5 dv col-xxs-6 col-ms-4 col-mm-4 col-mxs-6 woocommerce post-5518 product type-product status-publish has-post-thumbnail product_cat-bang-bao-ve-dau-goi first instock sale shipping-taxable purchasable product-type-variable">
+                                        <div class="wp-hover thumbnail-pro-cat">
+                                            <a href="@Url.Action("Detail", "SanPham", new { id = item.maSanPham})">
+
+
+                                                <image class='khungvien'
+                                                       src='//vnsport.com.vn/wp-content/plugins/a3-lazy-load/assets/images/lazy_placeholder.gif' />
+                                                <img src="~/image/@item.anh1" />
+
+                                            </a>
+
+                                            <div class="clearfix"></div>
+                                        </div>
+
+                                        <a href="@Url.Action("Detail", "SanPham", new { id = item.maSanPham})">
+                                            <h3 title="@item.tenSanPham" class="mb-5px title-pro-cat">
+                                                @item.tenSanPham
+                                            </h3>
+                                        </a>
+                                        <div class="codepro"> <span class="code">Mã SP</span>: @item.maSanPham</div>
+                                        <div class="gia">
+                                            <del class="price-old">
+                                                <span class="woocommerce-Price-amount amount price-new">
+                                                    @{
+                                                        if (item.giaCu != null)
+                                                        {
+                                                            <bdi>
+                                                                @item.giaCu<span class="woocommerce-Price-currencySymbol">&#8363;</span>
+                                                            </bdi>
+                                                        }
+                                                    }
+
+
+                                                </span>
+                                            </del>
+                                            <ins class="price-new">
+                                                <span class="woocommerce-Price-amount amount price-new">
+                                                    <bdi>
+                                                        @item.giaMoi<span class="woocommerce-Price-currencySymbol">&#8363;</span>
+                                                    </bdi>
+                                                </span>
+                                            </ins>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-nav col-sm-12 mb-15px">
+                        <ul class="pagination">
+                            <li class="active"><span class="active">01</span></li>
+                            <li><a href="">02</a></li>
+                            <li><a href="">03</a></li>
+                            <li><a href="">04</a></li>
+                            <li><a href="" title=">">></a></li>
+                            <li class="next"><a href="">>></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
